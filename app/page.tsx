@@ -1,4 +1,5 @@
 import { DiscoverCard } from '@/components/DiscoverCard';
+import { LottieAnimation } from '@/components/LottieAnimation';
 import Image from 'next/image';
 import {
   PiChecksLight,
@@ -12,8 +13,8 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-base-100">
-      <div className="hero min-h-screen">
+    <div className="container mx-auto">
+      <div className="hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <div className="max-w-6xl">
             <h1 className="text-4xl sm:text-6xl font-bold leading-normal">
@@ -42,10 +43,13 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="-z-10 w-full opacity-30 absolute">
+          <LottieAnimation src="/animations/matrix-animation.lottie" />
+        </div>
       </div>
 
       <section>{/* TODO: add animation */}</section>
-      <section className="flex flex-col items-center mt-16 lg:mt-8 xl:mt-0">
+      <section className="flex flex-col items-center mt-16 lg:mt-8 xl:mt-0 bg-base-100">
         <p className="text-center mb-12">We are proud to partner with</p>
         <div className="carousel carousel-center flex gap-32 max-w-3xl items-center">
           <div className="carousel-item">
@@ -78,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="m-auto mt-32 max-w-7xl p-4">
+      <section className="pt-32 p-4 bg-base-100">
         <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
           Have you ever wondered how you can benefit from the wave of new
           technology like artificial intelligence?
@@ -86,7 +90,7 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-12">
           <div
             className="tooltip tooltip-neutral col-span-3 lg:col-span-1 place-self-center"
-            data-tip="Prompt: Imagine a mystical figure, with a striking resemblance to Dumbledore, wearing sunglasses, illuminated by a sea of neon green lights as he casts a spell with his wand, creating a stunning visual display, a dark background."
+            data-tip="Prompt: Imagine a mystical figure, with a striking resemblance to Dumbledore, wearing sunglasses, illuminated by a sea of neon green lights as he casts a spell with his wand, creating a stunning visual display."
           >
             <Image
               style={{ height: 'auto' }}
