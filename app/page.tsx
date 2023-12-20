@@ -4,6 +4,7 @@ import { LottieAnimation } from '@/components/LottieAnimation';
 import { PartnerCard } from '@/components/PartnerCard';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   PiAlienLight,
   PiChecksLight,
@@ -74,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-32 p-4 bg-base-100 bg-gradient-to-b from-base-100 to-neutral-800">
+      <section className="py-16 sm:py-32 px-4 bg-base-100">
         <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
           Have you ever wondered how you can benefit from the wave of new
           technology like artificial intelligence?
@@ -115,12 +116,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-32 p-4 bg-base-100">
+      <section className="py-16 sm:py-32 px-4 bg-base-100">
         <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
           Learn based on our business use cases
         </h2>
         <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
-          We are a team of AI geeks, software engineers and entrepreneus. We
+          We are a team of AI geeks, software engineers and entrepreneurs. We
           continuously browse the web and test the newest tools. We then combine
           this with our business mindset to create the solutions you&apos;ll
           find here.
@@ -145,6 +146,32 @@ export default function Home() {
             icon={<PiAlienLight />}
             title="AI Generation"
             description="Build in chat bots generating the content you need, generate images and videos"
+          />
+        </div>
+      </section>
+
+      <section>{/* TODO: Add blog preview */}</section>
+
+      <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
+        <div className="flex flex-col col-span-2 lg:col-span-1">
+          <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-12">
+            We seamlessly build and launch automation solutions
+          </h2>
+          <CheckedText description="In case you need an automation hand take a look at our tailored services" />
+          <Link href="/">
+            <button className="btn btn-primary mt-8">Solutions</button>
+          </Link>
+        </div>
+        <div
+          className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
+          data-tip="Prompt: Hagrid from Harry Potter, full body from a distance in a dynamic position in a mystical forest, wearing sunglasses, surrounded by neon green lighting. He casts a spell that creates an army of small robots behind him, inspired by transformers."
+        >
+          <Image
+            className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+            src="/images/ai-hagrid-robots.webp"
+            alt="Ai generated image of Hagrid casting robots"
+            width={600}
+            height={400}
           />
         </div>
       </section>

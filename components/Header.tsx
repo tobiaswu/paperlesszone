@@ -8,9 +8,13 @@ type NavItemData = {
 
 export const Header = () => {
   const navItems: NavItemData[] = [
-    { id: 'item-1', label: 'Solutions', items: ['Paperless Office'] },
-    { id: 'item-2', label: 'Resources', items: ['Blog', 'Newsletter'] },
-    { id: 'item-3', label: 'About' },
+    {
+      id: 'tab-1',
+      label: 'Solutions',
+      items: ['Consulting', 'Paperless Office'],
+    },
+    { id: 'tab-2', label: 'Resources', items: ['Blog', 'Newsletter'] },
+    { id: 'tab-3', label: 'About' },
   ];
 
   return (
