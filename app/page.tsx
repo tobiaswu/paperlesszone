@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-32 px-4 bg-base-100">
+      <section id="newsletter" className="py-16 sm:py-32 px-4 bg-base-100">
         <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12">
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-8">
