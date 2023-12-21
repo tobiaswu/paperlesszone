@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PiListLight, PiXLight } from 'react-icons/pi';
 
 type NavItemData = {
@@ -49,7 +50,9 @@ export const Header = () => {
             })}
           </ul>
         </details>
-        <a className="btn text-xl">AIAA</a>
+        <Link href="/">
+          <button className="btn text-xl">AIAA</button>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -78,7 +81,9 @@ export const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-ghost">Contact</a>
+        <Link href="/contact">
+          <button className="btn btn-ghost">Contact</button>
+        </Link>
       </div>
     </div>
   );
