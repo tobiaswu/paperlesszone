@@ -21,6 +21,7 @@ import {
   PiRobotLight,
   PiRocketLaunchLight,
   PiSmileyLight,
+  PiTriangleLight,
 } from 'react-icons/pi';
 
 export default function Home() {
@@ -160,7 +161,10 @@ export default function Home() {
         </h2>
         <BlogPreview />
         <Link href={RouteId.blog}>
-          <button className="btn btn-primary mt-8">Learn more</button>
+          <button className="btn btn-primary mt-8">
+            Learn more
+            <PiTriangleLight className="rotate-90" />
+          </button>
         </Link>
       </section>
 
@@ -171,7 +175,10 @@ export default function Home() {
           </h2>
           <CheckedText description="In case you need an automation hand take a look at our tailored services" />
           <Link className="w-fit mt-8" href={RouteId.root}>
-            <button className="btn btn-primary">Solutions</button>
+            <button className="btn btn-primary">
+              Solutions
+              <PiTriangleLight className="rotate-90" />
+            </button>
           </Link>
         </div>
         <div
@@ -198,7 +205,10 @@ export default function Home() {
             digitalized, automated and so on.
           </p>
           <Link className="w-fit mt-8" href={RouteId.about}>
-            <button className="btn btn-primary">About us</button>
+            <button className="btn btn-primary">
+              About us
+              <PiTriangleLight className="rotate-90" />
+            </button>
           </Link>
         </div>
         <div className="col-span-2 lg:col-span-1">

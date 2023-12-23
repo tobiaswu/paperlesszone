@@ -1,6 +1,6 @@
 import { RouteId } from '@/utils';
 import Link from 'next/link';
-import { PiListLight, PiXLight } from 'react-icons/pi';
+import { PiListLight, PiTriangleLight, PiXLight } from 'react-icons/pi';
 
 type NavItemData = {
   id: string;
@@ -90,6 +90,7 @@ export const Header = () => {
             <div key={navItem.id} className="dropdown drowdown-hover">
               <div tabIndex={0} role="button" className="btn btn-ghost m-1">
                 {navItem.label}
+                <PiTriangleLight className="text-primary rotate-180" />
               </div>
               <ul
                 tabIndex={0}
