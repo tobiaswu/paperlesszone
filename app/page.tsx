@@ -1,3 +1,4 @@
+import { BlogPreview } from '@/components/BlogPreview';
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup';
@@ -5,6 +6,7 @@ import { LottieAnimation } from '@/components/LottieAnimation';
 import { PartnerCard } from '@/components/PartnerCard';
 import { ReviewCard } from '@/components/ReviewCard';
 import { UseCaseCard } from '@/components/UseCaseCard';
+import { RouteId } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -152,7 +154,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section>{/* TODO: Add blog preview */}</section>
+      <section className="py-16 sm:py-32 px-4 bg-base-100">
+        <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
+          Explore our blog
+        </h2>
+        <BlogPreview />
+        <Link href={RouteId.blog}>
+          <button className="btn btn-primary mt-8">Learn more</button>
+        </Link>
+      </section>
 
       <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
@@ -160,7 +170,7 @@ export default function Home() {
             We seamlessly build and launch automation solutions
           </h2>
           <CheckedText description="In case you need an automation hand take a look at our tailored services" />
-          <Link className="w-fit mt-8" href="/">
+          <Link className="w-fit mt-8" href={RouteId.root}>
             <button className="btn btn-primary">Solutions</button>
           </Link>
         </div>
@@ -187,7 +197,7 @@ export default function Home() {
             How our clients have transformed their business with us,
             digitalized, automated and so on.
           </p>
-          <Link className="w-fit mt-8" href="/">
+          <Link className="w-fit mt-8" href={RouteId.about}>
             <button className="btn btn-primary">About us</button>
           </Link>
         </div>
