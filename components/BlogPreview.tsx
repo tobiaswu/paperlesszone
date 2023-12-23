@@ -1,8 +1,6 @@
 import { PostCard } from './PostCard';
 
-export interface Props {}
-
-export const BlogPreview = ({}: Props) => {
+export const BlogPreview = () => {
   return (
     <div role="tablist" className="tabs tabs-boxed bg-base-100">
       <a role="tab" className="tab tab-active sm:w-28 md:w-32">

@@ -11,7 +11,7 @@ export default function Contact() {
     <div className="container mx-auto bg-base-100">
       <div className="grid grid-cols-2 gap-12 px-4 py-16 min-h-screen place-items-center">
         <div className="col-span-2 lg:col-span-1">
-          <h1 className="text-4xl sm:text-6xl font-bold leading-relaxed mb-12">
+          <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
             Get in touch
           </h1>
           <p className="leading-relaxed mb-8">
@@ -41,7 +41,7 @@ export default function Contact() {
         </div>
 
         <div className="col-span-2 lg:col-span-1 bg-neutral rounded-lg p-8 h-fit">
-          <h2 className="text-2xl sm:text-4xl leading-relaxed font-semibold text-center mb-8">
+          <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:leading-normal">
             Tell us about your project
           </h2>
           <p className="text-center mb-8">

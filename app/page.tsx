@@ -30,7 +30,7 @@ export default function Home() {
       <div className="hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <div className="max-w-6xl">
-            <h1 className="text-4xl sm:text-6xl font-bold leading-relaxed">
+            <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed">
               Scale and Digitalize your Business with Intelligent Automations
             </h1>
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       <section className="py-16 sm:py-32 px-4 bg-base-100">
-        <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
+        <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
           Have you ever wondered how you can benefit from the wave of new
           technology like artificial intelligence?
         </h2>
@@ -99,7 +99,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col col-span-3 lg:col-span-2">
-            <h3 className="text-2xl sm:text-3xl leading-relaxed font-semibold mb-8">
+            <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:leading-normal">
               And how you can implement it in your business to make your life
               dramatically easier?
             </h3>
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       <section className="py-16 sm:py-32 px-4 bg-base-100">
-        <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
+        <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
           Learn based on our business use cases
         </h2>
         <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       <section className="py-16 sm:py-32 px-4 bg-base-100">
-        <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
+        <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
           Explore our blog
         </h2>
         <BlogPreview />
@@ -170,7 +170,7 @@ export default function Home() {
 
       <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
-          <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-12">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal">
             We seamlessly build and launch automation solutions
           </h2>
           <CheckedText description="In case you need an automation hand take a look at our tailored services" />
@@ -197,7 +197,7 @@ export default function Home() {
 
       <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
-          <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-12">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal">
             Hear from our clients
           </h2>
           <p className="leading-relaxed">
@@ -244,7 +244,7 @@ export default function Home() {
       <section id="newsletter" className="py-16 sm:py-32 px-4 bg-base-100">
         <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12">
           <div className="col-span-3 md:col-span-2">
-            <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-8">
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
               Be the first to receive our industry specific trends
             </h2>
             <p className="leading-relaxed mb-8">
