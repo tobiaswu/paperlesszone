@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="grid gap-4 items-center grid-cols-2 bg-base-100 px-4">
+      <section className="grid gap-4 items-center grid-cols-2 bg-base-100 px-4 pb-32">
         <div className="order-2 md:order-1 col-span-2 md:col-span-1 flex flex-col items-center">
           <p className="text-xl mb-16 md:mt-16 xl:mt-0">
             We are proud to partner with
@@ -80,10 +80,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-32 px-4 bg-base-100">
+      <section className="p-4 sm:p-8 mx-4 rounded-lg glass">
         <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
           Have you ever wondered how you can benefit from the wave of new
-          technology like artificial intelligence?
+          technology?
         </h2>
         <div className="grid grid-cols-3 gap-12">
           <div
@@ -100,8 +100,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col col-span-3 lg:col-span-2">
             <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:leading-normal">
-              And how you can implement it in your business to make your life
-              dramatically easier?
+              And how you can implement it in your business?
             </h3>
             <p className="mb-4">
               Today&apos;s software landscape enables you to do much more than
@@ -121,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-32 px-4 bg-base-100">
+      <section className="pb-16 pt-32 sm:pb-32 sm:pt-64 px-4 bg-base-100">
         <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
           Learn based on our business use cases
         </h2>
@@ -242,7 +241,7 @@ export default function Home() {
       </section>
 
       <section id="newsletter" className="py-16 sm:py-32 px-4 bg-base-100">
-        <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12">
+        <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12 shadow-xl">
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
               Be the first to receive our industry specific trends
