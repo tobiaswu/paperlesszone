@@ -33,6 +33,14 @@ const config: Config = {
       },
     ],
   },
+  theme: {
+    extend: {
+      backgroundImage: {
+        'blob-md': "url('/backgrounds/blob-md.svg')",
+        'blob-lg': "url('/backgrounds/blob-lg.svg')",
+      },
+    },
+  },
   plugins: [require('daisyui')],
 };
 export default config;
