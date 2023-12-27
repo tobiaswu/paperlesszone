@@ -9,12 +9,12 @@ export const BlogPreview = () => {
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">
           <PostCard
-            className="col-span-6 card lg:card-side bg-neutral shadow-xl rounded-lg"
+            className="col-span-6 card lg:card-side bg-neutral shadow-md rounded-lg"
             preview
           />
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-xl rounded-lg" />
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-xl rounded-lg" />
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-xl rounded-lg" />
+          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-md rounded-lg" />
+          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-md rounded-lg" />
+          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2 card bg-neutral shadow-md rounded-lg" />
         </div>
       </div>
       <a role="tab" className="tab sm:w-28 md:w-32">

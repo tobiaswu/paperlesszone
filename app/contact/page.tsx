@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="col-span-2 lg:col-span-1 bg-neutral rounded-lg p-8 h-fit">
+        <div className="col-span-2 lg:col-span-1 bg-neutral rounded-lg p-8 h-fit shadow-md">
           <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:leading-normal">
             Tell us about your project
           </h2>

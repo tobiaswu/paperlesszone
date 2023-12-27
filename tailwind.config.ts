@@ -8,6 +8,17 @@ const config: Config = {
   daisyui: {
     themes: [
       {
+        lightTheme: {
+          primary: '#55d44c',
+          secondary: '#4059ad',
+          accent: '#cc3f0c',
+          neutral: '#f4f6f5',
+          'base-100': '#e9ede9',
+          info: '#0089ff',
+          success: '#1dffba',
+          warning: '#f7c400',
+          error: '#ce2854',
+        },
         darkTheme: {
           primary: '#55d44c',
           secondary: '#4059ad',

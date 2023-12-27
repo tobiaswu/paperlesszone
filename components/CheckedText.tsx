@@ -7,7 +7,10 @@ export interface CheckedTextProps {
 export const CheckedText = ({ description }: CheckedTextProps) => {
   return (
     <div className="flex gap-4 items-center">
-      <div className="bg-neutral rounded-lg p-4 flex items-center justify-center">
+      <div
+        className="bg-neutral rounded-lg p-4 flex items-center justify-center"
+        data-theme="darkTheme"
+      >
         <PiChecksLight className="text-3xl text-primary" />
       </div>
       <p>{description}</p>

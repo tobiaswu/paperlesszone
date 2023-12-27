@@ -55,9 +55,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="-z-10 w-full opacity-30 absolute">
+        {/* <div className="-z-10 w-full opacity-30 absolute">
           <LottieAnimation src="/animations/matrix.lottie" />
-        </div>
+        </div> */}
       </div>
 
       <section className="grid gap-4 items-center grid-cols-2 bg-base-100 px-4 pb-32">
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       <section id="newsletter" className="py-16 sm:py-32 px-4 bg-base-100">
-        <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12 shadow-xl">
+        <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12 shadow-md">
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
               Be the first to receive our industry specific trends
@@ -258,7 +258,7 @@ export default function Home() {
             <EmailSignup />
           </div>
           <div className="col-span-3 md:col-span-1 place-self-center">
-            <div className="rounded-lg border-primary border-2 shadow-xl bg-neutral px-8 py-32 relative">
+            <div className="rounded-lg border-primary border-2 shadow-md bg-neutral px-8 py-32 relative">
               <p className="uppercase text-center font-bold">
                 10 must have automation tools and how to use them
               </p>

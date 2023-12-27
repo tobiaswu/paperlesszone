@@ -1,6 +1,7 @@
 import { RouteId } from '@/utils';
 import Link from 'next/link';
 import { PiListLight, PiTriangleLight, PiXLight } from 'react-icons/pi';
+import dynamic from 'next/dynamic';
 
 type NavItemData = {
   id: string;
@@ -8,6 +9,10 @@ type NavItemData = {
   url?: string;
   items?: NavItemData[];
 };
+
+const DynamicThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), {
+  ssr: false,
+});
 
 export const Header = () => {
   const navItems: NavItemData[] = [
@@ -113,7 +118,8 @@ export const Header = () => {
         })}
       </div>
       <div className="navbar-end">
-        <Link href={RouteId.contact}>
+        <DynamicThemeSwitcher />
+        <Link className="ml-4" href={RouteId.contact}>
           <button className="btn btn-neutral">Contact</button>
         </Link>
       </div>
