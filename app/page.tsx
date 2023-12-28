@@ -1,3 +1,5 @@
+'use client';
+
 import { BlogPreview } from '@/components/BlogPreview';
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
@@ -7,6 +9,8 @@ import { PartnerCard } from '@/components/PartnerCard';
 import { ReviewCard } from '@/components/ReviewCard';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import { RouteId } from '@/utils';
+import { motion } from 'framer-motion';
+import transitions from '@/public/transitions.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -30,14 +34,29 @@ export default function Home() {
       <div className="container mx-auto hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <div className="max-w-6xl">
-            <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed">
+            <motion.h1
+              variants={transitions.item}
+              initial="hidden"
+              whileInView="show"
+              className="text-4xl sm:text-6xl font-bold sm:leading-relaxed"
+            >
               Scale and Digitalize your Business with Intelligent Automations
-            </h1>
+            </motion.h1>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-semibold sm:mt-16 my-8">
+          <motion.h2
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-2xl sm:text-4xl font-semibold sm:mt-16 my-8"
+          >
             Discover how you can
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+          </motion.h2>
+          <motion.div
+            variants={transitions.container}
+            initial="hidden"
+            whileInView="show"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4"
+          >
             <DiscoverCard icon={<PiFactoryLight />} title="Build systems" />
             <DiscoverCard icon={<PiRobotLight />} title="Automate processes" />
             <DiscoverCard
@@ -53,7 +72,7 @@ export default function Home() {
               icon={<PiSmileyLight />}
               title="Boost employee happiness"
             />
-          </div>
+          </motion.div>
         </div>
         {/* <div className="-z-10 w-full opacity-30 absolute">
           <LottieAnimation src="/animations/matrix.lottie" />
@@ -61,7 +80,12 @@ export default function Home() {
       </div>
 
       <section className="container mx-auto grid gap-4 items-center grid-cols-2 bg-base-100 px-4 pb-32">
-        <div className="order-2 md:order-1 col-span-2 md:col-span-1 flex flex-col items-center">
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
+          className="order-2 md:order-1 col-span-2 md:col-span-1 flex flex-col items-center"
+        >
           <p className="text-xl mb-16 md:mt-16 xl:mt-0">
             We are proud to partner with
           </p>
@@ -74,14 +98,19 @@ export default function Home() {
               alt="Wupperfeld Ventures Logo"
             />
           </div>
-        </div>
+        </motion.div>
         <div className="order-1 md:order-2 col-span-2 md:col-span-1">
           <LottieAnimation src="/animations/automation.lottie" />
         </div>
       </section>
 
       <section className="container mx-auto">
-        <div className="p-4 sm:p-8 rounded-lg bg-neutral shadow-md mx-4">
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
+          className="p-4 sm:p-8 rounded-lg bg-neutral shadow-md mx-4"
+        >
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
             Have you ever wondered how you can benefit from the wave of new
             technology?
@@ -119,21 +148,36 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="py-32 sm:py-64 px-4 bg-base-100 bg-blob-md bg-cover bg-center">
         <div className="container mx-auto">
-          <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
+          <motion.h2
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal"
+          >
             Learn based on our business use cases
-          </h2>
-          <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="mb-12 text-center max-w-xl mx-auto leading-relaxed"
+          >
             We are a team of AI geeks, software engineers and entrepreneurs. We
             continuously browse the web and test the newest tools. We then
             combine this with our business mindset to create the solutions
             you&apos;ll find here.
-          </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          </motion.p>
+          <motion.div
+            variants={transitions.container}
+            initial="hidden"
+            whileInView="show"
+            className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
             <UseCaseCard
               icon={<PiRepeatLight />}
               title="Automations"
@@ -154,15 +198,26 @@ export default function Home() {
               title="AI Generation"
               description="Build in chat bots generating the content you need, generate images and videos"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="container mx-auto pb-16 sm:pb-32 px-4 bg-base-100">
-        <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
+        <motion.h2
+          variants={transitions.item}
+          initial="hidden"
+          whileInView="show"
+          className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal"
+        >
           Explore our blog
-        </h2>
-        <BlogPreview />
+        </motion.h2>
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
+        >
+          <BlogPreview />
+        </motion.div>
         <Link href={RouteId.blog}>
           <button className="btn btn-primary mt-8">
             Learn more
@@ -173,9 +228,14 @@ export default function Home() {
 
       <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal">
+          <motion.h2
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal"
+          >
             We seamlessly build and launch automation solutions
-          </h2>
+          </motion.h2>
           <CheckedText description="In case you need an automation hand take a look at our tailored services" />
           <Link className="w-fit mt-8" href={RouteId.root}>
             <button className="btn btn-primary">
@@ -184,7 +244,10 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
           className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
           data-tip="Prompt: Hagrid from Harry Potter, full body from a distance in a dynamic position in a mystical forest, wearing sunglasses, surrounded by neon green lighting. He casts a spell that creates an army of small robots behind him, inspired by transformers."
         >
@@ -195,18 +258,28 @@ export default function Home() {
             width={600}
             height={400}
           />
-        </div>
+        </motion.div>
       </section>
 
       <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal">
+          <motion.h2
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal"
+          >
             Hear from our clients
-          </h2>
-          <p className="leading-relaxed">
+          </motion.h2>
+          <motion.p
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="leading-relaxed"
+          >
             How our clients have transformed their business with us,
             digitalized, automated and so on.
-          </p>
+          </motion.p>
           <Link className="w-fit mt-8" href={RouteId.about}>
             <button className="btn btn-primary">
               About us
@@ -215,7 +288,12 @@ export default function Home() {
           </Link>
         </div>
         <div className="col-span-2 lg:col-span-1">
-          <div className="grid sm:grid-cols-2 gap-4">
+          <motion.div
+            variants={transitions.container}
+            initial="hidden"
+            whileInView="show"
+            className="grid sm:grid-cols-2 gap-4"
+          >
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
               avatarURL="/images/placeholder.webp"
@@ -240,15 +318,20 @@ export default function Home() {
               name="Michael Baylor"
               position="Chief Technology Officer"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section
         id="newsletter"
-        className="pt-32 pb-16 sm:pt-64 sm:pb-32 px-4 bg-base-100 bg-blob-lg bg-cover bg-center"
+        className="pt-32 pb-16 sm:pt-64 sm:pb-32 px-4 bg-base-100 bg-blob-lg bg-cover bg-top"
       >
-        <div className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 glass rounded-lg p-8 sm:p-12">
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
+          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 glass rounded-lg p-8 sm:p-12"
+        >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
               Be the first to receive our industry specific trends
@@ -272,7 +355,7 @@ export default function Home() {
               <PiPlusSquareFill className="text-5xl text-primary absolute -top-8 -left-8" />
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
