@@ -296,25 +296,25 @@ export default function Home() {
           >
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/placeholder.webp"
+              avatarURL="/images/founder-portrait.webp"
               name="Michael Baylor"
               position="Chief Technology Officer"
             />
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/placeholder.webp"
+              avatarURL="/images/founder-portrait.webp"
               name="Michael Baylor"
               position="Chief Technology Officer"
             />
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/placeholder.webp"
+              avatarURL="/images/founder-portrait.webp"
               name="Michael Baylor"
               position="Chief Technology Officer"
             />
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/placeholder.webp"
+              avatarURL="/images/founder-portrait.webp"
               name="Michael Baylor"
               position="Chief Technology Officer"
             />
