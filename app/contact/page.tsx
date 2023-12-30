@@ -4,7 +4,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { ContactOption } from '@/components/ContactOption';
 import { motion } from 'framer-motion';
 import {
-  PiChatDotsLight,
+  PiEnvelopeLight,
   PiMapPinLineLight,
   PiPhoneCallLight,
 } from 'react-icons/pi';
@@ -40,7 +40,7 @@ export default function Contact() {
             className="flex flex-col gap-4"
           >
             <ContactOption
-              icon={<PiChatDotsLight />}
+              icon={<PiEnvelopeLight />}
               optionLabel="Email"
               optionText="info@digitizerspace.com"
               url="mailto:"

@@ -109,23 +109,23 @@ export default function Home() {
           variants={transitions.fadeIn}
           initial="hidden"
           whileInView="show"
-          className="p-4 sm:p-8 rounded-lg bg-neutral shadow-md mx-4"
+          className="p-4 sm:p-8 mx-4"
         >
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
             Have you ever wondered how you can benefit from the wave of new
-            technology?
+            technology in the automation space?
           </h2>
           <div className="grid grid-cols-3 gap-12">
             <div
               className="tooltip tooltip-neutral col-span-3 lg:col-span-1 place-self-center"
-              data-tip="Prompt: Imagine a mystical figure, with a striking resemblance to Dumbledore, wearing sunglasses, illuminated by a sea of neon green lights as he casts a spell with his wand, creating a stunning visual display."
+              data-tip="Prompt: a humanoid robot floating in space, wearing sunglasses, shrugging its arms, neon green lighting, highly detailed, and photo-realistic."
             >
               <Image
                 className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-                src="/images/ai-magician.webp"
-                alt="Ai generated image of a magician"
-                width={400}
-                height={600}
+                src="/images/ai-robot-shrugging.webp"
+                alt="Ai generated image of a robot shrugging his arms with the earth in the background"
+                width={512}
+                height={512}
               />
             </div>
             <div className="flex flex-col col-span-3 lg:col-span-2">
@@ -249,14 +249,14 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
-          data-tip="Prompt: Hagrid from Harry Potter, full body from a distance in a dynamic position in a mystical forest, wearing sunglasses, surrounded by neon green lighting. He casts a spell that creates an army of small robots behind him, inspired by transformers."
+          data-tip="Prompt: generate an image of a team of astronauts in black suits walking in a spaceship, neon green lighting, cinematic with lens flares, with DigitizerSpace written in large white letters on their suits."
         >
           <Image
             className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-            src="/images/ai-hagrid-robots.webp"
-            alt="Ai generated image of Hagrid casting robots"
-            width={600}
-            height={400}
+            src="/images/ai-team-digitizerspace.webp"
+            alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
+            width={512}
+            height={512}
           />
         </motion.div>
       </section>

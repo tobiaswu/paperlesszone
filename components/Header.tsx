@@ -52,7 +52,7 @@ export const Header = () => {
   ];
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar">
       <div className="navbar-start">
         <details className="dropdown [&_.swap-on]:opacity-100 [&_.swap-off]:opacity-0 [&[open]_.swap-off]:opacity-100 [&[open]_.swap-on]:opacity-0">
           <summary className="btn btn-ghost swap lg:hidden">
