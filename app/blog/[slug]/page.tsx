@@ -2,25 +2,23 @@ import { BlogContentRef } from '@/components/BlogContentRef';
 import { BlogPostAuthor } from '@/components/BlogPostAuthor';
 import { BlogPostSectionTitle } from '@/components/BlogPostSectionTitle';
 import { BlogPreviewSmall } from '@/components/BlogPreviewSmall';
+import { PostShareButton } from '@/components/PostShareButton';
 import Image from 'next/image';
-import { PiShareFatLight } from 'react-icons/pi';
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   return (
     <>
-      {/* overlapping image */}
+      {/* TODO: add overlapping image */}
       <div className="glass p-8">
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
             <div className="badge badge-secondary badge-lg rounded-lg mb-2">
               Trends
             </div>
-            <button className="btn btn-accent">
-              <PiShareFatLight className="text-2xl" />
-              Share this post
-            </button>
+            {/* TODO: add share modal */}
+            <PostShareButton />
           </div>
           <h1 className="text-5xl font-bold mb-4 leading-tight">
             The Paperless Office

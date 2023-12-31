@@ -57,6 +57,7 @@ export default function About() {
               alt="Ai generated image of a hacker in a space suit in front of a macbook."
               width={512}
               height={512}
+              loading="lazy"
             />
             <div className="flex flex-col gap-8">
               <StatCard
@@ -107,6 +108,7 @@ export default function About() {
             alt="Portrait of our founder Tobias Wupperfeld"
             width={200}
             height={200}
+            loading="lazy"
           />
           <p className="italic">
             &quot;We are a group of tech savvy individuals running our own

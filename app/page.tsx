@@ -125,6 +125,7 @@ export default function Home() {
                 alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
                 width={512}
                 height={512}
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col col-span-3 lg:col-span-2">
@@ -248,7 +249,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
-          data-tip="Prompt: generate an image of a team of astronauts in black suits walking in a spaceship, neon green lighting, cinematic with lens flares, with DigitizerSpace written in large white letters on their suits."
+          data-tip="Prompt: a team of astronauts in black suits walking in a spaceship, neon green lighting, cinematic with lens flares, with DigitizerSpace written in large white letters on their suits."
         >
           <Image
             className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
@@ -256,6 +257,7 @@ export default function Home() {
             alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
             width={512}
             height={512}
+            loading="lazy"
           />
         </motion.div>
       </section>
