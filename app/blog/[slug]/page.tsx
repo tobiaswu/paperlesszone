@@ -1,7 +1,7 @@
 import { BlogContentRef } from '@/components/BlogContentRef';
 import { BlogPostAuthor } from '@/components/BlogPostAuthor';
-import { BlogPostRating } from '@/components/BlogPostRating';
 import { BlogPostSectionTitle } from '@/components/BlogPostSectionTitle';
+import { BlogPreviewSmall } from '@/components/BlogPreviewSmall';
 import Image from 'next/image';
 import { PiShareFatLight } from 'react-icons/pi';
 
@@ -12,27 +12,29 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     <>
       {/* overlapping image */}
       <div className="glass p-8">
-        <div className="flex items-center justify-between">
-          <div className="badge badge-secondary badge-lg rounded-lg mb-2">
-            Trends
+        <div className="container mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="badge badge-secondary badge-lg rounded-lg mb-2">
+              Trends
+            </div>
+            <button className="btn btn-accent">
+              <PiShareFatLight className="text-2xl" />
+              Share this post
+            </button>
           </div>
-          <button className="btn btn-accent">
-            <PiShareFatLight className="text-2xl" />
-            Share this post
-          </button>
-        </div>
-        <h1 className="text-5xl font-bold mb-4 leading-tight">
-          The Paperless Office
-        </h1>
-        <p className="max-w-xl">
-          Summary about paperless, all you need to know to implement it
-          successfully into your business operations. Learn how Chris F.
-          digitalized his real estate business.
-        </p>
-        <div className="flex gap-8 mt-8 items-center">
-          <p className="text-base self-end">Oct 19, 2023</p>
-          <div className="badge badge-primary badge-md rounded-lg">
-            5 mins read
+          <h1 className="text-5xl font-bold mb-4 leading-tight">
+            The Paperless Office
+          </h1>
+          <p className="max-w-xl">
+            Summary about paperless, all you need to know to implement it
+            successfully into your business operations. Learn how Chris F.
+            digitalized his real estate business.
+          </p>
+          <div className="flex gap-8 mt-8 items-center">
+            <p className="text-base self-end">Oct 19, 2023</p>
+            <div className="badge badge-primary badge-md rounded-lg">
+              5 mins read
+            </div>
           </div>
         </div>
       </div>
@@ -96,21 +98,22 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </section>
       </div>
 
-      <div className="flex items-center justify-between mx-auto max-w-4xl px-4">
+      <div className="flex gap-8 items-center justify-between mx-auto max-w-4xl px-4">
         <BlogPostAuthor
           name="Tobias Wupperfeld"
           avatarUrl="/images/founder-portrait.webp"
           twitterUrl="/"
           linkedinUrl="/"
         />
-        <BlogPostRating />
+        {/* TODO: add post rating functionality */}
+        {/* <BlogPostRating /> */}
       </div>
 
-      {/* comment section */}
-      <div></div>
+      {/* TODO: add comment section */}
 
-      {/* small blog preview */}
-      <div></div>
+      <div className="container mx-auto py-32 px-4">
+        <BlogPreviewSmall />
+      </div>
     </>
   );
 }

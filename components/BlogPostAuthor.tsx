@@ -16,7 +16,7 @@ export const BlogPostAuthor = ({
   linkedinUrl,
 }: BlogPostAuthorProps) => {
   return (
-    <div>
+    <div className="bg-neutral p-8 rounded-lg shadow-md h-40 w-fit flex flex-col justify-center">
       <p className="text-xl mb-4">Author</p>
       <div className="flex gap-4 items-center">
         <Image

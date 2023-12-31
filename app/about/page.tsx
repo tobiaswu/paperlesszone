@@ -16,7 +16,7 @@ import { CheckedText } from '@/components/CheckedText';
 export default function About() {
   return (
     <>
-      <section className="bg-blob-md bg-cover bg-top">
+      <section className="bg-blob-md bg-cover bg-bottom">
         <div className="hero">
           <div className="hero-content text-center flex flex-col">
             <div className="max-w-6xl">
@@ -53,10 +53,10 @@ export default function About() {
           <div className="container mx-auto grid sm:grid-cols-2 gap-8 px-4 place-content-center">
             <Image
               className="rounded-lg"
-              src="/images/ai-magician.webp"
-              alt="DigitizerSpace"
-              width={400}
-              height={600}
+              src="/images/ai-hacker.webp"
+              alt="Ai generated image of a hacker in a space suit in front of a macbook."
+              width={512}
+              height={512}
             />
             <div className="flex flex-col gap-8">
               <StatCard
@@ -100,7 +100,7 @@ export default function About() {
           various industries. We are passionate about solving our everyday
           problems with innovative solutions and automating as much as possible.
         </p>
-        <div className="flex gap-4 items-center my-4">
+        <div className="flex gap-4 items-center my-8">
           <Image
             className="rounded-full"
             src="/images/founder-portrait.webp"

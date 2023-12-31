@@ -112,25 +112,24 @@ export default function Home() {
           className="p-4 sm:p-8 mx-4"
         >
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
-            Have you ever wondered how you can benefit from the wave of new
-            technology in the automation space?
+            Benefit from the wave of new technology in the automation space
           </h2>
           <div className="grid grid-cols-3 gap-12">
             <div
-              className="tooltip tooltip-neutral col-span-3 lg:col-span-1 place-self-center"
-              data-tip="Prompt: a humanoid robot floating in space, wearing sunglasses, shrugging its arms, neon green lighting, highly detailed, and photo-realistic."
+              className="tooltip tooltip-neutral col-span-3 lg:col-span-1"
+              data-tip="Prompt: an astronaut floating in space with earth in the background, shrugging his arms, neon green lighting, cinematic."
             >
               <Image
                 className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-                src="/images/ai-robot-shrugging.webp"
-                alt="Ai generated image of a robot shrugging his arms with the earth in the background"
+                src="/images/ai-astronaut-shrugging.webp"
+                alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
                 width={512}
                 height={512}
               />
             </div>
             <div className="flex flex-col col-span-3 lg:col-span-2">
               <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:leading-normal">
-                And how you can implement it in your business?
+                Implement it in your business the right way
               </h3>
               <p className="mb-4">
                 Today&apos;s software landscape enables you to do much more than
