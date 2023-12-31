@@ -25,7 +25,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <h1 className="text-5xl font-bold mb-4 leading-tight">
             The Paperless Office
           </h1>
-          <p className="max-w-xl">
+          <p className="max-w-xl leading-relaxed">
             Summary about paperless, all you need to know to implement it
             successfully into your business operations. Learn how Chris F.
             digitalized his real estate business.
@@ -49,18 +49,21 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             />
           </li>
           <li>
-            <BlogContentRef hash="section-1" title="What are the benefits?" />
+            <BlogContentRef hash="section-2" title="What are the benefits?" />
           </li>
           <li>
-            <BlogContentRef hash="section-1" title="Final thoughts" />
+            <BlogContentRef hash="section-3" title="Final thoughts" />
           </li>
         </ol>
       </div>
 
       <div className="mx-auto max-w-4xl px-4">
         <section id="section-1" className="pb-16">
-          <BlogPostSectionTitle title="What is a paperless office?" />
-          <p className="mt-6 text-justify">
+          <BlogPostSectionTitle
+            title="What is a paperless office?"
+            hash="section-1"
+          />
+          <p className="mt-6 leading-relaxed">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -73,8 +76,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </p>
         </section>
         <section id="section-2" className="pb-16">
-          <BlogPostSectionTitle title="What are the benefits?" />
-          <p className="mt-6">
+          <BlogPostSectionTitle
+            title="What are the benefits?"
+            hash="section-2"
+          />
+          <p className="mt-6 leading-relaxed">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
