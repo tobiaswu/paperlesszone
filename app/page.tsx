@@ -101,7 +101,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover bg-center">
+      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover lg:bg-auto bg-center">
         <div className="container mx-auto">
           <motion.h2
             variants={transitions.item}
