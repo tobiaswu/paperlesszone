@@ -81,7 +81,9 @@ export const Header = () => {
           </ul>
         </details>
         <Link href={RouteId.root}>
-          <button className="btn text-xl">DigitizerSpace</button>
+          <button className="btn text-xl bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text shadow-primary">
+            DigitizerSpace
+          </button>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex gap-8">

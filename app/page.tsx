@@ -5,7 +5,7 @@ import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup';
 import { LottieAnimation } from '@/components/LottieAnimation';
-import { PartnerCard } from '@/components/PartnerCard';
+import { PartnerLogo } from '@/components/PartnerLogo';
 import { ReviewCard } from '@/components/ReviewCard';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import { RouteId } from '@/utils';
@@ -15,6 +15,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   PiAlienLight,
+  PiArrowBendDownRightLight,
   PiFactoryLight,
   PiFileCloudLight,
   PiFilesLight,
@@ -38,7 +39,7 @@ export default function Home() {
               variants={transitions.item}
               initial="hidden"
               whileInView="show"
-              className="text-4xl sm:text-6xl font-bold sm:leading-relaxed"
+              className="text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text"
             >
               Scale and Digitalize your Business with Intelligent Automations
             </motion.h1>
@@ -73,85 +74,34 @@ export default function Home() {
               title="Boost employee happiness"
             />
           </motion.div>
-        </div>
-        {/* <div className="-z-10 w-full opacity-30 absolute">
-          <LottieAnimation src="/animations/matrix.lottie" />
-        </div> */}
-      </div>
-
-      <section className="container mx-auto grid gap-4 items-center grid-cols-2 bg-base-100 px-4 pb-32">
-        <motion.div
-          variants={transitions.fadeIn}
-          initial="hidden"
-          whileInView="show"
-          className="order-2 md:order-1 col-span-2 md:col-span-1 flex flex-col items-center"
-        >
-          <p className="text-xl mb-16 md:mt-16 xl:mt-0">
-            We are proud to partner with
-          </p>
-          <div className="grid order-2 grid-cols-2 gap-4">
-            <PartnerCard src="/images/CF_logo.webp" alt="Chris Feith Logo" />
-            <PartnerCard src="/images/IMS_logo.webp" alt="Immoselfmade Logo" />
-            <PartnerCard src="/images/ADP_logo.webp" alt="Aldeas de Paz Logo" />
-            <PartnerCard
-              src="/images/WV_logo.webp"
-              alt="Wupperfeld Ventures Logo"
-            />
-          </div>
-        </motion.div>
-        <div className="order-1 md:order-2 col-span-2 md:col-span-1">
-          <LottieAnimation src="/animations/automation.lottie" />
-        </div>
-      </section>
-
-      <section className="container mx-auto">
-        <motion.div
-          variants={transitions.fadeIn}
-          initial="hidden"
-          whileInView="show"
-          className="p-4 sm:p-8 mx-4"
-        >
-          <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
-            Benefit from the wave of new technology in the automation space
-          </h2>
-          <div className="grid grid-cols-3 gap-12">
-            <div
-              className="tooltip tooltip-neutral col-span-3 lg:col-span-1"
-              data-tip="Prompt: an astronaut floating in space with earth in the background, shrugging his arms, neon green lighting, cinematic."
-            >
-              <Image
-                className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-                src="/images/ai-astronaut-shrugging.webp"
-                alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
-                width={512}
-                height={512}
-                loading="lazy"
+          <motion.div
+            variants={transitions.fadeIn}
+            initial="hidden"
+            whileInView="show"
+            className="flex flex-col sm:flex-row items-center justify-center pt-8"
+          >
+            <div className="flex flex-col">
+              <p className="text-sm mr-16">We are proud to partner with</p>
+              <PiArrowBendDownRightLight className="text-3xl" />
+            </div>
+            <div className="flex items-center gap-12">
+              <PartnerLogo
+                src="/images/IMS_logo.webp"
+                alt="Immoselfmade Logo"
+              />
+              <PartnerLogo
+                src="/images/WV_logo.webp"
+                alt="Wupperfeld Ventures Logo"
               />
             </div>
-            <div className="flex flex-col col-span-3 lg:col-span-2">
-              <h3 className="text-2xl sm:text-3xl font-semibold mb-8 sm:leading-normal">
-                Implement it in your business the right way
-              </h3>
-              <p className="mb-4">
-                Today&apos;s software landscape enables you to do much more than
-                just chatbots but it can be overwhelming and how do you know
-                what works best for your business?
-              </p>
-              <p className="mb-8">
-                This is why we build this portal. To bundle our continuous
-                research and reveal real world use cases
-              </p>
-              <div className="flex flex-col gap-4">
-                <CheckedText description="stay up to date with trends and tools" />
-                <CheckedText description="identify use cases for your business" />
-                <CheckedText description="implement solutions and boost your business" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </section>
+          </motion.div>
+        </div>
+        <div className="-z-10 w-full opacity-30 absolute">
+          <LottieAnimation src="/animations/matrix.lottie" />
+        </div>
+      </div>
 
-      <section className="py-32 sm:py-64 px-4 bg-base-100 bg-blob-md bg-cover bg-center">
+      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover bg-center">
         <div className="container mx-auto">
           <motion.h2
             variants={transitions.item}
@@ -207,7 +157,7 @@ export default function Home() {
           variants={transitions.item}
           initial="hidden"
           whileInView="show"
-          className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal"
+          className="text-3xl sm:text-5xl font-semibold text-center mb-24 sm:leading-normal"
         >
           Explore our blog
         </motion.h2>
@@ -224,6 +174,58 @@ export default function Home() {
             <PiTriangleLight className="rotate-90" />
           </button>
         </Link>
+      </section>
+
+      <section className="bg-neutral py-32">
+        <motion.div
+          variants={transitions.fadeIn}
+          initial="hidden"
+          whileInView="show"
+          className="container mx-auto px-4"
+        >
+          <div className="grid grid-cols-2 gap-12">
+            <div
+              className="tooltip tooltip-neutral col-span-2 lg:col-span-1 w-fit"
+              data-tip="Prompt: an astronaut floating in space with earth in the background, shrugging his arms, neon green lighting, cinematic."
+            >
+              <Image
+                className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+                src="/images/ai-astronaut-shrugging.webp"
+                alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
+                width={512}
+                height={512}
+                loading="lazy"
+              />
+            </div>
+            <div className="flex flex-col col-span-2 lg:col-span-1">
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
+                Benefit from the wave of new technology
+              </h2>
+              <h3 className="text-2xl mb-4 sm:leading-normal">
+                Implement it in your business the right way
+              </h3>
+              <p className="mb-8">
+                Today&apos;s software landscape enables you to do much more than
+                just chatbots but it can be overwhelming and how do you know
+                what works best for your business?
+              </p>
+              <div className="flex flex-col gap-4">
+                <CheckedText
+                  isDark
+                  description="stay up to date with trends and tools"
+                />
+                <CheckedText
+                  isDark
+                  description="identify use cases for your business"
+                />
+                <CheckedText
+                  isDark
+                  description="implement solutions and boost your business"
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
@@ -263,31 +265,6 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
-        <div className="flex flex-col col-span-2 lg:col-span-1">
-          <motion.h2
-            variants={transitions.item}
-            initial="hidden"
-            whileInView="show"
-            className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal"
-          >
-            Hear from our clients
-          </motion.h2>
-          <motion.p
-            variants={transitions.item}
-            initial="hidden"
-            whileInView="show"
-            className="leading-relaxed"
-          >
-            How our clients have transformed their business with us,
-            digitalized, automated and so on.
-          </motion.p>
-          <Link className="w-fit mt-8" href={RouteId.about}>
-            <button className="btn btn-primary">
-              About us
-              <PiTriangleLight className="rotate-90" />
-            </button>
-          </Link>
-        </div>
         <div className="col-span-2 lg:col-span-1">
           <motion.div
             variants={transitions.container}
@@ -320,6 +297,31 @@ export default function Home() {
               position="Chief Technology Officer"
             />
           </motion.div>
+        </div>
+        <div className="flex flex-col col-span-2 lg:col-span-1">
+          <motion.h2
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal"
+          >
+            Hear from our clients
+          </motion.h2>
+          <motion.p
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="leading-relaxed"
+          >
+            How our clients have transformed their business with us,
+            digitalized, automated and so on.
+          </motion.p>
+          <Link className="w-fit mt-8" href={RouteId.about}>
+            <button className="btn btn-primary">
+              About us
+              <PiTriangleLight className="rotate-90" />
+            </button>
+          </Link>
         </div>
       </section>
 
