@@ -19,7 +19,7 @@ export const CheckedText = ({
       >
         <PiChecksLight className="text-3xl text-primary" />
       </div>
-      <p>{description}</p>
+      <p className="text-left">{description}</p>
     </div>
   );
 };

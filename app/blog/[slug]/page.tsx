@@ -40,9 +40,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <Image
           className="container mx-auto md:absolute top-64 md:right-8 lg:right-16 xl:right-32 2xl:right-64 px-4 w-auto max-w-sm pt-8"
           src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
-          alt="White logo of paperless ngx"
+          alt="White logo of paperless-ngx"
           width={384}
           height={184}
+          loading="lazy"
         />
 
         <div className="mx-auto max-w-4xl py-16 px-4">
