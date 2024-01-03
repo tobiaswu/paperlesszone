@@ -61,7 +61,9 @@ export const Header = () => {
             {navItems.map((tab) => {
               return (
                 <li key={tab.id}>
-                  <p>{tab.label}</p>
+                  <Link key={tab.id} href={tab.url ?? RouteId.root}>
+                    <p>{tab.label}</p>
+                  </Link>
                   {tab.items && (
                     <ul className="p-2">
                       {tab.items.map((item) => {
@@ -80,10 +82,10 @@ export const Header = () => {
             })}
           </ul>
         </details>
-        <Link href={RouteId.root}>
-          <button className="btn text-xl bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text shadow-primary">
+        <Link className="ml-2" href={RouteId.root}>
+          <p className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
             DigitizerSpace
-          </button>
+          </p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex gap-8">
@@ -116,7 +118,9 @@ export const Header = () => {
       </div>
       <div className="navbar-end">
         <Link className="ml-4" href={RouteId.contact}>
-          <button className="btn btn-neutral">Contact</button>
+          <button className="btn btn-neutral btn-outline border-primary">
+            Contact
+          </button>
         </Link>
       </div>
     </div>
