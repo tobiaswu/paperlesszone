@@ -3,20 +3,13 @@
 import { motion } from 'framer-motion';
 import transitions from '@/public/transitions.json';
 import Image from 'next/image';
-import {
-  PiCoinsThin,
-  PiLightningLight,
-  PiPlusSquareFill,
-  PiTimerLight,
-  PiTriangleLight,
-} from 'react-icons/pi';
+import { PiCoinsThin, PiLightningLight, PiTimerLight } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
-import { CheckedText } from '@/components/CheckedText';
 
 export default function About() {
   return (
     <>
-      <section className="bg-blob-md bg-cover bg-bottom">
+      <section className="bg-blob-md bg-cover lg:bg-contain bg-top">
         <div className="hero">
           <div className="hero-content text-center flex flex-col">
             <div className="max-w-6xl">
@@ -50,16 +43,8 @@ export default function About() {
           whileInView="show"
           className="py-16"
         >
-          <div className="container mx-auto grid sm:grid-cols-2 gap-8 px-4 place-content-center">
-            <Image
-              className="rounded-lg"
-              src="/images/ai-hacker.webp"
-              alt="Ai generated image of a hacker in a space suit in front of a macbook."
-              width={512}
-              height={512}
-              loading="lazy"
-            />
-            <div className="flex flex-col gap-8">
+          <div className="container mx-auto flex flex-col gap-8 px-4 items-center">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <StatCard
                 icon={<PiLightningLight />}
                 title="Founded"
@@ -76,6 +61,14 @@ export default function About() {
                 value="140h/m"
               />
             </div>
+            <Image
+              className="rounded-lg max-w-3xl mt-16"
+              src="/images/ai-hacker-wide.webp"
+              alt="Ai generated image of a hacker in a space suit in front of a macbook."
+              width={768}
+              height={400}
+              loading="lazy"
+            />
           </div>
         </motion.div>
       </section>
@@ -133,7 +126,7 @@ export default function About() {
       </section>
 
       <section className="py-32 px-4 bg-blob-lg bg-cover bg-top">
-        <motion.div
+        {/* <motion.div
           variants={transitions.fadeIn}
           initial="hidden"
           whileInView="show"
@@ -171,7 +164,7 @@ export default function About() {
               <PiPlusSquareFill className="text-5xl text-primary absolute -top-8 -left-8" />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </section>
     </>
   );

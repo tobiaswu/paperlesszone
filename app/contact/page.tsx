@@ -12,7 +12,7 @@ import transitions from '@/public/transitions.json';
 
 export default function Contact() {
   return (
-    <div className="container mx-auto bg-base-100">
+    <div className="container mx-auto">
       <div className="grid grid-cols-2 gap-12 px-4 py-16 min-h-screen place-items-center">
         <div className="col-span-2 lg:col-span-1">
           <motion.h1

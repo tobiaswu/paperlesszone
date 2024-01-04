@@ -42,7 +42,9 @@ export const PricingCard = ({}: PricingCardProps) => {
         </div>
       </div>
       <div className="card-actions justify-center px-4 pb-4">
-        <button className="btn btn-primary w-full">Get Started</button>
+        <button className="btn btn-primary capitalize w-full">
+          Launching soon
+        </button>
       </div>
     </div>
   );

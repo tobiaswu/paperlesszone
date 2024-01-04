@@ -17,8 +17,8 @@ export const Header = () => {
       items: [
         {
           id: 'solution-1',
-          label: 'Consultation',
-          url: RouteId.consultation,
+          label: 'Consultation *coming soon',
+          // url: RouteId.consultation,
         },
         {
           id: 'solution-2',
@@ -33,8 +33,8 @@ export const Header = () => {
       items: [
         {
           id: 'resource-1',
-          label: 'Blog',
-          url: RouteId.blog,
+          label: 'Blog *coming soon',
+          // url: RouteId.blog,
         },
         {
           id: 'resource-2',
