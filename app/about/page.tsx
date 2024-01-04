@@ -62,7 +62,7 @@ export default function About() {
               />
             </div>
             <Image
-              className="rounded-lg max-w-3xl mt-16"
+              className="rounded-lg max-w-3xl w-full mt-16"
               src="/images/ai-hacker-wide.webp"
               alt="Ai generated image of a hacker in a space suit in front of a macbook."
               width={768}
