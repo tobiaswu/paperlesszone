@@ -3,8 +3,15 @@
 import { motion } from 'framer-motion';
 import transitions from '@/public/transitions.json';
 import Image from 'next/image';
-import { PiCoinsThin, PiLightningLight, PiTimerLight } from 'react-icons/pi';
+import {
+  PiCoinsThin,
+  PiLightningLight,
+  PiLinkedinLogoLight,
+  PiTimerLight,
+  PiTwitterLogoLight,
+} from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -95,14 +102,34 @@ export default function About() {
           problems with innovative solutions and automating as much as possible.
         </p>
         <div className="flex gap-4 items-center my-8">
-          <Image
-            className="rounded-full"
-            src="/images/founder-portrait.webp"
-            alt="Portrait of our founder Tobias Wupperfeld"
-            width={200}
-            height={200}
-            loading="lazy"
-          />
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              className="rounded-full"
+              src="/images/founder-portrait.webp"
+              alt="Portrait of our founder Tobias Wupperfeld"
+              width={200}
+              height={200}
+              loading="lazy"
+            />
+            <div className="flex gap-2">
+              <Link
+                href="https://twitter.com/hikingceo"
+                className="link link-primary"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <PiTwitterLogoLight className="text-2xl" />
+              </Link>
+              <Link
+                href="https://linkedin.com/in/tobias-wupperfeld"
+                className="link link-primary"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <PiLinkedinLogoLight className="text-2xl" />
+              </Link>
+            </div>
+          </div>
           <p className="italic">
             &quot;We are a group of tech savvy individuals running our own
             businesses in various industries.&quot;

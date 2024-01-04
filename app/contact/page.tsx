@@ -14,7 +14,7 @@ export default function Contact() {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-2 gap-12 px-4 py-16 min-h-screen place-items-center">
-        <div className="col-span-2 lg:col-span-1">
+        <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover lg:bg-contain bg-top">
           <motion.h1
             variants={transitions.item}
             initial="hidden"
