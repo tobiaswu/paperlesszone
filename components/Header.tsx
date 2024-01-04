@@ -91,14 +91,14 @@ export const Header = () => {
       <div className="navbar-center hidden lg:flex gap-8">
         {navItems.map((navItem) => {
           return navItem.items ? (
-            <div key={navItem.id} className="dropdown drowdown-hover">
+            <div key={navItem.id} className="group">
               <div tabIndex={0} role="button" className="btn btn-ghost m-1">
                 {navItem.label}
-                <PiTriangleLight className="text-primary rotate-180" />
+                <PiTriangleLight className="text-primary rotate-180 group-hover:rotate-0 transition-transform duration-300" />
               </div>
               <ul
                 tabIndex={0}
-                className="p-2 z-[1] dropdown-content menu shadow bg-neutral rounded-lg w-52"
+                className="p-2 z-[1] hidden menu absolute shadow bg-neutral rounded-lg w-52 group-hover:block"
               >
                 {navItem.items.map((item) => {
                   return (
