@@ -22,7 +22,10 @@ export async function POST(req: NextRequest) {
 
     if (response.status !== 201) {
       return NextResponse.json(
-        { error: 'Failed to subscribe' },
+        {
+          error:
+            'Failed to subscribe. Please try it later again or contact us.',
+        },
         { status: 500 }
       );
     }

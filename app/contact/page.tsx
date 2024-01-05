@@ -42,14 +42,14 @@ export default function Contact() {
             <ContactOption
               icon={<PiEnvelopeLight />}
               optionLabel="Email"
-              optionText="info@digitizerspace.com"
-              url="mailto:"
+              optionText="hello@digitizerspace.com"
+              url="mailto:hello@digitizerspace.com"
             />
             <ContactOption
               icon={<PiPhoneCallLight />}
               optionLabel="Call"
               optionText="Schedule a call here"
-              url="https://calendly.com/tobiaswu"
+              url="https://calendly.com/tobiaswu/1-1-meeting-clone"
             />
             <ContactOption
               icon={<PiMapPinLineLight />}

@@ -212,18 +212,9 @@ export default function Home() {
                 what works best for your business?
               </p>
               <div className="flex flex-col gap-4">
-                <CheckedText
-                  isDark
-                  description="stay up to date with trends and tools"
-                />
-                <CheckedText
-                  isDark
-                  description="identify use cases for your business"
-                />
-                <CheckedText
-                  isDark
-                  description="implement solutions and boost your business"
-                />
+                <CheckedText description="stay up to date with trends and tools" />
+                <CheckedText description="identify use cases for your business" />
+                <CheckedText description="implement solutions and boost your business" />
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
-        <p className="text-base">© 2024 DigitizerSpace</p>
+        <p className="text-base">© 2024 TW Software Solutions LLC</p>
         <PiDotOutlineLight className="text-2xl" />
         <Link className="hover:text-primary" href={RouteId.privacy}>
           <p className="text-base">Privacy</p>

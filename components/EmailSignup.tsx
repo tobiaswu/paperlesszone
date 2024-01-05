@@ -4,7 +4,7 @@ import { RouteId } from '@/utils';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';
-import { z } from 'zod';
+import { ZodError, z } from 'zod';
 
 const schema = z.object({
   email: z.string().email().min(5),
@@ -22,7 +22,10 @@ export const EmailSignup = () => {
     });
 
     if (!parsed.success) {
-      setError('Invalid email');
+      const msg: ZodError[] = JSON.parse(parsed.error.message);
+      msg.forEach((item: ZodError) => {
+        setError(item.message);
+      });
     } else {
       await fetch('/api/subscribe', {
         method: 'POST',
