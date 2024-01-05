@@ -6,7 +6,6 @@ import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup';
 import { LottieAnimation } from '@/components/LottieAnimation';
 import { PartnerLogo } from '@/components/PartnerLogo';
-import { ReviewCard } from '@/components/ReviewCard';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import { RouteId } from '@/utils';
 import { motion } from 'framer-motion';
@@ -21,7 +20,6 @@ import {
   PiFilesLight,
   PiFlowArrowLight,
   PiPiggyBankLight,
-  PiPlusSquareFill,
   PiRepeatLight,
   PiRobotLight,
   PiRocketLaunchLight,
@@ -117,10 +115,12 @@ export default function Home() {
             whileInView="show"
             className="mb-12 text-center max-w-xl mx-auto leading-relaxed"
           >
-            We are a team of AI geeks, software engineers and entrepreneurs. We
-            continuously browse the web and test the newest tools. We then
-            combine this with our business mindset to create the solutions
-            you&apos;ll find here.
+            We are a team of AI geeks, software engineers and entrepreneurs who
+            are passionate about creating innovative solutions. We stay
+            up-to-date with the latest technologies and tools and continuously
+            test new products. We combine our technical expertise with our
+            industry insights to create and publish solutions on DigitizerSpace
+            that are both cutting-edge and simple to use.
           </motion.p>
           <motion.div
             variants={transitions.container}
@@ -136,17 +136,17 @@ export default function Home() {
             <UseCaseCard
               icon={<PiFlowArrowLight />}
               title="Workflows"
-              description="Create systematic approaches to your daily tasks, easy to follow routines for your employees"
+              description="Create systematic approaches to your daily tasks and easy to follow routines for your employees"
             />
             <UseCaseCard
               icon={<PiFileCloudLight />}
               title="Digitization"
-              description="Get rid of pen and paper, make every information accessible to all your team"
+              description="Eliminate pen and paper and make every information accessible to your team"
             />
             <UseCaseCard
               icon={<PiAlienLight />}
               title="AI Generation"
-              description="Build in chat bots generating the content you need, generate images and videos"
+              description="Use artificial intelligence to generate the content you need like images and videos"
             />
           </motion.div>
         </div>
@@ -204,17 +204,18 @@ export default function Home() {
                 Benefit from the wave of new technology
               </h2>
               <h3 className="text-2xl mb-4 sm:leading-normal">
-                Implement it in your business the right way
+                and implement it in your business the right way
               </h3>
               <p className="mb-8">
                 Today&apos;s software landscape enables you to do much more than
-                just chatbots but it can be overwhelming and how do you know
-                what works best for your business?
+                just integrating chatbots but it can be overwhelming to know
+                what works best for your business. DigitizerSpace is here to
+                help you identify use cases.
               </p>
               <div className="flex flex-col gap-4">
-                <CheckedText description="stay up to date with trends and tools" />
-                <CheckedText description="identify use cases for your business" />
-                <CheckedText description="implement solutions and boost your business" />
+                <CheckedText description="Stay up to date with trends and tools." />
+                <CheckedText description="Identify use cases for your business." />
+                <CheckedText description="Implement solutions that will boost your business." />
               </div>
             </div>
           </div>
@@ -227,12 +228,25 @@ export default function Home() {
             variants={transitions.item}
             initial="hidden"
             whileInView="show"
-            className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal"
+            className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal"
           >
             We seamlessly build and launch automation solutions
           </motion.h2>
-          <CheckedText description="In case you need an automation hand take a look at our tailored services" />
-          <Link className="w-fit mt-8" href={RouteId.root}>
+          <motion.h3
+            variants={transitions.item}
+            initial="hidden"
+            whileInView="show"
+            className="text-2xl mb-4 sm:leading-normal"
+          >
+            In case you need an automation hand take a look at our tailored
+            services
+          </motion.h3>
+          <div className="flex flex-col gap-4">
+            <CheckedText description="Pre-built automation solutions that can be customized to fit your business needs." />
+            <CheckedText description="Software products and tools that can help you automate your business processes." />
+            <CheckedText description="Consulting service designed to help you identify areas where automation and digitization can improve your processes." />
+          </div>
+          <Link className="w-fit mt-8" href={RouteId.solutions}>
             <button className="btn btn-primary">
               Solutions
               <PiTriangleLight className="rotate-90" />
@@ -310,8 +324,8 @@ export default function Home() {
             whileInView="show"
             className="leading-relaxed"
           >
-            How our clients have transformed their business with us,
-            digitalized, automated and so on.
+            How our clients have transformed their business with us, streamlined
+            processes, improved efficiency, saved costs and increased revenue.
           </motion.p>
           <Link className="w-fit mt-8" href={RouteId.about}>
             <button className="btn btn-primary">
@@ -337,13 +351,14 @@ export default function Home() {
               Be the first to receive our industry specific trends
             </h2>
             <p className="leading-relaxed mb-8">
-              Our goal is to help small and medium sized businesses to profit
-              from the current wave of technology in the automation space and to
-              make use of artificial intelligence
+              Our goal is to help you leverage the latest automation
+              technologies and artificial intelligence to run your business with
+              a tailwind.
             </p>
             <div className="flex flex-col gap-4 mb-8">
-              <CheckedText description="Never miss news, trends and special offers" />
-              <CheckedText description="Bonus: get our guide for free" />
+              <CheckedText description="Never miss out on news, trends and special offers." />
+              <CheckedText description="Receive our latest insights and updates." />
+              {/* <CheckedText description="As a bonus, you will receive our guide for free." /> */}
             </div>
             <EmailSignup />
           </div>

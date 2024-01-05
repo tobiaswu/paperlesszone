@@ -48,11 +48,11 @@ export default function Paperless() {
             whileInView="show"
             className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed"
           >
-            We are a group of tech savvy individuals running our own businesses
-            in various industries. We are passionate about solving our everyday
-            problems with innovative solutions and automating as much as
-            possible. Freeing up our time enables us to go after what we are
-            most passionate about.
+            Paperless is an open-source community developed document managment
+            software that runs on the server. You can connect your scanner to it
+            or just drop files from your devices into the consumption of
+            Paperless. The software automatically sorts and names your documents
+            and make it fully searchable thanks to OCR.
           </motion.p>
           <Link href="#pricing">
             <button className="btn btn-secondary mb-16 capitalize">
@@ -73,9 +73,9 @@ export default function Paperless() {
               whileInView="show"
               className="flex flex-col gap-4"
             >
-              <CheckedText description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
-              <CheckedText description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
-              <CheckedText description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." />
+              <CheckedText description="Find the right documents at a blazingly speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
+              <CheckedText description="Never worry about your files. Everything is backed-up on your server." />
+              <CheckedText description="Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time." />
             </motion.div>
           </div>
         </div>
@@ -96,26 +96,23 @@ export default function Paperless() {
           <h2 className="text-4xl font-semibold">What do I need?</h2>
         </div>
         <p className="max-w-3xl">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum.
+          Everything you need to setup the paperless system.
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
             icon={<PiDownloadLight />}
-            description="paperless-ngx open source software"
+            description="Paperless-ngx open source software"
             url="https://github.com/paperless-ngx/paperless-ngx"
           />
           <SolutionCard
             icon={<PiScanLight />}
             description="A scanner that is capable of sending files to a folder (e.g. Fujitsu ScanSnap)"
-            url="https://github.com/paperless-ngx/paperless-ngx"
+            // url="https://github.com/paperless-ngx/paperless-ngx"
           />
           <SolutionCard
             icon={<PiDesktopTowerLight />}
             description="A computer (ideally a server) where you want to store your files (e.g. Synology NAS)"
-            url="https://github.com/paperless-ngx/paperless-ngx"
+            // url="https://github.com/paperless-ngx/paperless-ngx"
           />
         </div>
       </div>
@@ -129,10 +126,8 @@ export default function Paperless() {
             </h2>
           </div>
           <p className="max-w-3xl">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            You can install Paperless on your computer, on your server or
+            company infrastructure or on an external server.
           </p>
           <ul className="mt-8">
             <li className="flex flex-col gap-4 mb-8">
@@ -179,10 +174,16 @@ export default function Paperless() {
           <h2 className="text-4xl font-semibold">How to use paperless-ngx?</h2>
         </div>
         <p className="max-w-3xl">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum.
+          We&apos;re currently working on a complete guide with a lot of tips,
+          tricks and hacks to empower you to reap all the fruits of this system.
+          In the meantime you can read the&nbsp;
+          <Link
+            className="underline hover:text-primary"
+            href="https://docs.paperless-ngx.com/"
+          >
+            official documentation here
+          </Link>
+          .
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
@@ -192,12 +193,12 @@ export default function Paperless() {
           />
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
-            description="How to backup & more tricks (coming soon)"
+            description="More tips and tricks on our blog (coming soon)"
           />
           <SolutionCard
             icon={<PiArticleLight />}
-            description="Check out our curated articles about paperless-ngx"
-            url="/blog?tag=paperless"
+            description="Curated articles about paperless-ngx"
+            // url="/blog?tag=paperless"
           />
         </div>
       </div>
@@ -208,42 +209,38 @@ export default function Paperless() {
             <PiMedalLight className="text-3xl text-primary" />
             <h2 className="text-4xl font-semibold">Our offer</h2>
           </div>
-          <h3 className="text-3xl mb-4">Sub headline</h3>
+          <h3 className="text-3xl mb-4">
+            We install the Paperless system for you.
+          </h3>
           <p className="max-w-3xl">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum.
+            Book today and start profiting from the paperless system tomorrow!
+            We take all the hustle and install paperless for you on a trusted
+            GDPR conform server provider in one of two locations (US or EU).
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
             <SolutionCard
               icon={<PiFileArrowDownLight />}
-              description="Our full guide (coming soon). Subscribe to get notified"
-              url="/#newsletter"
+              description="Save time and start immediately"
             />
             <SolutionCard
               icon={<PiLightbulbFilamentLight />}
-              description="How to backup & more tricks (coming soon)"
+              description="Free test of the system here"
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Check out our curated articles about paperless-ngx"
-              url="/blog?tag=paperless"
+              description="30 day full suport after the installation"
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Check out our curated articles about paperless-ngx"
-              url="/blog?tag=paperless"
+              description="Receive our full video tutorial for free (regular price $99)"
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Check out our curated articles about paperless-ngx"
-              url="/blog?tag=paperless"
+              description="Get access to our exclusive mastermind group"
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Check out our curated articles about paperless-ngx"
-              url="/blog?tag=paperless"
+              description="10% discount on our tools"
             />
           </div>
         </div>
@@ -255,10 +252,9 @@ export default function Paperless() {
           <h2 className="text-4xl font-semibold">Pricing</h2>
         </div>
         <p className="max-w-3xl">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum.
+          One click payment with credit/debit card. After your purchase you will
+          immediately receive the invoice in your email inbox. Within 24h we
+          will start working on your inquiry.
         </p>
         <div className="mt-8">
           <PricingCard />

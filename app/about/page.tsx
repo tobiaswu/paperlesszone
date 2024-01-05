@@ -12,6 +12,7 @@ import {
 } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
+import { RouteId } from '@/utils';
 
 export default function About() {
   return (
@@ -35,11 +36,11 @@ export default function About() {
               whileInView="show"
               className="mt-8 max-w-xl mx-auto leading-relaxed"
             >
-              We are a group of tech savvy individuals running our own
+              We are a group of tech-savvy individuals who run our own
               businesses in various industries. We are passionate about solving
-              our everyday problems with innovative solutions and automating as
-              much as possible. Freeing up our time enables us to go after what
-              we are most passionate about.
+              everyday problems with innovative solutions and automating as much
+              as possible. By freeing up our time, we can focus on what we are
+              most passionate about.
             </motion.p>
           </div>
         </div>
@@ -81,27 +82,35 @@ export default function About() {
       </section>
 
       <section className="container mx-auto max-w-2xl px-4">
-        <p className="mb-4">
-          We are a group of tech savvy individuals running our own businesses in
-          various industries. We are passionate about solving our everyday
-          problems with innovative solutions and automating as much as possible.
-          Freeing up our time enables us to go after what we are most passionate
-          about.
+        <p className="mb-8">
+          We quickly realized that many business owners are so busy with
+          day-to-day activities that they don&apos;t have time to keep up with
+          the latest technologies, let alone integrate them into their
+          operations. We are passionate about the rapid development of software,
+          especially when it comes to artificial intelligence.
         </p>
         <p>
-          We are a group of tech savvy individuals running our own businesses in
-          various industries. We are passionate about solving our everyday
-          problems with innovative solutions and automating as much as possible.
-          Freeing up our time enables us to go after what we are most passionate
-          about.
+          That&apos;s why we decided to make our research public and
+          create&nbsp;
+          <Link className="underline hover:text-primary" href={RouteId.root}>
+            DigitizerSpace.com
+          </Link>
+          .&nbsp;Our goal is to simplify the process of integrating new
+          technologies into your business and offer you our knowledge and
+          experience. We&apos;ve developed industry-specific tools that help you
+          automate, digitalize and streamline your workflows.
         </p>
         <h2 className="mt-16 mb-8 text-4xl font-semibold">About the founder</h2>
         <p>
-          We are a group of tech savvy individuals running our own businesses in
-          various industries. We are passionate about solving our everyday
-          problems with innovative solutions and automating as much as possible.
+          Tobias Wupperfeld is the founder of DigitizerSpace. He is a seasoned
+          software engineer with experience in various industries, including
+          working at international corporations like SAP and innovative AI
+          startups. Tobias has a passion for innovation and is dedicated to
+          helping businesses of all sizes leverage the latest automation
+          technologies and artificial intelligence to save time, cost and
+          increase efficiency.
         </p>
-        <div className="flex gap-4 items-center my-8">
+        <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
           <div className="flex flex-col items-center gap-2">
             <Image
               className="rounded-full"
@@ -130,25 +139,52 @@ export default function About() {
               </Link>
             </div>
           </div>
-          <p className="italic">
-            &quot;We are a group of tech savvy individuals running our own
-            businesses in various industries.&quot;
+          <p className="italic font-serif max-w-md">
+            &quot;The digitalization of everything that can be digitalized is
+            inevitable. Positioning oneself now before everyone else does is the
+            key to success. Working smarter, not harder, is the essence of
+            digital transformation.&quot;
           </p>
         </div>
         <p>
-          We are a group of tech savvy individuals running our own businesses in
-          various industries. We are passionate about solving our everyday
-          problems with innovative solutions and automating as much as possible.
-          Freeing up our time enables us to go after what we are most passionate
-          about.
+          Did you know that&nbsp;
+          <Link
+            className="underline hover:text-primary"
+            href="https://openai.com/blog/introducing-chatgpt-enterprise"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            80% of Fortune 500 companies use OpenAI products?
+          </Link>
+          These companies have long understood the potential of AI and have been
+          using it to their advantage. With the increasing demand for AI,
+          it&apos;s only a matter of time until smaller businesses start
+          adopting it too.
         </p>
         <h2 className="mt-16 mb-8 text-4xl font-semibold">Final words</h2>
         <p>
-          We are a group of tech savvy individuals running our own businesses in
-          various industries. We are passionate about solving our everyday
-          problems with innovative solutions and automating as much as possible.
-          Freeing up our time enables us to go after what we are most passionate
-          about.
+          By partnering with DigitizerSpace, you can take advantage of the
+          latest automation technologies and stay ahead of the competition.
+          Check out our&nbsp;
+          <Link
+            className="underline hover:text-primary"
+            href={RouteId.resources}
+          >
+            resources
+          </Link>
+          ,&nbsp;
+          <Link
+            className="underline hover:text-primary"
+            href={RouteId.solutions}
+          >
+            solutions
+          </Link>
+          &nbsp;or&nbsp;
+          <Link className="underline hover:text-primary" href={RouteId.contact}>
+            contact us
+          </Link>
+          &nbsp;to learn more about how we can help you achieve your business
+          objectives.
         </p>
       </section>
 

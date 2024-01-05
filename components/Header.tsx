@@ -15,11 +15,11 @@ export const Header = () => {
       id: 'solutions',
       label: 'Solutions',
       items: [
-        {
-          id: 'solution-1',
-          label: 'Consultation *coming soon',
-          // url: RouteId.consultation,
-        },
+        // {
+        //   id: 'solution-1',
+        //   label: 'Consultation *coming soon',
+        //   url: RouteId.consultation,
+        // },
         {
           id: 'solution-2',
           label: 'Paperless Office',
@@ -31,11 +31,11 @@ export const Header = () => {
       id: 'resources',
       label: 'Resources',
       items: [
-        {
-          id: 'resource-1',
-          label: 'Blog *coming soon',
-          // url: RouteId.blog,
-        },
+        // {
+        //   id: 'resource-1',
+        //   label: 'Blog *coming soon',
+        //   url: RouteId.blog,
+        // },
         {
           id: 'resource-2',
           label: 'Newsletter',
