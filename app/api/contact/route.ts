@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       // cc: email, (uncomment this line if you want to send a copy to the sender)
       subject: `Message from ${name}`,
       text: `${text}
-      
+
       email: ${email}
       tel: ${phone}`,
     };
@@ -50,8 +50,8 @@ export async function POST(req: NextRequest) {
     } catch (err) {
       return NextResponse.json(
         {
-          error: err,
-          // 'Failed to contact. Please try it later again or choose a different contact option.',
+          error:
+            'Failed to contact. Please try it later again or choose a different contact option.',
         },
         { status: 500 }
       );
