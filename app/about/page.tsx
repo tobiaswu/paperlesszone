@@ -13,6 +13,13 @@ import {
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
 import { RouteId } from '@/utils';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About DigitizerSpace - The why, who, and what of automation!',
+  description:
+    '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
+};
 
 export default function About() {
   return (

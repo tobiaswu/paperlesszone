@@ -26,6 +26,13 @@ import {
 import { SolutionCard } from '@/components/SolutionCard';
 import { PricingCard } from '@/components/PricingCard';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Get the Paperless-ngx system running | we install it for you',
+  description:
+    '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
+};
 
 export default function Paperless() {
   return (

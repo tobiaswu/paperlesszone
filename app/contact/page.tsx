@@ -9,6 +9,13 @@ import {
   PiPhoneCallLight,
 } from 'react-icons/pi';
 import transitions from '@/public/transitions.json';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact DigitizerSpace today - we help you automating',
+  description:
+    '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
+};
 
 export default function Contact() {
   return (
