@@ -385,6 +385,27 @@ export default function Paperless() {
             ]}
           />
         </div>
+        <h3 className="text-3xl mt-16 mb-4">Data protection</h3>
+        <div className="flex flex-col md:flex-row gap-8">
+          <p className="max-w-3xl">
+            Our server solution is compliant with EU Regulation 2016/679 (
+            <i>General Data Protection Regulation</i>, GDPR), the German Federal
+            Data Protection Act (<i>Bundesdatenschutzgesetz</i>, BDSG), the data
+            protection laws of the German Federal States as well as the German
+            Telemedia Act (<i>Telemediengesetz</i>, TMG) and the German
+            Telecommuniations-Telemedia-Data-Protection Act (
+            <i>Telekommunikations-Telemedien-Datenschutz-Gesetz</i>, TTDSG).
+          </p>
+          <div className="w-full">
+            <Image
+              className="w-auto h-32"
+              src="/images/ai-gdpr-shield.webp"
+              alt="EU GDPR logo"
+              width={128}
+              height={128}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
