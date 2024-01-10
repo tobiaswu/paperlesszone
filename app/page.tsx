@@ -81,20 +81,18 @@ export default function Home() {
             </MotionWrapper>
           </div>
           <MotionWrapper
-            variants={fadeInAnimationVariant}
-            className="flex flex-col sm:flex-row items-center justify-center pt-8"
+            variants={itemAnimationVariant}
+            className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8 sm:gap-16"
           >
             <div className="flex flex-col">
-              <p className="text-sm mr-16">We are proud to partner with</p>
+              <p className="text-sm">We are proud to partner with</p>
               <PiArrowBendDownRightLight className="text-3xl" />
             </div>
-            <div className="flex items-center gap-12">
+            <div className="flex flex-wrap lg:flex-nowrap items-center gap-12">
+              <PartnerLogo src="/logos/contabo_logo.svg" alt="Contabo Logo" />
+              <PartnerLogo src="/logos/IMS_logo.webp" alt="Immoselfmade Logo" />
               <PartnerLogo
-                src="/images/IMS_logo.webp"
-                alt="Immoselfmade Logo"
-              />
-              <PartnerLogo
-                src="/images/WV_logo.webp"
+                src="/logos/WV_logo.webp"
                 alt="Wupperfeld Ventures Logo"
               />
             </div>
