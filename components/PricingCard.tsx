@@ -1,71 +1,93 @@
-import {
-  PiCheckCircleLight,
-  PiInfoLight,
-  PiWarningCircleLight,
-} from 'react-icons/pi';
+import Link from 'next/link';
+import { PiCheckCircleLight, PiInfoLight } from 'react-icons/pi';
 
-export interface PricingCardProps {}
+type CardItem = {
+  icon?: JSX.Element;
+  name: string;
+  infoText?: string;
+};
 
-export const PricingCard = ({}: PricingCardProps) => {
+export interface PricingCardProps {
+  title: string;
+  subtitle?: string;
+  badgeText?: string;
+  priceOld?: string;
+  discount?: string;
+  price: string;
+  priceInfo?: string;
+  btnText: string;
+  btnUrl: string;
+  className?: string;
+  items: CardItem[];
+}
+
+export const PricingCard = ({
+  title,
+  subtitle,
+  badgeText,
+  priceOld,
+  discount,
+  price,
+  priceInfo,
+  btnText,
+  btnUrl,
+  className,
+  items,
+}: PricingCardProps) => {
   return (
-    <div className="card max-w-md bg-neutral rounded-lg shadow-md border-4 border-primary">
+    <div
+      className={`${className} card max-w-xl bg-neutral rounded-lg shadow-md border-4 border-primary h-fit`}
+    >
       <div className="card-body">
-        <div className="flex items-center justify-between">
-          <h3 className="card-title text-3xl text-primary">
-            The Paperless System
-          </h3>
-          <div className="badge badge-error w-fit sm:w-40 h-fit">
-            Only 2 seats left
-          </div>
+        <div className="badge badge-error w-fit sm:w-44 h-fit mb-2">
+          {badgeText}
         </div>
-        <p className="py-4">Perfect to get started</p>
+        <h3 className="card-title text-4xl font-bold text-primary capitalize leading-normal bg-gradient-to-br from-primary to-sapphire-800 text-transparent bg-clip-text">
+          {title}
+        </h3>
+        <p className="py-4">{subtitle}</p>
+        <div className="divider" />
         <div className="flex w-fit gap-2 items-center">
-          <p className="text-4xl font-semibold">$---</p>
+          <p className="text-4xl font-semibold">{price}</p>
           <div className="flex flex-col">
             <p className="text-xl line-through text-neutral-400 font-semibold">
-              $----
+              {priceOld}
             </p>
-            <p className="text-error">Beta phase 80% off</p>
+            <p className="text-error">{discount}</p>
           </div>
         </div>
-        <p className="text-base">One-time payment</p>
-        <div className="flex flex-col gap-2 pt-4">
-          <div className="flex items-center gap-2 w-fit">
-            <PiCheckCircleLight className="text-primary" />
-            <p>Paperless installed on US or EU server</p>
-            <PiInfoLight className="text-info" />
-          </div>
-          <div className="flex items-center gap-2 w-fit">
-            <PiCheckCircleLight className="text-primary" />
-            <p>Integration of your scanner</p>
-            <PiInfoLight className="text-info" />
-          </div>
-          <div className="flex items-center gap-2">
-            <PiCheckCircleLight className="text-primary" />
-            <p>30 day full support</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <PiCheckCircleLight className="text-primary" />
-            <p>Full video tutorial included</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <PiCheckCircleLight className="text-primary" />
-            <p>Access to exclusive mastermind</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <PiCheckCircleLight className="text-primary" />
-            <p>10% coupon on all tools</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <PiWarningCircleLight className="text-warning" />
-            <p>Not included: server costs (ca. $--/month)</p>
-          </div>
+        <p className="text-base">{priceInfo}</p>
+        <div className="flex flex-col gap-4 pt-4">
+          {items.map((item) => {
+            return (
+              <div key={item.name} className="flex items-center gap-2 w-fit">
+                {item.icon ? (
+                  <span className="text-accent text-3xl min-w-min">
+                    {item.icon}
+                  </span>
+                ) : (
+                  <PiCheckCircleLight className="text-primary text-3xl min-w-min" />
+                )}
+                <p>{item.name}</p>
+                {item.infoText && (
+                  <div
+                    className="tooltip tooltip-secondary tooltip-left md:tooltip-top"
+                    data-tip={item.infoText}
+                  >
+                    <PiInfoLight className="text-info text-xl min-w-min" />
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="card-actions justify-center px-4 pb-4">
-        <button className="btn btn-primary capitalize w-full">
-          Launching soon
-        </button>
+        <Link className="w-full" href={btnUrl}>
+          <button className="btn btn-primary capitalize w-full">
+            {btnText}
+          </button>
+        </Link>
       </div>
     </div>
   );

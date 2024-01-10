@@ -14,9 +14,13 @@ export const StatCard = ({
   return (
     <div className="stat glass rounded-lg">
       <div className="stat-figure text-primary text-3xl">{icon}</div>
-      <div className="stat-title text-base-content">{title}</div>
-      <div className="stat-value text-primary">{value}</div>
-      <div className="stat-desc text-base-content">{description}</div>
+      <div className="stat-title text-base-content whitespace-normal sm:whitespace-nowrap">
+        {title}
+      </div>
+      <div className="stat-value text-primary whitespace-normal sm:whitespace-nowrap">{value}</div>
+      <div className="stat-desc text-base-content whitespace-normal sm:whitespace-nowrap">
+        {description}
+      </div>
     </div>
   );
 };

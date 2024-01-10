@@ -3,20 +3,25 @@ import Image from 'next/image';
 import {
   PiArticleLight,
   PiCalculatorLight,
+  PiClockCountdownLight,
   PiCloudCheckLight,
   PiDesktopTowerLight,
   PiDownloadLight,
   PiFileArrowDownLight,
   PiHardDrivesLight,
   PiHourglassMediumLight,
+  PiKeyLight,
   PiLightbulbFilamentLight,
   PiMedalLight,
   PiNumberSquareOneLight,
   PiNumberSquareThreeLight,
   PiNumberSquareTwoLight,
   PiQuestionLight,
+  PiRobotLight,
   PiScanLight,
+  PiShootingStarLight,
   PiSignInLight,
+  PiWarningCircleLight,
   PiWrenchLight,
 } from 'react-icons/pi';
 import { SolutionCard } from '@/components/SolutionCard';
@@ -28,6 +33,8 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/utils/animation';
+import { StatCard } from '@/components/StatCard';
+import { RouteId } from '@/utils/route';
 
 export const metadata: Metadata = {
   title: 'Get the Paperless-ngx system running | we install it for you',
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
 export default function Paperless() {
   return (
     <>
-      <div className="hero bg-blob-soft bg-cover lg:bg-contain bg-top">
+      <div className="hero bg-blob-soft bg-cover xl:bg-contain bg-top">
         <div className="hero-content text-center flex flex-col">
           <MotionWrapper className="max-w-6xl" variants={itemAnimationVariant}>
             <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
@@ -47,49 +54,83 @@ export default function Paperless() {
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <p className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed">
-              Paperless is an open-source community developed document managment
-              software that runs on the server. You can connect your scanner to
-              it or just drop files from your devices into the consumption of
-              Paperless. The software automatically sorts and names your
-              documents and make it fully searchable thanks to OCR.
+              Paperless is an open-source community-developed document
+              management software that runs on the server. You can connect your
+              scanner to it or just drop files from your devices into the
+              consumption of Paperless. The software automatically sorts and
+              names your documents and makes them fully searchable thanks to
+              OCR.
             </p>
           </MotionWrapper>
-          <Link href="#pricing">
-            <button className="btn btn-secondary mb-16 capitalize">
-              Get started now
-            </button>
-          </Link>
-          <div className="flex flex-col md:flex-row gap-12 max-w-5xl">
-            <Image
-              src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
-              alt="White logo of paperless-ngx"
-              width={384}
-              height={184}
-              loading="lazy"
-            />
-            <div className="flex flex-col gap-4">
+          <MotionWrapper variants={itemAnimationVariant}>
+            <Link href="#pricing">
+              <button className="btn btn-secondary mb-16 capitalize">
+                Get started now
+              </button>
+            </Link>
+          </MotionWrapper>
+          <div className="flex flex-col lg:flex-row gap-12">
+            <div className="flex flex-col gap-4 max-w-2xl">
               <MotionWrapper index={0} variants={staggerAnimationVariant}>
-                <CheckedText description="Find the right documents at a blazingly speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
+                <Image
+                  className="h-auto w-96"
+                  src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
+                  alt="White logo of paperless-ngx"
+                  width={384}
+                  height={184}
+                  loading="lazy"
+                />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>
-                <CheckedText description="Never worry about your files. Everything is backed-up on your server." />
+                <CheckedText description="Find the right documents at a blazing speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
               </MotionWrapper>
               <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <CheckedText description="Never worry about your files. Everything is backed up on your server." />
+              </MotionWrapper>
+              <MotionWrapper index={3} variants={staggerAnimationVariant}>
                 <CheckedText description="Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time." />
+              </MotionWrapper>
+            </div>
+            <div className="flex flex-col gap-4">
+              <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiClockCountdownLight />}
+                  title="Avergage time to find a document"
+                  value="< 15 sec"
+                  description="Thanks to intelligent search"
+                />
+              </MotionWrapper>
+              <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiRobotLight />}
+                  title="Teach paperless how to"
+                  value="Name, tag and sort"
+                  description="No need for a classic folder structure"
+                />
+              </MotionWrapper>
+              <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiKeyLight />}
+                  title="Your data stays safe with"
+                  value="Flexible access rules"
+                  description="You decide what your team will see"
+                />
               </MotionWrapper>
             </div>
           </div>
         </div>
       </div>
 
-      <Image
-        className="container mx-auto pt-16 px-4"
-        src="https://docs.paperless-ngx.com/assets/screenshots/documents-smallcards-dark.png"
-        alt="paperless-ngx dashboard with tagged documents"
-        width={1920}
-        height={1080}
-        loading="lazy"
-      />
+      <MotionWrapper variants={itemAnimationVariant}>
+        <Image
+          className="container mx-auto pt-16 px-4"
+          src="https://docs.paperless-ngx.com/assets/screenshots/documents-smallcards-dark.png"
+          alt="paperless-ngx dashboard with tagged documents"
+          width={1920}
+          height={1080}
+          loading="lazy"
+        />
+      </MotionWrapper>
 
       <div className="container mx-auto px-4 py-16">
         <div className="flex gap-4 items-center mb-8">
@@ -257,8 +298,92 @@ export default function Paperless() {
           immediately receive the invoice in your email inbox. Within 24h we
           will start working on your inquiry.
         </p>
-        <div className="mt-8">
-          <PricingCard />
+        <div className="mt-8 flex flex-col lg:flex-row gap-8">
+          <PricingCard
+            title="The paperless system"
+            subtitle="Digitalize your document management"
+            priceOld="$4990"
+            discount="Beta phase: 80% off"
+            badgeText="Only 3 seats left"
+            price="$998"
+            priceInfo="One-time payment"
+            btnText="Launching soon"
+            btnUrl={RouteId.paperless}
+            items={[
+              {
+                name: 'Paperless-ngx installed on your company server or a virtual private server',
+                infoText:
+                  "In case you don't have your own server choose between our servers in Germany or the US or 9 other locations (we partner with contabo)",
+              },
+              {
+                name: 'Integration of your scanner',
+                infoText:
+                  'We connect your scanner with Paperless so that your scans will directly be imported',
+              },
+              {
+                name: 'Custom backup solution included',
+                infoText:
+                  'We setup a script to backup all your data in a place of your choice so that you can easily recover your documents in case of loss',
+              },
+              {
+                name: 'Custom configuration of Paperless included',
+                infoText: 'We configure Paperless as you wish',
+              },
+              {
+                name: "Money back guarantee if you don't increase your efficiency within 30 days after installation",
+                infoText:
+                  "We believe in our solution and return you the money no questions asked if you can't increase your efficiency.",
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: 'Bonus: 3 month access to our exclusive Automation Mastermind',
+                infoText:
+                  'Get access to our Telegram group for 3 months after your order (value: $99/month)',
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: 'Bonus: 3 month maintenance package',
+                infoText:
+                  'We install new updates for free for 3 months after your order (value: $49/month)',
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: 'Bonus: 10% coupon on all our tools and solutions',
+                infoText:
+                  'After the money back guarantee period is over we will send you a 10% coupon code which you can use to save on all of our offers.',
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: 'Bonus: Server costs for the first 3 months included',
+                infoText:
+                  'Server costs are on us for the initial 3 months after your order',
+              },
+              {
+                icon: <PiWarningCircleLight className="text-warning" />,
+                name: 'Server costs depend on your storage requirements',
+                infoText:
+                  'Starting at $4.50/month (200GB storage) and can be upgraded any time as you wish',
+              },
+            ]}
+          />
+          <PricingCard
+            title="Test system"
+            subtitle="Test Paperless here on our system"
+            badgeText="Free demo"
+            btnText="Start demo"
+            btnUrl={RouteId.paperless}
+            price="Free"
+            className="border-transparent"
+            items={[
+              {
+                name: 'Login with username: demo and password: digitizerspace ',
+              },
+              {
+                icon: <PiWarningCircleLight className="text-warning" />,
+                name: "Please don't upload sensitive data. This is a public installation of Paperless-ngx. Everyone can sign in and see what you've uploaded.",
+              },
+            ]}
+          />
         </div>
       </div>
     </>
