@@ -144,10 +144,12 @@ export default function About() {
             </div>
           </div>
           <p className="italic font-serif max-w-md">
-            &quot;The digitalization of everything that can be digitalized is
-            inevitable. Positioning oneself now before everyone else does is the
-            key to success. Working smarter, not harder, is the essence of
-            digital transformation.&quot;
+            &quot; I personally think that AI won&apos;t replace businesses but
+            businesses that use AI will replace businesses that don&apos;t.
+            Businesses powered by AI don&apos;t just lead, they dominate.
+            Positioning oneself now before everyone else does is the key to
+            success. Working smarter, not harder, is the essence of digital
+            transformation. &quot;
           </p>
         </div>
         <p>
