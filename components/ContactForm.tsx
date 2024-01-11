@@ -5,7 +5,7 @@ import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';
 import { ZodError, z } from 'zod';
 
 const schema = z.object({
-  name: z.string(),
+  name: z.string().min(2),
   email: z.string().email().min(5),
   phone: z.string().optional(),
   text: z.string().min(50),
