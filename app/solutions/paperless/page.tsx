@@ -371,7 +371,7 @@ export default function Paperless() {
             subtitle="Test Paperless here on our system"
             badgeText="Free demo"
             btnText="Start demo"
-            btnUrl={RouteId.paperless}
+            btnUrl="http://paperless.digitizerspace.com:8000/"
             price="Free"
             className="border-transparent"
             items={[
@@ -386,8 +386,8 @@ export default function Paperless() {
           />
         </div>
         <h3 className="text-3xl mt-16 mb-4">Data protection</h3>
-        <div className="flex flex-col md:flex-row gap-8">
-          <p className="max-w-3xl">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <p className="max-w-3xl text-sm">
             Our server solution is compliant with EU Regulation 2016/679 (
             <i>General Data Protection Regulation</i>, GDPR), the German Federal
             Data Protection Act (<i>Bundesdatenschutzgesetz</i>, BDSG), the data
