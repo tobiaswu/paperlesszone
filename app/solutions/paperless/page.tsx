@@ -393,7 +393,7 @@ export default function Paperless() {
             Data Protection Act (<i>Bundesdatenschutzgesetz</i>, BDSG), the data
             protection laws of the German Federal States as well as the German
             Telemedia Act (<i>Telemediengesetz</i>, TMG) and the German
-            Telecommuniations-Telemedia-Data-Protection Act (
+            Telecommunications-Telemedia-Data-Protection Act (
             <i>Telekommunikations-Telemedien-Datenschutz-Gesetz</i>, TTDSG).
           </p>
           <div className="w-full">
