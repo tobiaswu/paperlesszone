@@ -6,7 +6,7 @@ import {
   PiTriangleLight,
   PiTwitterLogoLight,
 } from 'react-icons/pi';
-import { navItems } from './Header';
+import { navItems } from './Navbar/Navbar.utils';
 
 export const Footer = () => {
   return (
