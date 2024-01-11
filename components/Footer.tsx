@@ -1,26 +1,94 @@
 import { RouteId } from '@/utils/route';
 import Link from 'next/link';
-import { PiDotOutlineLight, PiTwitterLogoLight } from 'react-icons/pi';
+import {
+  PiDotOutlineLight,
+  PiLockKeyLight,
+  PiTriangleLight,
+  PiTwitterLogoLight,
+} from 'react-icons/pi';
+import { navItems } from './Header';
 
 export const Footer = () => {
   return (
-    <footer className="footer items-center p-4 bg-neutral text-neutral-content">
-      <aside className="items-center grid-flow-col">
-        <p className="text-base">© 2024 TW Software Solutions LLC</p>
-        <PiDotOutlineLight className="text-2xl" />
-        <Link className="hover:text-primary" href={RouteId.privacy}>
-          <p className="text-base">Privacy</p>
-        </Link>
-        {/* <PiDotOutlineLight />
+    <footer className="bg-neutral">
+      <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
+        <div className="flex flex-col sm:flex-row justify-between gap-8 w-full">
+          <Link className="h-fit" href={RouteId.root}>
+            <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
+              DigitizerSpace
+            </p>
+          </Link>
+          {navItems.map((mainItem) => {
+            return (
+              mainItem.items && (
+                <div className="flex flex-col gap-2" key={mainItem.id}>
+                  <Link
+                    className="hover:text-primary w-fit"
+                    href={mainItem.url ?? RouteId.root}
+                  >
+                    <p className="font-bold">{mainItem.label}</p>
+                  </Link>
+                  {mainItem.items.map((item) => {
+                    return (
+                      <Link
+                        className="hover:text-primary w-fit"
+                        key={item.id}
+                        href={item.url ?? RouteId.root}
+                      >
+                        <p className="text-base">{item.label}</p>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )
+            );
+          })}
+        </div>
+        <div className="divider md:divider-horizontal mx-0" />
+        <div className="max-w-sm">
+          <p className="text-2xl leading-normal mb-4">
+            Sign up for our free automation & digitization newsletter
+          </p>
+          <Link href="/#newsletter">
+            <button className="btn btn-secondary">
+              Sign me up
+              <PiTriangleLight className="rotate-90" />
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div className="divider mb-0" />
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-4">
+        <aside className="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col sm:flex-row items-center">
+            <p className="text-sm">© 2024 TW Software Solutions LLC</p>
+            <PiDotOutlineLight className="text-2xl" />
+            <Link className="hover:text-primary" href={RouteId.about}>
+              <p className="text-sm">About us</p>
+            </Link>
+            <PiDotOutlineLight className="text-2xl" />
+            <Link className="hover:text-primary" href={RouteId.privacy}>
+              <p className="text-sm">Privacy</p>
+            </Link>
+            {/* <PiDotOutlineLight />
         <Link className="hover:text-primary" href="/terms">
           <p className="text-base">Terms</p>
         </Link> */}
-      </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <Link href="https://twitter.com/digitizerspace">
-          <PiTwitterLogoLight className="hover:text-primary text-3xl" />
-        </Link>
-      </nav>
+          </div>
+          <div className="border rounded-lg px-2 py-1 flex items-center gap-2 w-fit h-fit">
+            <PiLockKeyLight className="text-2xl" />
+            <div className="flex flex-col">
+              <p className="font-bold text-xs">Privacy</p>
+              <p className="text-xs">Protected</p>
+            </div>
+          </div>
+        </aside>
+        <nav>
+          <Link href="https://twitter.com/digitizerspace">
+            <PiTwitterLogoLight className="hover:text-primary text-3xl" />
+          </Link>
+        </nav>
+      </div>
     </footer>
   );
 };
