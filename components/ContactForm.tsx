@@ -15,8 +15,11 @@ const schema = z.object({
 export const ContactForm = () => {
   const [message, setMessage] = useState<string>();
   const [error, setError] = useState<string>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = async (formData: FormData) => {
+    setIsLoading(true);
+
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;
@@ -48,6 +51,7 @@ export const ContactForm = () => {
         .then((data) => setMessage(data.message))
         .catch((err) => setError(err.error));
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -101,7 +105,14 @@ export const ContactForm = () => {
           />
         </label>
         <button className="btn btn-primary" type="submit">
-          Submit
+          {isLoading ? (
+            <>
+              <span className="loading loading-spinner loading-md" />
+              <span>Sending</span>
+            </>
+          ) : (
+            <span>Submit</span>
+          )}
         </button>
       </form>
       {message && (

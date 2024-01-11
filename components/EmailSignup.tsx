@@ -13,8 +13,11 @@ const schema = z.object({
 export const EmailSignup = () => {
   const [message, setMessage] = useState<string>();
   const [error, setError] = useState<string>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = async (formData: FormData) => {
+    setIsLoading(true);
+
     const email = formData.get('email') as string;
 
     const parsed = schema.safeParse({
@@ -38,6 +41,7 @@ export const EmailSignup = () => {
         .then((data) => setMessage(data.message))
         .catch((err) => setError(err.error));
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -67,7 +71,14 @@ export const EmailSignup = () => {
           type="submit"
           className="btn btn-primary w-full sm:w-fit join-item"
         >
-          Subscribe
+          {isLoading ? (
+            <>
+              <span className="loading loading-spinner loading-md" />
+              <span>Sending</span>
+            </>
+          ) : (
+            <span>Subscribe</span>
+          )}
         </button>
       </form>
       {message && (
