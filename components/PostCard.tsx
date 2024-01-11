@@ -14,7 +14,7 @@ export const PostCard = ({ className, preview }: PostCardProps) => {
         <Link className="w-full" href={`${RouteId.blog}/my-post`}>
           <Image
             className="object-cover w-full h-full"
-            src="/images/ai-hagrid-robots.webp"
+            src="/assets/images/ai-hagrid-robots.webp"
             alt="Album"
             width={300}
             height={300}

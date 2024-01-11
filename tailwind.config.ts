@@ -27,9 +27,9 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'blob-md': "url('/backgrounds/blob-md.svg')",
-        'blob-lg': "url('/backgrounds/blob-lg.svg')",
-        'blob-soft': "url('/backgrounds/blob-soft.svg')",
+        'blob-md': "url('/assets/backgrounds/blob-md.svg')",
+        'blob-lg': "url('/assets/backgrounds/blob-lg.svg')",
+        'blob-soft': "url('/assets/backgrounds/blob-soft.svg')",
       },
       colors: {
         lime_green: {

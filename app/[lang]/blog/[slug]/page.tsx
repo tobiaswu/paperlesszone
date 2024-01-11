@@ -101,7 +101,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </p>
           <div className="flex flex-col py-4">
             <Image
-              src="/images/ai-hagrid-robots.webp"
+              src="/assets/images/ai-hagrid-robots.webp"
               alt="Placeholder image"
               width={600}
               height={200}
@@ -115,7 +115,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <div className="flex gap-8 items-center justify-between mx-auto max-w-4xl px-4">
         <BlogPostAuthor
           name="Tobias Wupperfeld"
-          avatarUrl="/images/founder-portrait.webp"
+          avatarUrl="/assets/images/founder-portrait.webp"
           twitterUrl="/"
           linkedinUrl="/"
         />

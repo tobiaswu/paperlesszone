@@ -6,6 +6,8 @@ import { LottieAnimation } from '@/components/LottieAnimation';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { PartnerLogo } from '@/components/PartnerLogo';
 import { UseCaseCard } from '@/components/UseCaseCard';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 import {
   fadeInAnimationVariant,
   itemAnimationVariant,
@@ -29,7 +31,13 @@ import {
   PiTriangleLight,
 } from 'react-icons/pi';
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
+
   return (
     <>
       <div className="container mx-auto hero min-h-screen relative">
@@ -89,17 +97,23 @@ export default function Home() {
               <PiArrowBendDownRightLight className="text-3xl" />
             </div>
             <div className="flex flex-wrap lg:flex-nowrap items-center gap-12">
-              <PartnerLogo src="/logos/contabo_logo.svg" alt="Contabo Logo" />
-              <PartnerLogo src="/logos/IMS_logo.webp" alt="Immoselfmade Logo" />
               <PartnerLogo
-                src="/logos/WV_logo.webp"
+                src="/assets/logos/contabo_logo.svg"
+                alt="Contabo Logo"
+              />
+              <PartnerLogo
+                src="/assets/logos/IMS_logo.webp"
+                alt="Immoselfmade Logo"
+              />
+              <PartnerLogo
+                src="/assets/logos/WV_logo.webp"
                 alt="Wupperfeld Ventures Logo"
               />
             </div>
           </MotionWrapper>
         </div>
         <div className="-z-10 w-full opacity-30 absolute">
-          <LottieAnimation src="/animations/matrix.lottie" />
+          <LottieAnimation src="/assets/animations/matrix.lottie" />
         </div>
       </div>
 
@@ -173,37 +187,42 @@ export default function Home() {
       </section>
 
       <section className="py-32">
-        <MotionWrapper
-          variants={fadeInAnimationVariant}
-          className="container mx-auto px-4"
-        >
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-12">
             <div
               className="tooltip tooltip-neutral col-span-2 lg:col-span-1 w-fit"
               data-tip="Prompt: an astronaut floating in space with earth in the background, shrugging his arms, neon green lighting, cinematic."
             >
-              <Image
-                className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-                src="/images/ai-astronaut-shrugging.webp"
-                alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
-                width={512}
-                height={512}
-                loading="lazy"
-              />
+              <MotionWrapper variants={fadeInAnimationVariant}>
+                <Image
+                  className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+                  src="/assets/images/ai-astronaut-shrugging.webp"
+                  alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
+                  width={512}
+                  height={512}
+                  loading="lazy"
+                />
+              </MotionWrapper>
             </div>
             <div className="flex flex-col col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
-              <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
-                Benefit from the wave of new technology
-              </h2>
-              <h3 className="text-2xl mb-4 sm:leading-normal">
-                and implement it in your business the right way
-              </h3>
-              <p className="mb-8">
-                Today&apos;s software landscape enables you to do much more than
-                just integrating chatbots but it can be overwhelming to know
-                what works best for your business. DigitizerSpace is here to
-                help you identify use cases.
-              </p>
+              <MotionWrapper variants={itemAnimationVariant}>
+                <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
+                  Benefit from the wave of new technology
+                </h2>
+              </MotionWrapper>
+              <MotionWrapper variants={itemAnimationVariant}>
+                <h3 className="text-2xl mb-4 sm:leading-normal">
+                  and implement it in your business the right way
+                </h3>
+              </MotionWrapper>
+              <MotionWrapper variants={itemAnimationVariant}>
+                <p className="mb-8">
+                  Today&apos;s software landscape enables you to do much more
+                  than just integrating chatbots but it can be overwhelming to
+                  know what works best for your business. DigitizerSpace is here
+                  to help you identify use cases.
+                </p>
+              </MotionWrapper>
               <div className="flex flex-col gap-4">
                 <CheckedText description="Stay up to date with trends and tools." />
                 <CheckedText description="Identify use cases for your business." />
@@ -211,7 +230,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </MotionWrapper>
+        </div>
       </section>
 
       <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
@@ -239,20 +258,21 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <MotionWrapper
-          variants={fadeInAnimationVariant}
-          className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
+        <div
+          className="tooltip tooltip-neutral col-span-2 lg:col-span-1 w-fit"
           data-tip="Prompt: a team of astronauts in black suits walking in a spaceship, neon green lighting, cinematic with lens flares, with DigitizerSpace written in large white letters on their suits."
         >
-          <Image
-            className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
-            src="/images/ai-team-digitizerspace.webp"
-            alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
-            width={512}
-            height={512}
-            loading="lazy"
-          />
-        </MotionWrapper>
+          <MotionWrapper variants={fadeInAnimationVariant}>
+            <Image
+              className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+              src="/assets/images/ai-team-digitizerspace.webp"
+              alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
+              width={512}
+              height={512}
+              loading="lazy"
+            />
+          </MotionWrapper>
+        </div>
       </section>
 
       <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">

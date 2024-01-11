@@ -399,7 +399,7 @@ export default function Paperless() {
           <div className="w-full">
             <Image
               className="w-auto h-32"
-              src="/images/ai-gdpr-shield.webp"
+              src="/assets/images/ai-gdpr-shield.webp"
               alt="EU GDPR logo"
               width={128}
               height={128}
