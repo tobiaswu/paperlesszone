@@ -57,37 +57,39 @@ export const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="divider mb-0" />
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-4">
-        <aside className="flex flex-col sm:flex-row items-center justify-between gap-8">
-          <div className="flex flex-col sm:flex-row items-center">
-            <p className="text-sm">© 2024 TW Software Solutions LLC</p>
-            <PiDotOutlineLight className="text-2xl" />
-            <Link className="hover:text-primary" href={RouteId.about}>
-              <p className="text-sm">About us</p>
-            </Link>
-            <PiDotOutlineLight className="text-2xl" />
-            <Link className="hover:text-primary" href={RouteId.privacy}>
-              <p className="text-sm">Privacy</p>
-            </Link>
-            {/* <PiDotOutlineLight />
+
+      <div className="bg-gunmetal-400">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-4">
+          <aside className="flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col sm:flex-row items-center">
+              <p className="text-sm">© 2024 TW Software Solutions LLC</p>
+              <PiDotOutlineLight className="text-2xl" />
+              <Link className="hover:text-primary" href={RouteId.about}>
+                <p className="text-sm">About us</p>
+              </Link>
+              <PiDotOutlineLight className="text-2xl" />
+              <Link className="hover:text-primary" href={RouteId.privacy}>
+                <p className="text-sm">Privacy</p>
+              </Link>
+              {/* <PiDotOutlineLight />
         <Link className="hover:text-primary" href="/terms">
           <p className="text-base">Terms</p>
         </Link> */}
-          </div>
-          <div className="border rounded-lg px-2 py-1 flex items-center gap-2 w-fit h-fit">
-            <PiLockKeyLight className="text-2xl" />
-            <div className="flex flex-col">
-              <p className="font-bold text-xs">Privacy</p>
-              <p className="text-xs">Protected</p>
             </div>
-          </div>
-        </aside>
-        <nav>
-          <Link href="https://twitter.com/digitizerspace">
-            <PiTwitterLogoLight className="hover:text-primary text-3xl" />
-          </Link>
-        </nav>
+            <div className="border rounded-lg px-2 py-1 flex items-center gap-2 w-fit h-fit">
+              <PiLockKeyLight className="text-2xl" />
+              <div className="flex flex-col">
+                <p className="font-bold text-xs">Privacy</p>
+                <p className="text-xs">Protected</p>
+              </div>
+            </div>
+          </aside>
+          <nav>
+            <Link href="https://twitter.com/digitizerspace">
+              <PiTwitterLogoLight className="hover:text-primary text-3xl" />
+            </Link>
+          </nav>
+        </div>
       </div>
     </footer>
   );
