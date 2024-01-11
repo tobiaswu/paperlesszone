@@ -3,16 +3,16 @@ import Link from 'next/link';
 import {
   PiDotOutlineLight,
   PiLockKeyLight,
-  PiTriangleLight,
   PiTwitterLogoLight,
 } from 'react-icons/pi';
 import { navItems } from './Navbar/Navbar.utils';
+import { EmailSignup } from './EmailSignup';
 
 export const Footer = () => {
   return (
     <footer className="bg-neutral">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
-        <div className="flex flex-col sm:flex-row justify-between gap-8 w-full">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
           <Link className="h-fit" href={RouteId.root}>
             <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
               DigitizerSpace
@@ -49,12 +49,7 @@ export const Footer = () => {
           <p className="text-2xl leading-normal mb-4">
             Sign up for our free automation & digitization newsletter
           </p>
-          <Link href="/#newsletter">
-            <button className="btn btn-secondary">
-              Sign me up
-              <PiTriangleLight className="rotate-90" />
-            </button>
-          </Link>
+          <EmailSignup />
         </div>
       </div>
 
