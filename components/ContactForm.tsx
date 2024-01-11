@@ -9,6 +9,7 @@ const schema = z.object({
   email: z.string().email().min(5),
   phone: z.string().optional(),
   text: z.string().min(50),
+  checkbox: z.string().optional().nullable(),
 });
 
 export const ContactForm = () => {
@@ -20,12 +21,14 @@ export const ContactForm = () => {
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;
     const text = formData.get('text') as string;
+    const checkbox = formData.get('checkbox') as string;
 
     const parsed = schema.safeParse({
       name: name,
       email: email,
       phone: phone,
       text: text,
+      checkbox: checkbox,
     });
 
     if (!parsed.success) {
@@ -39,7 +42,7 @@ export const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, phone, text }),
+        body: JSON.stringify({ name, email, phone, text, checkbox }),
       })
         .then((res) => res.json())
         .then((data) => setMessage(data.message))
@@ -89,6 +92,14 @@ export const ContactForm = () => {
           placeholder="Tell us about your project"
           required
         ></textarea>
+        <label className="cursor-pointer label w-fit gap-4">
+          <span className="label-text">Send me a copy to my email</span>
+          <input
+            type="checkbox"
+            name="checkbox"
+            className="checkbox checkbox-primary"
+          />
+        </label>
         <button className="btn btn-primary" type="submit">
           Submit
         </button>

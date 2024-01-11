@@ -4,7 +4,7 @@ import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(req: NextRequest) {
   if (req.method === 'POST') {
-    const { name, email, phone, text } = await req.json();
+    const { name, email, phone, text, checkbox } = await req.json();
 
     const transport = nodemailer.createTransport({
       host: 'ha01s019.org-dns.com',
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const mailOptions: Mail.Options = {
       from: process.env.CONTACT_EMAIL,
       to: process.env.CONTACT_EMAIL,
-      // cc: email, (uncomment this line if you want to send a copy to the sender)
+      cc: checkbox === 'on' && email,
       subject: `Message from ${name}`,
       text: `${text}
 
