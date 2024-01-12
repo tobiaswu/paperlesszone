@@ -21,15 +21,15 @@
       "digitizationTitle": "Digitization",
       "digitizationDescription": "Eliminate pen and paper and make every information accessible to your team",
       "aiTitle": "AI Generation",
-      "aiDescription": "Use artificial intelligence to generate the content you need like images and videos"
+      "aiDescription": "Use artificial intelligence to generate the content you need like images, texts, and videos"
     },
     "blogSection": {
       "title": "Explore our blog"
     },
     "benefitSection": {
       "title": "Benefit from the wave of new technology",
-      "subtitle": "and implement it in your business the right way",
-      "description": "Today&apos;s software landscape enables you to do much more than just integrating chatbots but it can be overwhelming to know what works best for your business. DigitizerSpace is here to help you identify use cases.",
+      "subtitle": "and implement it in your business in a profitable way",
+      "description": "Today&apos;s software landscape enables you to do much more than just integrating ChatGPT but it can be overwhelming to know what works best for your business. DigitizerSpace is here to help you identify use cases.",
       "firstText": "Stay up to date with trends and tools.",
       "secondText": "Identify use cases for your business.",
       "thirdText": "Implement solutions that will boost your business."
@@ -73,7 +73,7 @@
     "fortune500LinkText": "80% of Fortune 500 companies use OpenAI products?",
     "sixthSectionText": "These companies have long understood the potential of AI and have been using it to their advantage. With the increasing demand for AI, it&apos;s only a matter of time until smaller businesses start adopting it too.",
     "secondSubtitle": "Final words",
-    "seventhSectionText": " By partnering with DigitizerSpace, you can take advantage of the latest automation technologies and stay ahead of the competition. Check out our",
+    "seventhSectionText": "By partnering with DigitizerSpace, you can take advantage of the latest automation technologies and stay ahead of the competition. Check out our",
     "resourcesLinkText": "resources",
     "solutionsLinkText": "solutions",
     "contactUsLinkText": "contact us",
@@ -110,7 +110,7 @@
       "thirdCheckedText": "Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time.",
       "averageTimeTitle": "Avergage time to find a document",
       "averageTimeValue": "< 15 sec",
-      "averageTimeDescription": "Thanks to intelligent search",
+      "averageTimeDescription": "Thanks to intelligent OCR search",
       "teachTitle": "Teach paperless how to",
       "teachValue": "Name, tag and sort",
       "teachDescription": "No need for a classic folder structure",
@@ -198,6 +198,11 @@
     "resources": "Resources",
     "about": "About",
     "paperless": "Paperless Office"
+  },
+  "footer": {
+    "emailSignup": "Sign up for our free automation & digitization newsletter",
+    "aboutUs": "About us",
+    "privacy": "Privacy"
   },
   "contactForm": {
     "phonePlaceholder": "Phone",

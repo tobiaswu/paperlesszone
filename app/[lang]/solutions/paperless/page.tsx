@@ -68,12 +68,12 @@ export default async function Paperless({
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <Link href="#pricing">
-              <button className="btn btn-secondary mb-16 capitalize">
+              <button className="btn btn-secondary btn-lg mb-16 capitalize">
                 {dict.button.getStarted}
               </button>
             </Link>
           </MotionWrapper>
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex flex-col gap-4 max-w-2xl">
               <MotionWrapper index={0} variants={staggerAnimationVariant}>
                 <Image

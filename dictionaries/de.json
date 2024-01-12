@@ -1,228 +1,233 @@
 {
   "root": {
-    "heroTitle": "Scale and Digitalize your Business with Intelligent Automations",
-    "heroSubtitle": "Discover how you can",
-    "partnerTitle": "We are proud to partner with",
+    "heroTitle": "Skalieren und Digitalisieren Sie Ihr Unternehmen mit intelligenten Automatisierungen",
+    "heroSubtitle": "Entdecken Sie wie Sie",
+    "partnerTitle": "Wir sind stolze Partner von",
     "discoverCard": {
-      "systemTitle": "Build systems",
-      "automateTitle": "Automate processes",
-      "eliminateTitle": "Eliminate pen & paper",
-      "costTitle": "Reduce costs",
-      "efficiencyTitle": "Increase efficiency",
-      "happyTitle": "Boost employee happiness"
+      "systemTitle": "Systeme bauen",
+      "automateTitle": "Prozesse automatisieren",
+      "eliminateTitle": "Stift & Papier eliminieren",
+      "costTitle": "Kosten reduzieren",
+      "efficiencyTitle": "Effizienz steigern",
+      "happyTitle": "Mitarbeiter Zufriedenheit erhöhen"
     },
     "useCaseSection": {
-      "title": "Learn based on our business use cases",
-      "description": "We are a team of AI geeks, software engineers and entrepreneurs who are passionate about creating innovative solutions. We stay up-to-date with the latest technologies and tools and continuously test new products. We combine our technical expertise with our industry insights to create and publish solutions on DigitizerSpace that are both cutting-edge and simple to use.",
-      "automationTitle": "Automations",
-      "automationDescription": "Connect various apps with each other via APIs and safe tons of time",
-      "workflowTitle": "Workflows",
-      "workflowDescription": "Create systematic approaches to your daily tasks and easy to follow routines for your employees",
-      "digitizationTitle": "Digitization",
-      "digitizationDescription": "Eliminate pen and paper and make every information accessible to your team",
-      "aiTitle": "AI Generation",
-      "aiDescription": "Use artificial intelligence to generate the content you need like images and videos"
+      "title": "Lernen Sie basierend auf unseren Anwendungsfällen aus der Praxis",
+      "description": "Wir sind ein Team von AI-Geeks, Software-Ingenieuren und Unternehmern, die leidenschaftlich daran arbeiten, innovative Lösungen zu schaffen. Wir bleiben auf dem neuesten Stand der Technik und Software-Tools und testen kontinuierlich neue Produkte. Wir kombinieren unser technisches Know-how mit unseren Brancheneinblicken, um auf DigitizerSpace Lösungen zu entwickeln und zu veröffentlichen, die sowohl modern als auch einfach zu bedienen sind.",
+      "automationTitle": "Automatisierungen",
+      "automationDescription": "Verbinden Sie eine Vielzahl von Apps miteinander via APIs und sparen Sie Unmengen Ihrer produktiven Zeit",
+      "workflowTitle": "Arbeitsabläufe",
+      "workflowDescription": "Erstellen Sie systematische Ansätze für Ihre alltäglichen Aufgaben und einfach zu befolgende Routinen für Ihre Mitarbeiter",
+      "digitizationTitle": "Digitalisierung",
+      "digitizationDescription": "Eliminieren Sie Stift und Papier und machen Sie jede Information verfügbar für Ihr Team",
+      "aiTitle": "AI Generierung",
+      "aiDescription": "Verwenden Sie künstliche Intelligenz, um die Inhalte zu generieren, die Sie benötigen wie Bilder, Texte, und Videos"
     },
     "blogSection": {
-      "title": "Explore our blog"
+      "title": "Entdecken Sie unseren Blog"
     },
     "benefitSection": {
-      "title": "Benefit from the wave of new technology",
-      "subtitle": "and implement it in your business the right way",
-      "description": "Today&apos;s software landscape enables you to do much more than just integrating chatbots but it can be overwhelming to know what works best for your business. DigitizerSpace is here to help you identify use cases.",
-      "firstText": "Stay up to date with trends and tools.",
-      "secondText": "Identify use cases for your business.",
-      "thirdText": "Implement solutions that will boost your business."
+      "title": "Profitieren Sie von der Welle neuer Technologie",
+      "subtitle": "und implementieren Sie es auf profitable Weise in Ihr Unternehmen",
+      "description": "Die heutige Softwarelandschaft ermöglicht es Ihnen, viel mehr zu tun, als nur ChatGPT zu integrieren, aber es kann überwältigend sein, zu wissen, was am besten für Ihr Unternehmen funktioniert. DigitizerSpace ist hier, um Ihnen bei der Identifizierung von Anwendungsfällen zu helfen.",
+      "firstText": "Bleiben Sie auf dem Laufenden mit den neuesten Trends und Tools.",
+      "secondText": "Identifizieren Sie Anwendungsfälle für Ihr Unternehmen.",
+      "thirdText": "Implementieren Sie Lösungen, die Ihr Unternehmen wachsen lassen werden."
     },
     "aboutSection": {
-      "title": "We seamlessly build and launch automation solutions",
-      "subtitle": "In case you need an automation hand take a look at our tailored services",
-      "firstText": "Pre-built automation solutions that can be customized to fit your business needs.",
-      "secondText": "Software products and tools that can help you automate your business processes.",
-      "thirdText": "Consulting service designed to help you identify areas where automation and digitization can improve your processes."
+      "title": "Wir entwickeln und veröffentlichen Qualitäts-Automatisierungs-Lösungen",
+      "subtitle": "Falls Sie Unterstützung bei der Automatisierung benötigen, schauen Sie sich unsere maßgeschneiderten Dienstleistungen an",
+      "firstText": "Vorgefertigte Automatisierungslösungen, die an Ihre Geschäftsanforderungen angepasst werden können.",
+      "secondText": "Softwareprodukte und -tools, die Ihnen helfen können Ihre Geschäftsprozesse zu automatisieren.",
+      "thirdText": "Beratungsleistung, die darauf abzielt, Ihnen dabei zu helfen, Bereiche zu identifizieren, in denen Automatisierung und Digitalisierung Ihre Prozesse verbessern können."
     },
     "clientSection": {
-      "title": "Hear from our clients",
-      "description": "How our clients have transformed their business with us, streamlined processes, improved efficiency, saved costs and increased revenue."
+      "title": "Erfahrungen unserer Kunden",
+      "description": "Wie unsere Kunden ihr Geschäft mit uns transformiert haben. Von Prozessoptimierungen über Effizienzsteigerungen, Kostenersparnissen und Umsatzsteigerungen."
     },
     "newsletterSection": {
-      "title": "Be the first to receive our industry specific trends",
-      "description": "Our goal is to help you leverage the latest automation technologies and artificial intelligence to run your business with a tailwind.",
-      "firstText": "Never miss out on news, trends and special offers.",
-      "secondText": "Receive our latest insights and updates."
+      "title": "Erhalten Sie als Erstes unsere branchen-spezifischen Trends",
+      "description": "Unser Ziel ist es, Sie dabei zu unterstützen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um Ihr Unternehmen mit Rückenwind zu führen.",
+      "firstText": "Sie verpassen keine Neuigkeiten, Trends und Sonderangebote mehr.",
+      "secondText": "Sie erhalten unsere neuesten Erkenntnisse und Updates."
     }
   },
   "about": {
-    "title": "We build solutions for everyday business activities",
-    "description": "We are a group of tech-savvy individuals who run our own businesses in various industries. We are passionate about solving everyday problems with innovative solutions and automating as much as possible. By freeing up our time, we can focus on what we are most passionate about.",
+    "title": "Wir entwickeln Lösungen für den Geschäftsalltag",
+    "description": "Wir sind eine Gruppe von technisch versierten Personen, die ihre eigenen Unternehmen in verschiedenen Branchen führen. Unsere Leidenschaft ist es, alltägliche Probleme mit innovativen Lösungen zu lösen und so viel wie möglich zu automatisieren. Indem wir unsere Zeit frei machen, können wir uns auf das konzentrieren, was uns am meisten am Herzen liegt.",
     "statCard": {
-      "foundedTitle": "Founded",
+      "foundedTitle": "Gründung",
       "founedValue": "2023",
-      "costSavingTitle": "Average cost saved",
-      "costSavingValue": "$3000/m",
-      "timeSavingTitle": "Average time saved",
+      "costSavingTitle": "Durchschnittliche Kostenersparnis",
+      "costSavingValue": "3000€/m",
+      "timeSavingTitle": "Durchschnittliche Zeitersparnis",
       "timeSavingValue": "140h/m"
     },
-    "firstSectionText": "We quickly realized that many business owners are so busy with day-to-day activities that they don&apos;t have time to keep up with the latest technologies, let alone integrate them into their operations. We are passionate about the rapid development of software, especially when it comes to artificial intelligence.",
-    "secondSectionText": "That&apos;s why we decided to make our research public and create",
-    "thirdSectionText": "Our goal is to simplify the process of integrating new technologies into your business and offer you our knowledge and experience. We&apos;ve developed industry-specific tools that help you automate, digitalize and streamline your workflows.",
-    "firstSubtitle": "About the founder",
-    "fourthSectionText": "Tobias Wupperfeld is the founder of DigitizerSpace. He is a seasoned software engineer with experience in various industries, including working at international corporations like SAP and innovative AI startups. Tobias has a passion for innovation and is dedicated to helping businesses of all sizes leverage the latest automation technologies and artificial intelligence to save time, cost and increase efficiency.",
-    "quote": "I personally think that AI won&apos;t replace businesses but businesses that use AI will replace businesses that don&apos;t. Businesses powered by AI don&apos;t just lead, they dominate. Positioning oneself now before everyone else does is the key to success. Working smarter, not harder, is the essence of digital transformation.",
-    "fifthSectionText": "Did you know that",
-    "fortune500LinkText": "80% of Fortune 500 companies use OpenAI products?",
-    "sixthSectionText": "These companies have long understood the potential of AI and have been using it to their advantage. With the increasing demand for AI, it&apos;s only a matter of time until smaller businesses start adopting it too.",
-    "secondSubtitle": "Final words",
-    "seventhSectionText": " By partnering with DigitizerSpace, you can take advantage of the latest automation technologies and stay ahead of the competition. Check out our",
-    "resourcesLinkText": "resources",
-    "solutionsLinkText": "solutions",
-    "contactUsLinkText": "contact us",
-    "eighthSectionText": "to learn more about how we can help you achieve your business objectives."
+    "firstSectionText": "Wir haben schnell erkannt, dass viele Geschäftsinhaber so sehr mit dem Tagesgeschäft beschäftigt sind, dass sie keine Zeit haben, mit den neuesten Technologien Schritt zu halten, geschweige denn, sie in ihren Betrieb zu integrieren. Wir setzen uns leidenschaftlich für die schnelle Entwicklung von Software ein, vor allem im Bereich der künstlichen Intelligenz.",
+    "secondSectionText": "Deshalb haben wir beschlossen, unsere Forschung öffentlich zu machen mit",
+    "thirdSectionText": "Unser Ziel ist es, den Prozess der Integration neuer Technologien in Ihr Unternehmen zu vereinfachen und Ihnen unser Wissen und unsere Erfahrung zur Verfügung zu stellen. Wir haben branchenspezifische Tools entwickelt, die Ihnen helfen, Ihre Arbeitsabläufe zu automatisieren, zu digitalisieren und zu rationalisieren.",
+    "firstSubtitle": "Über den Gründer",
+    "fourthSectionText": "Tobias Wupperfeld ist der Gründer von DigitizerSpace. Er ist ein erfahrener Software-Ingenieur mit Erfahrung in verschiedenen Branchen. Er hat unter anderem bei internationalen Konzernen wie SAP und innovativen KI-Startups gearbeitet. Tobias hat eine Leidenschaft für Innovationen und möchte Unternehmen jeder Größe dabei helfen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um Zeit und Kosten zu sparen und die Effizienz zu steigern.",
+    "quote": "Ich persönlich glaube, dass KI Unternehmen nicht ersetzen wird, aber Unternehmen, die KI nutzen, werden Unternehmen ersetzen, die dies nicht tun. Unternehmen, die KI einsetzen werden, werden nicht nur führen, sondern dominieren. Sich jetzt gut aufzustellen, bevor es alle anderen tun, ist der Schlüssel zum Erfolg. Intelligenter arbeiten, nicht härter, das ist die Essenz der digitalen Transformation.",
+    "fifthSectionText": "Wussten Sie, dass",
+    "fortune500LinkText": "80% der Fortune 500 Unternehmen OpenAI Produkte einsetzen?",
+    "sixthSectionText": "Diese Unternehmen haben das Potenzial von KI längst erkannt und nutzen es zu ihrem Vorteil. Mit der zunehmenden Nachfrage nach KI ist es nur eine Frage der Zeit, bis auch kleinere Unternehmen damit beginnen, sie einzusetzen.",
+    "secondSubtitle": "Schlussworte",
+    "seventhSectionText": "Durch eine Zusammenarbeit mit DigitizerSpace können Sie die Vorteile der neuesten Automatisierungstechnologien nutzen und der Konkurrenz einen Schritt voraus sein. Schauen Sie sich unsere",
+    "resourcesLinkText": "Ressourcen",
+    "solutionsLinkText": "oder Lösungen an",
+    "contactUsLinkText": "kontaktieren Sie uns,",
+    "eighthSectionText": "um mehr darüber zu erfahren, wie wir Sie bei der Erreichung Ihrer Geschäftsziele unterstützen können."
   },
   "contact": {
-    "title": "Nehmen Sie Kontakt mit uns auf",
-    "description": "Got a project in mind? Let&apos;s talk, we&apos;d love to hear from you. Choose a contact option below or simply fill in the form and one of the team will be in touch!",
-    "callOptionLabel": "Call",
-    "callOptionText": "Schedule a call here",
-    "officeOptionLabel": "Office",
-    "officeOptionText": "USA, Florida (global clients)",
-    "formTitle": "Tell us about your project",
-    "formDescription": "How can DigitizerSpace help you? One of the team will be in touch after you submit this form."
+    "title": "Kontakt",
+    "description": "Haben Sie ein Projekt im Sinn? Lassen Sie uns darüber reden. Wir würden uns freuen, von Ihnen zu hören. Wählen Sie unten eine Kontaktoption oder füllen Sie einfach das Formular aus. Ein Teammitglied wird sich mit Ihnen in Verbindung setzen!",
+    "callOptionLabel": "Telefonat",
+    "callOptionText": "Buchen Sie ein Telefonat hier",
+    "officeOptionLabel": "Büro",
+    "officeOptionText": "Florida, USA (internationale Kundschaft)",
+    "formTitle": "Erzählen Sie uns über Ihr Projekt",
+    "formDescription": "Wie kann Ihnen DigitizerSpace helfen? Ein Teammitglied wird sich mit Ihnen in Verbindung setzen, nachdem Sie dieses Formular abgeschickt haben."
   },
   "privacy": {
-    "title": "Privacy Policy"
+    "title": "Datenschutzerklärung"
   },
   "blog": {
     "category": {
-      "all": "All",
-      "useCases": "Use Cases",
+      "all": "Alle",
+      "useCases": "Praxis",
       "guides": "Guides",
       "trends": "Trends",
-      "productNews": "Product News"
+      "productNews": "News"
     }
   },
   "solutions": {
     "paperless": {
-      "title": "Transform your physical documents into a searchable online archive",
-      "description": "Paperless is an open-source community-developed document management software that runs on the server. You can connect your scanner to it or just drop files from your devices into the consumption of Paperless. The software automatically sorts and names your documents and makes them fully searchable thanks to OCR.",
-      "firstCheckedText": "Find the right documents at a blazing speed and simplify collaborating with your team by digitalizing all your documents with Paperless.",
-      "secondCheckedText": "Never worry about your files. Everything is backed up on your server.",
-      "thirdCheckedText": "Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time.",
-      "averageTimeTitle": "Avergage time to find a document",
-      "averageTimeValue": "< 15 sec",
-      "averageTimeDescription": "Thanks to intelligent search",
-      "teachTitle": "Teach paperless how to",
-      "teachValue": "Name, tag and sort",
-      "teachDescription": "No need for a classic folder structure",
-      "dataSafetyTitle": "Your data stays safe with",
-      "dataSafetyValue": "Flexible access rules",
-      "dataSafetyDescription": "You decide what your team will see",
-      "reqTitle": "What do I need?",
-      "reqDescription": "Everything you need to setup the paperless system.",
-      "reqtFirstStep": "Paperless-ngx open source software",
-      "reqSecondStep": "A scanner that is capable of sending files to a folder (e.g. Fujitsu ScanSnap)",
-      "reqThirdStep": "A computer (ideally a server) where you want to store your files (e.g. Synology NAS)",
-      "installTitle": "How does the installation work?",
-      "installDescription": "You can install Paperless on your computer, on your server or company infrastructure or on an external server.",
-      "installFirstStep": "Install on your own server (NAS, company infrastructure)",
-      "installSecondStep": "Install on external server infrastructure you rent",
-      "installThirdStep": "Configure your scanner to drop files in paperless",
-      "installFourthStep": "Configure access rights, login web portal, test run",
-      "useTitle": "How to use paperless-ngx?",
-      "useDescription": "We&apos;re currently working on a complete guide with a lot of tips, tricks and hacks to empower you to reap all the fruits of this system. In the meantime you can read the",
-      "officialDocLinkText": "official documentation here",
-      "useFirstStep": "Our full guide (coming soon). Subscribe to get notified",
-      "useSecondStep": "More tips and tricks on our blog (coming soon)",
-      "useThirdStep": "Curated articles about paperless-ngx",
-      "offerTitle": "Our offer",
-      "offerSubtitle": "We install the Paperless system for you.",
-      "offerDescription": "Book today and start profiting from the paperless system tomorrow! We take all the hustle and install paperless for you on a trusted GDPR conform server provider in one of two locations (US or EU).",
-      "offerFirstBenefit": "Save time and start immediately",
-      "offerSecondBenefit": "Free test of the system here",
-      "offerThirdBenefit": "30 day full suport after the installation",
-      "offerFourthBenefit": "Receive our full video tutorial for free (regular price $99)",
-      "offerFifthBenefit": "Get access to our exclusive mastermind group",
-      "offerSixthBenefit": "10% discount on our tools",
-      "pricingTitle": "Pricing",
-      "pricingDescription": "One click payment with credit/debit card. After your purchase you will immediately receive the invoice in your email inbox. Within 24h we will start working on your inquiry.",
+      "title": "Verwandeln Sie Ihre physischen Dokumente in ein durchsuchbares Online-Archiv",
+      "description": "Paperless ist eine von der Open-Source-Community entwickelte Dokumentenverwaltungssoftware, die auf dem Server läuft. Sie können Ihren Scanner daran anschließen oder einfach Dateien von Ihren Geräten in Paperless einspeisen. Die Software sortiert und benennt Ihre Dokumente automatisch und macht sie dank OCR vollständig durchsuchbar.",
+      "firstCheckedText": "Finden Sie die richtigen Dokumente in Windeseile und vereinfachen Sie die Zusammenarbeit mit Ihrem Team, indem Sie alle Ihre Dokumente mit Paperless digitalisieren.",
+      "secondCheckedText": "Machen Sie sich keine Sorgen um Ihre Dateien. Alles wird auf Ihrem Server gesichert.",
+      "thirdCheckedText": "Vergessen Sie die repetitive Aufgabe, Dokumente manuell zu benennen und zu sortieren. Automatisieren Sie den Prozess vom Scannen bis zur Dokumentenverwaltung und sparen Sie viel Zeit ein.",
+      "averageTimeTitle": "Durchschnittliche Zeit ein Dokument zu finden",
+      "averageTimeValue": "< 15 Sek",
+      "averageTimeDescription": "Dank intelligenter OCR Suche",
+      "teachTitle": "Trainieren Sie Paperless auf Ihre Dokumente",
+      "teachValue": "Benennen, taggen und sortieren",
+      "teachDescription": "Keine Notwendigkeit für eine klassische Ordnerstruktur",
+      "dataSafetyTitle": "Ihre Daten bleiben sicher",
+      "dataSafetyValue": "Flexible Zugangsrechte",
+      "dataSafetyDescription": "Sie entscheiden auf was Ihr Team Zugriff hat",
+      "reqTitle": "Was brauche ich, um Paperless optimal nutzen zu können?",
+      "reqDescription": "Alles was Sie benötigen, um Paperless zu verwenden.",
+      "reqtFirstStep": "Paperless-ngx Open-Source Software.",
+      "reqSecondStep": "Ein Scanner, der Dateien an einen Ordner senden kann (z.B. Fujitsu ScanSnap).",
+      "reqThirdStep": "Ein Computer (idealerweise ein Server), auf dem Sie Ihre Dateien speichern möchten (z.B. Synology NAS).",
+      "installTitle": "Wie installiere ich Paperless?",
+      "installDescription": "Sie können Paperless auf Ihrem Computer, auf Ihrem Server oder Ihrer Unternehmensinfrastruktur oder auf einem externen Server installieren.",
+      "installFirstStep": "Installieren Sie Paperless auf Ihrem eigenen Server (NAS, Firmeninfrastruktur).",
+      "installSecondStep": "Installation Sie Paperless auf einer externen Serverinfrastruktur, die Sie mieten.",
+      "installThirdStep": "Konfigurieren Sie Ihren Scanner so, dass er Dateien in Paperless ablegt.",
+      "installFourthStep": "Konfigurieren Sie Zugriffsrechte, melden Sie sich im Webportal an und machen Sie einen Testlauf.",
+      "useTitle": "Wie verwende ich Paperless-ngx?",
+      "useDescription": "Wir arbeiten derzeit an einem vollständigen Leitfaden mit vielen Tipps, Tricks und Hacks, damit Sie alle Früchte dieses Systems ernten können. In der Zwischenzeit können Sie die",
+      "officialDocLinkText": "offizielle Dokumentation hier einsehen",
+      "useFirstStep": "Unser vollständiger Leitfaden (in Kürze erhältlich). Abonnieren Sie unseren Newsletter, um benachrichtigt zu werden.",
+      "useSecondStep": "Weitere Tipps und Tricks wird es in Kürze auf unserem Blog geben.",
+      "useThirdStep": "Außerdem wird es ausführliche Artikel auf unserem Blog geben.",
+      "offerTitle": "Unser Angebot",
+      "offerSubtitle": "Wir installieren das Paperless System für Sie.",
+      "offerDescription": "Buchen Sie noch heute und profitieren Sie schon morgen von dem papierlosen System! Wir nehmen Ihnen die ganze Arbeit ab und installieren das papierlose System für Sie auf einem vertrauenswürdigen GDPR-konformen Serveranbieter an einem von zwei Standorten (USA oder EU).",
+      "offerFirstBenefit": "Sparen Sie sich Zeit und Nerven und starten Sie direkt.",
+      "offerSecondBenefit": "Sie können die Software kostenlos testen (siehe unten 'Test System').",
+      "offerThirdBenefit": "90 Tage voller Support nach Ihrer Bestellung.",
+      "offerFourthBenefit": "Sie erhalten unser ausführliches Videotutorial kostenlos (statt regulär $299).",
+      "offerFifthBenefit": "Sie bekommen 3 Monate Zugang zu unserer exklusiven Mastermind Gruppe (statt regulär $199/m)",
+      "offerSixthBenefit": "Sie bekommen 10% Rabatt auf alle unsere (zukünftigen) Angebote und Tools.",
+      "pricingTitle": "Preise",
+      "pricingDescription": "Bezahlung mit einem Klick mit Kredit-/Debitkarte. Nach Ihrem Kauf erhalten Sie sofort die Rechnung in Ihrem E-Mail-Posteingang. Innerhalb von 24 Stunden beginnen wir mit der Bearbeitung Ihrer Anfrage.",
       "pricingCard": {
         "paperlessSystem": {
-          "title": "The paperless system",
-          "subtitle": "Digitalize your document management",
-          "priceOld": "$4990",
-          "discount": "Beta phase: 80% off",
-          "badgeText": "Only 3 seats left",
-          "price": "$998",
-          "priceInfo": "One-time payment",
+          "title": "Das papierlose Büro",
+          "subtitle": "Digitalisieren Sie Ihre Dokumentenverwaltung",
+          "priceOld": "4990€",
+          "discount": "Beta Phase: 80% Rabatt",
+          "badgeText": "Nur 3 Plätze übrig",
+          "price": "998€",
+          "priceInfo": "Einmalzahlung",
           "item": {
-            "firstName": "Paperless-ngx installed on your company server or a virtual private server",
-            "firstInfo": "In case you don't have your own server choose between our servers in Germany or the US or 9 other locations (we partner with contabo)",
-            "secondName": "Integration of your scanner",
-            "secondInfo": "We connect your scanner with Paperless so that your scans will directly be imported",
-            "thirdName": "Custom backup solution included",
-            "thirdInfo": "We setup a script to backup all your data in a place of your choice so that you can easily recover your documents in case of loss",
-            "fourthName": "Custom configuration of Paperless included",
-            "fourthInfo": "We configure Paperless as you wish",
-            "fifthName": "Money back guarantee if you don't increase your efficiency within 30 days after installation",
-            "fifthInfo": "We believe in our solution and return you the money no questions asked if you can't increase your efficiency.",
-            "sixthName": "Bonus: 3 month access to our exclusive Automation Mastermind",
-            "sixthInfo": "Get access to our Telegram group for 3 months after your order (value: $99/month)",
-            "seventhName": "Bonus: 3 month maintenance package",
-            "seventhInfo": "We install new updates for free for 3 months after your order (value: $49/month)",
-            "eighthName": "Bonus: 10% coupon on all our tools and solutions",
-            "eighthInfo": "After the money back guarantee period is over we will send you a 10% coupon code which you can use to save on all of our offers.",
-            "ninethName": "Bonus: Server costs for the first 3 months included",
-            "ninethInfo": "Server costs are on us for the initial 3 months after your order",
-            "tenthName": "Server costs depend on your storage requirements",
-            "tenthInfo": "Starting at $4.50/month (200GB storage) and can be upgraded any time as you wish"
+            "firstName": "Paperless-ngx wird auf Ihrem Firmenserver oder einem virtuellen privaten Server installiert.",
+            "firstInfo": "Falls Sie keinen eigenen Server haben, wählen Sie zwischen unseren Servern in Deutschland oder den USA oder 9 weiteren Standorten (wir arbeiten mit contabo zusammen).",
+            "secondName": "Integration Ihres Scanners.",
+            "secondInfo": "Wir verbinden Ihren Scanner mit Paperless, so dass Ihre Scans direkt importiert werden können.",
+            "thirdName": "Kundenspezifische Backup-Lösung inklusive.",
+            "thirdInfo": "Wir richten ein Skript ein, um alle Ihre Daten an einem Ort Ihrer Wahl zu sichern, so dass Sie Ihre Dokumente im Falle eines Verlustes leicht wiederherstellen können.",
+            "fourthName": "Individuelle Konfiguration von Paperless inklusive.",
+            "fourthInfo": "Wir konfigurieren Paperless nach Ihren Wünschen.",
+            "fifthName": "Geld-zurück-Garantie, wenn Sie Ihre Effizienz nicht innerhalb von 30 Tagen nach der Installation steigern können.",
+            "fifthInfo": "Wir glauben an unsere Lösung und geben Ihnen das Geld zurück, ohne Wenn-und-Aber, wenn Sie Ihre Effizienz nicht steigern können.",
+            "sixthName": "Bonus: 3 Monate Zugang zu unserer exklusiven Automation Mastermind.",
+            "sixthInfo": "Erhalten Sie Zugang zu unserer Telegram-Gruppe für 3 Monate nach Ihrer Bestellung (Wert: $199/Monat).",
+            "seventhName": "Bonus: 3 Monate Kundensupport & Wartungspaket.",
+            "seventhInfo": "Wir sind bei Fragen jederzeit für Sie da (Wert: $199/Monat).",
+            "eighthName": "Bonus: 10%-Gutschein auf alle unsere (zukünftigen) Tools und Lösungen.",
+            "eighthInfo": "Nach Ablauf der Geld-zurück-Garantie erhalten Sie von uns einen 10%-Gutscheincode, mit dem Sie bei allen unseren Angeboten sparen können.",
+            "ninethName": "Bonus: Serverkosten für die ersten 3 Monate inklusive.",
+            "ninethInfo": "Die Serverkosten gehen für die ersten 3 Monate nach Ihrer Bestellung auf uns.",
+            "tenthName": "Die Serverkosten hängen von Ihrem Speicherbedarf ab.",
+            "tenthInfo": "Beginnend bei $4,50/Monat (200 GB Speicherplatz) und jederzeit erweiterbar."
           }
         },
         "testSystem": {
-          "title": "Test system",
-          "subtitle": "Test Paperless here on our system",
-          "badgeText": "Free demo",
-          "price": "Free",
+          "title": "Test System",
+          "subtitle": "Testen Sie Paperless hier auf unserem Server.",
+          "badgeText": "Kostenlose Demo",
+          "price": "Kostenlos",
           "item": {
-            "firstName": "username: demo",
-            "secondName": "password: digitizerspace",
-            "thirdName": "Please don't upload sensitive data. This is a public installation of Paperless-ngx. Everyone can sign in and see what you've uploaded."
+            "firstName": "Benutzername: demo",
+            "secondName": "Passwort: digitizerspace",
+            "thirdName": "Bitte laden Sie keine sensiblen Daten hoch. Dies ist eine öffentliche Installation von Paperless-ngx. Jeder kann sich anmelden und sehen, was Sie hochgeladen haben."
           }
         }
       },
-      "dataProtectionTitle": "Data protection",
-      "dataProtectionDescription": "Our server solution is compliant with EU Regulation 2016/679 (<i>General Data Protection Regulation</i>, GDPR), the German Federal Data Protection Act (<i>Bundesdatenschutzgesetz</i>, BDSG), the data protection laws of the German Federal States as well as the German Telemedia Act (<i>Telemediengesetz</i>, TMG) and the German Telecommunications-Telemedia-Data-Protection Act (<i>Telekommunikations-Telemedien-Datenschutz-Gesetz</i>, TTDSG)."
+      "dataProtectionTitle": "Datenschutz",
+      "dataProtectionDescription": "Unsere Serverlösung ist konform mit der EU-Verordnung 2016/679 (Datenschutzgrundverordnung, DSGVO), dem Bundesdatenschutzgesetz (BDSG), den Datenschutz Gesetzen der Bundesländer sowie dem Telemediengesetz (TMG) und dem Telekommunikations-Telemedien-Datenschutz-Gesetz (TTDSG)."
     }
   },
   "navbar": {
-    "solutions": "Solutions",
-    "resources": "Resources",
-    "about": "About",
-    "paperless": "Paperless Office"
+    "solutions": "Lösungen",
+    "resources": "Ressourcen",
+    "about": "Über uns",
+    "paperless": "Das papierlose Büro"
+  },
+  "footer": {
+    "emailSignup": "Erhalten Sie unseren kostenlosen Newsletter über Automatisierung & Digitalisierung",
+    "aboutUs": "Über uns",
+    "privacy": "Datenschutz"
   },
   "contactForm": {
-    "phonePlaceholder": "Phone",
-    "textareaPlaceholder": "Tell us about your project",
-    "copyNote": "Send me a copy to my email"
+    "phonePlaceholder": "Telefon",
+    "textareaPlaceholder": "Erzählen Sie uns von Ihrem Projekt",
+    "copyNote": "Senden Sie mir eine Kopie per Email"
   },
   "emailSignup": {
-    "firstAgreement": "By subscribing you agree with our",
-    "secondAgreement": "and provide consent to receive updates from our company."
+    "firstAgreement": "Durch das Abonnieren akzeptieren Sie unsere",
+    "secondAgreement": "und geben Ihr Einverständnis, Mitteilungen von unserem Unternehmen zu erhalten."
   },
   "button": {
-    "learnMore": "Learn more",
-    "solutions": "Solutions",
-    "aboutUs": "About us",
-    "contact": "Contact",
-    "submit": "Submit",
-    "subscribe": "Subscribe",
-    "sharePost": "Share this post",
-    "getStarted": "Get started now",
-    "startDemo": "Start demo"
+    "learnMore": "Mehr erfahren",
+    "solutions": "Lösungen",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt",
+    "submit": "Abschicken",
+    "subscribe": "Abonnieren",
+    "sharePost": "Artikel teilen",
+    "getStarted": "Jetzt starten",
+    "startDemo": "Demo starten"
   },
   "state": {
-    "sending": "Sending"
+    "sending": "Senden"
   },
   "conditional": {
-    "or": "or"
+    "or": "oder"
   }
 }

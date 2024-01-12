@@ -58,7 +58,7 @@ export const Footer = ({ dict }: FooterProps) => {
         <div className="divider md:divider-horizontal mx-0" />
         <div className="max-w-sm">
           <p className="text-2xl leading-normal mb-4">
-            Sign up for our free automation & digitization newsletter
+            {dict.footer.emailSignup}
           </p>
           <EmailSignup dict={dict} />
         </div>
@@ -71,11 +71,11 @@ export const Footer = ({ dict }: FooterProps) => {
               <p className="text-sm">© 2024 TW Software Solutions LLC</p>
               <PiDotOutlineLight className="text-2xl" />
               <Link className="hover:text-primary" href={RouteId.about}>
-                <p className="text-sm">About us</p>
+                <p className="text-sm">{dict.footer.aboutUs}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
               <Link className="hover:text-primary" href={RouteId.privacy}>
-                <p className="text-sm">Privacy</p>
+                <p className="text-sm">{dict.footer.privacy}</p>
               </Link>
               {/* <PiDotOutlineLight />
         <Link className="hover:text-primary" href="/terms">
