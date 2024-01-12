@@ -4,6 +4,7 @@ import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';
 import { Dictionary } from '@/common/types';
 import { getNavItems } from './Navbar.utils';
+import { LocaleSwitcher } from '../LocaleSwitcher';
 
 interface NavbarProps {
   dict: Dictionary;
@@ -51,6 +52,9 @@ export const Navbar = async ({ dict }: NavbarProps) => {
         })}
       </div>
       <div className="navbar-end">
+        <div className="hidden lg:block">
+          <LocaleSwitcher />
+        </div>
         <Link className="ml-4" href={RouteId.contact}>
           <button className="btn btn-neutral btn-outline border-primary">
             {dict.button.contact}

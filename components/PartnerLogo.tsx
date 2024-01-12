@@ -12,7 +12,7 @@ export const PartnerLogo = ({ src, alt }: PartnerLogoProps) => {
       src={src}
       alt={alt}
       width={120}
-      height={32}
+      height={0}
       loading="lazy"
     />
   );

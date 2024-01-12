@@ -8,6 +8,7 @@ import {
 import { EmailSignup } from './EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
 import { Dictionary } from '@/common/types';
+import { LocaleSwitcher } from './LocaleSwitcher';
 
 interface FooterProps {
   dict: Dictionary;
@@ -20,11 +21,14 @@ export const Footer = ({ dict }: FooterProps) => {
     <footer className="bg-neutral">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
-          <Link className="h-fit" href={RouteId.root}>
-            <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
-              DigitizerSpace
-            </p>
-          </Link>
+          <div className="flex flex-col gap-8">
+            <Link className="h-fit" href={RouteId.root}>
+              <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
+                DigitizerSpace
+              </p>
+            </Link>
+            <LocaleSwitcher />
+          </div>
           {navItems.map((mainItem) => {
             return (
               mainItem.items && (

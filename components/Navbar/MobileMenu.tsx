@@ -2,6 +2,7 @@ import { PiListLight } from 'react-icons/pi';
 import Link from 'next/link';
 import { RouteId } from '@/utils/route';
 import { NavItemData } from './Navbar.types';
+import { LocaleSwitcher } from '../LocaleSwitcher';
 
 interface MobileMenuProps {
   items: NavItemData[];
@@ -15,7 +16,7 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-lg dropdown-content mt-2 z-[1] p-2 shadow bg-neutral rounded-lg w-screen"
+        className="menu menu-lg dropdown-content mt-2 z-[1] p-2 shadow bg-neutral border border-gunmetal-600 rounded-lg w-screen"
       >
         {items.map((tab) => {
           return (
@@ -39,6 +40,9 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
             </li>
           );
         })}
+        <div role="li" className="ml-4 mt-2">
+          <LocaleSwitcher />
+        </div>
       </ul>
     </div>
   );
