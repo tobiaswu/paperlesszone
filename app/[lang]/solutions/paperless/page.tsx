@@ -21,6 +21,7 @@ import {
   PiScanLight,
   PiShootingStarLight,
   PiSignInLight,
+  PiUserLight,
   PiWarningCircleLight,
   PiWrenchLight,
 } from 'react-icons/pi';
@@ -419,10 +420,12 @@ export default async function Paperless({
             className="border-transparent"
             items={[
               {
+                icon: <PiUserLight className="text-primary" />,
                 name: dict.solutions.paperless.pricingCard.testSystem.item
                   .firstName,
               },
               {
+                icon: <PiKeyLight className="text-primary" />,
                 name: dict.solutions.paperless.pricingCard.testSystem.item
                   .secondName,
               },
