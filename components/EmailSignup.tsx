@@ -1,5 +1,6 @@
 'use client';
 
+import { Dictionary } from '@/common/types';
 import { RouteId } from '@/utils/route';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -10,7 +11,11 @@ const schema = z.object({
   email: z.string().email().min(5),
 });
 
-export const EmailSignup = () => {
+interface EmailSignupProps {
+  dict: Dictionary;
+}
+
+export const EmailSignup = ({ dict }: EmailSignupProps) => {
   const [message, setMessage] = useState<string>();
   const [error, setError] = useState<string>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -74,10 +79,10 @@ export const EmailSignup = () => {
           {isLoading ? (
             <>
               <span className="loading loading-spinner loading-md" />
-              <span>Sending</span>
+              <span>{dict.state.sending}</span>
             </>
           ) : (
-            <span>Subscribe</span>
+            <span>{dict.button.subscribe}</span>
           )}
         </button>
       </form>
@@ -94,9 +99,9 @@ export const EmailSignup = () => {
         </div>
       )}
       <p className="text-sm pt-8">
-        By subscribing you agree with our&nbsp;
-        <Link href={RouteId.privacy}>Privacy Policy</Link>&nbsp;and provide
-        consent to receive updates from our company.
+        {dict.emailSignup.firstAgreement}&nbsp;
+        <Link href={RouteId.privacy}>{dict.privacy.title}</Link>&nbsp;
+        {dict.emailSignup.secondAgreement}
       </p>
     </div>
   );

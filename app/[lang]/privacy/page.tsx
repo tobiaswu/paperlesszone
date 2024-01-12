@@ -1,3 +1,5 @@
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -6,11 +8,17 @@ export const metadata: Metadata = {
     '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR/DSGVO.',
 };
 
-export default function Privacy() {
+export default async function Privacy({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dict = await getDictionary(lang);
+
   return (
     <div className="container mx-auto py-8 px-4 bg-base-100">
       <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
-        Privacy Policy
+        {dict.privacy.title}
       </h1>
       <p className="pb-8">
         At DigitizerSpace, accessible from https://www.digitizerspace.com, one

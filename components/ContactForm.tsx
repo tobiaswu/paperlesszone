@@ -1,5 +1,6 @@
 'use client';
 
+import { Dictionary } from '@/common/types';
 import { useEffect, useState } from 'react';
 import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';
 import { ZodError, z } from 'zod';
@@ -12,7 +13,11 @@ const schema = z.object({
   checkbox: z.string().optional().nullable(),
 });
 
-export const ContactForm = () => {
+interface ContactFormProps {
+  dict: Dictionary;
+}
+
+export const ContactForm = ({ dict }: ContactFormProps) => {
   const [message, setMessage] = useState<string>();
   const [error, setError] = useState<string>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -88,16 +93,16 @@ export const ContactForm = () => {
           className="input input-bordered"
           name="phone"
           type="tel"
-          placeholder="Phone"
+          placeholder={dict.contactForm.phonePlaceholder}
         />
         <textarea
           className="textarea textarea-bordered text-base textarea-md"
           name="text"
-          placeholder="Tell us about your project"
+          placeholder={dict.contactForm.textareaPlaceholder}
           required
         ></textarea>
         <label className="cursor-pointer label w-fit gap-4">
-          <span className="label-text">Send me a copy to my email</span>
+          <span className="label-text">{dict.contactForm.copyNote}</span>
           <input
             type="checkbox"
             name="checkbox"
@@ -108,10 +113,10 @@ export const ContactForm = () => {
           {isLoading ? (
             <>
               <span className="loading loading-spinner loading-md" />
-              <span>Sending</span>
+              <span>{dict.state.sending}</span>
             </>
           ) : (
-            <span>Submit</span>
+            <span>{dict.button.submit}</span>
           )}
         </button>
       </form>

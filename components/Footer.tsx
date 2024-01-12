@@ -5,10 +5,17 @@ import {
   PiLockKeyLight,
   PiTwitterLogoLight,
 } from 'react-icons/pi';
-import { navItems } from './Navbar/Navbar.utils';
 import { EmailSignup } from './EmailSignup';
+import { getNavItems } from './Navbar/Navbar.utils';
+import { Dictionary } from '@/common/types';
 
-export const Footer = () => {
+interface FooterProps {
+  dict: Dictionary;
+}
+
+export const Footer = ({ dict }: FooterProps) => {
+  const navItems = getNavItems(dict);
+
   return (
     <footer className="bg-neutral">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
@@ -49,7 +56,7 @@ export const Footer = () => {
           <p className="text-2xl leading-normal mb-4">
             Sign up for our free automation & digitization newsletter
           </p>
-          <EmailSignup />
+          <EmailSignup dict={dict} />
         </div>
       </div>
 

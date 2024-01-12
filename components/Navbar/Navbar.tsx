@@ -1,14 +1,21 @@
 import { RouteId } from '@/utils/route';
 import Link from 'next/link';
 import { PiTriangleLight } from 'react-icons/pi';
-import { navItems } from './Navbar.utils';
 import { MobileMenu } from './MobileMenu';
+import { Dictionary } from '@/common/types';
+import { getNavItems } from './Navbar.utils';
 
-export const Navbar = () => {
+interface NavbarProps {
+  dict: Dictionary;
+}
+
+export const Navbar = async ({ dict }: NavbarProps) => {
+  const navItems = getNavItems(dict);
+
   return (
     <header className="navbar pl-0">
       <div className="navbar-start">
-        <MobileMenu />
+        <MobileMenu items={navItems} />
         <Link className="ml-2" href={RouteId.root}>
           <p className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
             DigitizerSpace
@@ -46,7 +53,7 @@ export const Navbar = () => {
       <div className="navbar-end">
         <Link className="ml-4" href={RouteId.contact}>
           <button className="btn btn-neutral btn-outline border-primary">
-            Contact
+            {dict.button.contact}
           </button>
         </Link>
       </div>

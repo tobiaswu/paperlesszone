@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { type Locale, i18n } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,19 +20,21 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params,
+  params: { lang },
 }: {
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
+  const dict = await getDictionary(lang);
+
   return (
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body className={inter.className}>
-        <Navbar />
+        <Navbar dict={dict} />
         {children}
-        <Footer />
+        <Footer dict={dict} />
         <Analytics />
         <SpeedInsights />
       </body>

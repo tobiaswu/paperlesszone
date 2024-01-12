@@ -15,6 +15,8 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/utils/animation';
+import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
 export const metadata: Metadata = {
   title: 'About DigitizerSpace - The why, who, and what of automation!',
@@ -22,7 +24,13 @@ export const metadata: Metadata = {
     '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
 };
 
-export default function About() {
+export default async function About({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dict = await getDictionary(lang);
+
   return (
     <>
       <section className="bg-blob-md bg-cover lg:bg-contain bg-top">
@@ -33,16 +41,12 @@ export default function About() {
               variants={itemAnimationVariant}
             >
               <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
-                We build solutions for everyday business activities
+                {dict.about.title}
               </h1>
             </MotionWrapper>
             <MotionWrapper variants={itemAnimationVariant}>
               <p className="mt-8 max-w-xl mx-auto leading-relaxed">
-                We are a group of tech-savvy individuals who run our own
-                businesses in various industries. We are passionate about
-                solving everyday problems with innovative solutions and
-                automating as much as possible. By freeing up our time, we can
-                focus on what we are most passionate about.
+                {dict.about.description}
               </p>
             </MotionWrapper>
           </div>
@@ -54,22 +58,22 @@ export default function About() {
               <MotionWrapper index={0} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiLightningLight />}
-                  title="Founded"
-                  value="2023"
+                  title={dict.about.statCard.foundedTitle}
+                  value={dict.about.statCard.founedValue}
                 />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiCoinsThin />}
-                  title="Average cost saved"
-                  value="$3000/m"
+                  title={dict.about.statCard.costSavingTitle}
+                  value={dict.about.statCard.costSavingValue}
                 />
               </MotionWrapper>
               <MotionWrapper index={2} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiTimerLight />}
-                  title="Average time saved"
-                  value="140h/m"
+                  title={dict.about.statCard.timeSavingTitle}
+                  value={dict.about.statCard.timeSavingValue}
                 />
               </MotionWrapper>
             </div>
@@ -86,34 +90,20 @@ export default function About() {
       </section>
 
       <section className="container mx-auto max-w-2xl px-4">
-        <p className="mb-8">
-          We quickly realized that many business owners are so busy with
-          day-to-day activities that they don&apos;t have time to keep up with
-          the latest technologies, let alone integrate them into their
-          operations. We are passionate about the rapid development of software,
-          especially when it comes to artificial intelligence.
-        </p>
+        <p className="mb-8">{dict.about.firstSectionText}</p>
         <p>
-          That&apos;s why we decided to make our research public and
-          create&nbsp;
+          {dict.about.secondSectionText}
+          &nbsp;
           <Link className="underline hover:text-primary" href={RouteId.root}>
             DigitizerSpace.com
           </Link>
-          .&nbsp;Our goal is to simplify the process of integrating new
-          technologies into your business and offer you our knowledge and
-          experience. We&apos;ve developed industry-specific tools that help you
-          automate, digitalize and streamline your workflows.
+          .&nbsp;
+          {dict.about.thirdSectionText}
         </p>
-        <h2 className="mt-16 mb-8 text-4xl font-semibold">About the founder</h2>
-        <p>
-          Tobias Wupperfeld is the founder of DigitizerSpace. He is a seasoned
-          software engineer with experience in various industries, including
-          working at international corporations like SAP and innovative AI
-          startups. Tobias has a passion for innovation and is dedicated to
-          helping businesses of all sizes leverage the latest automation
-          technologies and artificial intelligence to save time, cost and
-          increase efficiency.
-        </p>
+        <h2 className="mt-16 mb-8 text-4xl font-semibold">
+          {dict.about.firstSubtitle}
+        </h2>
+        <p>{dict.about.fourthSectionText}</p>
         <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
           <div className="flex flex-col items-center gap-2">
             <Image
@@ -144,53 +134,47 @@ export default function About() {
             </div>
           </div>
           <p className="italic font-serif max-w-md">
-            &quot; I personally think that AI won&apos;t replace businesses but
-            businesses that use AI will replace businesses that don&apos;t.
-            Businesses powered by AI don&apos;t just lead, they dominate.
-            Positioning oneself now before everyone else does is the key to
-            success. Working smarter, not harder, is the essence of digital
-            transformation. &quot;
+            &quot;{dict.about.quote}&quot;
           </p>
         </div>
         <p>
-          Did you know that&nbsp;
+          {dict.about.fifthSectionText}
+          &nbsp;
           <Link
             className="underline hover:text-primary"
             href="https://openai.com/blog/introducing-chatgpt-enterprise"
             rel="noopener noreferrer"
             target="_blank"
           >
-            80% of Fortune 500 companies use OpenAI products?
+            {dict.about.fortune500LinkText}
           </Link>
-          &nbsp;These companies have long understood the potential of AI and
-          have been using it to their advantage. With the increasing demand for
-          AI, it&apos;s only a matter of time until smaller businesses start
-          adopting it too.
+          &nbsp;{dict.about.sixthSectionText}
         </p>
-        <h2 className="mt-16 mb-8 text-4xl font-semibold">Final words</h2>
+        <h2 className="mt-16 mb-8 text-4xl font-semibold">
+          {dict.about.secondSubtitle}
+        </h2>
         <p>
-          By partnering with DigitizerSpace, you can take advantage of the
-          latest automation technologies and stay ahead of the competition.
-          Check out our&nbsp;
+          {dict.about.seventhSectionText}
+          &nbsp;
           <Link
             className="underline hover:text-primary"
             href={RouteId.resources}
           >
-            resources
+            {dict.about.resourcesLinkText}
           </Link>
           ,&nbsp;
           <Link
             className="underline hover:text-primary"
             href={RouteId.solutions}
           >
-            solutions
+            {dict.about.solutionsLinkText}
           </Link>
-          &nbsp;or&nbsp;
+          &nbsp;{dict.conditional.or}&nbsp;
           <Link className="underline hover:text-primary" href={RouteId.contact}>
-            contact us
+            {dict.about.contactUsLinkText}
           </Link>
-          &nbsp;to learn more about how we can help you achieve your business
-          objectives.
+          &nbsp;
+          {dict.about.eighthSectionText}
         </p>
       </section>
 

@@ -36,7 +36,7 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  const dictionary = await getDictionary(lang);
+  const dict = await getDictionary(lang);
 
   return (
     <>
@@ -47,44 +47,47 @@ export default async function Home({
             variants={fadeInAnimationVariant}
           >
             <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
-              Scale and Digitalize your Business with Intelligent Automations
+              {dict.root.heroTitle}
             </h1>
             <h2 className="text-2xl sm:text-4xl font-semibold sm:mt-16 my-8">
-              Discover how you can
+              {dict.root.heroSubtitle}
             </h2>
           </MotionWrapper>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             <MotionWrapper index={0} variants={staggerAnimationVariant}>
-              <DiscoverCard icon={<PiFactoryLight />} title="Build systems" />
+              <DiscoverCard
+                icon={<PiFactoryLight />}
+                title={dict.root.discoverCard.systemTitle}
+              />
             </MotionWrapper>
             <MotionWrapper index={1} variants={staggerAnimationVariant}>
               <DiscoverCard
                 icon={<PiRobotLight />}
-                title="Automate processes"
+                title={dict.root.discoverCard.automateTitle}
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
               <DiscoverCard
                 icon={<PiFilesLight />}
-                title="Eliminate pen & paper"
+                title={dict.root.discoverCard.eliminateTitle}
               />
             </MotionWrapper>
-
             <MotionWrapper index={3} variants={staggerAnimationVariant}>
-              <DiscoverCard icon={<PiPiggyBankLight />} title="Reduce costs" />
+              <DiscoverCard
+                icon={<PiPiggyBankLight />}
+                title={dict.root.discoverCard.costTitle}
+              />
             </MotionWrapper>
-
             <MotionWrapper index={4} variants={staggerAnimationVariant}>
               <DiscoverCard
                 icon={<PiRocketLaunchLight />}
-                title="Increase efficiency"
+                title={dict.root.discoverCard.efficiencyTitle}
               />
             </MotionWrapper>
-
             <MotionWrapper index={5} variants={staggerAnimationVariant}>
               <DiscoverCard
                 icon={<PiSmileyLight />}
-                title="Boost employee happiness"
+                title={dict.root.discoverCard.happyTitle}
               />
             </MotionWrapper>
           </div>
@@ -93,7 +96,7 @@ export default async function Home({
             className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8 sm:gap-16"
           >
             <div className="flex flex-col">
-              <p className="text-sm">We are proud to partner with</p>
+              <p className="text-sm">{dict.root.partnerTitle}</p>
               <PiArrowBendDownRightLight className="text-3xl" />
             </div>
             <div className="flex flex-wrap lg:flex-nowrap items-center gap-12">
@@ -121,46 +124,41 @@ export default async function Home({
         <div className="container mx-auto">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
-              Learn based on our business use cases
+              {dict.root.useCaseSection.title}
             </h2>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
-              We are a team of AI geeks, software engineers and entrepreneurs
-              who are passionate about creating innovative solutions. We stay
-              up-to-date with the latest technologies and tools and continuously
-              test new products. We combine our technical expertise with our
-              industry insights to create and publish solutions on
-              DigitizerSpace that are both cutting-edge and simple to use.
+              {dict.root.useCaseSection.description}
             </p>
           </MotionWrapper>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <MotionWrapper index={0} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiRepeatLight />}
-                title="Automations"
-                description="Connect various apps with each other via APIs and safe tons of time"
+                title={dict.root.useCaseSection.automationTitle}
+                description={dict.root.useCaseSection.automationDescription}
               />
             </MotionWrapper>
             <MotionWrapper index={1} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiFlowArrowLight />}
-                title="Workflows"
-                description="Create systematic approaches to your daily tasks and easy to follow routines for your employees"
+                title={dict.root.useCaseSection.workflowTitle}
+                description={dict.root.useCaseSection.workflowDescription}
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiFileCloudLight />}
-                title="Digitization"
-                description="Eliminate pen and paper and make every information accessible to your team"
+                title={dict.root.useCaseSection.digitizationTitle}
+                description={dict.root.useCaseSection.digitizationDescription}
               />
             </MotionWrapper>
             <MotionWrapper index={3} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiAlienLight />}
-                title="AI Generation"
-                description="Use artificial intelligence to generate the content you need like images and videos"
+                title={dict.root.useCaseSection.aiTitle}
+                description={dict.root.useCaseSection.aiDescription}
               />
             </MotionWrapper>
           </div>
@@ -170,17 +168,17 @@ export default async function Home({
       <section className="container mx-auto pb-16 sm:pb-32 px-4 bg-base-100">
         <MotionWrapper variants={itemAnimationVariant}>
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-24 sm:leading-normal">
-            Explore our blog
+            {dict.root.blogSection.title}
             <br></br>
             <span className="text-error lowercase text-xl">*Coming soon</span>
           </h2>
         </MotionWrapper>
         <MotionWrapper variants={fadeInAnimationVariant}>
-          <BlogPreview />
+          <BlogPreview dict={dict} />
         </MotionWrapper>
         {/* <Link href={RouteId.blog}> */}
         <button className="btn btn-primary mt-8" disabled>
-          Learn more
+          {dict.button.learnMore}
           <PiTriangleLight className="rotate-90" />
         </button>
         {/* </Link> */}
@@ -207,26 +205,23 @@ export default async function Home({
             <div className="flex flex-col col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
               <MotionWrapper variants={itemAnimationVariant}>
                 <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
-                  Benefit from the wave of new technology
+                  {dict.root.benefitSection.title}
                 </h2>
               </MotionWrapper>
               <MotionWrapper variants={itemAnimationVariant}>
                 <h3 className="text-2xl mb-4 sm:leading-normal">
-                  and implement it in your business the right way
+                  {dict.root.benefitSection.subtitle}
                 </h3>
               </MotionWrapper>
               <MotionWrapper variants={itemAnimationVariant}>
-                <p className="mb-8">
-                  Today&apos;s software landscape enables you to do much more
-                  than just integrating chatbots but it can be overwhelming to
-                  know what works best for your business. DigitizerSpace is here
-                  to help you identify use cases.
-                </p>
+                <p className="mb-8">{dict.root.benefitSection.description}</p>
               </MotionWrapper>
               <div className="flex flex-col gap-4">
-                <CheckedText description="Stay up to date with trends and tools." />
-                <CheckedText description="Identify use cases for your business." />
-                <CheckedText description="Implement solutions that will boost your business." />
+                <CheckedText description={dict.root.benefitSection.firstText} />
+                <CheckedText
+                  description={dict.root.benefitSection.secondText}
+                />
+                <CheckedText description={dict.root.benefitSection.thirdText} />
               </div>
             </div>
           </div>
@@ -237,23 +232,22 @@ export default async function Home({
         <div className="flex flex-col col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
-              We seamlessly build and launch automation solutions
+              {dict.root.aboutSection.title}
             </h2>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <h3 className="text-2xl mb-4 sm:leading-normal">
-              In case you need an automation hand take a look at our tailored
-              services
+              {dict.root.aboutSection.subtitle}
             </h3>
           </MotionWrapper>
           <div className="flex flex-col gap-4">
-            <CheckedText description="Pre-built automation solutions that can be customized to fit your business needs." />
-            <CheckedText description="Software products and tools that can help you automate your business processes." />
-            <CheckedText description="Consulting service designed to help you identify areas where automation and digitization can improve your processes." />
+            <CheckedText description={dict.root.aboutSection.firstText} />
+            <CheckedText description={dict.root.aboutSection.secondText} />
+            <CheckedText description={dict.root.aboutSection.thirdText} />
           </div>
           <Link className="w-fit mt-8" href={RouteId.solutions}>
             <button className="btn btn-primary">
-              Solutions
+              {dict.button.solutions}
               <PiTriangleLight className="rotate-90" />
             </button>
           </Link>
@@ -278,10 +272,10 @@ export default async function Home({
       <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
           <div className="grid sm:grid-cols-2 gap-4">
-            <div className="skeleton w-full h-48"></div>
-            <div className="skeleton w-full h-48"></div>
-            <div className="skeleton w-full h-48"></div>
-            <div className="skeleton w-full h-48"></div>
+            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
+            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
+            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
+            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
             {/* <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
               avatarURL="/images/founder-portrait.webp"
@@ -311,19 +305,17 @@ export default async function Home({
         <div className="flex flex-col col-span-2 lg:col-span-1">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-4xl font-semibold mb-12 sm:leading-normal">
-              Hear from our clients
+              {dict.root.clientSection.title}
             </h2>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <p className="leading-relaxed">
-              How our clients have transformed their business with us,
-              streamlined processes, improved efficiency, saved costs and
-              increased revenue.
+              {dict.root.clientSection.description}
             </p>
           </MotionWrapper>
           <Link className="w-fit mt-8" href={RouteId.about}>
             <button className="btn btn-primary">
-              About us
+              {dict.button.aboutUs}
               <PiTriangleLight className="rotate-90" />
             </button>
           </Link>
@@ -340,19 +332,21 @@ export default async function Home({
         >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
-              Be the first to receive our industry specific trends
+              {dict.root.newsletterSection.title}
             </h2>
             <p className="leading-relaxed mb-8">
-              Our goal is to help you leverage the latest automation
-              technologies and artificial intelligence to run your business with
-              a tailwind.
+              {dict.root.newsletterSection.description}
             </p>
             <div className="flex flex-col gap-4 mb-8">
-              <CheckedText description="Never miss out on news, trends and special offers." />
-              <CheckedText description="Receive our latest insights and updates." />
+              <CheckedText
+                description={dict.root.newsletterSection.firstText}
+              />
+              <CheckedText
+                description={dict.root.newsletterSection.secondText}
+              />
               {/* <CheckedText description="As a bonus, you will receive our guide for free." /> */}
             </div>
-            <EmailSignup />
+            <EmailSignup dict={dict} />
           </div>
           {/* <div className="col-span-3 md:col-span-1 place-self-center">
             <div className="rounded-lg border-primary border-2 shadow-md bg-neutral px-8 py-32 relative">

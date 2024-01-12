@@ -35,6 +35,8 @@ import {
 } from '@/utils/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/utils/route';
+import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
 
 export const metadata: Metadata = {
   title: 'Get the Paperless-ngx system running | we install it for you',
@@ -42,30 +44,31 @@ export const metadata: Metadata = {
     '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
 };
 
-export default function Paperless() {
+export default async function Paperless({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dict = await getDictionary(lang);
+
   return (
     <>
       <div className="hero bg-blob-soft bg-cover xl:bg-contain bg-top">
         <div className="hero-content text-center flex flex-col">
           <MotionWrapper className="max-w-6xl" variants={itemAnimationVariant}>
             <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
-              Transform your physical documents into a searchable online archive
+              {dict.solutions.paperless.title}
             </h1>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <p className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed">
-              Paperless is an open-source community-developed document
-              management software that runs on the server. You can connect your
-              scanner to it or just drop files from your devices into the
-              consumption of Paperless. The software automatically sorts and
-              names your documents and makes them fully searchable thanks to
-              OCR.
+              {dict.solutions.paperless.description}
             </p>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
             <Link href="#pricing">
               <button className="btn btn-secondary mb-16 capitalize">
-                Get started now
+                {dict.button.getStarted}
               </button>
             </Link>
           </MotionWrapper>
@@ -82,38 +85,44 @@ export default function Paperless() {
                 />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>
-                <CheckedText description="Find the right documents at a blazing speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
+                <CheckedText
+                  description={dict.solutions.paperless.firstCheckedText}
+                />
               </MotionWrapper>
               <MotionWrapper index={2} variants={staggerAnimationVariant}>
-                <CheckedText description="Never worry about your files. Everything is backed up on your server." />
+                <CheckedText
+                  description={dict.solutions.paperless.secondCheckedText}
+                />
               </MotionWrapper>
               <MotionWrapper index={3} variants={staggerAnimationVariant}>
-                <CheckedText description="Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time." />
+                <CheckedText
+                  description={dict.solutions.paperless.thirdCheckedText}
+                />
               </MotionWrapper>
             </div>
             <div className="flex flex-col gap-4">
               <MotionWrapper index={0} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiClockCountdownLight />}
-                  title="Avergage time to find a document"
-                  value="< 15 sec"
-                  description="Thanks to intelligent search"
+                  title={dict.solutions.paperless.averageTimeTitle}
+                  value={dict.solutions.paperless.averageTimeValue}
+                  description={dict.solutions.paperless.averageTimeDescription}
                 />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiRobotLight />}
-                  title="Teach paperless how to"
-                  value="Name, tag and sort"
-                  description="No need for a classic folder structure"
+                  title={dict.solutions.paperless.teachTitle}
+                  value={dict.solutions.paperless.teachValue}
+                  description={dict.solutions.paperless.teachDescription}
                 />
               </MotionWrapper>
               <MotionWrapper index={2} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiKeyLight />}
-                  title="Your data stays safe with"
-                  value="Flexible access rules"
-                  description="You decide what your team will see"
+                  title={dict.solutions.paperless.dataSafetyTitle}
+                  value={dict.solutions.paperless.dataSafetyValue}
+                  description={dict.solutions.paperless.dataSafetyDescription}
                 />
               </MotionWrapper>
             </div>
@@ -135,25 +144,25 @@ export default function Paperless() {
       <div className="container mx-auto px-4 py-16">
         <div className="flex gap-4 items-center mb-8">
           <PiQuestionLight className="text-3xl text-primary" />
-          <h2 className="text-4xl font-semibold">What do I need?</h2>
+          <h2 className="text-4xl font-semibold">
+            {dict.solutions.paperless.reqTitle}
+          </h2>
         </div>
-        <p className="max-w-3xl">
-          Everything you need to setup the paperless system.
-        </p>
+        <p className="max-w-3xl">{dict.solutions.paperless.reqDescription}</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
             icon={<PiDownloadLight />}
-            description="Paperless-ngx open source software"
+            description={dict.solutions.paperless.reqtFirstStep}
             url="https://github.com/paperless-ngx/paperless-ngx"
           />
           <SolutionCard
             icon={<PiScanLight />}
-            description="A scanner that is capable of sending files to a folder (e.g. Fujitsu ScanSnap)"
+            description={dict.solutions.paperless.reqSecondStep}
             // url="https://github.com/paperless-ngx/paperless-ngx"
           />
           <SolutionCard
             icon={<PiDesktopTowerLight />}
-            description="A computer (ideally a server) where you want to store your files (e.g. Synology NAS)"
+            description={dict.solutions.paperless.reqThirdStep}
             // url="https://github.com/paperless-ngx/paperless-ngx"
           />
         </div>
@@ -164,12 +173,11 @@ export default function Paperless() {
           <div className="flex gap-4 items-center mb-8">
             <PiHourglassMediumLight className="text-3xl text-primary" />
             <h2 className="text-4xl font-semibold">
-              How does the installation work?
+              {dict.solutions.paperless.installTitle}
             </h2>
           </div>
           <p className="max-w-3xl">
-            You can install Paperless on your computer, on your server or
-            company infrastructure or on an external server.
+            {dict.solutions.paperless.installDescription}
           </p>
           <ul className="mt-8">
             <li className="flex flex-col gap-4 mb-8">
@@ -178,12 +186,14 @@ export default function Paperless() {
                 <div className="col-span-2 flex flex-col sm:flex-row gap-2">
                   <SolutionCard
                     icon={<PiHardDrivesLight />}
-                    description="Install on your own server (NAS, company infrastructure)"
+                    description={dict.solutions.paperless.installFirstStep}
                   />
-                  <div className="divider sm:divider-horizontal">OR</div>
+                  <div className="divider sm:divider-horizontal">
+                    {dict.conditional.or}
+                  </div>
                   <SolutionCard
                     icon={<PiCloudCheckLight />}
-                    description="Install on external server infrastructure you rent"
+                    description={dict.solutions.paperless.installSecondStep}
                   />
                 </div>
               </div>
@@ -193,7 +203,7 @@ export default function Paperless() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3">
                 <SolutionCard
                   icon={<PiWrenchLight />}
-                  description="Configure your scanner to drop files in paperless"
+                  description={dict.solutions.paperless.installThirdStep}
                 />
               </div>
             </li>
@@ -202,7 +212,7 @@ export default function Paperless() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3">
                 <SolutionCard
                   icon={<PiSignInLight />}
-                  description="Configure access rights, login web portal, test run"
+                  description={dict.solutions.paperless.installFourthStep}
                 />
               </div>
             </li>
@@ -213,33 +223,33 @@ export default function Paperless() {
       <div className="container mx-auto px-4 py-16">
         <div className="flex gap-4 items-center mb-8">
           <PiQuestionLight className="text-3xl text-primary" />
-          <h2 className="text-4xl font-semibold">How to use paperless-ngx?</h2>
+          <h2 className="text-4xl font-semibold">
+            {dict.solutions.paperless.useTitle}
+          </h2>
         </div>
         <p className="max-w-3xl">
-          We&apos;re currently working on a complete guide with a lot of tips,
-          tricks and hacks to empower you to reap all the fruits of this system.
-          In the meantime you can read the&nbsp;
+          {dict.solutions.paperless.useDescription}&nbsp;
           <Link
             className="underline hover:text-primary"
             href="https://docs.paperless-ngx.com/"
           >
-            official documentation here
+            {dict.solutions.paperless.officialDocLinkText}
           </Link>
           .
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
             icon={<PiFileArrowDownLight />}
-            description="Our full guide (coming soon). Subscribe to get notified"
+            description={dict.solutions.paperless.useFirstStep}
             url="/#newsletter"
           />
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
-            description="More tips and tricks on our blog (coming soon)"
+            description={dict.solutions.paperless.useSecondStep}
           />
           <SolutionCard
             icon={<PiArticleLight />}
-            description="Curated articles about paperless-ngx"
+            description={dict.solutions.paperless.useThirdStep}
             // url="/blog?tag=paperless"
           />
         </div>
@@ -249,40 +259,40 @@ export default function Paperless() {
         <div className="container mx-auto p-8 lg:p-16 bg-sapphire-300 rounded-lg">
           <div className="flex gap-4 items-center mb-8">
             <PiMedalLight className="text-3xl text-primary" />
-            <h2 className="text-4xl font-semibold">Our offer</h2>
+            <h2 className="text-4xl font-semibold">
+              {dict.solutions.paperless.offerTitle}
+            </h2>
           </div>
           <h3 className="text-3xl mb-4">
-            We install the Paperless system for you.
+            {dict.solutions.paperless.offerSubtitle}
           </h3>
           <p className="max-w-3xl">
-            Book today and start profiting from the paperless system tomorrow!
-            We take all the hustle and install paperless for you on a trusted
-            GDPR conform server provider in one of two locations (US or EU).
+            {dict.solutions.paperless.offerDescription}
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
             <SolutionCard
               icon={<PiFileArrowDownLight />}
-              description="Save time and start immediately"
+              description={dict.solutions.paperless.offerFirstBenefit}
             />
             <SolutionCard
               icon={<PiLightbulbFilamentLight />}
-              description="Free test of the system here"
+              description={dict.solutions.paperless.offerSecondBenefit}
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="30 day full suport after the installation"
+              description={dict.solutions.paperless.offerThirdBenefit}
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Receive our full video tutorial for free (regular price $99)"
+              description={dict.solutions.paperless.offerFourthBenefit}
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="Get access to our exclusive mastermind group"
+              description={dict.solutions.paperless.offerFifthBenefit}
             />
             <SolutionCard
               icon={<PiArticleLight />}
-              description="10% discount on our tools"
+              description={dict.solutions.paperless.offerSixthBenefit}
             />
           </div>
         </div>
@@ -291,110 +301,145 @@ export default function Paperless() {
       <div className="container mx-auto px-4 py-16" id="pricing">
         <div className="flex gap-4 items-center mb-8">
           <PiCalculatorLight className="text-3xl text-primary" />
-          <h2 className="text-4xl font-semibold">Pricing</h2>
+          <h2 className="text-4xl font-semibold">
+            {dict.solutions.paperless.pricingTitle}
+          </h2>
         </div>
         <p className="max-w-3xl">
-          One click payment with credit/debit card. After your purchase you will
-          immediately receive the invoice in your email inbox. Within 24h we
-          will start working on your inquiry.
+          {dict.solutions.paperless.pricingDescription}
         </p>
         <div className="mt-8 flex flex-col lg:flex-row gap-8">
           <PricingCard
-            title="The paperless system"
-            subtitle="Digitalize your document management"
-            priceOld="$4990"
-            discount="Beta phase: 80% off"
-            badgeText="Only 3 seats left"
-            price="$998"
-            priceInfo="One-time payment"
-            btnText="Launching soon"
+            title={dict.solutions.paperless.pricingCard.paperlessSystem.title}
+            subtitle={
+              dict.solutions.paperless.pricingCard.paperlessSystem.subtitle
+            }
+            priceOld={
+              dict.solutions.paperless.pricingCard.paperlessSystem.priceOld
+            }
+            discount={
+              dict.solutions.paperless.pricingCard.paperlessSystem.discount
+            }
+            badgeText={
+              dict.solutions.paperless.pricingCard.paperlessSystem.badgeText
+            }
+            price={dict.solutions.paperless.pricingCard.paperlessSystem.price}
+            priceInfo={
+              dict.solutions.paperless.pricingCard.paperlessSystem.priceInfo
+            }
+            btnText={dict.button.getStarted}
             btnUrl={RouteId.paperless}
             items={[
               {
-                name: 'Paperless-ngx installed on your company server or a virtual private server',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .firstName,
                 infoText:
-                  "In case you don't have your own server choose between our servers in Germany or the US or 9 other locations (we partner with contabo)",
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .firstInfo,
               },
               {
-                name: 'Integration of your scanner',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .secondName,
                 infoText:
-                  'We connect your scanner with Paperless so that your scans will directly be imported',
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .secondInfo,
               },
               {
-                name: 'Custom backup solution included',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .thirdName,
                 infoText:
-                  'We setup a script to backup all your data in a place of your choice so that you can easily recover your documents in case of loss',
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .thirdInfo,
               },
               {
-                name: 'Custom configuration of Paperless included',
-                infoText: 'We configure Paperless as you wish',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .fourthName,
+                infoText:
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .fourthInfo,
               },
               {
-                name: "Money back guarantee if you don't increase your efficiency within 30 days after installation",
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .fifthName,
                 infoText:
-                  "We believe in our solution and return you the money no questions asked if you can't increase your efficiency.",
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: 'Bonus: 3 month access to our exclusive Automation Mastermind',
-                infoText:
-                  'Get access to our Telegram group for 3 months after your order (value: $99/month)',
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: 'Bonus: 3 month maintenance package',
-                infoText:
-                  'We install new updates for free for 3 months after your order (value: $49/month)',
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: 'Bonus: 10% coupon on all our tools and solutions',
-                infoText:
-                  'After the money back guarantee period is over we will send you a 10% coupon code which you can use to save on all of our offers.',
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .fifthInfo,
               },
               {
                 icon: <PiShootingStarLight />,
-                name: 'Bonus: Server costs for the first 3 months included',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .sixthName,
                 infoText:
-                  'Server costs are on us for the initial 3 months after your order',
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .sixthInfo,
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .seventhName,
+                infoText:
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .seventhInfo,
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .eighthName,
+                infoText:
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .eighthInfo,
+              },
+              {
+                icon: <PiShootingStarLight />,
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .ninethName,
+                infoText:
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .ninethInfo,
               },
               {
                 icon: <PiWarningCircleLight className="text-warning" />,
-                name: 'Server costs depend on your storage requirements',
+                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+                  .tenthName,
                 infoText:
-                  'Starting at $4.50/month (200GB storage) and can be upgraded any time as you wish',
+                  dict.solutions.paperless.pricingCard.paperlessSystem.item
+                    .tenthInfo,
               },
             ]}
           />
           <PricingCard
-            title="Test system"
-            subtitle="Test Paperless here on our system"
-            badgeText="Free demo"
-            btnText="Start demo"
+            title={dict.solutions.paperless.pricingCard.testSystem.title}
+            subtitle={dict.solutions.paperless.pricingCard.testSystem.subtitle}
+            badgeText={
+              dict.solutions.paperless.pricingCard.testSystem.badgeText
+            }
+            btnText={dict.button.startDemo}
             btnUrl="http://paperless.digitizerspace.com:8000/"
-            price="Free"
+            price={dict.solutions.paperless.pricingCard.testSystem.price}
             className="border-transparent"
             items={[
               {
-                name: 'Login with username: demo and password: digitizerspace ',
+                name: dict.solutions.paperless.pricingCard.testSystem.item
+                  .firstName,
+              },
+              {
+                name: dict.solutions.paperless.pricingCard.testSystem.item
+                  .secondName,
               },
               {
                 icon: <PiWarningCircleLight className="text-warning" />,
-                name: "Please don't upload sensitive data. This is a public installation of Paperless-ngx. Everyone can sign in and see what you've uploaded.",
+                name: dict.solutions.paperless.pricingCard.testSystem.item
+                  .thirdName,
               },
             ]}
           />
         </div>
-        <h3 className="text-3xl mt-16 mb-4">Data protection</h3>
+        <h3 className="text-3xl mt-16 mb-4">
+          {dict.solutions.paperless.dataProtectionTitle}
+        </h3>
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <p className="max-w-3xl text-sm">
-            Our server solution is compliant with EU Regulation 2016/679 (
-            <i>General Data Protection Regulation</i>, GDPR), the German Federal
-            Data Protection Act (<i>Bundesdatenschutzgesetz</i>, BDSG), the data
-            protection laws of the German Federal States as well as the German
-            Telemedia Act (<i>Telemediengesetz</i>, TMG) and the German
-            Telecommunications-Telemedia-Data-Protection Act (
-            <i>Telekommunikations-Telemedien-Datenschutz-Gesetz</i>, TTDSG).
+            {dict.solutions.paperless.dataProtectionDescription}
           </p>
           <div className="w-full">
             <Image

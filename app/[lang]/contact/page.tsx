@@ -12,6 +12,8 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/utils/animation';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 
 export const metadata: Metadata = {
   title: 'Contact DigitizerSpace today - we help you automating',
@@ -19,22 +21,24 @@ export const metadata: Metadata = {
     '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
 };
 
-export default function Contact() {
+export default async function Contact({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dict = await getDictionary(lang);
+
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-2 gap-12 px-4 py-16 min-h-screen place-items-center">
         <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover lg:bg-contain bg-top">
           <MotionWrapper variants={itemAnimationVariant}>
             <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
-              Get in touch
+              {dict.contact.title}
             </h1>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
-            <p className="leading-relaxed mb-8">
-              Got a project in mind? Let&apos;s talk, we&apos;d love to hear
-              from you. Choose a contact option below or simply fill in the form
-              and one of the team will be in touch!
-            </p>
+            <p className="leading-relaxed mb-8">{dict.contact.description}</p>
           </MotionWrapper>
           <div className="flex flex-col gap-4">
             <MotionWrapper index={0} variants={staggerAnimationVariant}>
@@ -48,16 +52,16 @@ export default function Contact() {
             <MotionWrapper index={1} variants={staggerAnimationVariant}>
               <ContactOption
                 icon={<PiPhoneCallLight />}
-                optionLabel="Call"
-                optionText="Schedule a call here"
+                optionLabel={dict.contact.callOptionLabel}
+                optionText={dict.contact.callOptionText}
                 url="https://calendly.com/tobiaswu/1-1-meeting-clone"
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
               <ContactOption
                 icon={<PiMapPinLineLight />}
-                optionLabel="Office"
-                optionText="USA, Florida (global clients)"
+                optionLabel={dict.contact.officeOptionLabel}
+                optionText={dict.contact.officeOptionText}
               />
             </MotionWrapper>
           </div>
@@ -68,13 +72,10 @@ export default function Contact() {
           className="col-span-2 lg:col-span-1 bg-neutral rounded-lg p-8 h-fit shadow-md"
         >
           <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:leading-normal">
-            Tell us about your project
+            {dict.contact.formTitle}
           </h2>
-          <p className="text-center mb-8">
-            How can DigitizerSpace help you? One of the team will be in touch
-            after you submit this form.
-          </p>
-          <ContactForm />
+          <p className="text-center mb-8">{dict.contact.formDescription}</p>
+          <ContactForm dict={dict} />
         </MotionWrapper>
       </div>
     </div>
