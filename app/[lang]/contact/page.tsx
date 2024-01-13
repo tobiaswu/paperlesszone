@@ -69,7 +69,7 @@ export default async function Contact({
 
         <MotionWrapper
           variants={fadeInAnimationVariant}
-          className="col-span-2 lg:col-span-1 bg-neutral rounded-lg p-8 h-fit shadow-md"
+          className="col-span-2 lg:col-span-1 bg-neutral border border-gunmetal-600 rounded-lg p-8 h-fit shadow-md"
         >
           <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:leading-normal">
             {dict.contact.formTitle}

@@ -12,12 +12,14 @@ export const StatCard = ({
   description,
 }: StatCardProps) => {
   return (
-    <div className="stat glass rounded-lg">
+    <div className="stat border border-gunmetal-600 rounded-lg">
       <div className="stat-figure text-primary text-3xl">{icon}</div>
       <div className="stat-title text-base-content whitespace-normal sm:whitespace-nowrap">
         {title}
       </div>
-      <div className="stat-value text-primary whitespace-normal sm:whitespace-nowrap">{value}</div>
+      <div className="stat-value text-primary whitespace-normal sm:whitespace-nowrap">
+        {value}
+      </div>
       <div className="stat-desc text-base-content whitespace-normal sm:whitespace-nowrap">
         {description}
       </div>

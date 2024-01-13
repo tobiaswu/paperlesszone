@@ -33,7 +33,7 @@ export const Navbar = async ({ dict }: NavbarProps) => {
               </div>
               <ul
                 tabIndex={0}
-                className="p-2 z-[1] hidden menu absolute shadow bg-neutral rounded-lg w-52 group-hover:block"
+                className="p-2 z-[1] hidden menu absolute shadow bg-neutral border border-gunmetal-600 rounded-lg w-52 group-hover:block"
               >
                 {navItem.items.map((item) => {
                   return (
@@ -56,7 +56,7 @@ export const Navbar = async ({ dict }: NavbarProps) => {
           <LocaleSwitcher />
         </div>
         <Link className="ml-4" href={RouteId.contact}>
-          <button className="btn btn-neutral btn-outline border-primary">
+          <button className="btn btn-neutral border-gunmetal-600">
             {dict.button.contact}
           </button>
         </Link>

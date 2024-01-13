@@ -15,7 +15,7 @@ export const ContactOption = ({
 }: ContactOptionProps) => {
   return (
     <div className="flex items-center gap-4">
-      <div className="bg-neutral rounded-lg p-4 flex items-center justify-center">
+      <div className="bg-neutral border border-gunmetal-600 rounded-lg p-4 flex items-center justify-center">
         <span className="text-5xl text-primary">{icon}</span>
       </div>
       <div className="flex flex-col gap-1">

@@ -52,6 +52,84 @@ export default async function Paperless({
 }) {
   const dict = await getDictionary(lang);
 
+  const paperlessCardItems = [
+    {
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item.firstName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.firstInfo,
+    },
+    {
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+        .secondName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.secondInfo,
+    },
+    {
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item.thirdName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.thirdInfo,
+    },
+    {
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+        .fourthName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.fourthInfo,
+    },
+    {
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item.fifthName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.fifthInfo,
+    },
+    {
+      icon: <PiShootingStarLight />,
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item.sixthName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.sixthInfo,
+    },
+    {
+      icon: <PiShootingStarLight />,
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+        .seventhName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.seventhInfo,
+    },
+    {
+      icon: <PiShootingStarLight />,
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+        .eighthName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.eighthInfo,
+    },
+    {
+      icon: <PiShootingStarLight />,
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item
+        .ninethName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.ninethInfo,
+    },
+    {
+      icon: <PiWarningCircleLight className="text-warning" />,
+      name: dict.solutions.paperless.pricingCard.paperlessSystem.item.tenthName,
+      infoText:
+        dict.solutions.paperless.pricingCard.paperlessSystem.item.tenthInfo,
+    },
+  ];
+
+  const testCardItems = [
+    {
+      icon: <PiUserLight className="text-primary" />,
+      name: dict.solutions.paperless.pricingCard.testSystem.item.firstName,
+    },
+    {
+      icon: <PiKeyLight className="text-primary" />,
+      name: dict.solutions.paperless.pricingCard.testSystem.item.secondName,
+    },
+    {
+      icon: <PiWarningCircleLight className="text-warning" />,
+      name: dict.solutions.paperless.pricingCard.testSystem.item.thirdName,
+    },
+  ];
+
   return (
     <>
       <div className="hero bg-blob-soft bg-cover xl:bg-contain bg-top">
@@ -330,83 +408,8 @@ export default async function Paperless({
             }
             btnText={dict.button.getStarted}
             btnUrl={RouteId.paperless}
-            items={[
-              {
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .firstName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .firstInfo,
-              },
-              {
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .secondName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .secondInfo,
-              },
-              {
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .thirdName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .thirdInfo,
-              },
-              {
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .fourthName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .fourthInfo,
-              },
-              {
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .fifthName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .fifthInfo,
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .sixthName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .sixthInfo,
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .seventhName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .seventhInfo,
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .eighthName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .eighthInfo,
-              },
-              {
-                icon: <PiShootingStarLight />,
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .ninethName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .ninethInfo,
-              },
-              {
-                icon: <PiWarningCircleLight className="text-warning" />,
-                name: dict.solutions.paperless.pricingCard.paperlessSystem.item
-                  .tenthName,
-                infoText:
-                  dict.solutions.paperless.pricingCard.paperlessSystem.item
-                    .tenthInfo,
-              },
-            ]}
+            className="border-primary"
+            items={paperlessCardItems}
           />
           <PricingCard
             title={dict.solutions.paperless.pricingCard.testSystem.title}
@@ -417,24 +420,8 @@ export default async function Paperless({
             btnText={dict.button.startDemo}
             btnUrl="http://paperless.digitizerspace.com:8000/"
             price={dict.solutions.paperless.pricingCard.testSystem.price}
-            className="border-transparent"
-            items={[
-              {
-                icon: <PiUserLight className="text-primary" />,
-                name: dict.solutions.paperless.pricingCard.testSystem.item
-                  .firstName,
-              },
-              {
-                icon: <PiKeyLight className="text-primary" />,
-                name: dict.solutions.paperless.pricingCard.testSystem.item
-                  .secondName,
-              },
-              {
-                icon: <PiWarningCircleLight className="text-warning" />,
-                name: dict.solutions.paperless.pricingCard.testSystem.item
-                  .thirdName,
-              },
-            ]}
+            className="border-gunmetal-600"
+            items={testCardItems}
           />
         </div>
         <h3 className="text-3xl mt-16 mb-4">

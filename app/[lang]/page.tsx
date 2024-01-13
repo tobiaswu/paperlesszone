@@ -193,7 +193,7 @@ export default async function Home({
             >
               <MotionWrapper variants={fadeInAnimationVariant}>
                 <Image
-                  className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+                  className="h-auto rounded-lg border border-transparent hover:border-primary"
                   src="/assets/images/ai-astronaut-shrugging.webp"
                   alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
                   width={512}
@@ -258,7 +258,7 @@ export default async function Home({
         >
           <MotionWrapper variants={fadeInAnimationVariant}>
             <Image
-              className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+              className="h-auto rounded-lg border border-transparent hover:border-primary"
               src="/assets/images/ai-team-digitizerspace.webp"
               alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
               width={512}
@@ -328,7 +328,7 @@ export default async function Home({
       >
         <MotionWrapper
           variants={fadeInAnimationVariant}
-          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 glass rounded-lg p-8 sm:p-12"
+          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12"
         >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">

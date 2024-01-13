@@ -36,7 +36,7 @@ export const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div
-      className={`${className} card max-w-xl bg-neutral rounded-lg shadow-md border-4 border-primary h-fit`}
+      className={`${className} card max-w-xl bg-neutral border rounded-lg shadow-md h-fit`}
     >
       <div className="card-body">
         <div className="badge badge-error w-fit sm:w-44 h-fit mb-2">

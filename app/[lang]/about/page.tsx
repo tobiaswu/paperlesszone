@@ -107,7 +107,7 @@ export default async function About({
         <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
           <div className="flex flex-col items-center gap-2">
             <Image
-              className="rounded-full"
+              className="rounded-full border border-gunmetal-600"
               src="/assets/images/founder-portrait.webp"
               alt="Portrait of our founder Tobias Wupperfeld"
               width={200}
@@ -183,7 +183,7 @@ export default async function About({
           variants={transitions.fadeIn}
           initial="hidden"
           whileInView="show"
-          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 glass rounded-lg p-8 sm:p-12"
+          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12"
         >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
