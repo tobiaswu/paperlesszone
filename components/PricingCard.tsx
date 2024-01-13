@@ -45,7 +45,7 @@ export const PricingCard = ({
         <h3 className="card-title text-4xl font-bold text-primary capitalize leading-normal bg-gradient-to-br from-primary to-sapphire-800 text-transparent bg-clip-text">
           {title}
         </h3>
-        <p className="py-4">{subtitle}</p>
+        <p className="pt-4">{subtitle}</p>
         <div className="divider" />
         <div className="flex w-fit gap-2 items-center">
           <p className="text-4xl font-semibold">{price}</p>
@@ -53,7 +53,7 @@ export const PricingCard = ({
             <p className="text-xl line-through text-neutral-400 font-semibold">
               {priceOld}
             </p>
-            <p className="text-error">{discount}</p>
+            <p className="text-error font-semibold">{discount}</p>
           </div>
         </div>
         <p className="text-base">{priceInfo}</p>
@@ -62,7 +62,7 @@ export const PricingCard = ({
             return (
               <div key={item.name} className="flex items-center gap-2 w-fit">
                 {item.icon ? (
-                  <span className="text-accent text-3xl min-w-min">
+                  <span className="text-yellow-400 text-3xl min-w-min">
                     {item.icon}
                   </span>
                 ) : (

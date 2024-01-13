@@ -8,19 +8,26 @@ import {
   PiDesktopTowerLight,
   PiDownloadLight,
   PiFileArrowDownLight,
+  PiHandshakeLight,
   PiHardDrivesLight,
   PiHourglassMediumLight,
   PiKeyLight,
   PiLightbulbFilamentLight,
   PiMedalLight,
+  PiMoneyLight,
   PiNumberSquareOneLight,
   PiNumberSquareThreeLight,
   PiNumberSquareTwoLight,
+  PiPathLight,
   PiQuestionLight,
   PiRobotLight,
   PiScanLight,
   PiShootingStarLight,
   PiSignInLight,
+  PiStarFourLight,
+  PiTestTubeLight,
+  PiTrendUpLight,
+  PiTrophyLight,
   PiUserLight,
   PiWarningCircleLight,
   PiWrenchLight,
@@ -108,7 +115,7 @@ export default async function Paperless({
         dict.solutions.paperless.pricingCard.paperlessSystem.item.ninethInfo,
     },
     {
-      icon: <PiWarningCircleLight className="text-warning" />,
+      icon: <PiWarningCircleLight className="text-accent" />,
       name: dict.solutions.paperless.pricingCard.paperlessSystem.item.tenthName,
       infoText:
         dict.solutions.paperless.pricingCard.paperlessSystem.item.tenthInfo,
@@ -125,8 +132,19 @@ export default async function Paperless({
       name: dict.solutions.paperless.pricingCard.testSystem.item.secondName,
     },
     {
-      icon: <PiWarningCircleLight className="text-warning" />,
+      icon: <PiWarningCircleLight className="text-accent" />,
       name: dict.solutions.paperless.pricingCard.testSystem.item.thirdName,
+    },
+  ];
+
+  const liveCardItems = [
+    {
+      icon: <PiStarFourLight className="text-primary" />,
+      name: dict.solutions.paperless.pricingCard.liveDemo.item.firstName,
+    },
+    {
+      icon: <PiPathLight className="text-primary" />,
+      name: dict.solutions.paperless.pricingCard.liveDemo.item.secondName,
     },
   ];
 
@@ -158,7 +176,7 @@ export default async function Paperless({
                   className="h-auto w-96"
                   src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
                   alt="White logo of paperless-ngx"
-                  width={384}
+                  width={0}
                   height={184}
                   loading="lazy"
                 />
@@ -247,57 +265,55 @@ export default async function Paperless({
         </div>
       </div>
 
-      <section className="px-4">
-        <div className="container mx-auto p-8 lg:p-16 bg-gunmetal-600 rounded-lg">
-          <div className="flex gap-4 items-center mb-8">
-            <PiHourglassMediumLight className="text-3xl text-primary" />
-            <h2 className="text-4xl font-semibold">
-              {dict.solutions.paperless.installTitle}
-            </h2>
-          </div>
-          <p className="max-w-3xl">
-            {dict.solutions.paperless.installDescription}
-          </p>
-          <ul className="mt-8">
-            <li className="flex flex-col gap-4 mb-8">
-              <PiNumberSquareOneLight className="text-4xl text-primary" />
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-                <div className="col-span-2 flex flex-col sm:flex-row gap-2">
-                  <SolutionCard
-                    icon={<PiHardDrivesLight />}
-                    description={dict.solutions.paperless.installFirstStep}
-                  />
-                  <div className="divider sm:divider-horizontal">
-                    {dict.conditional.or}
-                  </div>
-                  <SolutionCard
-                    icon={<PiCloudCheckLight />}
-                    description={dict.solutions.paperless.installSecondStep}
-                  />
-                </div>
-              </div>
-            </li>
-            <li className="flex flex-col gap-4 mb-8">
-              <PiNumberSquareTwoLight className="text-4xl text-primary" />
-              <div className="grid sm:grid-cols-2 md:grid-cols-3">
-                <SolutionCard
-                  icon={<PiWrenchLight />}
-                  description={dict.solutions.paperless.installThirdStep}
-                />
-              </div>
-            </li>
-            <li className="flex flex-col gap-4">
-              <PiNumberSquareThreeLight className="text-4xl text-primary" />
-              <div className="grid sm:grid-cols-2 md:grid-cols-3">
-                <SolutionCard
-                  icon={<PiSignInLight />}
-                  description={dict.solutions.paperless.installFourthStep}
-                />
-              </div>
-            </li>
-          </ul>
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex gap-4 items-center mb-8">
+          <PiHourglassMediumLight className="text-3xl text-primary" />
+          <h2 className="text-4xl font-semibold">
+            {dict.solutions.paperless.installTitle}
+          </h2>
         </div>
-      </section>
+        <p className="max-w-3xl">
+          {dict.solutions.paperless.installDescription}
+        </p>
+        <ul className="mt-8">
+          <li className="flex flex-col gap-4 mb-8">
+            <PiNumberSquareOneLight className="text-4xl text-primary" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
+              <div className="col-span-2 flex flex-col sm:flex-row gap-2">
+                <SolutionCard
+                  icon={<PiHardDrivesLight />}
+                  description={dict.solutions.paperless.installFirstStep}
+                />
+                <div className="divider sm:divider-horizontal">
+                  {dict.conditional.or}
+                </div>
+                <SolutionCard
+                  icon={<PiCloudCheckLight />}
+                  description={dict.solutions.paperless.installSecondStep}
+                />
+              </div>
+            </div>
+          </li>
+          <li className="flex flex-col gap-4 mb-8">
+            <PiNumberSquareTwoLight className="text-4xl text-primary" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-3">
+              <SolutionCard
+                icon={<PiWrenchLight />}
+                description={dict.solutions.paperless.installThirdStep}
+              />
+            </div>
+          </li>
+          <li className="flex flex-col gap-4">
+            <PiNumberSquareThreeLight className="text-4xl text-primary" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-3">
+              <SolutionCard
+                icon={<PiSignInLight />}
+                description={dict.solutions.paperless.installFourthStep}
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
 
       <div className="container mx-auto px-4 py-16">
         <div className="flex gap-4 items-center mb-8">
@@ -334,10 +350,10 @@ export default async function Paperless({
         </div>
       </div>
 
-      <section className="px-4">
-        <div className="container mx-auto p-8 lg:p-16 bg-sapphire-300 rounded-lg">
+      <section className="px-4 py-16 bg-blob-lg bg-center bg-cover xl:bg-contain">
+        <div className="container mx-auto">
           <div className="flex gap-4 items-center mb-8">
-            <PiMedalLight className="text-3xl text-primary" />
+            <PiMedalLight className="text-5xl text-yellow-400" />
             <h2 className="text-4xl font-semibold">
               {dict.solutions.paperless.offerTitle}
             </h2>
@@ -350,27 +366,28 @@ export default async function Paperless({
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
             <SolutionCard
-              icon={<PiFileArrowDownLight />}
+              icon={<PiWrenchLight />}
               description={dict.solutions.paperless.offerFirstBenefit}
             />
             <SolutionCard
-              icon={<PiLightbulbFilamentLight />}
+              icon={<PiTestTubeLight />}
               description={dict.solutions.paperless.offerSecondBenefit}
+              url="http://paperless.digitizerspace.com:8000/"
             />
             <SolutionCard
-              icon={<PiArticleLight />}
+              icon={<PiHandshakeLight />}
               description={dict.solutions.paperless.offerThirdBenefit}
             />
             <SolutionCard
-              icon={<PiArticleLight />}
+              icon={<PiMoneyLight />}
               description={dict.solutions.paperless.offerFourthBenefit}
             />
             <SolutionCard
-              icon={<PiArticleLight />}
+              icon={<PiTrophyLight />}
               description={dict.solutions.paperless.offerFifthBenefit}
             />
             <SolutionCard
-              icon={<PiArticleLight />}
+              icon={<PiTrendUpLight />}
               description={dict.solutions.paperless.offerSixthBenefit}
             />
           </div>
@@ -387,7 +404,7 @@ export default async function Paperless({
         <p className="max-w-3xl">
           {dict.solutions.paperless.pricingDescription}
         </p>
-        <div className="mt-8 flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 mt-8">
           <PricingCard
             title={dict.solutions.paperless.pricingCard.paperlessSystem.title}
             subtitle={
@@ -411,18 +428,34 @@ export default async function Paperless({
             className="border-primary"
             items={paperlessCardItems}
           />
-          <PricingCard
-            title={dict.solutions.paperless.pricingCard.testSystem.title}
-            subtitle={dict.solutions.paperless.pricingCard.testSystem.subtitle}
-            badgeText={
-              dict.solutions.paperless.pricingCard.testSystem.badgeText
-            }
-            btnText={dict.button.startDemo}
-            btnUrl="http://paperless.digitizerspace.com:8000/"
-            price={dict.solutions.paperless.pricingCard.testSystem.price}
-            className="border-gunmetal-600"
-            items={testCardItems}
-          />
+          <div>
+            <PricingCard
+              title={dict.solutions.paperless.pricingCard.testSystem.title}
+              subtitle={
+                dict.solutions.paperless.pricingCard.testSystem.subtitle
+              }
+              badgeText={
+                dict.solutions.paperless.pricingCard.testSystem.badgeText
+              }
+              btnText={dict.button.startDemo}
+              btnUrl="http://paperless.digitizerspace.com:8000/"
+              price={dict.solutions.paperless.pricingCard.testSystem.price}
+              className="border-gunmetal-600 mb-8"
+              items={testCardItems}
+            />
+            <PricingCard
+              title={dict.solutions.paperless.pricingCard.liveDemo.title}
+              subtitle={dict.solutions.paperless.pricingCard.liveDemo.subtitle}
+              badgeText={
+                dict.solutions.paperless.pricingCard.liveDemo.badgeText
+              }
+              btnText={dict.button.bookDemo}
+              btnUrl={RouteId.contact}
+              price={dict.solutions.paperless.pricingCard.liveDemo.price}
+              className="border-gunmetal-600"
+              items={liveCardItems}
+            />
+          </div>
         </div>
         <h3 className="text-3xl mt-16 mb-4">
           {dict.solutions.paperless.dataProtectionTitle}
