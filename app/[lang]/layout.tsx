@@ -5,8 +5,8 @@ import { Navbar } from '@/components/Navbar/Navbar';
 import { Footer } from '@/components/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { type Locale, i18n } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
+import { type Locale, i18n } from '@/common/i18n/i18n-config';
+import { getDictionary } from '@/utils/getDictionary/get-dictionary';
 
 const inter = Inter({ subsets: ['latin'] });
 

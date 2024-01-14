@@ -147,12 +147,12 @@
       "pricingDescription": "Easy one click payment with credit/debit card. After your order you will immediately receive our invoice in your email inbox. Within 24h we will start working on your inquiry.",
       "pricingCard": {
         "paperlessSystem": {
-          "title": "The paperless system",
+          "title": "The paperless office",
           "subtitle": "Digitalize your document management.",
           "priceOld": "$4990",
           "discount": "Beta phase: 80% off",
           "badgeText": "Only 3 seats left",
-          "price": "$998",
+          "price": "$1093",
           "priceInfo": "One-time payment",
           "item": {
             "firstName": "Paperless-ngx installed on your company server or a virtual private server",
@@ -166,15 +166,15 @@
             "fifthName": "Money back guarantee if you don't increase your efficiency within 30 days after installation",
             "fifthInfo": "We believe in our solution and return you the money no questions asked if you can't increase your efficiency.",
             "sixthName": "Bonus: 3 month access to our exclusive Automation Mastermind",
-            "sixthInfo": "Get access to our Telegram group for 3 months after your order (value: $99/month)",
-            "seventhName": "Bonus: 3 month maintenance package",
-            "seventhInfo": "We install new updates for free for 3 months after your order (value: $49/month)",
+            "sixthInfo": "Get access to our Telegram group for 3 months after your order (value: $199/month)",
+            "seventhName": "Bonus: 3 month support & maintenance package",
+            "seventhInfo": "We help you using the software in an optimal way (value: $199/month).",
             "eighthName": "Bonus: 10% coupon on all our tools and solutions",
             "eighthInfo": "After the money back guarantee period is over we will send you a 10% coupon code which you can use to save on all of our offers.",
             "ninethName": "Bonus: Server costs for the first 3 months included",
             "ninethInfo": "Server costs are on us for the initial 3 months after your order",
             "tenthName": "Server costs depend on your storage requirements",
-            "tenthInfo": "Starting at $4.50/month (200GB storage) and can be upgraded any time as you wish"
+            "tenthInfo": "Costs for a VPS starting at $4.50/month (200GB storage) and can be upgraded any time as you wish"
           }
         },
         "testSystem": {

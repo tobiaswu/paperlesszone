@@ -43,8 +43,8 @@ import {
 } from '@/utils/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/utils/route';
-import { Locale } from '@/i18n-config';
-import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/common/i18n/i18n-config';
+import { getDictionary } from '@/utils/getDictionary/get-dictionary';
 
 export const metadata: Metadata = {
   title: 'Get the Paperless-ngx system running | we install it for you',
@@ -350,15 +350,15 @@ export default async function Paperless({
         </div>
       </div>
 
-      <section className="px-4 py-16 bg-blob-lg bg-center bg-cover xl:bg-contain">
-        <div className="container mx-auto">
+      <section className="bg-blob-lg bg-center bg-cover xl:bg-contain">
+        <div className="container mx-auto px-4 py-16">
           <div className="flex gap-4 items-center mb-8">
             <PiMedalLight className="text-5xl text-yellow-400" />
             <h2 className="text-4xl font-semibold">
               {dict.solutions.paperless.offerTitle}
             </h2>
           </div>
-          <h3 className="text-3xl mb-4">
+          <h3 className="text-3xl max-w-3xl mb-4">
             {dict.solutions.paperless.offerSubtitle}
           </h3>
           <p className="max-w-3xl">
@@ -424,7 +424,11 @@ export default async function Paperless({
               dict.solutions.paperless.pricingCard.paperlessSystem.priceInfo
             }
             btnText={dict.button.getStarted}
-            btnUrl={RouteId.paperless}
+            btnUrl={
+              lang === 'de'
+                ? 'https://buy.stripe.com/bIY6re0K11YDg9O8ww?locale=de'
+                : 'https://buy.stripe.com/cN2g1O64l9r58Hm145?locale=en'
+            }
             className="border-primary"
             items={paperlessCardItems}
           />

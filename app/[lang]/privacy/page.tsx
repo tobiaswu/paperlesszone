@@ -1,5 +1,5 @@
-import { getDictionary } from '@/get-dictionary';
-import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/utils/getDictionary/get-dictionary';
+import { Locale } from '@/common/i18n/i18n-config';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

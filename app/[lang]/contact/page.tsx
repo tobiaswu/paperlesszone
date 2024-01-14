@@ -12,8 +12,8 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/utils/animation';
-import { getDictionary } from '@/get-dictionary';
-import { Locale } from '@/i18n-config';
+import { getDictionary } from '@/utils/getDictionary/get-dictionary';
+import { Locale } from '@/common/i18n/i18n-config';
 
 export const metadata: Metadata = {
   title: 'Contact DigitizerSpace today - we help you automating',
