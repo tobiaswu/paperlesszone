@@ -1,3 +1,3 @@
-import { type getDictionary } from '@/utils/getDictionary/get-dictionary';
+import { type getDictionary } from '@/utils/getDictionary';
 
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;

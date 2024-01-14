@@ -1,6 +1,6 @@
 'use client';
 
-import { i18n, type Locale } from '@/common/i18n/i18n-config';
+import { i18n, type Locale } from '@/common/i18n';
 import { useLocale } from '@/utils/hooks';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';

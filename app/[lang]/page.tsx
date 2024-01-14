@@ -6,8 +6,8 @@ import { LottieAnimation } from '@/components/LottieAnimation';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { PartnerLogo } from '@/components/PartnerLogo';
 import { UseCaseCard } from '@/components/UseCaseCard';
-import { getDictionary } from '@/utils/getDictionary/get-dictionary';
-import { Locale } from '@/common/i18n/i18n-config';
+import { getDictionary } from '@/utils/getDictionary';
+import { Locale } from '@/common/i18n';
 import {
   fadeInAnimationVariant,
   itemAnimationVariant,

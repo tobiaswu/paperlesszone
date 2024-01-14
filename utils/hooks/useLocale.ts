@@ -1,4 +1,4 @@
-import { Locale } from '@/common/i18n/i18n-config';
+import { Locale } from '@/common/i18n';
 import { useLocalStorage } from './useLocalStorage';
 
 export const useLocale = () => {

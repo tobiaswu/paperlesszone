@@ -43,8 +43,8 @@ import {
 } from '@/utils/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/utils/route';
-import { Locale } from '@/common/i18n/i18n-config';
-import { getDictionary } from '@/utils/getDictionary/get-dictionary';
+import { Locale } from '@/common/i18n';
+import { getDictionary } from '@/utils/getDictionary';
 
 export const metadata: Metadata = {
   title: 'Get the Paperless-ngx system running | we install it for you',
