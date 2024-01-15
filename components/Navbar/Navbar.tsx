@@ -5,13 +5,15 @@ import { MobileMenu } from './MobileMenu';
 import { Dictionary } from '@/common/types';
 import { getNavItems } from './Navbar.utils';
 import { LocaleSwitcher } from '../LocaleSwitcher';
+import { Locale } from '@/common/i18n';
 
 interface NavbarProps {
   dict: Dictionary;
+  lang: Locale;
 }
 
-export const Navbar = async ({ dict }: NavbarProps) => {
-  const navItems = getNavItems(dict);
+export const Navbar = async ({ dict, lang }: NavbarProps) => {
+  const navItems = getNavItems(dict, lang);
 
   return (
     <header className="navbar pl-0">

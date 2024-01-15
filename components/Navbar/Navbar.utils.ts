@@ -1,8 +1,9 @@
 import { RouteId } from '@/utils/route';
 import { NavItemData } from './Navbar.types';
 import { Dictionary } from '@/common/types';
+import { Locale } from '@/common/i18n';
 
-export const getNavItems = (dict: Dictionary) => {
+export const getNavItems = (dict: Dictionary, lang: Locale) => {
   const navItems: NavItemData[] = [
     {
       id: 'solutions',
@@ -32,7 +33,7 @@ export const getNavItems = (dict: Dictionary) => {
         {
           id: 'resource-2',
           label: 'Newsletter',
-          url: '/#newsletter',
+          url: `/${lang}/#newsletter`,
         },
       ],
     },

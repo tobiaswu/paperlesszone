@@ -32,9 +32,9 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        <Navbar dict={dict} />
+        <Navbar dict={dict} lang={lang} />
         {children}
-        <Footer dict={dict} />
+        <Footer dict={dict} lang={lang} />
         <Analytics />
         <SpeedInsights />
       </body>
