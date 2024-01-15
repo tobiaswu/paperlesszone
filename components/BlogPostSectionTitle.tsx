@@ -13,9 +13,12 @@ export const BlogPostSectionTitle = ({
   return (
     <div className="flex gap-2 items-center w-fit">
       <h2 className="text-2xl font-semibold">
-        <Link className="next-link flex items-center gap-2 hover:text-primary" href={`#${hash}`}>
+        <Link
+          className="group flex items-center gap-2 hover:text-primary"
+          href={`#${hash}`}
+        >
           {title}
-          <PiLinkLight className="link-icon hidden" />
+          <PiLinkLight className="hidden group-hover:block" />
         </Link>
       </h2>
     </div>

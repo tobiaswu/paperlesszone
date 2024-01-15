@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .card:hover .icon {
-    color: theme('colors.neutral');
-  }
-
-  .next-link:hover .link-icon {
-    display: block;
-  }
-}
-
 p {
   font-size: large;
   line-height: 1.75;
