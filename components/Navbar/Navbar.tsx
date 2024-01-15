@@ -18,8 +18,8 @@ export const Navbar = async ({ dict, lang }: NavbarProps) => {
   return (
     <header className="navbar pl-0">
       <div className="navbar-start">
-        <MobileMenu items={navItems} />
-        <Link className="ml-2" href={RouteId.root}>
+        <MobileMenu items={navItems} lang={lang} />
+        <Link className="ml-2" href={`/${lang}${RouteId.root}`}>
           <p className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
             DigitizerSpace
           </p>
@@ -40,14 +40,19 @@ export const Navbar = async ({ dict, lang }: NavbarProps) => {
                 {navItem.items.map((item) => {
                   return (
                     <li key={item.id}>
-                      <Link href={item.url ?? RouteId.root}>{item.label}</Link>
+                      <Link href={item.url ?? `/${lang}${RouteId.root}`}>
+                        {item.label}
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
           ) : (
-            <Link key={navItem.id} href={navItem.url ?? RouteId.root}>
+            <Link
+              key={navItem.id}
+              href={navItem.url ?? `/${lang}${RouteId.root}`}
+            >
               <button className="btn btn-ghost">{navItem.label}</button>
             </Link>
           );
@@ -57,7 +62,7 @@ export const Navbar = async ({ dict, lang }: NavbarProps) => {
         <div className="hidden lg:block">
           <LocaleSwitcher />
         </div>
-        <Link className="ml-4" href={RouteId.contact}>
+        <Link className="ml-4" href={`/${lang}${RouteId.contact}`}>
           <button className="btn btn-neutral border-gunmetal-600">
             {dict.button.contact}
           </button>

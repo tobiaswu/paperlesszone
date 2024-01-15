@@ -17,7 +17,7 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
         {
           id: 'solution-2',
           label: dict.navbar.paperless,
-          url: RouteId.paperless,
+          url: `/${lang}${RouteId.paperless}`,
         },
       ],
     },
@@ -37,7 +37,7 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
         },
       ],
     },
-    { id: 'about', label: dict.navbar.about, url: RouteId.about },
+    { id: 'about', label: dict.navbar.about, url: `/${lang}${RouteId.about}` },
   ];
 
   return navItems;

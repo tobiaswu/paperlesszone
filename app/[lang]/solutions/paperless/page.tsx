@@ -37,10 +37,7 @@ import { PricingCard } from '@/components/PricingCard';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
-import {
-  itemAnimationVariant,
-  staggerAnimationVariant,
-} from '@/lib/animation';
+import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/lib/route';
 import { Locale } from '@/lib/i18n';
@@ -454,7 +451,7 @@ export default async function Paperless({
                 dict.solutions.paperless.pricingCard.liveDemo.badgeText
               }
               btnText={dict.button.bookDemo}
-              btnUrl={RouteId.contact}
+              btnUrl={`/${lang}${RouteId.contact}`}
               price={dict.solutions.paperless.pricingCard.liveDemo.price}
               className="border-gunmetal-600"
               items={liveCardItems}

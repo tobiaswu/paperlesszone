@@ -346,7 +346,7 @@ export default async function Home({
               />
               {/* <CheckedText description="As a bonus, you will receive our guide for free." /> */}
             </div>
-            <EmailSignup dict={dict} />
+            <EmailSignup dict={dict} lang={lang} />
           </div>
           {/* <div className="col-span-3 md:col-span-1 place-self-center">
             <div className="rounded-lg border-primary border-2 shadow-md bg-neutral px-8 py-32 relative">

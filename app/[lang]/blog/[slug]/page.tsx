@@ -101,11 +101,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </p>
           <div className="flex flex-col py-4">
             <Image
+              className="rounded-lg w-full h-auto"
               src="/assets/images/ai-hagrid-robots.webp"
               alt="Placeholder image"
               width={600}
-              height={200}
-              className="rounded-lg"
+              height={0}
             />
             <p className="text-sm text-neutral-400">Picture of ...</p>
           </div>
