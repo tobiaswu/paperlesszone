@@ -1,7 +1,7 @@
 import { BlogPreview } from '@/components/BlogPreview';
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
-import { EmailSignup } from '@/components/EmailSignup';
+import { EmailSignup } from '@/components/EmailSignup/EmailSignup';
 import { LottieAnimation } from '@/components/LottieAnimation';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { PartnerLogo } from '@/components/PartnerLogo';

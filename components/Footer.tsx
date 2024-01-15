@@ -5,7 +5,7 @@ import {
   PiLockKeyLight,
   PiTwitterLogoLight,
 } from 'react-icons/pi';
-import { EmailSignup } from './EmailSignup';
+import { EmailSignup } from './EmailSignup/EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
 import { Dictionary } from '@/lib/types';
 import { LocaleSwitcher } from './LocaleSwitcher';
