@@ -1,4 +1,4 @@
-import { RouteId } from '@/utils/route';
+import { RouteId } from '@/lib/route';
 import Link from 'next/link';
 import { PostCard } from './PostCard';
 import { PiTriangleLight } from 'react-icons/pi';

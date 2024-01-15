@@ -1,7 +1,7 @@
 'use client';
 
-import { Dictionary } from '@/common/types';
-import { RouteId } from '@/utils/route';
+import { Dictionary } from '@/lib/types';
+import { RouteId } from '@/lib/route';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';

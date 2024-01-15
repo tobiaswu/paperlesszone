@@ -8,14 +8,14 @@ import {
 } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
-import { RouteId } from '@/utils/route';
+import { RouteId } from '@/lib/route';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import {
   itemAnimationVariant,
   staggerAnimationVariant,
-} from '@/utils/animation';
-import { Locale } from '@/common/i18n';
+} from '@/lib/animation';
+import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 
 export const metadata: Metadata = {

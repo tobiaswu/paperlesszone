@@ -1,4 +1,4 @@
-import { RouteId } from '@/utils/route';
+import { RouteId } from '@/lib/route';
 import Image from 'next/image';
 import Link from 'next/link';
 

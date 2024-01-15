@@ -1,4 +1,4 @@
-import { Dictionary } from '@/common/types';
+import { Dictionary } from '@/lib/types';
 
 interface BlogPreviewProps {
   dict: Dictionary;

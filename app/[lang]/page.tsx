@@ -7,13 +7,13 @@ import { MotionWrapper } from '@/components/MotionWrapper';
 import { PartnerLogo } from '@/components/PartnerLogo';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import { getDictionary } from '@/utils/getDictionary';
-import { Locale } from '@/common/i18n';
+import { Locale } from '@/lib/i18n';
 import {
   fadeInAnimationVariant,
   itemAnimationVariant,
   staggerAnimationVariant,
-} from '@/utils/animation';
-import { RouteId } from '@/utils/route';
+} from '@/lib/animation';
+import { RouteId } from '@/lib/route';
 import Image from 'next/image';
 import Link from 'next/link';
 import {

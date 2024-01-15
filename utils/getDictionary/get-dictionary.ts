@@ -1,5 +1,5 @@
 import 'server-only';
-import { Locale } from '@/common/i18n';
+import { Locale } from '@/lib/i18n';
 
 // We enumerate all dictionaries here for better linting and typescript support
 // We also get the default import for cleaner types

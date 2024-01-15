@@ -1,5 +1,5 @@
 import { getDictionary } from '@/utils/getDictionary';
-import { Locale } from '@/common/i18n';
+import { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

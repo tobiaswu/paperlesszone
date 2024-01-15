@@ -1,6 +1,6 @@
 'use client';
 
-import { Dictionary } from '@/common/types';
+import { Dictionary } from '@/lib/types';
 import { useEffect, useState } from 'react';
 import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';
 import { ZodError, z } from 'zod';

@@ -40,10 +40,10 @@ import { MotionWrapper } from '@/components/MotionWrapper';
 import {
   itemAnimationVariant,
   staggerAnimationVariant,
-} from '@/utils/animation';
+} from '@/lib/animation';
 import { StatCard } from '@/components/StatCard';
-import { RouteId } from '@/utils/route';
-import { Locale } from '@/common/i18n';
+import { RouteId } from '@/lib/route';
+import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 
 export const metadata: Metadata = {

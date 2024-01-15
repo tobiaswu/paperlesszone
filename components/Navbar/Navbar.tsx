@@ -1,11 +1,11 @@
-import { RouteId } from '@/utils/route';
+import { RouteId } from '@/lib/route';
 import Link from 'next/link';
 import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';
-import { Dictionary } from '@/common/types';
+import { Dictionary } from '@/lib/types';
 import { getNavItems } from './Navbar.utils';
 import { LocaleSwitcher } from '../LocaleSwitcher';
-import { Locale } from '@/common/i18n';
+import { Locale } from '@/lib/i18n';
 
 interface NavbarProps {
   dict: Dictionary;

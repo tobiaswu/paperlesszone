@@ -1,7 +1,7 @@
-import { RouteId } from '@/utils/route';
+import { RouteId } from '@/lib/route';
 import { NavItemData } from './Navbar.types';
-import { Dictionary } from '@/common/types';
-import { Locale } from '@/common/i18n';
+import { Dictionary } from '@/lib/types';
+import { Locale } from '@/lib/i18n';
 
 export const getNavItems = (dict: Dictionary, lang: Locale) => {
   const navItems: NavItemData[] = [
