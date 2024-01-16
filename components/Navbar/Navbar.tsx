@@ -16,7 +16,7 @@ export const Navbar = async ({ dict, lang }: NavbarProps) => {
   const navItems = getNavItems(dict, lang);
 
   return (
-    <header className="navbar pl-0">
+    <header className="navbar pl-0" data-theme="darkTheme">
       <div className="navbar-start">
         <MobileMenu items={navItems} lang={lang} />
         <Link className="ml-2" href={`/${lang}${RouteId.root}`}>

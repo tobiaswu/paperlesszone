@@ -1,7 +1,18 @@
 import { useLocalStorage } from './useLocalStorage';
 
 export const useDarkMode = () => {
-  const [darkMode, setDarkMode] = useLocalStorage<boolean>('darkMode', true);
+  const getDefault = () => {
+    try {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch (error) {
+      return false;
+    }
+  };
+
+  const [darkMode, setDarkMode] = useLocalStorage<boolean>(
+    'darkMode',
+    getDefault()
+  );
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);

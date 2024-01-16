@@ -20,7 +20,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
   const navItems = getNavItems(dict, lang);
 
   return (
-    <footer className="bg-neutral">
+    <footer className="bg-neutral" data-theme="darkTheme">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
           <div className="flex flex-col gap-8">

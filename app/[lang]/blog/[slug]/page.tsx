@@ -1,9 +1,10 @@
-import { BlogContentRef } from '@/components/BlogContentRef';
 import { BlogPostAuthor } from '@/components/BlogPostAuthor';
 import { BlogPostSectionTitle } from '@/components/BlogPostSectionTitle';
-import { BlogPreviewSmall } from '@/components/BlogPreviewSmall';
+import { RelatedPosts } from '@/components/RelatedPosts';
 import { PostShareButton } from '@/components/PostShareButton';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import Image from 'next/image';
+import { TableOfContents } from '@/components/TableOfContents';
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -13,14 +14,15 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <div className="relative">
         <div className="bg-neutral p-8">
           <div className="container mx-auto">
-            <div className="flex items-center justify-between">
-              <div className="badge badge-secondary badge-lg rounded-lg mb-2">
+            <div className="flex items-center justify-between gap-2">
+              {/* <div className="badge badge-secondary badge-lg rounded-lg mb-2">
                 Trends
-              </div>
+              </div> */}
               {/* TODO: add share modal */}
               <PostShareButton />
+              <ThemeSwitcher />
             </div>
-            <h1 className="text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-5xl font-bold my-4 leading-tight">
               The Paperless Office
             </h1>
             <p className="max-w-xl leading-relaxed">
@@ -46,79 +48,70 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           loading="lazy"
         />
 
-        <div className="mx-auto max-w-4xl py-16 px-4">
-          <h2 className="text-2xl font-semibold mb-4">Table of contents</h2>
-          <ol className="list-decimal list-inside">
-            <li>
-              <BlogContentRef
-                hash="section-1"
-                title="What is paperless office?"
-              />
-            </li>
-            <li>
-              <BlogContentRef hash="section-2" title="What are the benefits?" />
-            </li>
-            <li>
-              <BlogContentRef hash="section-3" title="Final thoughts" />
-            </li>
-          </ol>
+        <div className="container mx-auto py-8 px-4">
+          <BlogPostAuthor
+            name="Tobias Wupperfeld"
+            avatarUrl="/assets/images/founder-portrait.webp"
+            twitterUrl="/"
+            linkedinUrl="/"
+          />
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4">
-        <section id="section-1" className="pb-16">
-          <BlogPostSectionTitle
-            title="What is a paperless office?"
-            hash="section-1"
-          />
-          <p className="mt-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-        </section>
-        <section id="section-2" className="pb-16">
-          <BlogPostSectionTitle
-            title="What are the benefits?"
-            hash="section-2"
-          />
-          <p className="mt-6 leading-relaxed">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
-          <div className="flex flex-col py-4">
-            <Image
-              className="rounded-lg w-full h-auto"
-              src="/assets/images/ai-hagrid-robots.webp"
-              alt="Placeholder image"
-              width={600}
-              height={0}
+      <div className="container flex flex-col md:flex-row mx-auto gap-8 px-4">
+        <TableOfContents />
+
+        <div className="max-w-4xl">
+          <section id="section-1" className="pb-16">
+            <BlogPostSectionTitle
+              title="What is a paperless office?"
+              hash="section-1"
             />
-            <p className="text-sm text-neutral-400">Picture of ...</p>
-          </div>
-        </section>
+            <p className="mt-6 leading-relaxed">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </p>
+          </section>
+          <section id="section-2" className="pb-16">
+            <BlogPostSectionTitle
+              title="What are the benefits?"
+              hash="section-2"
+            />
+            <p className="mt-6 leading-relaxed">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+              invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+              dolor sit amet.
+            </p>
+            <div className="flex flex-col py-4">
+              <Image
+                className="rounded-lg w-full h-auto"
+                src="/assets/images/ai-hagrid-robots.webp"
+                alt="Placeholder image"
+                width={600}
+                height={0}
+              />
+              <p className="text-sm text-neutral-400">Picture of ...</p>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div className="flex gap-8 items-center justify-between mx-auto max-w-4xl px-4">
-        <BlogPostAuthor
-          name="Tobias Wupperfeld"
-          avatarUrl="/assets/images/founder-portrait.webp"
-          twitterUrl="/"
-          linkedinUrl="/"
-        />
         {/* TODO: add post rating functionality */}
         {/* <BlogPostRating /> */}
       </div>
@@ -126,7 +119,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       {/* TODO: add comment section */}
 
       <div className="container mx-auto py-32 px-4">
-        <BlogPreviewSmall />
+        <RelatedPosts />
       </div>
     </>
   );
