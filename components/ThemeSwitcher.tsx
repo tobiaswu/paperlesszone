@@ -10,9 +10,9 @@ export const ThemeSwitcher = () => {
 
   useEffect(() => {
     if (darkMode) {
-      setClassName('swap swap-rotate text-3xl');
+      setClassName('swap swap-rotate text-4xl hover:text-primary');
     } else {
-      setClassName('swap swap-rotate text-3xl');
+      setClassName('swap swap-rotate text-4xl hover:text-primary');
     }
   }, [darkMode]);
 
