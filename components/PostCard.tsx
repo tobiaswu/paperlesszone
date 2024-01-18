@@ -3,13 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export interface PostCardProps {
-  className: string;
+  className?: string;
   preview?: boolean;
 }
 
 export const PostCard = ({ className, preview }: PostCardProps) => {
+  const defaultClassName = 'card bg-neutral shadow-md rounded-lg';
+  const mergedClassName = className + ' ' + defaultClassName;
+
   return (
-    <div className={className}>
+    <div className={mergedClassName}>
       <figure className="min-w-fit">
         <Link className="w-full" href={`${RouteId.blog}/my-post`}>
           <Image

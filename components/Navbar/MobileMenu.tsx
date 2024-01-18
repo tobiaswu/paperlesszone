@@ -23,7 +23,7 @@ export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
         {items.map((tab) => {
           return (
             <li key={tab.id}>
-              <Link key={tab.id} href={tab.url ?? `/${lang}${RouteId.root}`}>
+              <Link key={tab.id} href={tab.url ?? `/${lang + RouteId.root}`}>
                 <p className="font-bold text-xl">{tab.label}</p>
               </Link>
               {tab.items && (
@@ -31,7 +31,7 @@ export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
                   {tab.items.map((item) => {
                     return (
                       <li key={item.id}>
-                        <Link href={item.url ?? `/${lang}${RouteId.root}`}>
+                        <Link href={item.url ?? `/${lang + RouteId.root}`}>
                           {item.label}
                         </Link>
                       </li>

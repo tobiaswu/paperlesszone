@@ -11,30 +11,29 @@ export interface Props {
 export const BlogNavbar = ({ dict, lang }: Props) => {
   const CATEGORIES = [
     {
-      name: 'all',
+      id: 'all',
       t: dict.blog.category.all,
     },
     {
-      name: 'useCases',
+      id: 'useCases',
       t: dict.blog.category.useCases,
     },
     {
-      name: 'guides',
+      id: 'guides',
       t: dict.blog.category.guides,
     },
     {
-      name: 'trends',
+      id: 'trends',
       t: dict.blog.category.trends,
     },
     {
-      name: 'productNews',
+      id: 'productNews',
       t: dict.blog.category.productNews,
     },
   ];
 
   // TODO: add selection menu on mobile
-  const className =
-    'tab w-32 overflow-hidden text-ellipsis md:w-auto'; // TODO: conditional set category's tab-active when URL param match
+  const className = 'tab w-32 overflow-hidden text-ellipsis md:w-auto'; // TODO: conditional set category's tab-active when URL param match
 
   return (
     <div className="flex gap-4 items-center bg-neutral border-b border-gunmetal-600 w-full h-16 p-8">
@@ -46,10 +45,12 @@ export const BlogNavbar = ({ dict, lang }: Props) => {
           {CATEGORIES.map((cat) => {
             return (
               <Link
-                key={cat.name}
-                href={`/${lang + RouteId.blog}?category=${cat.name}`}
+                key={cat.id}
+                href={`/${lang + RouteId.blog}?category=${cat.id}`}
                 role="tab"
-                className={className}
+                className={
+                  cat.id === 'all' ? className + ' tab-active' : className
+                }
               >
                 {cat.t}
               </Link>

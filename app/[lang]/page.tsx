@@ -169,19 +169,17 @@ export default async function Home({
         <MotionWrapper variants={itemAnimationVariant}>
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-24 sm:leading-normal">
             {dict.root.blogSection.title}
-            <br></br>
-            <span className="text-error lowercase text-xl">*Coming soon</span>
           </h2>
         </MotionWrapper>
         <MotionWrapper variants={fadeInAnimationVariant}>
           <BlogPreview dict={dict} />
         </MotionWrapper>
-        {/* <Link href={RouteId.blog}> */}
-        <button className="btn btn-primary mt-8" disabled>
-          {dict.button.learnMore}
-          <PiTriangleLight className="rotate-90" />
-        </button>
-        {/* </Link> */}
+        <Link href={RouteId.blog}>
+          <button className="btn btn-primary mt-8">
+            {dict.button.learnMore}
+            <PiTriangleLight className="rotate-90" />
+          </button>
+        </Link>
       </section>
 
       <section className="py-32">

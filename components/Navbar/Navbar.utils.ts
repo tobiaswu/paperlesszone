@@ -17,7 +17,7 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
         {
           id: 'solution-2',
           label: dict.navbar.paperless,
-          url: `/${lang}${RouteId.paperless}`,
+          url: `/${lang + RouteId.paperless}`,
         },
       ],
     },
@@ -25,11 +25,11 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
       id: 'resources',
       label: dict.navbar.resources,
       items: [
-        // {
-        //   id: 'resource-1',
-        //   label: 'Blog *coming soon',
-        //   url: RouteId.blog,
-        // },
+        {
+          id: 'resource-1',
+          label: 'Blog',
+          url: `/${lang + RouteId.blog}`,
+        },
         {
           id: 'resource-2',
           label: 'Newsletter',
@@ -37,7 +37,7 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
         },
       ],
     },
-    { id: 'about', label: dict.navbar.about, url: `/${lang}${RouteId.about}` },
+    { id: 'about', label: dict.navbar.about, url: `/${lang + RouteId.about}` },
   ];
 
   return navItems;

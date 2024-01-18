@@ -5,6 +5,7 @@ import { PostShareButton } from '@/components/PostShareButton';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import Image from 'next/image';
 import { TableOfContents } from '@/components/TableOfContents';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -15,11 +16,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="bg-neutral p-8">
           <div className="container mx-auto">
             <div className="flex items-center justify-between gap-2">
-              {/* <div className="badge badge-secondary badge-lg rounded-lg mb-2">
-                Trends
-              </div> */}
-              {/* TODO: add share modal */}
-              <PostShareButton />
+              <Breadcrumbs />
               <ThemeSwitcher />
             </div>
             <h1 className="text-5xl font-bold my-4 leading-tight">
@@ -30,11 +27,12 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               successfully into your business operations. Learn how Chris F.
               digitalized his real estate business.
             </p>
-            <div className="flex gap-8 mt-8 items-center">
-              <p className="text-base self-end">Oct 19, 2023</p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 items-start sm:items-center">
+              <p className="text-base">Oct 19, 2023</p>
               <div className="badge badge-primary badge-md rounded-lg">
                 5 mins read
               </div>
+              <PostShareButton />
             </div>
           </div>
         </div>

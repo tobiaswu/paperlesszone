@@ -30,9 +30,9 @@ export const RelatedPosts = ({}: RelatedPostsProps) => {
       </div>
       {/* show 1 card, sm: 2 cards, lg: 3 cards */}
       {/* TODO: add carousel navigation */}
-      <PostCard className="card bg-neutral shadow-md rounded-lg" />
-      <PostCard className="hidden sm:block card bg-neutral shadow-md rounded-lg" />
-      <PostCard className="hidden lg:block card bg-neutral shadow-md rounded-lg" />
+      <PostCard />
+      <PostCard className="hidden sm:block" />
+      <PostCard className="hidden lg:block" />
     </div>
   );
 };

@@ -24,7 +24,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
           <div className="flex flex-col gap-8">
-            <Link className="h-fit" href={`/${lang}${RouteId.root}`}>
+            <Link className="h-fit" href={`/${lang + RouteId.root}`}>
               <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
                 DigitizerSpace
               </p>
@@ -37,7 +37,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
                 <div className="flex flex-col gap-2" key={mainItem.id}>
                   <Link
                     className="hover:text-primary w-fit"
-                    href={mainItem.url ?? `/${lang}${RouteId.root}`}
+                    href={mainItem.url ?? `/${lang + RouteId.root}`}
                   >
                     <p className="font-bold">{mainItem.label}</p>
                   </Link>
@@ -46,7 +46,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
                       <Link
                         className="hover:text-primary w-fit"
                         key={item.id}
-                        href={item.url ?? `/${lang}${RouteId.root}`}
+                        href={item.url ?? `/${lang + RouteId.root}`}
                       >
                         <p className="text-base">{item.label}</p>
                       </Link>
@@ -74,21 +74,21 @@ export const Footer = ({ dict, lang }: FooterProps) => {
               <PiDotOutlineLight className="text-2xl" />
               <Link
                 className="hover:text-primary"
-                href={`/${lang}${RouteId.about}`}
+                href={`/${lang + RouteId.about}`}
               >
                 <p className="text-sm">{dict.footer.aboutUs}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
               <Link
                 className="hover:text-primary"
-                href={`/${lang}${RouteId.contact}`}
+                href={`/${lang + RouteId.contact}`}
               >
                 <p className="text-sm">{dict.button.contact}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
               <Link
                 className="hover:text-primary"
-                href={`/${lang}${RouteId.privacy}`}
+                href={`/${lang + RouteId.privacy}`}
               >
                 <p className="text-sm">{dict.footer.privacy}</p>
               </Link>
