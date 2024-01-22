@@ -15,7 +15,7 @@ import {
   PiWhatsappLogoLight,
 } from 'react-icons/pi';
 
-export const PostShareButton = () => {
+export const ArticleShareButton = () => {
   const [open, setOpen] = useState(false);
   const [toastOpen, setToastOpen] = useState(false);
   const pathname = usePathname();

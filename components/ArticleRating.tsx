@@ -2,9 +2,9 @@
 
 import ReactStars from 'react-stars';
 
-export interface BlogPostRatingProps {}
+export interface ArticleRatingProps {}
 
-export const BlogPostRating = ({}: BlogPostRatingProps) => {
+export const ArticleRating = ({}: ArticleRatingProps) => {
   return (
     <div className="bg-neutral p-8 rounded-lg h-40 w-1/2 flex flex-col justify-center">
       <p className="text-xl mb-4">How would you rate this article?</p>

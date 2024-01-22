@@ -11,6 +11,7 @@
   "dependencies": {
     "@dotlottie/react-player": "^1.6.6",
     "@formatjs/intl-localematcher": "^0.5.2",
+    "@strapi/blocks-react-renderer": "^1.0.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
     "framer-motion": "^10.16.16",

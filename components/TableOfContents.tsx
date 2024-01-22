@@ -1,21 +1,24 @@
-import { BlogContentRef } from './BlogContentRef';
+import { ArticleContentRef } from './ArticleContentRef';
 
-export interface TableOfContentsProps {}
+export interface TableOfContentsProps {
+  hashes: string[];
+  titles: string[];
+}
 
-export const TableOfContents = ({}: TableOfContentsProps) => {
+export const TableOfContents = ({ hashes, titles }: TableOfContentsProps) => {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">Table of contents</h2>
       <ol className="list-decimal list-inside">
-        <li>
-          <BlogContentRef hash="section-1" title="What is paperless office?" />
-        </li>
-        <li>
-          <BlogContentRef hash="section-2" title="What are the benefits?" />
-        </li>
-        <li>
-          <BlogContentRef hash="section-3" title="Final thoughts" />
-        </li>
+        {hashes.map((hash) => {
+          return titles.map((title) => {
+            return (
+              <li key={hash}>
+                <ArticleContentRef hash={hash} title={title} />
+              </li>
+            );
+          });
+        })}
       </ol>
     </div>
   );

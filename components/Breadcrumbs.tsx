@@ -13,7 +13,7 @@ export const Breadcrumbs = ({}: Props) => {
         <li>
           <Link href={RouteId.blog}>Blog</Link>
         </li>
-        <li>The Paperless Office</li>
+        <li>Here</li>
       </ul>
     </div>
   );

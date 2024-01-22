@@ -107,11 +107,11 @@ export default async function About({
         <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
           <div className="flex flex-col items-center gap-2">
             <Image
-              className="rounded-full border border-gunmetal-600"
+              className="rounded-full border border-gunmetal-600 w-48 h-auto"
               src="/assets/images/founder-portrait.webp"
               alt="Portrait of our founder Tobias Wupperfeld"
-              width={200}
-              height={200}
+              width={192}
+              height={0}
               loading="lazy"
             />
             <div className="flex gap-2">

@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export interface BlogContentRefProps {
+export interface ArticleContentRefProps {
   hash: string;
   title: string;
 }
 
-export const BlogContentRef = ({ hash, title }: BlogContentRefProps) => {
+export const ArticleContentRef = ({ hash, title }: ArticleContentRefProps) => {
   const pathname = usePathname();
 
   return (

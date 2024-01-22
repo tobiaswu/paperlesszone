@@ -1,11 +1,24 @@
-import { Dictionary } from '@/lib/types';
-import { PostCard } from './PostCard';
+import { Article, Dictionary } from '@/lib/types';
+import { ArticleCard } from './ArticleCard';
+import { articlesApi } from '@/app/[lang]/blog/[slug]/page';
+import { Locale } from '@/lib/i18n';
 
 interface BlogPreviewProps {
   dict: Dictionary;
+  lang: Locale;
 }
 
-export const BlogPreview = ({ dict }: BlogPreviewProps) => {
+export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
+  const articles: Article[] | undefined = await fetch(
+    articlesApi + '?locale=' + lang + '&populate=*',
+    {
+      method: 'GET',
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((error) => console.log(error));
+
   return (
     <div role="tablist" className="tabs tabs-boxed bg-base-100">
       <a role="tab" className="tab tab-active sm:w-28 md:w-32">
@@ -13,14 +26,47 @@ export const BlogPreview = ({ dict }: BlogPreviewProps) => {
       </a>
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">
-          <PostCard className="col-span-6 lg:card-side" preview />
-          <div className="skeleton col-span-6 sm:col-span-3 lg:col-span-2 w-full h-48 bg-gunmetal-300"></div>
-          <div className="skeleton col-span-6 sm:col-span-3 lg:col-span-2 w-full h-48 bg-gunmetal-300"></div>
-          <div className="skeleton col-span-6 sm:col-span-3 lg:col-span-2 w-full h-48 bg-gunmetal-300"></div>
-          {/*
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2" />
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2" />
-          <PostCard className="col-span-6 sm:col-span-3 lg:col-span-2" /> */}
+          {articles?.map((article, index) => {
+            if (index === 0) {
+              return (
+                <ArticleCard
+                  key={article.id}
+                  className="col-span-6 lg:card-side"
+                  preview
+                  category={article.attributes.category.data.attributes.item}
+                  description={article.attributes.description}
+                  slug={article.attributes.slug}
+                  title={article.attributes.title}
+                  updatedAt={article.attributes.updatedAt}
+                  readTime={article.attributes.reading_time}
+                  lang={lang}
+                  thumbnailUrl={
+                    article.attributes.thumbnail?.data.attributes.url
+                  }
+                  thumbnailAltText={
+                    article.attributes.thumbnail?.data.attributes
+                      .alternativeText
+                  }
+                />
+              );
+            }
+            return (
+              <ArticleCard
+                key={article.id}
+                className="col-span-6 sm:col-span-3 lg:col-span-2"
+                category={article.attributes.category.data.attributes.item}
+                slug={article.attributes.slug}
+                title={article.attributes.title}
+                updatedAt={article.attributes.updatedAt}
+                readTime={article.attributes.reading_time}
+                lang={lang}
+                thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
+                thumbnailAltText={
+                  article.attributes.thumbnail?.data.attributes.alternativeText
+                }
+              />
+            );
+          })}
         </div>
       </div>
       <a role="tab" className="tab sm:w-28 md:w-32">

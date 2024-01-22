@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { type Locale, i18n } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default async function RootLayout({
         {children}
         <Footer dict={dict} lang={lang} />
         <Analytics />
+        <GoogleAnalytics />
         <SpeedInsights />
       </body>
     </html>

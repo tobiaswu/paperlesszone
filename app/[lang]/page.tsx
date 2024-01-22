@@ -120,7 +120,7 @@ export default async function Home({
         </div>
       </div>
 
-      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover lg:bg-contain bg-center">
+      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover xl:bg-contain bg-center">
         <div className="container mx-auto">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
@@ -172,7 +172,7 @@ export default async function Home({
           </h2>
         </MotionWrapper>
         <MotionWrapper variants={fadeInAnimationVariant}>
-          <BlogPreview dict={dict} />
+          <BlogPreview dict={dict} lang={lang} />
         </MotionWrapper>
         <Link href={RouteId.blog}>
           <button className="btn btn-primary mt-8">
@@ -267,19 +267,9 @@ export default async function Home({
         </div>
       </section>
 
-      <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
+      {/* <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
           <div className="grid sm:grid-cols-2 gap-4">
-            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
-            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
-            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
-            <div className="skeleton w-full h-48 bg-gunmetal-300"></div>
-            {/* <ReviewCard
-              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/founder-portrait.webp"
-              name="Michael Baylor"
-              position="Chief Technology Officer"
-            />
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
               avatarURL="/images/founder-portrait.webp"
@@ -297,7 +287,13 @@ export default async function Home({
               avatarURL="/images/founder-portrait.webp"
               name="Michael Baylor"
               position="Chief Technology Officer"
-            /> */}
+            />
+            <ReviewCard
+              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
+              avatarURL="/images/founder-portrait.webp"
+              name="Michael Baylor"
+              position="Chief Technology Officer"
+            />
           </div>
         </div>
         <div className="flex flex-col col-span-2 lg:col-span-1">
@@ -318,7 +314,7 @@ export default async function Home({
             </button>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <section
         id="newsletter"

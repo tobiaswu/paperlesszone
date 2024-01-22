@@ -1,17 +1,16 @@
 import { RouteId } from '@/lib/route';
 import Link from 'next/link';
-import { PostCard } from './PostCard';
 import { PiTriangleLight } from 'react-icons/pi';
 
-export interface RelatedPostsProps {}
+export interface RelatedArticlesProps {}
 
-export const RelatedPosts = ({}: RelatedPostsProps) => {
+export const RelatedArticles = ({}: RelatedArticlesProps) => {
   return (
     <div className="flex gap-8">
       <div className="flex flex-col justify-between max-w-sm">
         <div>
           <p className="text-base">Keep reading</p>
-          <h2 className="py-4 text-2xl font-semibold">Related Posts</h2>
+          <h2 className="py-4 text-2xl font-semibold">Related Articles</h2>
           <p className="mb-4">
             Laborum dolore aute et incididunt commodo consectetur eiusmod magna.
           </p>
@@ -30,9 +29,9 @@ export const RelatedPosts = ({}: RelatedPostsProps) => {
       </div>
       {/* show 1 card, sm: 2 cards, lg: 3 cards */}
       {/* TODO: add carousel navigation */}
-      <PostCard />
-      <PostCard className="hidden sm:block" />
-      <PostCard className="hidden lg:block" />
+      {/* <ArticleCard />
+      <ArticleCard className="hidden sm:block" />
+      <ArticleCard className="hidden lg:block" /> */}
     </div>
   );
 };
