@@ -1,7 +1,7 @@
 import { ArticleCard } from '@/components/ArticleCard';
 import { Locale } from '@/lib/i18n';
 import { Article } from '@/lib/types';
-import { articlesApi } from './[slug]/page';
+import { ARTICLES_API } from './[slug]/page';
 import { NotFound } from '@/components/NotFound';
 
 export default async function Blog({
@@ -10,7 +10,7 @@ export default async function Blog({
   params: { lang: Locale };
 }) {
   const articles: Article[] | undefined = await fetch(
-    articlesApi + '?locale=' + lang + '&populate=*',
+    ARTICLES_API + '?locale=' + lang + '&populate=*',
     {
       method: 'GET',
     }

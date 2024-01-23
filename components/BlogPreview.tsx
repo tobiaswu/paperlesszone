@@ -1,6 +1,6 @@
 import { Article, Dictionary } from '@/lib/types';
 import { ArticleCard } from './ArticleCard';
-import { articlesApi } from '@/app/[lang]/blog/[slug]/page';
+import { ARTICLES_API } from '@/app/[lang]/blog/[slug]/page';
 import { Locale } from '@/lib/i18n';
 
 interface BlogPreviewProps {
@@ -10,7 +10,7 @@ interface BlogPreviewProps {
 
 export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
   const articles: Article[] | undefined = await fetch(
-    articlesApi + '?locale=' + lang + '&populate=*',
+    ARTICLES_API + '?locale=' + lang + '&populate=*',
     {
       method: 'GET',
     }

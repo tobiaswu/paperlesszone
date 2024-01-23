@@ -7,11 +7,11 @@ import { Article } from '@/lib/types';
 import { ArticleContentRenderer } from '@/components/ArticleContentRenderer';
 import { NotFound } from '@/components/NotFound';
 
-export const articlesApi = `${process.env.STRAPI_URL}/api/articles`;
+export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
 
 export async function generateStaticParams() {
   const articlesDe: Article[] | undefined = await fetch(
-    articlesApi + '?locale=de',
+    ARTICLES_API + '?locale=de',
     {
       method: 'GET',
     }
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     .then((res) => res.json())
     .then((data) => data.data)
     .catch((error) => console.log(error));
-  const articlesEn: Article[] | undefined = await fetch(articlesApi, {
+  const articlesEn: Article[] | undefined = await fetch(ARTICLES_API, {
     method: 'GET',
   })
     .then((res) => res.json())
@@ -48,7 +48,7 @@ export default async function Article({
   params: { slug: string; lang: Locale };
 }) {
   const article: Article | undefined = await fetch(
-    articlesApi +
+    ARTICLES_API +
       '?locale=' +
       lang +
       '&filters[slug][$eq]=' +
