@@ -369,7 +369,7 @@ export default async function Paperless({
             <SolutionCard
               icon={<PiTestTubeLight />}
               description={dict.solutions.paperless.offerSecondBenefit}
-              url="http://paperless.digitizerspace.com:8000/"
+              url="https://paperless.digitizerspace.com/"
             />
             <SolutionCard
               icon={<PiHandshakeLight />}
@@ -439,7 +439,7 @@ export default async function Paperless({
                 dict.solutions.paperless.pricingCard.testSystem.badgeText
               }
               btnText={dict.button.startDemo}
-              btnUrl="http://paperless.digitizerspace.com:8000/"
+              btnUrl="https://paperless.digitizerspace.com/"
               price={dict.solutions.paperless.pricingCard.testSystem.price}
               className="border-gunmetal-600 mb-8"
               items={testCardItems}

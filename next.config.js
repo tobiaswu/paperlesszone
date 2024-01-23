@@ -9,9 +9,9 @@ const nextConfig = {
         pathname: '/assets/**',
       },
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '1337',
+        protocol: 'https',
+        hostname: 'strapi.digitizerspace.com',
+        port: '',
         pathname: '/uploads/**',
       },
     ],
