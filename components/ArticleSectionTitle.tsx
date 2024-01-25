@@ -13,7 +13,7 @@ export const ArticleSectionTitle = ({
 }: ArticleSectionTitleProps) => {
   return (
     <div className="flex gap-2 items-center w-fit">
-      <h2 className="text-4xl font-semibold pb-4 leading-tight">
+      <h2 className="text-3xl font-semibold pb-6 pt-12 leading-tight">
         <Link
           className="group flex items-center gap-2 hover:text-primary"
           href={`#${hash}`}

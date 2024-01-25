@@ -63,7 +63,7 @@ export default async function Article({
     .catch((error) => console.log(error));
 
   return article ? (
-    <>
+    <div>
       <div className="relative">
         <div className="bg-neutral p-8">
           <div className="container mx-auto">
@@ -121,7 +121,7 @@ export default async function Article({
         {/* TODO: add table of content */}
         {/* <TableOfContents hashes={} titles={} /> */}
 
-        <div className="max-w-4xl">
+        <div className="max-w-4xl pb-16">
           <ArticleContentRenderer content={article.attributes.content} />
         </div>
       </div>
@@ -137,7 +137,7 @@ export default async function Article({
       {/* <div className="container mx-auto py-32 px-4">
         <RelatedArticles />
       </div> */}
-    </>
+    </div>
   ) : (
     <NotFound text="Could not find article" />
   );
