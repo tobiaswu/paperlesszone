@@ -56,7 +56,7 @@ export default async function Article({
       lang +
       '&filters[slug][$eq]=' +
       slug +
-      '&populate=*',
+      '&populate[0]=author&populate[1]=author.avatar&populate[2]=category&populate[3]=tags',
     {
       method: 'GET',
     }
@@ -107,16 +107,17 @@ export default async function Article({
 
         <div className="container mx-auto py-8 px-4">
           <ArticleAuthor
-            name={article.attributes.author.data.attributes.name}
+            name={article.attributes.author?.data.attributes.name ?? ''}
             avatarUrl={
-              article.attributes.author.data.attributes.avatar?.url ?? '/'
+              article.attributes.author?.data.attributes.avatar?.data.attributes
+                .url ?? '/'
             }
             avatarAltText={
-              article.attributes.author.data.attributes.avatar
-                ?.alternativeText ?? ''
+              article.attributes.author?.data.attributes.avatar?.data.attributes
+                .alternativeText ?? ''
             }
-            twitterUrl={article.attributes.author.data.attributes.twitterUrl}
-            linkedinUrl={article.attributes.author.data.attributes.linkedinUrl}
+            twitterUrl={article.attributes.author?.data.attributes.twitterUrl}
+            linkedinUrl={article.attributes.author?.data.attributes.linkedinUrl}
           />
         </div>
       </div>

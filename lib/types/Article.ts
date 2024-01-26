@@ -6,18 +6,18 @@ export type Article = {
   attributes: {
     title: string;
     description: string;
-    category: Category;
-    tags: Tag[];
-    reading_time: number;
+    category?: Category;
+    tags?: Tag[];
+    reading_time?: number;
     content: BlocksContent;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
     locale: Locale;
     slug: string;
-    author: Author;
-    heroImageLight: Image;
-    heroImageDark: Image;
+    author?: Author;
+    heroImageLight?: Image;
+    heroImageDark?: Image;
     thumbnail: Image;
   };
 };
@@ -44,13 +44,10 @@ type Author = {
   data: {
     id: number;
     attributes: {
-      avatar: {
-        url: string;
-        alternativeText: string;
-      };
+      avatar?: Image;
       name: string;
-      twitterUrl: string;
-      linkedinUrl: string;
+      twitterUrl?: string;
+      linkedinUrl?: string;
     };
   };
 };
