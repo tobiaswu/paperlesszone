@@ -12,6 +12,8 @@ export const LocaleSwitcher = () => {
   const [storedLocale, setStoredLocale] = useLocale();
   const [activeTab, setActiveTab] = useState<Locale>();
 
+  const isArticle = pathName.includes('/blog/');
+
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return '/';
     const segments = pathName.split('/');
@@ -46,6 +48,21 @@ export const LocaleSwitcher = () => {
         const className = activeTab?.includes(locale)
           ? 'tab tab-active'
           : 'tab';
+
+        if (isArticle) {
+          if (activeTab?.includes(locale)) {
+            return (
+              <button key={locale} className={className} role="tab">
+                {locale}
+              </button>
+            );
+          }
+          return (
+            <button disabled key={locale} className={className} role="tab">
+              {locale}
+            </button>
+          );
+        }
 
         return (
           <Link
