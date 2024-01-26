@@ -99,6 +99,15 @@
       "guides": "Guides",
       "trends": "Trends",
       "productNews": "News"
+    },
+    "info": {
+      "readTime": " min Lesezeit",
+      "published": "Veröffentlicht am: ",
+      "updated": "Aktualisiert am: ",
+      "home": "Start",
+      "here": "Hier",
+      "notFound": "Der Artikel konnte nicht gefunden werden.",
+      "loadingError": "Es konnte kein Artikel geladen werden."
     }
   },
   "solutions": {
@@ -223,6 +232,12 @@
     "firstAgreement": "Durch das Abonnieren akzeptieren Sie unsere",
     "secondAgreement": "und geben Ihr Einverständnis, Mitteilungen von unserem Unternehmen zu erhalten."
   },
+  "shareDialog": {
+    "title": "Teilen",
+    "embed": "Einbetten",
+    "email": "E-Mail",
+    "shareLink": "Diesen Link teilen"
+  },
   "button": {
     "learnMore": "Mehr erfahren",
     "solutions": "Lösungen",
@@ -233,12 +248,16 @@
     "sharePost": "Artikel teilen",
     "getStarted": "Jetzt starten",
     "startDemo": "Demo starten",
-    "bookDemo": "Demo buchen"
+    "bookDemo": "Demo buchen",
+    "copy": "Kopieren"
   },
   "state": {
     "sending": "Senden"
   },
   "conditional": {
     "or": "oder"
+  },
+  "toast": {
+    "clipboard": "In die Zwischenablage kopiert"
   }
 }

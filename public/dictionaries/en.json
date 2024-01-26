@@ -99,6 +99,15 @@
       "guides": "Guides",
       "trends": "Trends",
       "productNews": "Product News"
+    },
+    "info": {
+      "readTime": " mins read",
+      "published": "Published at: ",
+      "updated": "Updated at: ",
+      "home": "Home",
+      "here": "Here",
+      "notFound": "Could not find article.",
+      "loadingError": "Could not load any articles."
     }
   },
   "solutions": {
@@ -223,6 +232,12 @@
     "firstAgreement": "By subscribing you agree with our",
     "secondAgreement": "and provide consent to receive updates from our company."
   },
+  "shareDialog": {
+    "title": "Share",
+    "embed": "Embed",
+    "email": "Email",
+    "shareLink": "Share this link"
+  },
   "button": {
     "learnMore": "Learn more",
     "solutions": "Solutions",
@@ -233,12 +248,16 @@
     "sharePost": "Share this post",
     "getStarted": "Get started now",
     "startDemo": "Start demo",
-    "bookDemo": "Book demo"
+    "bookDemo": "Book demo",
+    "copy": "Copy"
   },
   "state": {
     "sending": "Sending"
   },
   "conditional": {
     "or": "or"
+  },
+  "toast": {
+    "clipboard": "Copied to clipboard"
   }
 }

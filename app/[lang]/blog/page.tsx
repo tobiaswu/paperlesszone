@@ -3,12 +3,15 @@ import { Locale } from '@/lib/i18n';
 import { Article } from '@/lib/types';
 import { ARTICLES_API } from './[slug]/page';
 import { NotFound } from '@/components/NotFound';
+import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Blog({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
+  const dict = await getDictionary(lang);
+
   const articles: Article[] | undefined = await fetch(
     ARTICLES_API + '?locale=' + lang + '&populate=*',
     {
@@ -27,12 +30,13 @@ export default async function Blog({
             <ArticleCard
               key={article.id}
               className="col-span-12 lg:card-side"
+              dict={dict}
               preview
               category={article.attributes.category.data.attributes.item}
               description={article.attributes.description}
               slug={article.attributes.slug}
               title={article.attributes.title}
-              updatedAt={article.attributes.updatedAt}
+              publishedAt={article.attributes.publishedAt}
               readTime={article.attributes.reading_time}
               lang={lang}
               thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
@@ -47,9 +51,10 @@ export default async function Blog({
             key={article.id}
             className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3"
             category={article.attributes.category.data.attributes.item}
+            dict={dict}
             slug={article.attributes.slug}
             title={article.attributes.title}
-            updatedAt={article.attributes.updatedAt}
+            publishedAt={article.attributes.publishedAt}
             readTime={article.attributes.reading_time}
             lang={lang}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
@@ -61,6 +66,6 @@ export default async function Blog({
       })}
     </div>
   ) : (
-    <NotFound text="Could not find any articles" />
+    <NotFound text={dict.blog.info.loadingError} />
   );
 }

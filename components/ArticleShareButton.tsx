@@ -1,5 +1,6 @@
 'use client';
 
+import { Dictionary } from '@/lib/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -15,7 +16,11 @@ import {
   PiWhatsappLogoLight,
 } from 'react-icons/pi';
 
-export const ArticleShareButton = () => {
+interface ArticleShareButtonProps {
+  dict: Dictionary;
+}
+
+export const ArticleShareButton = ({ dict }: ArticleShareButtonProps) => {
   const [open, setOpen] = useState(false);
   const [toastOpen, setToastOpen] = useState(false);
   const pathname = usePathname();
@@ -41,14 +46,14 @@ export const ArticleShareButton = () => {
     <div>
       <button className="btn btn-accent btn-sm" onClick={() => setOpen(true)}>
         <PiShareFatLight className="text-2xl" />
-        Share this post
+        {dict.button.sharePost}
       </button>
 
       {toastOpen && (
         <div className="toast toast-bottom toast-center z-20">
           <div className="alert alert-info">
             <PiClipboardTextLight className="text-2xl" />
-            <span>Copied to clipboard</span>
+            <span>{dict.toast.clipboard}</span>
           </div>
         </div>
       )}
@@ -64,13 +69,15 @@ export const ArticleShareButton = () => {
               >
                 ✕
               </button>
-              <h3 className="font-bold text-2xl pb-8">Share</h3>
+              <h3 className="font-bold text-2xl pb-8">
+                {dict.shareDialog.title}
+              </h3>
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-8 items-center justify-evenly">
                 <div className="flex flex-col items-center gap-2">
                   <button className="btn btn-circle" onClick={handleEmbedClick}>
                     <PiCodeSimpleLight className="text-2xl" />
                   </button>
-                  <label className="label-text">Embed</label>
+                  <label className="label-text">{dict.shareDialog.embed}</label>
                 </div>
 
                 <div className="flex flex-col items-center gap-2">
@@ -130,11 +137,13 @@ export const ArticleShareButton = () => {
                       <PiEnvelopeLight className="text-2xl" />
                     </button>
                   </Link>
-                  <label className="label-text">Email</label>
+                  <label className="label-text">{dict.shareDialog.email}</label>
                 </div>
               </div>
 
-              <p className="pb-2 pt-6 font-bold">Share this link</p>
+              <p className="pb-2 pt-6 font-bold">
+                {dict.shareDialog.shareLink}
+              </p>
               <div className="join w-full">
                 <input
                   className="input input-bordered input-ghost join-item w-full"
@@ -146,7 +155,7 @@ export const ArticleShareButton = () => {
                   className="btn btn-primary join-item"
                   onClick={handleCopyClick}
                 >
-                  Copy
+                  {dict.button.copy}
                 </button>
               </div>
             </div>

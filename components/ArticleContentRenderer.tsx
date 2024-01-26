@@ -94,17 +94,13 @@ export const ArticleContentRenderer = ({
           if (format === 'ordered') {
             return (
               <ol className="list-decimal mb-4 ml-4 text-lg leading-relaxed">
-                {/* <li className="list-item"> */}
                 {children}
-                {/* </li> */}
               </ol>
             );
           }
           return (
             <ul className="list-disc mb-4 ml-4 text-lg leading-relaxed">
-              {/* <li className="list-item"> */}
               {children}
-              {/* </li> */}
             </ul>
           );
         },

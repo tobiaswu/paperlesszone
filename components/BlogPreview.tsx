@@ -32,12 +32,13 @@ export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
                 <ArticleCard
                   key={article.id}
                   className="col-span-6 lg:card-side"
+                  dict={dict}
                   preview
                   category={article.attributes.category.data.attributes.item}
                   description={article.attributes.description}
                   slug={article.attributes.slug}
                   title={article.attributes.title}
-                  updatedAt={article.attributes.updatedAt}
+                  publishedAt={article.attributes.publishedAt}
                   readTime={article.attributes.reading_time}
                   lang={lang}
                   thumbnailUrl={
@@ -54,10 +55,11 @@ export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
               <ArticleCard
                 key={article.id}
                 className="col-span-6 sm:col-span-3 lg:col-span-2"
+                dict={dict}
                 category={article.attributes.category.data.attributes.item}
                 slug={article.attributes.slug}
                 title={article.attributes.title}
-                updatedAt={article.attributes.updatedAt}
+                publishedAt={article.attributes.publishedAt}
                 readTime={article.attributes.reading_time}
                 lang={lang}
                 thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}

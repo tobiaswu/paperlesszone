@@ -1,10 +1,12 @@
 import { Locale } from '@/lib/i18n';
 import { RouteId } from '@/lib/route';
+import { Dictionary } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export interface ArticleCardProps {
   className?: string;
+  dict: Dictionary;
   preview?: boolean;
   thumbnailUrl?: string;
   thumbnailAltText?: string;
@@ -12,13 +14,14 @@ export interface ArticleCardProps {
   category: string;
   title: string;
   description?: string;
-  updatedAt: string;
+  publishedAt: string;
   readTime?: number;
   lang: Locale;
 }
 
 export const ArticleCard = ({
   className,
+  dict,
   preview,
   thumbnailUrl,
   thumbnailAltText,
@@ -26,7 +29,7 @@ export const ArticleCard = ({
   category,
   title,
   description,
-  updatedAt,
+  publishedAt,
   readTime,
   lang,
 }: ArticleCardProps) => {
@@ -35,7 +38,7 @@ export const ArticleCard = ({
   const mergedClassName = className + ' ' + defaultClassName;
   const url = process.env.STRAPI_URL;
   const href = '/' + lang + RouteId.blog + '/' + slug;
-  const date = new Date(updatedAt).toLocaleDateString();
+  const date = new Date(publishedAt).toLocaleDateString();
 
   return (
     <div className={mergedClassName}>
@@ -62,10 +65,13 @@ export const ArticleCard = ({
         </Link>
         {preview && <p>{description}</p>}
         <div className="card-actions">
-          <p className="text-base self-end">{date}</p>
+          <p className="text-base self-end">
+            {dict.blog.info.published + date}
+          </p>
           <Link href={href}>
             <button className="btn btn-primary btn-outline btn-sm mt-2">
-              {readTime ?? 0} mins read
+              {readTime ?? 0}
+              {dict.blog.info.readTime}
             </button>
           </Link>
         </div>
