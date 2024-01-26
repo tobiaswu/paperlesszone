@@ -32,7 +32,7 @@ export default async function Blog({
               className="col-span-12 lg:card-side"
               dict={dict}
               preview
-              category={article.attributes.category.data.attributes.item}
+              category={article.attributes.category?.data.attributes.item}
               description={article.attributes.description}
               slug={article.attributes.slug}
               title={article.attributes.title}
@@ -50,7 +50,7 @@ export default async function Blog({
           <ArticleCard
             key={article.id}
             className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3"
-            category={article.attributes.category.data.attributes.item}
+            category={article.attributes.category?.data.attributes.item}
             dict={dict}
             slug={article.attributes.slug}
             title={article.attributes.title}

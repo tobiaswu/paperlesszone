@@ -11,7 +11,7 @@ export interface ArticleCardProps {
   thumbnailUrl?: string;
   thumbnailAltText?: string;
   slug: string;
-  category: string;
+  category?: string;
   title: string;
   description?: string;
   publishedAt: string;

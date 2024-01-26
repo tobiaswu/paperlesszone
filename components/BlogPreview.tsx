@@ -34,7 +34,7 @@ export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
                   className="col-span-6 lg:card-side"
                   dict={dict}
                   preview
-                  category={article.attributes.category.data.attributes.item}
+                  category={article.attributes.category?.data.attributes.item}
                   description={article.attributes.description}
                   slug={article.attributes.slug}
                   title={article.attributes.title}
@@ -56,7 +56,7 @@ export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
                 key={article.id}
                 className="col-span-6 sm:col-span-3 lg:col-span-2"
                 dict={dict}
-                category={article.attributes.category.data.attributes.item}
+                category={article.attributes.category?.data.attributes.item}
                 slug={article.attributes.slug}
                 title={article.attributes.title}
                 publishedAt={article.attributes.publishedAt}
