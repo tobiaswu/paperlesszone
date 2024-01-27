@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { type Locale, i18n } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,6 +34,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body className={inter.className}>
+        <NextTopLoader color="#55d44c" />
         <Navbar dict={dict} lang={lang} />
         {children}
         <Footer dict={dict} lang={lang} />
