@@ -4,7 +4,6 @@ import { BlocksContent, BlocksRenderer } from '@strapi/blocks-react-renderer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArticleSectionTitle } from './ArticleSectionTitle';
-import { PiCopySimpleLight } from 'react-icons/pi';
 
 export interface ArticleContentRendererProps {
   content: BlocksContent;
@@ -81,12 +80,12 @@ export const ArticleContentRenderer = ({
         ),
         code: ({ children }) => (
           <code className="block p-4 mb-4 rounded-lg bg-base-300 border border-gunmetal-600 whitespace-pre overflow-x-scroll relative">
-            <button
+            {/* <button
               className="absolute btn btn-ghost right-1 top-1"
               onClick={() => navigator.clipboard.writeText(children as string)} // TODO: fix
             >
               <PiCopySimpleLight className="text-2xl" />
-            </button>
+            </button> */}
             {children}
           </code>
         ),
