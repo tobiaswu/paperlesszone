@@ -7,6 +7,7 @@ import { Article } from '@/lib/types';
 import { ArticleContentRenderer } from '@/components/ArticleContentRenderer';
 import { NotFound } from '@/components/NotFound';
 import { getDictionary } from '@/utils/getDictionary';
+import { MotionProgressbar } from '@/components/MotionProgressbar';
 
 export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
 
@@ -67,6 +68,7 @@ export default async function Article({
 
   return article ? (
     <div>
+      <MotionProgressbar />
       <div className="relative">
         <div className="bg-neutral p-8">
           <div className="container mx-auto">
