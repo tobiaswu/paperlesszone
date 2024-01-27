@@ -2,7 +2,6 @@ import { BlogPreview } from '@/components/BlogPreview';
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup/EmailSignup';
-import { LottieAnimation } from '@/components/LottieAnimation';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { PartnerLogo } from '@/components/PartnerLogo';
 import { UseCaseCard } from '@/components/UseCaseCard';
@@ -115,9 +114,9 @@ export default async function Home({
             </div>
           </MotionWrapper>
         </div>
-        <div className="-z-10 w-full opacity-30 absolute">
+        {/* <div className="-z-10 w-full opacity-30 absolute">
           <LottieAnimation src="/assets/animations/matrix.lottie" />
-        </div>
+        </div> */}
       </div>
 
       <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover xl:bg-contain bg-center">

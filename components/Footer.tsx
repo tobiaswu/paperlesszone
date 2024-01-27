@@ -66,7 +66,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
         </div>
       </div>
 
-      <div className="bg-gunmetal-400">
+      <div className="bg-base-100">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-4">
           <aside className="flex flex-col sm:flex-row items-center justify-between gap-8">
             <div className="flex flex-col sm:flex-row items-center">

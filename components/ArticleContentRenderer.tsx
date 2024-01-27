@@ -80,7 +80,7 @@ export const ArticleContentRenderer = ({
           </div>
         ),
         code: ({ children }) => (
-          <code className="block p-4 mb-4 rounded-lg bg-neutral border border-gunmetal-600 whitespace-pre overflow-x-scroll relative">
+          <code className="block p-4 mb-4 rounded-lg bg-base-300 border border-gunmetal-600 whitespace-pre overflow-x-scroll relative">
             <button
               className="absolute btn btn-ghost right-1 top-1"
               onClick={() => navigator.clipboard.writeText(children as string)} // TODO: fix
