@@ -16,8 +16,6 @@ export type Article = {
     locale: Locale;
     slug: string;
     author?: Author;
-    heroImageLight?: Image;
-    heroImageDark?: Image;
     thumbnail: Image;
   };
 };
