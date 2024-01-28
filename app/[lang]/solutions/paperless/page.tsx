@@ -333,16 +333,17 @@ export default async function Paperless({
           <SolutionCard
             icon={<PiFileArrowDownLight />}
             description={dict.solutions.paperless.useFirstStep}
-            url="/#newsletter"
+            url={`/${lang}#newsletter`}
           />
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
             description={dict.solutions.paperless.useSecondStep}
+            url={`/${lang + RouteId.blog}?tag=paperless`}
           />
           <SolutionCard
             icon={<PiArticleLight />}
             description={dict.solutions.paperless.useThirdStep}
-            // url="/blog?tag=paperless"
+            url={`/${lang + RouteId.blog}?tag=paperless`}
           />
         </div>
       </div>
