@@ -8,8 +8,40 @@ import { ArticleContentRenderer } from '@/components/ArticleContentRenderer';
 import { NotFound } from '@/components/NotFound';
 import { getDictionary } from '@/utils/getDictionary';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
+import { Metadata } from 'next';
 
 export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
+
+export async function generateMetadata({
+  params: { slug, lang },
+}: {
+  params: { slug: string; lang: Locale };
+}): Promise<Metadata> {
+  const article: Article | undefined = await fetch(
+    ARTICLES_API +
+      '?locale=' +
+      lang +
+      '&filters[slug][$eq]=' +
+      slug +
+      '&populate[0]=thumbnail',
+    {
+      method: 'GET',
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => data.data[0])
+    .catch((error) => console.log(error));
+
+  const url = process.env.STRAPI_URL ?? '';
+
+  return {
+    title: article?.attributes.title,
+    description: article?.attributes.description,
+    openGraph: {
+      images: url + article?.attributes.thumbnail?.data.attributes.url,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const articlesDe: Article[] | undefined = await fetch(
