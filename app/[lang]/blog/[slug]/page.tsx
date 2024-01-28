@@ -10,19 +10,19 @@ import { getDictionary } from '@/utils/getDictionary';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
 
+type Props = {
+  params: { slug: string; lang: Locale };
+};
+
 export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
 
-export async function generateMetadata({
-  params: { slug, lang },
-}: {
-  params: { slug: string; lang: Locale };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article: Article | undefined = await fetch(
     ARTICLES_API +
       '?locale=' +
-      lang +
+      params.lang +
       '&filters[slug][$eq]=' +
-      slug +
+      params.slug +
       '&populate[0]=thumbnail',
     {
       method: 'GET',
@@ -76,19 +76,15 @@ export async function generateStaticParams() {
   return [];
 }
 
-export default async function Article({
-  params: { slug, lang },
-}: {
-  params: { slug: string; lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+export default async function Article({ params }: Props) {
+  const dict = await getDictionary(params.lang);
 
   const article: Article | undefined = await fetch(
     ARTICLES_API +
       '?locale=' +
-      lang +
+      params.lang +
       '&filters[slug][$eq]=' +
-      slug +
+      params.slug +
       '&populate[0]=author&populate[1]=author.avatar&populate[2]=category&populate[3]=tags',
     {
       method: 'GET',

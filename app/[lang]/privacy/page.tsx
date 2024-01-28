@@ -2,18 +2,28 @@ import { getDictionary } from '@/utils/getDictionary';
 import { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy of DigitizerSpace - we care about your data',
-  description:
-    '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR/DSGVO.',
+type Props = {
+  params: { lang: Locale };
 };
 
-export default async function Privacy({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title:
+        'Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten',
+      description:
+        '▷ Deine Daten sind 100% sicher mit DigitizerSpace. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform.',
+    };
+  }
+  return {
+    title: 'Privacy Policy of DigitizerSpace - we care about your data',
+    description:
+      '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR.',
+  };
+}
+
+export default async function Privacy({ params }: Props) {
+  const dict = await getDictionary(params.lang);
 
   return (
     <div className="container mx-auto py-8 px-4 bg-base-100">

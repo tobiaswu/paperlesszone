@@ -12,11 +12,24 @@ import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'DigitizerSpace - Automation & Digitization Solutions',
-  description:
-    '▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today.',
+type Props = {
+  params: { lang: Locale };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title: 'DigitizerSpace - KI Automatisierung und Digitalisierung',
+      description:
+        '▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um.',
+    };
+  }
+  return {
+    title: 'DigitizerSpace - Automation & Digitization Solutions',
+    description:
+      '▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today.',
+  };
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));

@@ -3,11 +3,24 @@ import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'DigitizerSpace Blog - Automation Use Cases, AI Trends & More',
-  description:
-    '▷ Discover the DigitizerSpace Blog. Learn how you can scale & digitalize your business. ✓ Based on real use cases. ✓ Learn for free. ✓ Start automating today.',
+type Props = {
+  params: { lang: Locale };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title: 'DigitizerSpace Blog - Automatisierung, AI Trends & Mehr!',
+      description:
+        '▷ Entdecke den DigitierSpace Blog. Lerne wie du dein Unternehmen skalierst & digitalisierst. ✓ Reale Anwendungsfälle. ✓ Lerne kostenlos. ✓ Setze noch heute um.',
+    };
+  }
+  return {
+    title: 'DigitizerSpace Blog - Automation Use Cases, AI Trends & More',
+    description:
+      '▷ Discover the DigitizerSpace Blog. Learn how you can scale & digitalize your business. ✓ Based on real use cases. ✓ Learn for free. ✓ Start automating today.',
+  };
+}
 
 export default async function BlogLayout({
   children,

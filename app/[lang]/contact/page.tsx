@@ -15,18 +15,28 @@ import {
 import { getDictionary } from '@/utils/getDictionary';
 import { Locale } from '@/lib/i18n';
 
-export const metadata: Metadata = {
-  title: 'Contact DigitizerSpace today - we help you automating',
-  description:
-    '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
+type Props = {
+  params: { lang: Locale };
 };
 
-export default async function Contact({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title:
+        'Kontaktiere DigitizerSpace hier - wir helfen dir zu automatisieren',
+      description:
+        '▷ Kontaktiere DigitizerSpace per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren.',
+    };
+  }
+  return {
+    title: 'Contact DigitizerSpace here - we help you automating',
+    description:
+      '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
+  };
+}
+
+export default async function Contact({ params }: Props) {
+  const dict = await getDictionary(params.lang);
 
   return (
     <div className="container mx-auto">

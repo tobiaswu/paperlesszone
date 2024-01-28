@@ -43,18 +43,27 @@ import { RouteId } from '@/lib/route';
 import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 
-export const metadata: Metadata = {
-  title: 'Get the Paperless-ngx system running | we install it for you',
-  description:
-    '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
+type Props = {
+  params: { lang: Locale };
 };
 
-export default async function Paperless({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title: 'Nutze das Paperless-ngx System | wir installieren es für dich',
+      description:
+        '▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport.',
+    };
+  }
+  return {
+    title: 'Get the Paperless-ngx system running | we install it for you',
+    description:
+      '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
+  };
+}
+
+export default async function Paperless({ params }: Props) {
+  const dict = await getDictionary(params.lang);
 
   const paperlessCardItems = [
     {
@@ -333,17 +342,17 @@ export default async function Paperless({
           <SolutionCard
             icon={<PiFileArrowDownLight />}
             description={dict.solutions.paperless.useFirstStep}
-            url={`/${lang}#newsletter`}
+            url={`/${params.lang}#newsletter`}
           />
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
             description={dict.solutions.paperless.useSecondStep}
-            url={`/${lang + RouteId.blog}?tag=paperless`}
+            url={`/${params.lang + RouteId.blog}?tag=paperless`}
           />
           <SolutionCard
             icon={<PiArticleLight />}
             description={dict.solutions.paperless.useThirdStep}
-            url={`/${lang + RouteId.blog}?tag=paperless`}
+            url={`/${params.lang + RouteId.blog}?tag=paperless`}
           />
         </div>
       </div>
@@ -423,7 +432,7 @@ export default async function Paperless({
             }
             btnText={dict.button.getStarted}
             btnUrl={
-              lang === 'de'
+              params.lang === 'de'
                 ? 'https://buy.stripe.com/bIY6re0K11YDg9O8ww?locale=de'
                 : 'https://buy.stripe.com/cN2g1O64l9r58Hm145?locale=en'
             }
@@ -452,7 +461,7 @@ export default async function Paperless({
                 dict.solutions.paperless.pricingCard.liveDemo.badgeText
               }
               btnText={dict.button.bookDemo}
-              btnUrl={`/${lang}${RouteId.contact}`}
+              btnUrl={`/${params.lang}${RouteId.contact}`}
               price={dict.solutions.paperless.pricingCard.liveDemo.price}
               className="border-gunmetal-600"
               items={liveCardItems}

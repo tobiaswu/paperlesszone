@@ -15,18 +15,28 @@ import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 
-export const metadata: Metadata = {
-  title: 'About DigitizerSpace - The why, who, and what of automation!',
-  description:
-    '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
+type Props = {
+  params: { lang: Locale };
 };
 
-export default async function About({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.lang === 'de') {
+    return {
+      title:
+        'Über DigitizerSpace - das Warum, Wer und Was der Automatisierung!',
+      description:
+        '▷ Über DigitierSpace - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!.',
+    };
+  }
+  return {
+    title: 'About DigitizerSpace - The why, who, and what of automation!',
+    description:
+      '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
+  };
+}
+
+export default async function About({ params }: Props) {
+  const dict = await getDictionary(params.lang);
 
   return (
     <>
@@ -93,7 +103,7 @@ export default async function About({
           &nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${lang}${RouteId.root}`}
+            href={`/${params.lang}${RouteId.root}`}
           >
             DigitizerSpace.com
           </Link>
@@ -158,21 +168,21 @@ export default async function About({
           &nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${lang}${RouteId.resources}`}
+            href={`/${params.lang}${RouteId.resources}`}
           >
             {dict.about.resourcesLinkText}
           </Link>
           ,&nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${lang}${RouteId.solutions}`}
+            href={`/${params.lang}${RouteId.solutions}`}
           >
             {dict.about.solutionsLinkText}
           </Link>
           &nbsp;{dict.conditional.or}&nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${lang}${RouteId.contact}`}
+            href={`/${params.lang}${RouteId.contact}`}
           >
             {dict.about.contactUsLinkText}
           </Link>
