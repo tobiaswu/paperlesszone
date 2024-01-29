@@ -92,10 +92,10 @@ export const Footer = ({ dict, lang }: FooterProps) => {
               >
                 <p className="text-sm">{dict.footer.privacy}</p>
               </Link>
-              {/* <PiDotOutlineLight />
-        <Link className="hover:text-primary" href="/terms">
-          <p className="text-base">Terms</p>
-        </Link> */}
+              <PiDotOutlineLight />
+              <Link className="hover:text-primary" href="/sitemap.xml">
+                <p className="text-sm">Sitemap</p>
+              </Link>
             </div>
             <div className="border rounded-lg px-2 py-1 flex items-center gap-2 w-fit h-fit">
               <PiLockKeyLight className="text-2xl" />

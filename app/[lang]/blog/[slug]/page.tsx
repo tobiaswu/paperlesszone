@@ -16,8 +16,8 @@ type Props = {
   params: { slug: string; lang: Locale };
 };
 
-export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
 const BASE_URL = process.env.STRAPI_URL ?? '';
+export const ARTICLES_API = `${BASE_URL}/api/articles`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article: Article | undefined = await fetch(
