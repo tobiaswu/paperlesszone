@@ -17,7 +17,7 @@ type Props = {
 };
 
 export const ARTICLES_API = `${process.env.STRAPI_URL}/api/articles`;
-const URL = process.env.STRAPI_URL ?? '';
+const BASE_URL = process.env.STRAPI_URL ?? '';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article: Article | undefined = await fetch(
@@ -38,8 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: article?.attributes.title,
     description: article?.attributes.description,
+    metadataBase: new URL(BASE_URL),
     openGraph: {
-      images: URL + article?.attributes.thumbnail?.data.attributes.url,
+      images: article?.attributes.thumbnail?.data.attributes.url,
     },
   };
 }
@@ -127,7 +128,7 @@ export default async function Article({ params }: Props) {
 
       <Image
         className="container mx-auto px-4 my-8"
-        src={URL + article.attributes.thumbnail.data.attributes.url}
+        src={BASE_URL + article.attributes.thumbnail.data.attributes.url}
         alt={article.attributes.thumbnail.data.attributes.alternativeText}
         width={1024}
         height={768}

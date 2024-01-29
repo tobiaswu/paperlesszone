@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PiLinkedinLogoLight, PiTwitterLogoLight } from 'react-icons/pi';
 
+const BASE_URL = process.env.STRAPI_URL;
+
 export interface ArticleAuthorProps {
   name: string;
   avatarUrl: string;
@@ -17,14 +19,12 @@ export const ArticleAuthor = ({
   twitterUrl,
   linkedinUrl,
 }: ArticleAuthorProps) => {
-  const url = process.env.STRAPI_URL;
-
   return (
     <div className="p-6 border border-neutral rounded-lg w-fit">
       <div className="flex gap-4 items-center">
         <Image
           className="rounded-full border border-gunmetal-600 h-auto w-20"
-          src={url + avatarUrl}
+          src={BASE_URL + avatarUrl}
           alt={avatarAltText}
           width={80}
           height={0}

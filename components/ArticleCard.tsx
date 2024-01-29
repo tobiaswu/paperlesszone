@@ -5,6 +5,8 @@ import { getFormattedDate } from '@/utils/date';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const BASE_URL = process.env.STRAPI_URL;
+
 export interface ArticleCardProps {
   className?: string;
   dict: Dictionary;
@@ -37,7 +39,6 @@ export const ArticleCard = ({
   const defaultClassName =
     'card bg-neutral shadow-md rounded-lg border border-gunmetal-600';
   const mergedClassName = className + ' ' + defaultClassName;
-  const url = process.env.STRAPI_URL;
   const href = '/' + lang + RouteId.blog + '/' + slug;
 
   return (
@@ -47,7 +48,7 @@ export const ArticleCard = ({
           {thumbnailUrl && thumbnailAltText && (
             <Image
               className="object-cover w-full h-full"
-              src={url + thumbnailUrl}
+              src={BASE_URL + thumbnailUrl}
               alt={thumbnailAltText}
               width={300}
               height={0}
