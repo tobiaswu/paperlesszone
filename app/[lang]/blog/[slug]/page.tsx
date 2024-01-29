@@ -10,6 +10,7 @@ import { getDictionary } from '@/utils/getDictionary';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
 import { getFormattedDate } from '@/utils/date';
+import Image from 'next/image';
 
 type Props = {
   params: { slug: string; lang: Locale };
@@ -97,15 +98,8 @@ export default async function Article({ params }: Props) {
   return article ? (
     <div>
       <MotionProgressbar />
-      <div
-        className="bg-neutral p-8"
-        // style={{
-        //   backgroundImage: `url(${
-        //     URL + article.attributes.thumbnail.data.attributes.url
-        //   })`,
-        // }}
-      >
-        <div className="container mx-auto">
+      <div className="bg-neutral p-8">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between gap-2">
             <Breadcrumbs dict={dict} />
             <ThemeSwitcher />
@@ -131,7 +125,16 @@ export default async function Article({ params }: Props) {
         </div>
       </div>
 
-      <div className="container mx-auto py-8 px-4">
+      <Image
+        className="container mx-auto px-4 my-8"
+        src={URL + article.attributes.thumbnail.data.attributes.url}
+        alt={article.attributes.thumbnail.data.attributes.alternativeText}
+        width={1024}
+        height={768}
+        loading="lazy"
+      />
+
+      <div className="container mx-auto px-4 pb-4">
         <ArticleAuthor
           name={article.attributes.author?.data.attributes.name ?? ''}
           avatarUrl={
