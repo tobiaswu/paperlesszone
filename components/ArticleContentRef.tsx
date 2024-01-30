@@ -1,19 +1,15 @@
-'use client';
-
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 export interface ArticleContentRefProps {
-  hash: string;
   title: string;
 }
 
-export const ArticleContentRef = ({ hash, title }: ArticleContentRefProps) => {
-  const pathname = usePathname();
-
+export const ArticleContentRef = ({ title }: ArticleContentRefProps) => {
   return (
-    <Link href={`${pathname}/#${hash}`} className="link link-info">
-      {title}
+    <Link href={`#${title}`}>
+      <button className="border-none bg-transparent appearance-none text-neutral-500 text-left text-xl hover:text-2xl hover:font-semibold hover:text-primary my-2">
+        {title}
+      </button>
     </Link>
   );
 };

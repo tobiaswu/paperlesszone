@@ -5,7 +5,7 @@ export const useDarkMode = () => {
     try {
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     } catch (error) {
-      return false;
+      return true;
     }
   };
 

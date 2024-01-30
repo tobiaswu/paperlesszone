@@ -11,6 +11,8 @@ import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
 import { getFormattedDate } from '@/utils/date';
 import Image from 'next/image';
+import { TableOfContents } from '@/components/TableOfContents';
+import { ArticleTags } from '@/components/ArticleTags';
 
 type Props = {
   params: { slug: string; lang: Locale };
@@ -96,6 +98,11 @@ export default async function Article({ params }: Props) {
     .then((data) => data.data[0])
     .catch((error) => console.log(error));
 
+  const titles: string[] = article?.attributes.content
+    .filter((item) => item.type === 'heading' && item.level === 2)
+    // @ts-ignore
+    .map((item) => item.children[0].text) as string[];
+
   return article ? (
     <div>
       <MotionProgressbar />
@@ -126,36 +133,41 @@ export default async function Article({ params }: Props) {
         </div>
       </div>
 
-      <Image
-        className="container mx-auto px-4 my-8"
-        src={BASE_URL + article.attributes.thumbnail.data.attributes.url}
-        alt={article.attributes.thumbnail.data.attributes.alternativeText}
-        width={1024}
-        height={768}
-        loading="lazy"
-      />
+      <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-4 mt-8">
+        <div className="max-w-md flex flex-col gap-8">
+          <ArticleAuthor
+            name={article.attributes.author?.data.attributes.name ?? ''}
+            avatarUrl={
+              article.attributes.author?.data.attributes.avatar?.data.attributes
+                .url ?? '/'
+            }
+            avatarAltText={
+              article.attributes.author?.data.attributes.avatar?.data.attributes
+                .alternativeText ?? ''
+            }
+            twitterUrl={article.attributes.author?.data.attributes.twitterUrl}
+            linkedinUrl={article.attributes.author?.data.attributes.linkedinUrl}
+          />
 
-      <div className="container mx-auto px-4 pb-4">
-        <ArticleAuthor
-          name={article.attributes.author?.data.attributes.name ?? ''}
-          avatarUrl={
-            article.attributes.author?.data.attributes.avatar?.data.attributes
-              .url ?? '/'
-          }
-          avatarAltText={
-            article.attributes.author?.data.attributes.avatar?.data.attributes
-              .alternativeText ?? ''
-          }
-          twitterUrl={article.attributes.author?.data.attributes.twitterUrl}
-          linkedinUrl={article.attributes.author?.data.attributes.linkedinUrl}
-        />
+          <ArticleTags />
+        </div>
+
+        <div className="max-w-2xl xl:max-w-4xl">
+          <Image
+            src={BASE_URL + article.attributes.thumbnail.data.attributes.url}
+            alt={article.attributes.thumbnail.data.attributes.alternativeText}
+            width={1024}
+            height={768}
+            loading="lazy"
+          />
+        </div>
       </div>
 
-      <div className="container flex flex-col md:flex-row mx-auto gap-8 px-4">
-        {/* TODO: add table of content */}
-        {/* <TableOfContents hashes={} titles={} /> */}
-
-        <div className="max-w-4xl pb-16">
+      <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
+        <div className="pt-12 pb-6 max-w-md">
+          <TableOfContents titles={titles} />
+        </div>
+        <div className="max-w-2xl xl:max-w-4xl">
           <ArticleContentRenderer content={article.attributes.content} />
         </div>
       </div>

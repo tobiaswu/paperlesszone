@@ -20,7 +20,7 @@ export const ArticleAuthor = ({
   linkedinUrl,
 }: ArticleAuthorProps) => {
   return (
-    <div className="p-6 border border-neutral rounded-lg w-fit">
+    <div className="p-6 border border-neutral rounded-lg w-fit h-fit">
       <div className="flex gap-4 items-center">
         <Image
           className="rounded-full border border-gunmetal-600 h-auto w-20"

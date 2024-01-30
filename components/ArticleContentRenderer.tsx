@@ -36,7 +36,7 @@ export const ArticleContentRenderer = ({
                 </h1>
               );
             case 2:
-              return <ArticleSectionTitle title={children} hash={children} />;
+              return <ArticleSectionTitle title={children} />;
             case 3:
               return (
                 <h3 className="text-2xl font-semibold pb-6 pt-12 leading-tight">
