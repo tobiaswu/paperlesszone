@@ -69,6 +69,7 @@ export default async function Home({
               <DiscoverCard
                 icon={<PiFilesLight />}
                 title={dict.root.discoverCard.eliminateTitle}
+                url={lang + RouteId.paperless}
               />
             </MotionWrapper>
             <MotionWrapper index={3} variants={staggerAnimationVariant}>
