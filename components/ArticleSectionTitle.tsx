@@ -10,13 +10,13 @@ export const ArticleSectionTitle = ({ title }: ArticleSectionTitleProps) => {
   const id = title[0].props.text;
 
   return (
-    <div className="flex gap-2 items-center w-fit" id={id}>
-      <h2 className="text-3xl font-semibold pb-6 pt-12 leading-tight">
-        <div className="group flex items-center gap-2 hover:text-primary">
+    <div id={id} className="pt-12 pb-6">
+      <div className="flex gap-2 items-center w-fit h-fit group hover:text-primary">
+        <h2 role="button" className="text-3xl font-semibold leading-tight">
           {title}
-          <PiLinkLight className="hidden group-hover:block" />
-        </div>
-      </h2>
+        </h2>
+        <PiLinkLight className="text-3xl hidden group-hover:block" />
+      </div>
     </div>
   );
 };

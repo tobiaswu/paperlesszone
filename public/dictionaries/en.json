@@ -108,6 +108,9 @@
       "here": "Here",
       "notFound": "Could not find article.",
       "loadingError": "Could not load any articles."
+    },
+    "toc": {
+      "title": "Table of contents"
     }
   },
   "solutions": {

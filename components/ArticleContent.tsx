@@ -5,13 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArticleSectionTitle } from './ArticleSectionTitle';
 
-export interface ArticleContentRendererProps {
+export interface ArticleContentProps {
   content: BlocksContent;
 }
 
-export const ArticleContentRenderer = ({
-  content,
-}: ArticleContentRendererProps) => {
+export const ArticleContent = ({ content }: ArticleContentProps) => {
   return (
     <BlocksRenderer
       content={content}

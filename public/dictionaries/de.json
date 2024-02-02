@@ -108,6 +108,9 @@
       "here": "Hier",
       "notFound": "Der Artikel konnte nicht gefunden werden.",
       "loadingError": "Es konnte kein Artikel geladen werden."
+    },
+    "toc": {
+      "title": "Inhaltsverzeichnis"
     }
   },
   "solutions": {

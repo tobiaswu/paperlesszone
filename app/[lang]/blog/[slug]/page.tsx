@@ -4,15 +4,15 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Locale } from '@/lib/i18n';
 import { Article } from '@/lib/types';
-import { ArticleContentRenderer } from '@/components/ArticleContentRenderer';
 import { NotFound } from '@/components/NotFound';
 import { getDictionary } from '@/utils/getDictionary';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
 import { getFormattedDate } from '@/utils/date';
 import Image from 'next/image';
-import { TableOfContents } from '@/components/TableOfContents';
 import { ArticleTags } from '@/components/ArticleTags';
+import { ArticleContent } from '@/components/ArticleContent';
+import { TableOfContents } from '@/components/TableOfContents';
 
 type Props = {
   params: { slug: string; lang: Locale };
@@ -98,7 +98,7 @@ export default async function Article({ params }: Props) {
     .then((data) => data.data[0])
     .catch((error) => console.log(error));
 
-  const titles: string[] = article?.attributes.content
+  const sectionTitles: string[] = article?.attributes.content
     .filter((item) => item.type === 'heading' && item.level === 2)
     // @ts-ignore
     .map((item) => item.children[0].text) as string[];
@@ -165,10 +165,11 @@ export default async function Article({ params }: Props) {
 
       <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
         <div className="pt-12 pb-6 max-w-md">
-          <TableOfContents titles={titles} />
+          <TableOfContents sectionTitles={sectionTitles} dict={dict} />
         </div>
+
         <div className="max-w-2xl xl:max-w-4xl">
-          <ArticleContentRenderer content={article.attributes.content} />
+          <ArticleContent content={article.attributes.content} />
         </div>
       </div>
 
