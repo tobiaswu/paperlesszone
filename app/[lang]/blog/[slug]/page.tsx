@@ -13,13 +13,14 @@ import Image from 'next/image';
 import { ArticleTags } from '@/components/ArticleTags';
 import { ArticleContent } from '@/components/ArticleContent';
 import { TableOfContents } from '@/components/TableOfContents';
+import { BASE_URL, STRAPI_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 type Props = {
   params: { slug: string; lang: Locale };
 };
 
-const BASE_URL = process.env.STRAPI_URL ?? '';
-export const ARTICLES_API = `${BASE_URL}/api/articles`;
+export const ARTICLES_API = `${STRAPI_URL}/api/articles`;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article: Article | undefined = await fetch(
@@ -37,12 +38,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .then((data) => data.data[0])
     .catch((error) => console.log(error));
 
-  return {
+  const baseData = {
     title: article?.attributes.title,
     description: article?.attributes.description,
     metadataBase: new URL(BASE_URL),
     openGraph: {
-      images: article?.attributes.thumbnail?.data.attributes.url,
+      images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
+    },
+  };
+  const canonicalUrl = `${RouteId.blog}/${params.slug}`;
+  const hreflang = `/${params.lang}` + canonicalUrl;
+
+  if (params.lang === 'de') {
+    return {
+      ...baseData,
+      alternates: {
+        canonical: canonicalUrl,
+        languages: {
+          'de-DE': hreflang,
+        },
+      },
+    };
+  }
+  return {
+    ...baseData,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en-US': hreflang,
+      },
     },
   };
 }
@@ -154,7 +178,7 @@ export default async function Article({ params }: Props) {
 
         <div className="max-w-2xl xl:max-w-4xl">
           <Image
-            src={BASE_URL + article.attributes.thumbnail.data.attributes.url}
+            src={STRAPI_URL + article.attributes.thumbnail.data.attributes.url}
             alt={article.attributes.thumbnail.data.attributes.alternativeText}
             width={1024}
             height={768}

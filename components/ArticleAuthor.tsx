@@ -1,8 +1,7 @@
+import { STRAPI_URL } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PiLinkedinLogoLight, PiTwitterLogoLight } from 'react-icons/pi';
-
-const BASE_URL = process.env.STRAPI_URL;
 
 export interface ArticleAuthorProps {
   name: string;
@@ -24,7 +23,7 @@ export const ArticleAuthor = ({
       <div className="flex gap-4 items-center">
         <Image
           className="rounded-full border border-gunmetal-600 h-auto w-20"
-          src={BASE_URL + avatarUrl}
+          src={STRAPI_URL + avatarUrl}
           alt={avatarAltText}
           width={80}
           height={0}

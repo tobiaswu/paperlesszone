@@ -14,24 +14,38 @@ import {
 } from '@/lib/animation';
 import { getDictionary } from '@/utils/getDictionary';
 import { Locale } from '@/lib/i18n';
+import { BASE_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 type Props = {
   params: { lang: Locale };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const canonicalData = {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: RouteId.contact,
+      languages: {
+        'en-US': '/en' + RouteId.contact,
+        'de-DE': '/de' + RouteId.contact,
+      },
+    },
+  };
   if (params.lang === 'de') {
     return {
       title:
         'Kontaktiere DigitizerSpace hier - wir helfen dir zu automatisieren',
       description:
         '▷ Kontaktiere DigitizerSpace per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren.',
+      ...canonicalData,
     };
   }
   return {
     title: 'Contact DigitizerSpace here - we help you automating',
     description:
       '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
+    ...canonicalData,
   };
 }
 

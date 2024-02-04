@@ -42,23 +42,36 @@ import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/lib/route';
 import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
+import { BASE_URL } from '@/lib/constants';
 
 type Props = {
   params: { lang: Locale };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const canonicalData = {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: RouteId.paperless,
+      languages: {
+        'en-US': '/en' + RouteId.paperless,
+        'de-DE': '/de' + RouteId.paperless,
+      },
+    },
+  };
   if (params.lang === 'de') {
     return {
       title: 'Nutze das Paperless-ngx System | wir installieren es für dich',
       description:
         '▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport.',
+      ...canonicalData,
     };
   }
   return {
     title: 'Get the Paperless-ngx system running | we install it for you',
     description:
       '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
+    ...canonicalData,
   };
 }
 

@@ -1,24 +1,38 @@
 import { getDictionary } from '@/utils/getDictionary';
 import { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
+import { BASE_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 type Props = {
   params: { lang: Locale };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const canonicalData = {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: RouteId.privacy,
+      languages: {
+        'en-US': '/en' + RouteId.privacy,
+        'de-DE': '/de' + RouteId.privacy,
+      },
+    },
+  };
   if (params.lang === 'de') {
     return {
       title:
         'Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten',
       description:
         '▷ Deine Daten sind 100% sicher mit DigitizerSpace. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform.',
+      ...canonicalData,
     };
   }
   return {
     title: 'Privacy Policy of DigitizerSpace - we care about your data',
     description:
       '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR.',
+    ...canonicalData,
   };
 }
 

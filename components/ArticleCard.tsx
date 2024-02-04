@@ -1,11 +1,10 @@
+import { STRAPI_URL } from '@/lib/constants';
 import { Locale } from '@/lib/i18n';
 import { RouteId } from '@/lib/route';
 import { Dictionary } from '@/lib/types';
 import { getFormattedDate } from '@/utils/date';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const BASE_URL = process.env.STRAPI_URL;
 
 export interface ArticleCardProps {
   className?: string;
@@ -48,7 +47,7 @@ export const ArticleCard = ({
           {thumbnailUrl && thumbnailAltText && (
             <Image
               className="object-cover w-full h-full"
-              src={BASE_URL + thumbnailUrl}
+              src={STRAPI_URL + thumbnailUrl}
               alt={thumbnailAltText}
               width={300}
               height={0}

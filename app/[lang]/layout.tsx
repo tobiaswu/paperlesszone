@@ -9,6 +9,8 @@ import { type Locale, i18n } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import NextTopLoader from 'nextjs-toploader';
+import { BASE_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,17 +19,29 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const canonicalData = {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: RouteId.root,
+      languages: {
+        'en-US': '/en',
+        'de-DE': '/de',
+      },
+    },
+  };
   if (params.lang === 'de') {
     return {
       title: 'DigitizerSpace - KI Automatisierung und Digitalisierung',
       description:
         '▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um.',
+      ...canonicalData,
     };
   }
   return {
     title: 'DigitizerSpace - Automation & Digitization Solutions',
     description:
       '▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today.',
+    ...canonicalData,
   };
 }
 

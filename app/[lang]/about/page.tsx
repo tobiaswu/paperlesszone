@@ -14,24 +14,37 @@ import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { Locale } from '@/lib/i18n';
 import { getDictionary } from '@/utils/getDictionary';
+import { BASE_URL } from '@/lib/constants';
 
 type Props = {
   params: { lang: Locale };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const canonicalData = {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: RouteId.about,
+      languages: {
+        'en-US': '/en' + RouteId.about,
+        'de-DE': '/de' + RouteId.about,
+      },
+    },
+  };
   if (params.lang === 'de') {
     return {
       title:
         'Über DigitizerSpace - das Warum, Wer und Was der Automatisierung!',
       description:
         '▷ Über DigitierSpace - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!.',
+      ...canonicalData,
     };
   }
   return {
     title: 'About DigitizerSpace - The why, who, and what of automation!',
     description:
       '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
+    ...canonicalData,
   };
 }
 
