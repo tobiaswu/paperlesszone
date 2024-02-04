@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useScroll } from 'framer-motion';
 import { Dictionary } from '@/lib/types';
 
 export interface TableOfContentsProps {
@@ -14,7 +13,6 @@ export const TableOfContents = ({
   dict,
   sectionTitles,
 }: TableOfContentsProps) => {
-  const { scrollY } = useScroll();
   const [activeTitle, setActiveTitle] = useState('');
 
   useEffect(() => {
@@ -34,7 +32,8 @@ export const TableOfContents = ({
     );
 
     sectionTitles.forEach((title) => {
-      const section = document.getElementById(title);
+      const id = title.toLowerCase().replace(/\s/g, '-');
+      const section = document.getElementById(id);
       if (section) {
         sectionObserver.observe(section);
       }
@@ -43,20 +42,21 @@ export const TableOfContents = ({
     return () => {
       sectionObserver.disconnect();
     };
-  }, [scrollY, sectionTitles]);
+  }, [sectionTitles]);
 
   return (
     <div className="sticky top-12">
-      <h2 className="text-3xl font-semibold mb-4">{dict.blog.toc.title}</h2>
+      <h2 className="text-xl font-semibold mb-2">{dict.blog.toc.title}</h2>
       <ul className="list-none list-inside">
         {sectionTitles.map((title) => {
+          const id = title.toLowerCase().replace(/\s/g, '-');
           return (
-            <li key={title}>
-              <Link href={`#${title}`}>
+            <li key={id}>
+              <Link href={`#${id}`}>
                 <button
                   className={`${
-                    activeTitle === title ? 'text-primary' : 'text-neutral-500'
-                  } border-none bg-transparent appearance-none text-left text-xl hover:text-primary my-2`}
+                    activeTitle === id ? 'text-primary' : 'text-neutral-500'
+                  } border-none bg-transparent appearance-none text-left text-lg hover:text-primary mt-4`}
                 >
                   {title}
                 </button>

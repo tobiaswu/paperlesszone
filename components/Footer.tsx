@@ -92,7 +92,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
               >
                 <p className="text-sm">{dict.footer.privacy}</p>
               </Link>
-              <PiDotOutlineLight />
+              <PiDotOutlineLight className="text-2xl" />
               <Link className="hover:text-primary" href="/sitemap.xml">
                 <p className="text-sm">Sitemap</p>
               </Link>

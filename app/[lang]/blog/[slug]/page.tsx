@@ -112,7 +112,7 @@ export default async function Article({ params }: Props) {
             <Breadcrumbs dict={dict} />
             <ThemeSwitcher />
           </div>
-          <h1 className="text-5xl font-bold my-4 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold my-4 leading-normal sm:leading-tight">
             {article.attributes.title}
           </h1>
           <p className="max-w-xl leading-relaxed">
@@ -164,11 +164,11 @@ export default async function Article({ params }: Props) {
       </div>
 
       <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
-        <div className="pt-12 pb-6 max-w-md">
+        <div className="pt-12 lg:pb-6 lg:w-1/3">
           <TableOfContents sectionTitles={sectionTitles} dict={dict} />
         </div>
 
-        <div className="max-w-2xl xl:max-w-4xl">
+        <div className="lg:w-2/3">
           <ArticleContent content={article.attributes.content} />
         </div>
       </div>
