@@ -158,7 +158,7 @@ export default async function Article({ params }: Props) {
       </div>
 
       <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-4 mt-8">
-        <div className="max-w-md flex flex-col gap-8">
+        <div className="lg:w-1/3 flex flex-col gap-8">
           <ArticleAuthor
             name={article.attributes.author?.data.attributes.name ?? ''}
             avatarUrl={
@@ -176,7 +176,7 @@ export default async function Article({ params }: Props) {
           <ArticleTags />
         </div>
 
-        <div className="max-w-2xl xl:max-w-4xl">
+        <div className="lg:w-2/3">
           <Image
             src={STRAPI_URL + article.attributes.thumbnail.data.attributes.url}
             alt={article.attributes.thumbnail.data.attributes.alternativeText}
