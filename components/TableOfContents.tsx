@@ -56,7 +56,7 @@ export const TableOfContents = ({
                 <button
                   className={`${
                     activeTitle === id ? 'text-primary' : 'text-neutral-500'
-                  } border-none bg-transparent appearance-none text-left text-lg hover:text-primary mt-4`}
+                  } border-none bg-transparent appearance-none text-left text-base font-semibold hover:text-primary mt-4`}
                 >
                   {title}
                 </button>

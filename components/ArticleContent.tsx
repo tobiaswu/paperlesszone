@@ -10,6 +10,25 @@ export interface ArticleContentProps {
 }
 
 export const ArticleContent = ({ content }: ArticleContentProps) => {
+  const handleImageClick = async (e: React.MouseEvent<HTMLImageElement>) => {
+    if (!document.fullscreenElement) {
+      try {
+        const imgElement = e.target as HTMLImageElement;
+        if (imgElement.requestFullscreen) {
+          await imgElement.requestFullscreen();
+        }
+      } catch (err: any) {
+        console.error(
+          `Error attempting to enable fullscreen mode: ${err.message}`
+        );
+      }
+    } else {
+      if (document.exitFullscreen) {
+        await document.exitFullscreen();
+      }
+    }
+  };
+
   return (
     <BlocksRenderer
       content={content}
@@ -66,12 +85,13 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
         image: ({ image }) => (
           <div className="flex flex-col gap-1 mb-4">
             <Image
-              className="rounded-lg border border-gunmetal-600 w-auto"
+              className="rounded-lg border border-gunmetal-600 w-auto cursor-zoom-in"
               src={image.url}
               alt={image.alternativeText ?? ''}
               width={image.width}
               height={image.height}
               loading="lazy"
+              onClick={handleImageClick}
             />
             <p className="text-sm">{image.caption}</p>
           </div>
