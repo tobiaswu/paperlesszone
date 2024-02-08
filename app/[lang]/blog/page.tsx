@@ -13,7 +13,7 @@ export default async function Blog({
   const dict = await getDictionary(lang);
 
   const articles: Article[] | undefined = await fetch(
-    ARTICLES_API + '?locale=' + lang + '&populate=*',
+    ARTICLES_API + '?locale=' + lang + '&populate=*&sort=publishedAt:desc',
     {
       method: 'GET',
     }
@@ -23,13 +23,13 @@ export default async function Blog({
     .catch((error) => console.log(error));
 
   return articles ? (
-    <div className="container mx-auto py-16 px-4 grid grid-cols-12 gap-8">
+    <div className="container mx-auto py-16 px-4 grid grid-cols-6 gap-8">
       {articles.map((article, index) => {
         if (index === 0) {
           return (
             <ArticleCard
               key={article.id}
-              className="col-span-12 lg:card-side"
+              className="col-span-6 lg:card-side min-h-[300px]"
               dict={dict}
               preview
               category={article.attributes.category?.data.attributes.item}
@@ -49,7 +49,7 @@ export default async function Blog({
         return (
           <ArticleCard
             key={article.id}
-            className="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3"
+            className="col-span-6 sm:col-span-3 lg:col-span-2"
             category={article.attributes.category?.data.attributes.item}
             dict={dict}
             slug={article.attributes.slug}

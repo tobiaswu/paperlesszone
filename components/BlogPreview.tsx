@@ -10,7 +10,7 @@ interface BlogPreviewProps {
 
 export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
   const articles: Article[] | undefined = await fetch(
-    ARTICLES_API + '?locale=' + lang + '&populate=*',
+    ARTICLES_API + '?locale=' + lang + '&populate=*&sort=publishedAt:desc',
     {
       method: 'GET',
     }

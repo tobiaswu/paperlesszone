@@ -36,7 +36,7 @@ export const BlogPreviewTabs = ({
         return (
           <ArticleCard
             key={article.id}
-            className="col-span-6 lg:card-side"
+            className="col-span-6 lg:card-side min-h-[300px]"
             dict={dict}
             preview
             category={article.attributes.category?.data.attributes.item}
