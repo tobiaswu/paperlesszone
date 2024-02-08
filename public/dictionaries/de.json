@@ -98,7 +98,9 @@
       "useCases": "Praxis",
       "guides": "Guides",
       "trends": "Trends",
-      "productNews": "News"
+      "tools": "Tools",
+      "productNews": "News",
+      "workflows": "Workflows"
     },
     "info": {
       "readTime": " min Lesezeit",

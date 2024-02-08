@@ -15,10 +15,6 @@ export const BlogNavbar = ({ dict, lang }: Props) => {
       t: dict.blog.category.all,
     },
     {
-      id: 'useCases',
-      t: dict.blog.category.useCases,
-    },
-    {
       id: 'guides',
       t: dict.blog.category.guides,
     },
@@ -27,8 +23,8 @@ export const BlogNavbar = ({ dict, lang }: Props) => {
       t: dict.blog.category.trends,
     },
     {
-      id: 'productNews',
-      t: dict.blog.category.productNews,
+      id: 'workflows',
+      t: dict.blog.category.workflows,
     },
   ];
 
