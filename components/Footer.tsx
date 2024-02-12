@@ -7,29 +7,24 @@ import {
 } from 'react-icons/pi';
 import { EmailSignup } from './EmailSignup/EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
-import { Dictionary } from '@/lib/types';
 import { LocaleSwitcher } from './LocaleSwitcher';
-import { Locale } from '@/lib/i18n';
+import { getTranslations } from 'next-intl/server';
 
-interface FooterProps {
-  dict: Dictionary;
-  lang: Locale;
-}
-
-export const Footer = ({ dict, lang }: FooterProps) => {
-  const navItems = getNavItems(dict, lang);
+export const Footer = async () => {
+  const t = await getTranslations();
+  const navItems = await getNavItems();
 
   return (
     <footer className="bg-neutral" data-theme="darkTheme">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
         <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
           <div className="flex flex-col gap-8">
-            <Link className="h-fit" href={`/${lang + RouteId.root}`}>
+            <Link className="h-fit" href={RouteId.root}>
               <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
                 DigitizerSpace
               </p>
             </Link>
-            <LocaleSwitcher />
+            {/* <LocaleSwitcher /> */}
           </div>
           {navItems.map((mainItem) => {
             return (
@@ -37,7 +32,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
                 <div className="flex flex-col gap-2" key={mainItem.id}>
                   <Link
                     className="hover:text-primary w-fit"
-                    href={mainItem.url ?? `/${lang + RouteId.root}`}
+                    href={mainItem.url ?? RouteId.root}
                   >
                     <p className="font-bold">{mainItem.label}</p>
                   </Link>
@@ -46,7 +41,7 @@ export const Footer = ({ dict, lang }: FooterProps) => {
                       <Link
                         className="hover:text-primary w-fit"
                         key={item.id}
-                        href={item.url ?? `/${lang + RouteId.root}`}
+                        href={item.url ?? RouteId.root}
                       >
                         <p className="text-base">{item.label}</p>
                       </Link>
@@ -60,9 +55,19 @@ export const Footer = ({ dict, lang }: FooterProps) => {
         <div className="divider md:divider-horizontal mx-0" />
         <div className="max-w-sm">
           <p className="text-2xl leading-normal mb-4">
-            {dict.footer.emailSignup}
+            {t('footer.emailSignup')}
           </p>
-          <EmailSignup dict={dict} lang={lang} />
+          <EmailSignup
+            btnTitle={t('button.subscribe')}
+            disclaimer={
+              <>
+                {t('emailSignup.firstAgreement')}
+                <Link href={RouteId.privacy}>{t('privacy.title')}</Link>
+                {t('emailSignup.secondAgreement')}
+              </>
+            }
+            loadingMsg={t('state.sending')}
+          />
         </div>
       </div>
 
@@ -72,25 +77,16 @@ export const Footer = ({ dict, lang }: FooterProps) => {
             <div className="flex flex-col sm:flex-row items-center">
               <p className="text-sm">© 2024 TW Software Solutions LLC</p>
               <PiDotOutlineLight className="text-2xl" />
-              <Link
-                className="hover:text-primary"
-                href={`/${lang + RouteId.about}`}
-              >
-                <p className="text-sm">{dict.footer.aboutUs}</p>
+              <Link className="hover:text-primary" href={RouteId.about}>
+                <p className="text-sm">{t('footer.aboutUs')}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
-              <Link
-                className="hover:text-primary"
-                href={`/${lang + RouteId.contact}`}
-              >
-                <p className="text-sm">{dict.button.contact}</p>
+              <Link className="hover:text-primary" href={RouteId.contact}>
+                <p className="text-sm">{t('button.contact')}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
-              <Link
-                className="hover:text-primary"
-                href={`/${lang + RouteId.privacy}`}
-              >
-                <p className="text-sm">{dict.footer.privacy}</p>
+              <Link className="hover:text-primary" href={RouteId.privacy}>
+                <p className="text-sm">{t('footer.privacy')}</p>
               </Link>
               <PiDotOutlineLight className="text-2xl" />
               <Link className="hover:text-primary" href="/sitemap.xml">

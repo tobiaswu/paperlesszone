@@ -3,14 +3,12 @@ import Link from 'next/link';
 import { RouteId } from '@/lib/route';
 import { NavItemData } from './Navbar.types';
 import { LocaleSwitcher } from '../LocaleSwitcher';
-import { Locale } from '@/lib/i18n';
 
 interface MobileMenuProps {
   items: NavItemData[];
-  lang: Locale;
 }
 
-export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
+export const MobileMenu = ({ items }: MobileMenuProps) => {
   return (
     <div className="dropdown">
       <div tabIndex={0} className="btn btn-ghost lg:hidden ml-2">
@@ -23,7 +21,7 @@ export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
         {items.map((tab) => {
           return (
             <li key={tab.id}>
-              <Link key={tab.id} href={tab.url ?? `/${lang + RouteId.root}`}>
+              <Link key={tab.id} href={tab.url ?? RouteId.root}>
                 <p className="font-bold text-xl">{tab.label}</p>
               </Link>
               {tab.items && (
@@ -31,7 +29,7 @@ export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
                   {tab.items.map((item) => {
                     return (
                       <li key={item.id}>
-                        <Link href={item.url ?? `/${lang + RouteId.root}`}>
+                        <Link href={item.url ?? RouteId.root}>
                           {item.label}
                         </Link>
                       </li>
@@ -43,7 +41,7 @@ export const MobileMenu = ({ items, lang }: MobileMenuProps) => {
           );
         })}
         <div role="li" className="ml-4 mt-2">
-          <LocaleSwitcher />
+          {/* <LocaleSwitcher /> */}
         </div>
       </ul>
     </div>

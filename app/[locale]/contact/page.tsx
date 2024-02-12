@@ -12,45 +12,39 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/lib/animation';
-import { getDictionary } from '@/utils/getDictionary';
-import { Locale } from '@/lib/i18n';
 import { BASE_URL } from '@/lib/constants';
 import { RouteId } from '@/lib/route';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
-  params: { lang: Locale };
+  params: { locale: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const canonicalData = {
-    metadataBase: new URL(BASE_URL),
-    alternates: {
-      canonical: RouteId.contact,
-      languages: {
-        'en-US': '/en' + RouteId.contact,
-        'de-DE': '/de' + RouteId.contact,
-      },
-    },
-  };
-  if (params.lang === 'de') {
-    return {
-      title:
-        'Kontaktiere DigitizerSpace hier - wir helfen dir zu automatisieren',
-      description:
-        '▷ Kontaktiere DigitizerSpace per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren.',
-      ...canonicalData,
-    };
-  }
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.contact',
+  });
+  // const canonicalData = {
+  //   metadataBase: new URL(BASE_URL),
+  //   alternates: {
+  //     canonical: RouteId.contact,
+  //     languages: {
+  //       'en-US': '/en' + RouteId.contact,
+  //       'de-DE': '/de' + RouteId.contact,
+  //     },
+  //   },
+  // };
+
   return {
-    title: 'Contact DigitizerSpace here - we help you automating',
-    description:
-      '▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!',
-    ...canonicalData,
+    title: t('title'),
+    description: t('description'),
   };
 }
 
 export default async function Contact({ params }: Props) {
-  const dict = await getDictionary(params.lang);
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale });
 
   return (
     <div className="container mx-auto">
@@ -58,11 +52,11 @@ export default async function Contact({ params }: Props) {
         <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover lg:bg-contain bg-top">
           <MotionWrapper variants={itemAnimationVariant}>
             <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
-              {dict.contact.title}
+              {t('contact.title')}
             </h1>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
-            <p className="leading-relaxed mb-8">{dict.contact.description}</p>
+            <p className="leading-relaxed mb-8">{t('contact.description')}</p>
           </MotionWrapper>
           <div className="flex flex-col gap-4">
             <MotionWrapper index={0} variants={staggerAnimationVariant}>
@@ -76,16 +70,16 @@ export default async function Contact({ params }: Props) {
             <MotionWrapper index={1} variants={staggerAnimationVariant}>
               <ContactOption
                 icon={<PiPhoneCallLight />}
-                optionLabel={dict.contact.callOptionLabel}
-                optionText={dict.contact.callOptionText}
+                optionLabel={t('contact.callOptionLabel')}
+                optionText={t('contact.callOptionText')}
                 url="https://calendly.com/tobiaswu/1-1-meeting-clone"
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
               <ContactOption
                 icon={<PiMapPinLineLight />}
-                optionLabel={dict.contact.officeOptionLabel}
-                optionText={dict.contact.officeOptionText}
+                optionLabel={t('contact.officeOptionLabel')}
+                optionText={t('contact.officeOptionText')}
               />
             </MotionWrapper>
           </div>
@@ -96,10 +90,10 @@ export default async function Contact({ params }: Props) {
           className="col-span-2 lg:col-span-1 bg-neutral border border-gunmetal-600 rounded-lg p-8 h-fit shadow-md"
         >
           <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:leading-normal">
-            {dict.contact.formTitle}
+            {t('contact.formTitle')}
           </h2>
-          <p className="text-center mb-8">{dict.contact.formDescription}</p>
-          <ContactForm dict={dict} />
+          <p className="text-center mb-8">{t('contact.formDescription')}</p>
+          <ContactForm />
         </MotionWrapper>
       </div>
     </div>

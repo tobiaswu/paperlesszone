@@ -1,7 +1,7 @@
 import { RouteId } from '@/lib/route';
 import { Article } from '@/lib/types';
 import { MetadataRoute } from 'next';
-import { ARTICLES_API } from './[lang]/blog/[slug]/page';
+import { ARTICLES_API } from './[locale]/blog/[slug]/page';
 import { BASE_URL } from '@/lib/constants';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .catch((error) => console.log(error));
 
   const postsEn: MetadataRoute.Sitemap = articlesEn.map((article) => ({
-    url: `${BASE_URL}/en${RouteId.blog}/${article.attributes.slug}`,
+    url: `${BASE_URL + RouteId.blog}/${article.attributes.slug}`,
     lastModified: article.attributes.updatedAt,
     changeFrequency: 'monthly',
     priority: 1,
@@ -40,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let routes = <MetadataRoute.Sitemap>[];
 
   for (const path of Object.values(RouteId)) {
-    const enUrl = `${BASE_URL}/en${path}`;
+    const enUrl = `${BASE_URL + path}`;
     const deUrl = `${BASE_URL}/de${path}`;
 
     routes.push(

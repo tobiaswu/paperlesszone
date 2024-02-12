@@ -1,22 +1,20 @@
 import { RouteId } from '@/lib/route';
-import { Dictionary } from '@/lib/types';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-export interface Props {
-  dict: Dictionary;
-}
+export const Breadcrumbs = async () => {
+  const t = await getTranslations();
 
-export const Breadcrumbs = ({ dict }: Props) => {
   return (
     <div className="text-sm breadcrumbs">
       <ul>
         <li>
-          <Link href={RouteId.root}>{dict.blog.info.home}</Link>
+          <Link href={RouteId.root}>{t('blog.info.home')}</Link>
         </li>
         <li>
           <Link href={RouteId.blog}>Blog</Link>
         </li>
-        <li>{dict.blog.info.here}</li>
+        <li>{t('blog.info.here')}</li>
       </ul>
     </div>
   );

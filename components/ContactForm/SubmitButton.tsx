@@ -1,21 +1,19 @@
-import { Dictionary } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 import { useFormStatus } from 'react-dom';
 
-export interface SubmitButtonProps {
-  dict: Dictionary;
-}
-
-export const SubmitButton = ({ dict }: SubmitButtonProps) => {
+export const SubmitButton = () => {
+  const t = useTranslations();
   const { pending } = useFormStatus();
+
   return (
     <button className="btn btn-primary" type="submit" disabled={pending}>
       {pending ? (
         <>
           <span className="loading loading-spinner loading-md" />
-          <span>{dict.state.sending}</span>
+          <span>{t('state.sending')}</span>
         </>
       ) : (
-        <span>{dict.button.submit}</span>
+        <span>{t('button.submit')}</span>
       )}
     </button>
   );

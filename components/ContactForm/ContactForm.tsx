@@ -1,16 +1,13 @@
 'use client';
 
-import { Dictionary } from '@/lib/types';
 import { useFormState } from 'react-dom';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
 import { SubmitButton } from './SubmitButton';
+import { useTranslations } from 'next-intl';
 
-interface ContactFormProps {
-  dict: Dictionary;
-}
-
-export const ContactForm = ({ dict }: ContactFormProps) => {
+export const ContactForm = () => {
+  const t = useTranslations();
   const [state, formAction] = useFormState(submitContactForm, null);
 
   const nameError = state?.error?.name?._errors[0];
@@ -55,7 +52,7 @@ export const ContactForm = ({ dict }: ContactFormProps) => {
           className={`${phoneError && 'input-error'} input input-bordered`}
           name="phone"
           type="tel"
-          placeholder={dict.contactForm.phonePlaceholder}
+          placeholder={t('contactForm.phonePlaceholder')}
         />
         {phoneError && (
           <div className="label">
@@ -68,7 +65,7 @@ export const ContactForm = ({ dict }: ContactFormProps) => {
               textError && 'textarea-error'
             } textarea textarea-bordered text-base textarea-md`}
             name="text"
-            placeholder={dict.contactForm.textareaPlaceholder}
+            placeholder={t('contactForm.textareaPlaceholder')}
             required
           />
           {textError && (
@@ -80,7 +77,7 @@ export const ContactForm = ({ dict }: ContactFormProps) => {
         <label className="form-control">
           <label className="cursor-pointer label w-fit gap-4">
             <span className={`${checkboxError && 'text-error'} label-text`}>
-              {dict.contactForm.copyNote}
+              {t('contactForm.copyNote')}
             </span>
             <input
               type="checkbox"
@@ -96,7 +93,7 @@ export const ContactForm = ({ dict }: ContactFormProps) => {
             </div>
           )}
         </label>
-        <SubmitButton dict={dict} />
+        <SubmitButton />
       </form>
       {message && (
         <div className="alert alert-info mt-4">

@@ -1,16 +1,13 @@
-import { Article, Dictionary } from '@/lib/types';
-import { ARTICLES_API } from '@/app/[lang]/blog/[slug]/page';
-import { Locale } from '@/lib/i18n';
+import { Article } from '@/lib/types';
+import { ARTICLES_API } from '@/app/[locale]/blog/[slug]/page';
 import { BlogPreviewTabs } from './BlogPreviewTabs';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-interface BlogPreviewProps {
-  dict: Dictionary;
-  lang: Locale;
-}
-
-export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
+export const BlogPreview = async () => {
+  const t = await getTranslations();
+  const locale = await getLocale();
   const articles: Article[] | undefined = await fetch(
-    ARTICLES_API + '?locale=' + lang + '&populate=*&sort=publishedAt:desc',
+    ARTICLES_API + '?locale=' + locale + '&populate=*&sort=publishedAt:desc',
     {
       method: 'GET',
     }
@@ -23,5 +20,15 @@ export const BlogPreview = async ({ dict, lang }: BlogPreviewProps) => {
     return <p>Articles could not be loaded.</p>;
   }
 
-  return <BlogPreviewTabs articles={articles} dict={dict} lang={lang} />;
+  return (
+    <BlogPreviewTabs
+      articles={articles}
+      allTabTitle={t('blog.category.all')}
+      toolsTabTitle={t('blog.category.tools')}
+      guidesTabTitle={t('blog.category.guides')}
+      workflowsTabTitle={t('blog.category.workflows')}
+      publishedAtTitle={t('blog.info.published')}
+      readTimeText={t('blog.info.readTime')}
+    />
+  );
 };

@@ -1,11 +1,14 @@
-import { Dictionary } from '@/lib/types';
 import { useFormStatus } from 'react-dom';
 
-export interface SubscribeButtonProps {
-  dict: Dictionary;
+interface SubscribeButtonProps {
+  loadingMsg: string;
+  btnTitle: string;
 }
 
-export const SubscribeButton = ({ dict }: SubscribeButtonProps) => {
+export const SubscribeButton = ({
+  loadingMsg,
+  btnTitle,
+}: SubscribeButtonProps) => {
   const { pending } = useFormStatus();
   return (
     <button
@@ -16,10 +19,10 @@ export const SubscribeButton = ({ dict }: SubscribeButtonProps) => {
       {pending ? (
         <>
           <span className="loading loading-spinner loading-md" />
-          <span>{dict.state.sending}</span>
+          <span>{loadingMsg}</span>
         </>
       ) : (
-        <span>{dict.button.subscribe}</span>
+        <span>{btnTitle}</span>
       )}
     </button>
   );

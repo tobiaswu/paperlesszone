@@ -1,21 +1,28 @@
 'use client';
 
-import { Article, Dictionary } from '@/lib/types';
+import { Article } from '@/lib/types';
 import { useState } from 'react';
 import { ArticleCard } from './ArticleCard';
 import { Category } from '@/lib/enums';
-import { Locale } from '@/lib/i18n';
 
 export interface BlogPreviewTabsProps {
   articles: Article[];
-  dict: Dictionary;
-  lang: Locale;
+  allTabTitle: string;
+  toolsTabTitle: string;
+  guidesTabTitle: string;
+  workflowsTabTitle: string;
+  publishedAtTitle: string;
+  readTimeText: string;
 }
 
 export const BlogPreviewTabs = ({
   articles,
-  dict,
-  lang,
+  allTabTitle,
+  toolsTabTitle,
+  guidesTabTitle,
+  workflowsTabTitle,
+  publishedAtTitle,
+  readTimeText,
 }: BlogPreviewTabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -37,15 +44,15 @@ export const BlogPreviewTabs = ({
           <ArticleCard
             key={article.id}
             className="col-span-6 lg:card-side min-h-[300px]"
-            dict={dict}
             preview
             category={article.attributes.category?.data.attributes.item}
             description={article.attributes.description}
             slug={article.attributes.slug}
             title={article.attributes.title}
             publishedAt={article.attributes.publishedAt}
+            publishedAtText={publishedAtTitle}
             readTime={article.attributes.reading_time}
-            lang={lang}
+            readTimeText={readTimeText}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
             thumbnailAltText={
               article.attributes.thumbnail?.data.attributes.alternativeText
@@ -57,13 +64,13 @@ export const BlogPreviewTabs = ({
         <ArticleCard
           key={article.id}
           className="col-span-6 sm:col-span-3 lg:col-span-2"
-          dict={dict}
           category={article.attributes.category?.data.attributes.item}
           slug={article.attributes.slug}
           title={article.attributes.title}
           publishedAt={article.attributes.publishedAt}
+          publishedAtText={publishedAtTitle}
           readTime={article.attributes.reading_time}
-          lang={lang}
+          readTimeText={readTimeText}
           thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
           thumbnailAltText={
             article.attributes.thumbnail?.data.attributes.alternativeText
@@ -80,7 +87,7 @@ export const BlogPreviewTabs = ({
         className={`tab sm:w-28 md:w-32 ${activeTab === 0 ? 'tab-active' : ''}`}
         onClick={() => selectTab(0)}
       >
-        {dict.blog.category.all}
+        {allTabTitle}
       </a>
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">{renderArticleCards()}</div>
@@ -90,7 +97,7 @@ export const BlogPreviewTabs = ({
         className={`tab sm:w-28 md:w-32 ${activeTab === 1 ? 'tab-active' : ''}`}
         onClick={() => selectTab(1)}
       >
-        {dict.blog.category.guides}
+        {guidesTabTitle}
       </a>
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">
@@ -102,7 +109,7 @@ export const BlogPreviewTabs = ({
         className={`tab sm:w-28 md:w-32 ${activeTab === 2 ? 'tab-active' : ''}`}
         onClick={() => selectTab(2)}
       >
-        {dict.blog.category.tools}
+        {toolsTabTitle}
       </a>
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">
@@ -114,7 +121,7 @@ export const BlogPreviewTabs = ({
         className={`tab sm:w-28 md:w-32 ${activeTab === 3 ? 'tab-active' : ''}`}
         onClick={() => selectTab(3)}
       >
-        {dict.blog.category.workflows}
+        {workflowsTabTitle}
       </a>
       <div role="tabpanel" className="tab-content pt-10">
         <div className="grid grid-cols-6 gap-10">

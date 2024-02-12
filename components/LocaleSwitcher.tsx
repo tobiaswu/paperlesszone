@@ -1,68 +1,25 @@
-'use client';
-
-import { i18n, type Locale } from '@/lib/i18n';
-import { useLocale } from '@/utils/hooks';
+import { locales } from '@/lib/constants';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { LocaleSwitcherTab } from './LocaleSwitcherTab';
 
 export const LocaleSwitcher = () => {
-  const pathName = usePathname();
-  const router = useRouter();
-  const [storedLocale, setStoredLocale] = useLocale();
-  const [activeTab, setActiveTab] = useState<Locale>();
-
-  const isArticle = pathName.includes('/blog/');
-
-  const redirectedPathName = (locale: Locale) => {
-    if (!pathName) return '/';
-    const segments = pathName.split('/');
-    segments[1] = locale;
-    return segments.join('/');
-  };
-
-  const handleClick = (locale: Locale) => {
-    setActiveTab(locale);
-    setStoredLocale(locale);
-  };
-
-  useEffect(() => {
-    if (!pathName) return;
-    const segments = pathName.split('/');
-    setActiveTab(segments[1] as Locale);
-
-    if (storedLocale && segments[1] !== storedLocale) {
-      setActiveTab(storedLocale);
-      segments[1] = storedLocale;
-      router.replace(segments.join('/'));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const t = useTranslations('LocaleSwitcher');
+  const locale = useLocale();
 
   return (
-    <div
-      role="tablist"
-      className="tabs tabs-boxed border border-gunmetal-600 bg-neutral w-fit"
-    >
-      {i18n.locales.map((locale) => {
+    <LocaleSwitcherTab defaultValue={locale}>
+     {locales.map((locale) => (
+        <option key={locale} value={locale}>
+          {t('locale', {locale})}
+        </option>
+      ))}
+    </LocaleSwitcherTab>
+    
+      {locales.map((locale) => {
         const className = activeTab?.includes(locale)
           ? 'tab tab-active'
           : 'tab';
-
-        if (isArticle) {
-          if (activeTab?.includes(locale)) {
-            return (
-              <button key={locale} className={className} role="tab">
-                {locale}
-              </button>
-            );
-          }
-          return (
-            <button disabled key={locale} className={className} role="tab">
-              {locale}
-            </button>
-          );
-        }
 
         return (
           <Link
@@ -76,6 +33,5 @@ export const LocaleSwitcher = () => {
           </Link>
         );
       })}
-    </div>
   );
 };

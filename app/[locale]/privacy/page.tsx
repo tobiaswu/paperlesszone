@@ -1,48 +1,42 @@
-import { getDictionary } from '@/utils/getDictionary';
-import { Locale } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { BASE_URL } from '@/lib/constants';
 import { RouteId } from '@/lib/route';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
-  params: { lang: Locale };
+  params: { locale: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const canonicalData = {
-    metadataBase: new URL(BASE_URL),
-    alternates: {
-      canonical: RouteId.privacy,
-      languages: {
-        'en-US': '/en' + RouteId.privacy,
-        'de-DE': '/de' + RouteId.privacy,
-      },
-    },
-  };
-  if (params.lang === 'de') {
-    return {
-      title:
-        'Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten',
-      description:
-        '▷ Deine Daten sind 100% sicher mit DigitizerSpace. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform.',
-      ...canonicalData,
-    };
-  }
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.privacy',
+  });
+  // const canonicalData = {
+  //   metadataBase: new URL(BASE_URL),
+  //   alternates: {
+  //     canonical: RouteId.privacy,
+  //     languages: {
+  //       'en-US': '/en' + RouteId.privacy,
+  //       'de-DE': '/de' + RouteId.privacy,
+  //     },
+  //   },
+  // };
+
   return {
-    title: 'Privacy Policy of DigitizerSpace - we care about your data',
-    description:
-      '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR.',
-    ...canonicalData,
+    title: t('title'),
+    description: t('description'),
   };
 }
 
 export default async function Privacy({ params }: Props) {
-  const dict = await getDictionary(params.lang);
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale });
 
   return (
     <div className="container mx-auto py-8 px-4 bg-base-100">
       <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
-        {dict.privacy.title}
+        {t('privacy.title')}
       </h1>
       <p className="pb-8">
         At DigitizerSpace, accessible from https://www.digitizerspace.com, one

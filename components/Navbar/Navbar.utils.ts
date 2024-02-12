@@ -1,13 +1,14 @@
 import { RouteId } from '@/lib/route';
 import { NavItemData } from './Navbar.types';
-import { Dictionary } from '@/lib/types';
-import { Locale } from '@/lib/i18n';
+import { getTranslations } from 'next-intl/server';
 
-export const getNavItems = (dict: Dictionary, lang: Locale) => {
+export const getNavItems = async () => {
+  const t = await getTranslations();
+
   const navItems: NavItemData[] = [
     {
       id: 'solutions',
-      label: dict.navbar.solutions,
+      label: t('navbar.solutions'),
       items: [
         // {
         //   id: 'solution-1',
@@ -16,28 +17,28 @@ export const getNavItems = (dict: Dictionary, lang: Locale) => {
         // },
         {
           id: 'solution-2',
-          label: dict.navbar.paperless,
-          url: `/${lang + RouteId.paperless}`,
+          label: t('navbar.paperless'),
+          url: RouteId.paperless,
         },
       ],
     },
     {
       id: 'resources',
-      label: dict.navbar.resources,
+      label: t('navbar.resources'),
       items: [
         {
           id: 'resource-1',
           label: 'Blog',
-          url: `/${lang + RouteId.blog}`,
+          url: RouteId.blog,
         },
         {
           id: 'resource-2',
           label: 'Newsletter',
-          url: `/${lang}/#newsletter`,
+          url: '/#newsletter',
         },
       ],
     },
-    { id: 'about', label: dict.navbar.about, url: `/${lang + RouteId.about}` },
+    { id: 'about', label: t('navbar.about'), url: RouteId.about },
   ];
 
   return navItems;

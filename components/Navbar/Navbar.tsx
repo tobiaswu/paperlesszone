@@ -2,24 +2,19 @@ import { RouteId } from '@/lib/route';
 import Link from 'next/link';
 import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';
-import { Dictionary } from '@/lib/types';
 import { getNavItems } from './Navbar.utils';
 import { LocaleSwitcher } from '../LocaleSwitcher';
-import { Locale } from '@/lib/i18n';
+import { getTranslations } from 'next-intl/server';
 
-interface NavbarProps {
-  dict: Dictionary;
-  lang: Locale;
-}
-
-export const Navbar = async ({ dict, lang }: NavbarProps) => {
-  const navItems = getNavItems(dict, lang);
+export const Navbar = async () => {
+  const t = await getTranslations();
+  const navItems = await getNavItems();
 
   return (
     <header className="navbar pl-0" data-theme="darkTheme">
       <div className="navbar-start">
-        <MobileMenu items={navItems} lang={lang} />
-        <Link className="ml-2" href={`/${lang + RouteId.root}`}>
+        <MobileMenu items={navItems} />
+        <Link className="ml-2" href={RouteId.root}>
           <p className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
             DigitizerSpace
           </p>
@@ -40,31 +35,24 @@ export const Navbar = async ({ dict, lang }: NavbarProps) => {
                 {navItem.items.map((item) => {
                   return (
                     <li key={item.id}>
-                      <Link href={item.url ?? `/${lang + RouteId.root}`}>
-                        {item.label}
-                      </Link>
+                      <Link href={item.url ?? RouteId.root}>{item.label}</Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
           ) : (
-            <Link
-              key={navItem.id}
-              href={navItem.url ?? `/${lang + RouteId.root}`}
-            >
+            <Link key={navItem.id} href={navItem.url ?? RouteId.root}>
               <button className="btn btn-ghost">{navItem.label}</button>
             </Link>
           );
         })}
       </div>
       <div className="navbar-end">
-        <div className="hidden lg:block">
-          <LocaleSwitcher />
-        </div>
-        <Link className="ml-4" href={`/${lang + RouteId.contact}`}>
+        <div className="hidden lg:block">{/* <LocaleSwitcher /> */}</div>
+        <Link className="ml-4" href={RouteId.contact}>
           <button className="btn btn-neutral border-gunmetal-600">
-            {dict.button.contact}
+            {t('button.contact')}
           </button>
         </Link>
       </div>

@@ -1,6 +1,4 @@
-import { Locale } from '@/lib/i18n';
-
-export const getFormattedDate = (date: string, lang: Locale) => {
+export const getFormattedDate = (date: string, lang: string) => {
   const dateObj = new Date(date);
   const day = dateObj.getDate();
   const month = dateObj.getMonth() + 1;

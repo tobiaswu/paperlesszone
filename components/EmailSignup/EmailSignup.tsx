@@ -1,20 +1,23 @@
 'use client';
 
-import { Dictionary } from '@/lib/types';
 import { RouteId } from '@/lib/route';
 import Link from 'next/link';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitEmailForm } from './actions';
 import { useFormState } from 'react-dom';
 import { SubscribeButton } from './SubscribeButton';
-import { Locale } from '@/lib/i18n';
 
 interface EmailSignupProps {
-  dict: Dictionary;
-  lang: Locale;
+  disclaimer: JSX.Element;
+  loadingMsg: string;
+  btnTitle: string;
 }
 
-export const EmailSignup = ({ dict, lang }: EmailSignupProps) => {
+export const EmailSignup = ({
+  disclaimer,
+  loadingMsg,
+  btnTitle,
+}: EmailSignupProps) => {
   const [state, formAction] = useFormState(submitEmailForm, null);
   const error = state?.error?.email?._errors[0];
   const message: string | undefined = state?.message?.message;
@@ -38,7 +41,7 @@ export const EmailSignup = ({ dict, lang }: EmailSignupProps) => {
             </div>
           )}
         </label>
-        <SubscribeButton dict={dict} />
+        <SubscribeButton loadingMsg={loadingMsg} btnTitle={btnTitle} />
       </form>
       {message && (
         <div className="alert alert-info w-fit mt-4">
@@ -46,12 +49,7 @@ export const EmailSignup = ({ dict, lang }: EmailSignupProps) => {
           <span>{message}</span>
         </div>
       )}
-      <p className="text-sm pt-8">
-        {dict.emailSignup.firstAgreement}&nbsp;
-        <Link href={`/${lang}${RouteId.privacy}`}>{dict.privacy.title}</Link>
-        &nbsp;
-        {dict.emailSignup.secondAgreement}
-      </p>
+      <p className="text-sm pt-8">{disclaimer}</p>
     </div>
   );
 };

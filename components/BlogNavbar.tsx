@@ -1,30 +1,26 @@
-import { Locale } from '@/lib/i18n';
 import { RouteId } from '@/lib/route';
-import { Dictionary } from '@/lib/types';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-export interface Props {
-  dict: Dictionary;
-  lang: Locale;
-}
+export const BlogNavbar = async () => {
+  const t = await getTranslations();
 
-export const BlogNavbar = ({ dict, lang }: Props) => {
   const CATEGORIES = [
     {
       id: 'all',
-      t: dict.blog.category.all,
+      t: t('blog.category.all'),
     },
     {
       id: 'guides',
-      t: dict.blog.category.guides,
+      t: t('blog.category.guides'),
     },
     {
       id: 'trends',
-      t: dict.blog.category.trends,
+      t: t('blog.category.trends'),
     },
     {
       id: 'workflows',
-      t: dict.blog.category.workflows,
+      t: t('blog.category.workflows'),
     },
   ];
 
@@ -42,7 +38,7 @@ export const BlogNavbar = ({ dict, lang }: Props) => {
             return (
               <Link
                 key={cat.id}
-                href={`/${lang + RouteId.blog}?category=${cat.id}`}
+                href={`${RouteId.blog}?category=${cat.id}`}
                 role="tab"
                 className={
                   cat.id === 'all' ? className + ' tab-active' : className

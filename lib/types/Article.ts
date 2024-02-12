@@ -1,5 +1,4 @@
 import { type BlocksContent } from '@strapi/blocks-react-renderer';
-import { Locale } from '../i18n';
 
 export type Article = {
   id: number;
@@ -13,7 +12,6 @@ export type Article = {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    locale: Locale;
     slug: string;
     author?: Author;
     thumbnail: Image;

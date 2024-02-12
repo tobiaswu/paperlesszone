@@ -1,19 +1,22 @@
 import { ArticleCard } from '@/components/ArticleCard';
-import { Locale } from '@/lib/i18n';
 import { Article } from '@/lib/types';
 import { ARTICLES_API } from './[slug]/page';
 import { NotFound } from '@/components/NotFound';
-import { getDictionary } from '@/utils/getDictionary';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-export default async function Blog({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dict = await getDictionary(lang);
+type Props = {
+  params: { locale: string };
+};
+
+export default async function Blog({ params }: Props) {
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale });
 
   const articles: Article[] | undefined = await fetch(
-    ARTICLES_API + '?locale=' + lang + '&populate=*&sort=publishedAt:desc',
+    ARTICLES_API +
+      '?locale=' +
+      params.locale +
+      '&populate=*&sort=publishedAt:desc',
     {
       method: 'GET',
     }
@@ -30,15 +33,15 @@ export default async function Blog({
             <ArticleCard
               key={article.id}
               className="col-span-6 lg:card-side min-h-[300px]"
-              dict={dict}
               preview
               category={article.attributes.category?.data.attributes.item}
               description={article.attributes.description}
               slug={article.attributes.slug}
               title={article.attributes.title}
               publishedAt={article.attributes.publishedAt}
+              publishedAtText={t('blog.info.published')}
               readTime={article.attributes.reading_time}
-              lang={lang}
+              readTimeText={t('blog.info.readTime')}
               thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
               thumbnailAltText={
                 article.attributes.thumbnail?.data.attributes.alternativeText
@@ -51,12 +54,12 @@ export default async function Blog({
             key={article.id}
             className="col-span-6 sm:col-span-3 lg:col-span-2"
             category={article.attributes.category?.data.attributes.item}
-            dict={dict}
             slug={article.attributes.slug}
             title={article.attributes.title}
             publishedAt={article.attributes.publishedAt}
+            publishedAtText={t('blog.info.published')}
             readTime={article.attributes.reading_time}
-            lang={lang}
+            readTimeText={t('blog.info.readTime')}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
             thumbnailAltText={
               article.attributes.thumbnail?.data.attributes.alternativeText
@@ -66,6 +69,6 @@ export default async function Blog({
       })}
     </div>
   ) : (
-    <NotFound text={dict.blog.info.loadingError} />
+    <NotFound text={t('blog.info.loadingError')} />
   );
 }

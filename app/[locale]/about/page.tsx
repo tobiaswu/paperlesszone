@@ -12,44 +12,38 @@ import { RouteId } from '@/lib/route';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
-import { Locale } from '@/lib/i18n';
-import { getDictionary } from '@/utils/getDictionary';
 import { BASE_URL } from '@/lib/constants';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
-  params: { lang: Locale };
+  params: { locale: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const canonicalData = {
-    metadataBase: new URL(BASE_URL),
-    alternates: {
-      canonical: RouteId.about,
-      languages: {
-        'en-US': '/en' + RouteId.about,
-        'de-DE': '/de' + RouteId.about,
-      },
-    },
-  };
-  if (params.lang === 'de') {
-    return {
-      title:
-        'Über DigitizerSpace - das Warum, Wer und Was der Automatisierung!',
-      description:
-        '▷ Über DigitierSpace - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!.',
-      ...canonicalData,
-    };
-  }
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.about',
+  });
+  // const canonicalData = {
+  //   metadataBase: new URL(BASE_URL),
+  //   alternates: {
+  //     canonical: RouteId.about,
+  //     languages: {
+  //       'en-US': '/en' + RouteId.about,
+  //       'de-DE': '/de' + RouteId.about,
+  //     },
+  //   },
+  // };
+
   return {
-    title: 'About DigitizerSpace - The why, who, and what of automation!',
-    description:
-      '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
-    ...canonicalData,
+    title: t('title'),
+    description: t('description'),
   };
 }
 
 export default async function About({ params }: Props) {
-  const dict = await getDictionary(params.lang);
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({ locale: params.locale });
 
   return (
     <>
@@ -61,12 +55,12 @@ export default async function About({ params }: Props) {
               variants={itemAnimationVariant}
             >
               <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
-                {dict.about.title}
+                {t('about.title')}
               </h1>
             </MotionWrapper>
             <MotionWrapper variants={itemAnimationVariant}>
               <p className="mt-8 max-w-xl mx-auto leading-relaxed">
-                {dict.about.description}
+                {t('about.description')}
               </p>
             </MotionWrapper>
           </div>
@@ -78,22 +72,22 @@ export default async function About({ params }: Props) {
               <MotionWrapper index={0} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiLightningLight />}
-                  title={dict.about.statCard.foundedTitle}
-                  value={dict.about.statCard.founedValue}
+                  title={t('about.statCard.foundedTitle')}
+                  value={t('about.statCard.founedValue')}
                 />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiCoinsThin />}
-                  title={dict.about.statCard.costSavingTitle}
-                  value={dict.about.statCard.costSavingValue}
+                  title={t('about.statCard.costSavingTitle')}
+                  value={t('about.statCard.costSavingValue')}
                 />
               </MotionWrapper>
               <MotionWrapper index={2} variants={staggerAnimationVariant}>
                 <StatCard
                   icon={<PiTimerLight />}
-                  title={dict.about.statCard.timeSavingTitle}
-                  value={dict.about.statCard.timeSavingValue}
+                  title={t('about.statCard.timeSavingTitle')}
+                  value={t('about.statCard.timeSavingValue')}
                 />
               </MotionWrapper>
             </div>
@@ -110,23 +104,20 @@ export default async function About({ params }: Props) {
       </section>
 
       <section className="container mx-auto max-w-2xl px-4">
-        <p className="mb-8">{dict.about.firstSectionText}</p>
+        <p className="mb-8">{t('about.firstSectionText')}</p>
         <p>
-          {dict.about.secondSectionText}
+          {t('about.secondSectionText')}
           &nbsp;
-          <Link
-            className="underline hover:text-primary"
-            href={`/${params.lang}${RouteId.root}`}
-          >
+          <Link className="underline hover:text-primary" href={RouteId.root}>
             DigitizerSpace.com
           </Link>
           .&nbsp;
-          {dict.about.thirdSectionText}
+          {t('about.thirdSectionText')}
         </p>
         <h2 className="mt-16 mb-8 text-4xl font-semibold">
-          {dict.about.firstSubtitle}
+          {t('about.firstSubtitle')}
         </h2>
-        <p>{dict.about.fourthSectionText}</p>
+        <p>{t('about.fourthSectionText')}</p>
         <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
           <div className="flex flex-col items-center gap-2">
             <Image
@@ -157,11 +148,11 @@ export default async function About({ params }: Props) {
             </div>
           </div>
           <p className="italic font-serif max-w-md">
-            &quot;{dict.about.quote}&quot;
+            &quot;{t('about.quote')}&quot;
           </p>
         </div>
         <p>
-          {dict.about.fifthSectionText}
+          {t('about.fifthSectionText')}
           &nbsp;
           <Link
             className="underline hover:text-primary"
@@ -169,38 +160,35 @@ export default async function About({ params }: Props) {
             rel="noopener noreferrer"
             target="_blank"
           >
-            {dict.about.fortune500LinkText}
+            {t('about.fortune500LinkText')}
           </Link>
-          &nbsp;{dict.about.sixthSectionText}
+          &nbsp;{t('about.sixthSectionText')}
         </p>
         <h2 className="mt-16 mb-8 text-4xl font-semibold">
-          {dict.about.secondSubtitle}
+          {t('about.secondSubtitle')}
         </h2>
         <p>
-          {dict.about.seventhSectionText}
+          {t('about.seventhSectionText')}
           &nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${params.lang}${RouteId.resources}`}
+            href={RouteId.resources}
           >
-            {dict.about.resourcesLinkText}
+            {t('about.resourcesLinkText')}
           </Link>
           ,&nbsp;
           <Link
             className="underline hover:text-primary"
-            href={`/${params.lang}${RouteId.solutions}`}
+            href={RouteId.solutions}
           >
-            {dict.about.solutionsLinkText}
+            {t('about.solutionsLinkText')}
           </Link>
-          &nbsp;{dict.conditional.or}&nbsp;
-          <Link
-            className="underline hover:text-primary"
-            href={`/${params.lang}${RouteId.contact}`}
-          >
-            {dict.about.contactUsLinkText}
+          &nbsp;{t('conditional.or')}&nbsp;
+          <Link className="underline hover:text-primary" href={RouteId.contact}>
+            {t('about.contactUsLinkText')}
           </Link>
           &nbsp;
-          {dict.about.eighthSectionText}
+          {t('about.eighthSectionText')}
         </p>
       </section>
 

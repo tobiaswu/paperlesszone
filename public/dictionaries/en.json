@@ -264,5 +264,36 @@
   },
   "toast": {
     "clipboard": "Copied to clipboard"
+  },
+  "localeSwitcher": {
+    "locale": "{locale}"
+  },
+  "metadata": {
+    "root": {
+      "title": "DigitizerSpace - Automation & Digitization Solutions",
+      "description": "▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
+    },
+    "solutions": {
+      "paperless": {
+        "title": "Get the Paperless-ngx system running | we install it for you",
+        "description": "▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy of DigitizerSpace - we care about your data",
+      "description": "▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR."
+    },
+    "contact": {
+      "title": "Contact DigitizerSpace here - we help you automating",
+      "description": "▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!"
+    },
+    "blog": {
+      "title": "DigitizerSpace Blog - Automation Use Cases, AI Trends & More",
+      "description": "▷ Discover the DigitizerSpace Blog. Learn how you can scale & digitalize your business. ✓ Based on real use cases. ✓ Learn for free. ✓ Start automating today."
+    },
+    "about": {
+      "title": "About DigitizerSpace - solutions for everyday business activities",
+      "description": "▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!"
+    }
   }
 }

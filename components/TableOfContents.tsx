@@ -2,17 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Dictionary } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 
 export interface TableOfContentsProps {
-  dict: Dictionary;
   sectionTitles: string[];
 }
 
-export const TableOfContents = ({
-  dict,
-  sectionTitles,
-}: TableOfContentsProps) => {
+export const TableOfContents = ({ sectionTitles }: TableOfContentsProps) => {
+  const t = useTranslations();
   const [activeTitle, setActiveTitle] = useState('');
 
   useEffect(() => {
@@ -46,7 +43,7 @@ export const TableOfContents = ({
 
   return (
     <div className="sticky top-12">
-      <h2 className="text-xl font-semibold mb-2">{dict.blog.toc.title}</h2>
+      <h2 className="text-xl font-semibold mb-2">{t('blog.toc.title')}</h2>
       <ul className="list-none list-inside">
         {sectionTitles.map((title) => {
           const id = title.toLowerCase().replace(/\s/g, '-');

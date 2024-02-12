@@ -264,5 +264,36 @@
   },
   "toast": {
     "clipboard": "In die Zwischenablage kopiert"
+  },
+  "localeSwitcher": {
+    "locale": "{locale}"
+  },
+  "metadata": {
+    "root": {
+      "title": "DigitizerSpace - KI Automatisierung und Digitalisierung",
+      "description": "▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
+    },
+    "solutions": {
+      "paperless": {
+        "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
+        "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."
+      }
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten",
+      "description": "▷ Deine Daten sind 100% sicher mit DigitizerSpace. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform."
+    },
+    "contact": {
+      "title": "Kontaktiere DigitizerSpace hier - wir helfen dir zu automatisieren",
+      "description": "▷ Kontaktiere DigitizerSpace per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren."
+    },
+    "blog": {
+      "title": "DigitizerSpace Blog - Automatisierung, AI Trends & Mehr!",
+      "description": "▷ Entdecke den DigitierSpace Blog. Lerne wie du dein Unternehmen skalierst & digitalisierst. ✓ Reale Anwendungsfälle. ✓ Lerne kostenlos. ✓ Setze noch heute um."
+    },
+    "about": {
+      "title": "Über DigitizerSpace - Lösungen für den Geschäftsalltag",
+      "description": "▷ Über DigitierSpace - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!"
+    }
   }
 }

@@ -10,14 +10,13 @@
   },
   "dependencies": {
     "@dotlottie/react-player": "^1.6.6",
-    "@formatjs/intl-localematcher": "^0.5.2",
     "@strapi/blocks-react-renderer": "^1.0.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
     "framer-motion": "^10.16.16",
     "lodash": "^4.17.21",
-    "negotiator": "^0.6.3",
     "next": "14.0.4",
+    "next-intl": "^3.7.0",
     "nextjs-toploader": "^1.6.4",
     "nodemailer": "^6.9.8",
     "react": "^18",
@@ -28,7 +27,6 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
-    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
