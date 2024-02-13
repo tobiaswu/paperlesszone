@@ -1,20 +1,18 @@
 import { STRAPI_URL } from '@/lib/constants';
 import { RouteId } from '@/lib/route';
-import { getFormattedDate } from '@/utils/date';
-import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export interface ArticleCardProps {
   className?: string;
   preview?: boolean;
+  formattedDate: string;
   thumbnailUrl?: string;
   thumbnailAltText?: string;
   slug: string;
   category?: string;
   title: string;
   description?: string;
-  publishedAt: string;
   publishedAtText: string;
   readTime?: number;
   readTimeText: string;
@@ -23,18 +21,17 @@ export interface ArticleCardProps {
 export const ArticleCard = ({
   className,
   preview,
+  formattedDate,
   thumbnailUrl,
   thumbnailAltText,
   slug,
   category,
   title,
   description,
-  publishedAt,
   publishedAtText,
   readTime,
   readTimeText,
 }: ArticleCardProps) => {
-  const locale = useLocale();
   const defaultClassName =
     'card bg-neutral shadow-md rounded-lg border border-gunmetal-600';
   const mergedClassName = className + ' ' + defaultClassName;
@@ -67,8 +64,7 @@ export const ArticleCard = ({
         {preview && <p>{description}</p>}
         <div className="card-actions">
           <p className="text-base self-end">
-            {/* TODO: replace with intl formatter */}
-            {publishedAtText + getFormattedDate(publishedAt, locale)}
+            {publishedAtText + formattedDate}
           </p>
           <Link href={href}>
             <button className="btn btn-primary btn-outline btn-sm mt-2">
