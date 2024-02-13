@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';
 import { getNavItems } from './Navbar.utils';
-import { LocaleSwitcher } from '../LocaleSwitcher';
 import { getTranslations } from 'next-intl/server';
 
 export const Navbar = async () => {

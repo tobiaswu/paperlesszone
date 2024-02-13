@@ -7,7 +7,6 @@ import {
 } from 'react-icons/pi';
 import { EmailSignup } from './EmailSignup/EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
-import { LocaleSwitcher } from './LocaleSwitcher';
 import { getTranslations } from 'next-intl/server';
 
 export const Footer = async () => {
