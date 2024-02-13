@@ -11,9 +11,10 @@ import { Category } from '@/lib/enums';
 
 type Props = {
   params: { locale: string };
+  searchParams: Record<string, Category>;
 };
 
-export default async function Blog({ params }: Props) {
+export default async function Blog({ params, searchParams }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale });
   const format = await getFormatter();
@@ -22,7 +23,7 @@ export default async function Blog({ params }: Props) {
     ARTICLES_API +
       '?locale=' +
       params.locale +
-      '&populate=*&sort=publishedAt:desc',
+      '&populate=*&sort=publishedAt:desc&',
     {
       method: 'GET',
     }
@@ -31,9 +32,17 @@ export default async function Blog({ params }: Props) {
     .then((data) => data.data)
     .catch((error) => console.log(error));
 
-  return articles ? (
+  const filteredArticles = searchParams.category
+    ? articles?.filter(
+        (article) =>
+          article.attributes.category?.data.attributes.item ===
+          searchParams.category
+      )
+    : articles;
+
+  return filteredArticles ? (
     <div className="container mx-auto py-16 px-4 grid grid-cols-6 gap-8">
-      {articles.map((article, index) => {
+      {filteredArticles.map((article, index) => {
         const dateTime = new Date(article.attributes.publishedAt);
         const formattedDate = format.dateTime(dateTime, {
           year: 'numeric',

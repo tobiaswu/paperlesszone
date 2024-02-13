@@ -26,10 +26,18 @@ export default async function BlogLayout({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
+  const t = await getTranslations();
 
   return (
     <div data-theme>
-      <BlogNavbar />
+      <BlogNavbar
+        categoryTexts={{
+          all: t('blog.category.all'),
+          guides: t('blog.category.guides'),
+          tools: t('blog.category.tools'),
+          workflows: t('blog.category.workflows'),
+        }}
+      />
       {children}
     </div>
   );
