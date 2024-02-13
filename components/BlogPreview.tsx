@@ -42,7 +42,11 @@ export const BlogPreview = async () => {
             key={article.id}
             className="col-span-6 lg:card-side min-h-[300px]"
             preview
-            category={article.attributes.category?.data.attributes.item}
+            category={t(
+              `blog.category.${
+                article.attributes.category?.data.attributes.item as Category
+              }`
+            )}
             description={article.attributes.description}
             formattedDate={formattedDate}
             slug={article.attributes.slug}
@@ -61,7 +65,11 @@ export const BlogPreview = async () => {
         <ArticleCard
           key={article.id}
           className="col-span-6 sm:col-span-3 lg:col-span-2"
-          category={article.attributes.category?.data.attributes.item}
+          category={t(
+            `blog.category.${
+              article.attributes.category?.data.attributes.item as Category
+            }`
+          )}
           formattedDate={formattedDate}
           slug={article.attributes.slug}
           title={article.attributes.title}

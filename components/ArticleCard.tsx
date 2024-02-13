@@ -55,8 +55,7 @@ export const ArticleCard = ({
       </figure>
       <div className="card-body">
         <div className="badge badge-secondary badge-lg rounded-lg mb-2">
-          {/* {tblog.category[category as keyof typeof tblog.category] ??
-            ''} */}
+          {category}
         </div>
         <Link className="w-fit" href={href}>
           <h2 className="card-title text-2xl mb-2">{title}</h2>

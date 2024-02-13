@@ -7,6 +7,7 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
+import { Category } from '@/lib/enums';
 
 type Props = {
   params: { locale: string };
@@ -46,7 +47,11 @@ export default async function Blog({ params }: Props) {
               key={article.id}
               className="col-span-6 lg:card-side min-h-[300px]"
               preview
-              category={article.attributes.category?.data.attributes.item}
+              category={t(
+                `blog.category.${
+                  article.attributes.category?.data.attributes.item as Category
+                }`
+              )}
               description={article.attributes.description}
               slug={article.attributes.slug}
               title={article.attributes.title}
@@ -65,7 +70,11 @@ export default async function Blog({ params }: Props) {
           <ArticleCard
             key={article.id}
             className="col-span-6 sm:col-span-3 lg:col-span-2"
-            category={article.attributes.category?.data.attributes.item}
+            category={t(
+              `blog.category.${
+                article.attributes.category?.data.attributes.item as Category
+              }`
+            )}
             slug={article.attributes.slug}
             title={article.attributes.title}
             formattedDate={formattedDate}
