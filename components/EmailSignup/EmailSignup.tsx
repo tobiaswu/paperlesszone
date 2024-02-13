@@ -1,7 +1,5 @@
 'use client';
 
-import { RouteId } from '@/lib/route';
-import Link from 'next/link';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitEmailForm } from './actions';
 import { useFormState } from 'react-dom';

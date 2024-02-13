@@ -12,8 +12,6 @@ import {
   itemAnimationVariant,
   staggerAnimationVariant,
 } from '@/lib/animation';
-import { BASE_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
@@ -25,16 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.contact',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.contact,
-  //     languages: {
-  //       'en-US': '/en' + RouteId.contact,
-  //       'de-DE': '/de' + RouteId.contact,
-  //     },
-  //   },
-  // };
 
   return {
     title: t('title'),
@@ -93,7 +81,13 @@ export default async function Contact({ params }: Props) {
             {t('contact.formTitle')}
           </h2>
           <p className="text-center mb-8">{t('contact.formDescription')}</p>
-          <ContactForm />
+          <ContactForm
+            copyNote={t('contactForm.copyNote')}
+            loadingText={t('state.sending')}
+            phonePlaceholder={t('contactForm.phonePlaceholder')}
+            submitBtnText={t('button.submit')}
+            textareaPlaceholder={t('contactForm.textareaPlaceholder')}
+          />
         </MotionWrapper>
       </div>
     </div>

@@ -67,6 +67,7 @@ export const ArticleCard = ({
         {preview && <p>{description}</p>}
         <div className="card-actions">
           <p className="text-base self-end">
+            {/* TODO: replace with intl formatter */}
             {publishedAtText + getFormattedDate(publishedAt, locale)}
           </p>
           <Link href={href}>

@@ -1,6 +1,4 @@
 import { BlogNavbar } from '@/components/BlogNavbar';
-import { BASE_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
 import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
@@ -13,16 +11,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.blog',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.blog,
-  //     languages: {
-  //       'en-US': '/en' + RouteId.blog,
-  //       'de-DE': '/de' + RouteId.blog,
-  //     },
-  //   },
-  // };
 
   return {
     title: t('title'),

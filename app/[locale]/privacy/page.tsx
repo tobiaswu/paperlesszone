@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { BASE_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
@@ -12,16 +10,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.privacy',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.privacy,
-  //     languages: {
-  //       'en-US': '/en' + RouteId.privacy,
-  //       'de-DE': '/de' + RouteId.privacy,
-  //     },
-  //   },
-  // };
 
   return {
     title: t('title'),

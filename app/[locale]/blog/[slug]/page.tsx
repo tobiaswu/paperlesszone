@@ -1,5 +1,5 @@
 import { ArticleAuthor } from '@/components/ArticleAuthor';
-import { ArticleShareButton } from '@/components/ArticleShareButton';
+import { ArticleShare } from '@/components/ArticleShare';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Article } from '@/lib/types';
@@ -12,7 +12,6 @@ import { ArticleTags } from '@/components/ArticleTags';
 import { ArticleContent } from '@/components/ArticleContent';
 import { TableOfContents } from '@/components/TableOfContents';
 import { BASE_URL, STRAPI_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
@@ -37,35 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .then((data) => data.data[0])
     .catch((error) => console.log(error));
 
-  const baseData = {
+  return {
     title: article?.attributes.title,
     description: article?.attributes.description,
     metadataBase: new URL(BASE_URL),
     openGraph: {
       images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
-    },
-  };
-  const canonicalUrl = `${RouteId.blog}/${params.slug}`;
-  const hreflang = `/${params.locale}` + canonicalUrl;
-
-  if (params.locale === 'de') {
-    return {
-      ...baseData,
-      alternates: {
-        canonical: canonicalUrl,
-        languages: {
-          'de-DE': hreflang,
-        },
-      },
-    };
-  }
-  return {
-    ...baseData,
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en-US': hreflang,
-      },
     },
   };
 }
@@ -152,7 +128,15 @@ export default async function Article({ params }: Props) {
               {article.attributes.reading_time ?? 0}
               {t('blog.info.readTime')}
             </div>
-            <ArticleShareButton />
+            <ArticleShare
+              btnCopyText={t('button.copy')}
+              btnText={t('button.sharePost')}
+              clipboardMsg={t('toast.clipboard')}
+              emailText={t('shareDialog.email')}
+              embedText={t('shareDialog.embed')}
+              shareLinkText={t('shareDialog.shareLink')}
+              title={t('shareDialog.title')}
+            />
           </div>
         </div>
       </div>
@@ -189,7 +173,10 @@ export default async function Article({ params }: Props) {
 
       <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
         <div className="pt-12 lg:pb-6 lg:w-1/3">
-          <TableOfContents sectionTitles={sectionTitles} />
+          <TableOfContents
+            sectionTitles={sectionTitles}
+            title={t('blog.toc.title')}
+          />
         </div>
 
         <div className="lg:w-2/3">

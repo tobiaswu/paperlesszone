@@ -4,10 +4,22 @@ import { useFormState } from 'react-dom';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
 import { SubmitButton } from './SubmitButton';
-import { useTranslations } from 'next-intl';
 
-export const ContactForm = () => {
-  const t = useTranslations();
+interface ContactFormProps {
+  copyNote: string;
+  loadingText: string;
+  phonePlaceholder: string;
+  submitBtnText: string;
+  textareaPlaceholder: string;
+}
+
+export const ContactForm = ({
+  copyNote,
+  loadingText,
+  phonePlaceholder,
+  submitBtnText,
+  textareaPlaceholder,
+}: ContactFormProps) => {
   const [state, formAction] = useFormState(submitContactForm, null);
 
   const nameError = state?.error?.name?._errors[0];
@@ -52,7 +64,7 @@ export const ContactForm = () => {
           className={`${phoneError && 'input-error'} input input-bordered`}
           name="phone"
           type="tel"
-          placeholder={t('contactForm.phonePlaceholder')}
+          placeholder={phonePlaceholder}
         />
         {phoneError && (
           <div className="label">
@@ -65,7 +77,7 @@ export const ContactForm = () => {
               textError && 'textarea-error'
             } textarea textarea-bordered text-base textarea-md`}
             name="text"
-            placeholder={t('contactForm.textareaPlaceholder')}
+            placeholder={textareaPlaceholder}
             required
           />
           {textError && (
@@ -77,7 +89,7 @@ export const ContactForm = () => {
         <label className="form-control">
           <label className="cursor-pointer label w-fit gap-4">
             <span className={`${checkboxError && 'text-error'} label-text`}>
-              {t('contactForm.copyNote')}
+              {copyNote}
             </span>
             <input
               type="checkbox"
@@ -93,7 +105,7 @@ export const ContactForm = () => {
             </div>
           )}
         </label>
-        <SubmitButton />
+        <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
       </form>
       {message && (
         <div className="alert alert-info mt-4">

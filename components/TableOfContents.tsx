@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 export interface TableOfContentsProps {
   sectionTitles: string[];
+  title: string;
 }
 
-export const TableOfContents = ({ sectionTitles }: TableOfContentsProps) => {
-  const t = useTranslations();
+export const TableOfContents = ({
+  sectionTitles,
+  title,
+}: TableOfContentsProps) => {
   const [activeTitle, setActiveTitle] = useState('');
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export const TableOfContents = ({ sectionTitles }: TableOfContentsProps) => {
 
   return (
     <div className="sticky top-12">
-      <h2 className="text-xl font-semibold mb-2">{t('blog.toc.title')}</h2>
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
       <ul className="list-none list-inside">
         {sectionTitles.map((title) => {
           const id = title.toLowerCase().replace(/\s/g, '-');

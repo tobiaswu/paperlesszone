@@ -40,7 +40,6 @@ import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/lib/route';
-import { BASE_URL } from '@/lib/constants';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
@@ -52,16 +51,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.solutions.paperless',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.paperless,
-  //     languages: {
-  //       'en-US': '/en' + RouteId.paperless,
-  //       'de-DE': '/de' + RouteId.paperless,
-  //     },
-  //   },
-  // };
 
   return {
     title: t('title'),

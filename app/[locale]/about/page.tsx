@@ -12,7 +12,6 @@ import { RouteId } from '@/lib/route';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
-import { BASE_URL } from '@/lib/constants';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 type Props = {
@@ -24,16 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.about',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.about,
-  //     languages: {
-  //       'en-US': '/en' + RouteId.about,
-  //       'de-DE': '/de' + RouteId.about,
-  //     },
-  //   },
-  // };
 
   return {
     title: t('title'),

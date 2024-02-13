@@ -1,8 +1,14 @@
-import { useTranslations } from 'next-intl';
 import { useFormStatus } from 'react-dom';
 
-export const SubmitButton = () => {
-  const t = useTranslations();
+interface SubmitButtonProps {
+  loadingText: string;
+  submitBtnText: string;
+}
+
+export const SubmitButton = ({
+  loadingText,
+  submitBtnText,
+}: SubmitButtonProps) => {
   const { pending } = useFormStatus();
 
   return (
@@ -10,10 +16,10 @@ export const SubmitButton = () => {
       {pending ? (
         <>
           <span className="loading loading-spinner loading-md" />
-          <span>{t('state.sending')}</span>
+          <span>{loadingText}</span>
         </>
       ) : (
-        <span>{t('button.submit')}</span>
+        <span>{submitBtnText}</span>
       )}
     </button>
   );

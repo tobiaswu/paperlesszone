@@ -7,9 +7,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import NextTopLoader from 'nextjs-toploader';
-import { BASE_URL, locales } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { locales } from '@/lib/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,16 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: params.locale,
     namespace: 'metadata.root',
   });
-  // const canonicalData = {
-  //   metadataBase: new URL(BASE_URL),
-  //   alternates: {
-  //     canonical: RouteId.root,
-  //     languages: {
-  //       en: '/en',
-  //       de: '/de',
-  //     },
-  //   },
-  // };
+
   return {
     title: t('title'),
     description: t('description'),
