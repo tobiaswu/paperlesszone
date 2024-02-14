@@ -2,11 +2,11 @@
 
 import { locales } from '@/lib/constants';
 import { useLocale } from 'next-intl';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export const LocaleSwitcher = () => {
+  const router = useRouter();
   const locale = useLocale();
   const pathname = usePathname();
   const [activeLocale, setActiveLocale] = useState<string>(locale);
@@ -16,10 +16,19 @@ export const LocaleSwitcher = () => {
   const redirectedPathName = (nextLocale: string) => {
     let newPathname = pathname;
     if (locale !== 'en') {
-      newPathname = newPathname.replace(`/${locale}`, '');
+      newPathname = newPathname.replace(`/${locale}`, `/${nextLocale}`);
+      router.push(newPathname);
+      router.refresh();
+    } else {
+      newPathname = `/${nextLocale + newPathname}`;
+      router.push(newPathname);
+      router.refresh();
     }
-    newPathname = `/${nextLocale + newPathname}`;
-    return newPathname;
+  };
+
+  const handleLocaleSwitch = (nextLocale: string) => {
+    setActiveLocale(nextLocale);
+    redirectedPathName(nextLocale);
   };
 
   return (
@@ -46,15 +55,14 @@ export const LocaleSwitcher = () => {
         }
 
         return (
-          <Link
+          <a
             key={locale}
             className={className}
             role="tab"
-            href={redirectedPathName(locale)}
-            onClick={() => setActiveLocale(locale)}
+            onClick={() => handleLocaleSwitch(locale)}
           >
             {locale}
-          </Link>
+          </a>
         );
       })}
     </div>
