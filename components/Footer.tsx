@@ -8,6 +8,7 @@ import {
 import { EmailSignup } from './EmailSignup/EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
 import { getTranslations } from 'next-intl/server';
+import { LocaleSwitcher } from './LocaleSwitcher';
 
 export const Footer = async () => {
   const t = await getTranslations();
@@ -23,7 +24,7 @@ export const Footer = async () => {
                 DigitizerSpace
               </p>
             </Link>
-            {/* <LocaleSwitcher /> */}
+            <LocaleSwitcher />
           </div>
           {navItems.map((mainItem) => {
             return (

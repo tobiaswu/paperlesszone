@@ -4,6 +4,7 @@ import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';
 import { getNavItems } from './Navbar.utils';
 import { getTranslations } from 'next-intl/server';
+import { LocaleSwitcher } from '../LocaleSwitcher';
 
 export const Navbar = async () => {
   const t = await getTranslations();
@@ -48,7 +49,9 @@ export const Navbar = async () => {
         })}
       </div>
       <div className="navbar-end">
-        <div className="hidden lg:block">{/* <LocaleSwitcher /> */}</div>
+        <div className="hidden lg:block">
+          <LocaleSwitcher />
+        </div>
         <Link className="ml-4" href={RouteId.contact}>
           <button className="btn btn-neutral border-gunmetal-600">
             {t('button.contact')}
