@@ -14,6 +14,6 @@ export const MotionProgressbar = () => {
     <motion.div
       className="fixed top-0 left-0 right-0 h-2 bg-primary z-50 origin-left"
       style={{ scaleX }}
-    />
+    ></motion.div>
   );
 };
