@@ -23,65 +23,32 @@ type Props = {
 
 export const ARTICLES_API = `${STRAPI_URL}/api/articles`;
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const article: Article | undefined = await fetch(
-//     ARTICLES_API +
-//       '?locale=' +
-//       params.locale +
-//       '&filters[slug][$eq]=' +
-//       params.slug +
-//       '&populate[0]=thumbnail',
-//     {
-//       method: 'GET',
-//     }
-//   )
-//     .then((res) => res.json())
-//     .then((data) => data.data[0])
-//     .catch((error) => console.log(error));
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const article: Article | undefined = await fetch(
+    ARTICLES_API +
+      '?locale=' +
+      params.locale +
+      '&filters[slug][$eq]=' +
+      params.slug +
+      '&populate[0]=thumbnail',
+    {
+      method: 'GET',
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => data.data[0])
+    .catch((error) => console.log(error));
 
-//   return {
-//     title: article?.attributes.title,
-//     description: article?.attributes.description,
-//     metadataBase: new URL(BASE_URL),
-//     openGraph: {
-//       images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
-//     },
-//     robots: { index: true, follow: true },
-//   };
-// }
-
-// export async function generateStaticParams() {
-//   const articlesDe: Article[] | undefined = await fetch(
-//     ARTICLES_API + '?locale=de',
-//     {
-//       method: 'GET',
-//     }
-//   )
-//     .then((res) => res.json())
-//     .then((data) => data.data)
-//     .catch((error) => console.log(error));
-//   const articlesEn: Article[] | undefined = await fetch(ARTICLES_API, {
-//     method: 'GET',
-//   })
-//     .then((res) => res.json())
-//     .then((data) => data.data)
-//     .catch((error) => console.log(error));
-//   const slugsDe = articlesDe?.map((article) => ({
-//     slug: article.attributes.slug,
-//   }));
-//   const slugsEn = articlesEn?.map((article) => ({
-//     slug: article.attributes.slug,
-//   }));
-
-//   if (slugsDe && slugsEn) {
-//     return slugsEn.concat(slugsDe);
-//   } else if (slugsDe) {
-//     return slugsDe;
-//   } else if (slugsEn) {
-//     return slugsEn;
-//   }
-//   return [];
-// }
+  return {
+    title: article?.attributes.title,
+    description: article?.attributes.description,
+    metadataBase: new URL(BASE_URL),
+    openGraph: {
+      images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default async function Article({ params }: Props) {
   unstable_setRequestLocale(params.locale);
