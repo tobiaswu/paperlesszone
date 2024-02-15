@@ -122,8 +122,8 @@ export default async function Article({ params }: Props) {
         <div className="bg-neutral p-8">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2">
-              {/* <Breadcrumbs />
-              <ThemeSwitcher /> */}
+              <Breadcrumbs />
+              <ThemeSwitcher />
             </div>
             <h1 className="text-3xl sm:text-5xl font-bold my-4 leading-normal sm:leading-tight">
               {article.attributes.title}
@@ -139,7 +139,7 @@ export default async function Article({ params }: Props) {
                 {article.attributes.reading_time ?? 0}
                 {t('blog.info.readTime')}
               </div>
-              <ArticleShare
+              {/* <ArticleShare
                 btnCopyText={t('button.copy')}
                 btnText={t('button.sharePost')}
                 clipboardMsg={t('toast.clipboard')}
@@ -147,7 +147,7 @@ export default async function Article({ params }: Props) {
                 embedText={t('shareDialog.embed')}
                 shareLinkText={t('shareDialog.shareLink')}
                 title={t('shareDialog.title')}
-              />
+              /> */}
             </div>
           </div>
         </div>
