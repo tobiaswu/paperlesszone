@@ -118,12 +118,12 @@ export default async function Article({ params }: Props) {
 
     return (
       <div>
-        {/* <MotionProgressbar /> */}
+        <MotionProgressbar />
         <div className="bg-neutral p-8">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2">
-              <Breadcrumbs />
-              <ThemeSwitcher />
+              {/* <Breadcrumbs />
+              <ThemeSwitcher /> */}
             </div>
             <h1 className="text-3xl sm:text-5xl font-bold my-4 leading-normal sm:leading-tight">
               {article.attributes.title}
