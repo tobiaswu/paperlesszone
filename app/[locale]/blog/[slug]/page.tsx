@@ -175,12 +175,13 @@ export default async function Article({ params }: Props) {
 
           <div className="lg:w-2/3">
             <Image
+              className="w-full h-auto"
               src={
                 STRAPI_URL + article.attributes.thumbnail.data.attributes.url
               }
               alt={article.attributes.thumbnail.data.attributes.alternativeText}
               width={1024}
-              height={768}
+              height={0}
               loading="lazy"
             />
           </div>
@@ -188,14 +189,14 @@ export default async function Article({ params }: Props) {
 
         <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
           <div className="pt-12 lg:pb-6 lg:w-1/3">
-            <TableOfContents
+            {/* <TableOfContents
               sectionTitles={sectionTitles}
               title={t('blog.toc.title')}
-            />
+            /> */}
           </div>
 
           <div className="lg:w-2/3">
-            {/* <ArticleContent content={article.attributes.content} /> */}
+            <ArticleContent content={article.attributes.content} />
           </div>
         </div>
 
