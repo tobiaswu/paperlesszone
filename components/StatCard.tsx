@@ -12,7 +12,7 @@ export const StatCard = ({
   description,
 }: StatCardProps) => {
   return (
-    <div className="stat border border-gunmetal-600 rounded-lg">
+    <div className="stat border border-gunmetal-600 rounded-lg backdrop-blur-3xl">
       <div className="stat-figure text-primary text-3xl">{icon}</div>
       <div className="stat-title text-base-content whitespace-normal sm:whitespace-nowrap">
         {title}

@@ -322,7 +322,7 @@ export default async function Home({ params }: Props) {
       >
         <MotionWrapper
           variants={fadeInAnimationVariant}
-          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12"
+          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12 backdrop-blur-3xl"
         >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
