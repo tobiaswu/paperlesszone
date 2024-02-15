@@ -118,7 +118,7 @@ export default async function Article({ params }: Props) {
 
     return (
       <div>
-        <MotionProgressbar />
+        {/* <MotionProgressbar /> */}
         <div className="bg-neutral p-8">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between gap-2">
@@ -189,10 +189,10 @@ export default async function Article({ params }: Props) {
 
         <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-16">
           <div className="pt-12 lg:pb-6 lg:w-1/3">
-            {/* <TableOfContents
+            <TableOfContents
               sectionTitles={sectionTitles}
               title={t('blog.toc.title')}
-            /> */}
+            />
           </div>
 
           <div className="lg:w-2/3">
