@@ -5,15 +5,15 @@ export type Article = {
   attributes: {
     title: string;
     description: string;
-    category?: Category;
+    category: Category;
     tags?: Tag[];
-    reading_time?: number;
+    reading_time: number;
     content: BlocksContent;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
     slug: string;
-    author?: Author;
+    author: Author;
     thumbnail: Image;
   };
 };

@@ -30,7 +30,7 @@ export default async function BlogLayout({
   const t = await getTranslations();
 
   return (
-    <div data-theme>
+    <div>
       <BlogNavbar
         categoryTexts={{
           all: t('blog.category.all'),

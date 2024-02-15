@@ -79,13 +79,13 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
                 </h6>
               );
             default:
-              return <h1>{children}</h1>;
+              return <p>{children}</p>;
           }
         },
         image: ({ image }) => (
           <div className="flex flex-col gap-1 mb-4">
             <Image
-              className="rounded-lg border border-gunmetal-600 w-auto cursor-zoom-in"
+              className="rounded-lg border border-gunmetal-600 w-auto h-auto cursor-zoom-in"
               src={image.url}
               alt={image.alternativeText ?? ''}
               width={image.width}
