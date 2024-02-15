@@ -195,7 +195,7 @@ export default async function Article({ params }: Props) {
           </div>
 
           <div className="lg:w-2/3">
-            <ArticleContent content={article.attributes.content} />
+            {/* <ArticleContent content={article.attributes.content} /> */}
           </div>
         </div>
 
