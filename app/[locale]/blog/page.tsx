@@ -54,7 +54,7 @@ export default async function Blog({ params, searchParams }: Props) {
           return (
             <ArticleCard
               key={article.id}
-              className="col-span-6 lg:card-side min-h-[300px]"
+              className="col-span-6 lg:card-side min-h-[324px]"
               preview
               category={t(
                 `blog.category.${

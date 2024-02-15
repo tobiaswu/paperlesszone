@@ -40,7 +40,7 @@ export const BlogPreview = async () => {
         return (
           <ArticleCard
             key={article.id}
-            className="col-span-6 lg:card-side min-h-[300px]"
+            className="col-span-6 lg:card-side min-h-[324px]"
             preview
             category={t(
               `blog.category.${
