@@ -23,32 +23,32 @@ type Props = {
 
 export const ARTICLES_API = `${STRAPI_URL}/api/articles`;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article: Article | undefined = await fetch(
-    ARTICLES_API +
-      '?locale=' +
-      params.locale +
-      '&filters[slug][$eq]=' +
-      params.slug +
-      '&populate[0]=thumbnail',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data[0])
-    .catch((error) => console.log(error));
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const article: Article | undefined = await fetch(
+//     ARTICLES_API +
+//       '?locale=' +
+//       params.locale +
+//       '&filters[slug][$eq]=' +
+//       params.slug +
+//       '&populate[0]=thumbnail',
+//     {
+//       method: 'GET',
+//     }
+//   )
+//     .then((res) => res.json())
+//     .then((data) => data.data[0])
+//     .catch((error) => console.log(error));
 
-  return {
-    title: article?.attributes.title,
-    description: article?.attributes.description,
-    metadataBase: new URL(BASE_URL),
-    openGraph: {
-      images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
-    },
-    robots: { index: true, follow: true },
-  };
-}
+//   return {
+//     title: article?.attributes.title,
+//     description: article?.attributes.description,
+//     metadataBase: new URL(BASE_URL),
+//     openGraph: {
+//       images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
+//     },
+//     robots: { index: true, follow: true },
+//   };
+// }
 
 export async function generateStaticParams() {
   const articlesDe: Article[] | undefined = await fetch(
@@ -139,7 +139,7 @@ export default async function Article({ params }: Props) {
                 {article.attributes.reading_time ?? 0}
                 {t('blog.info.readTime')}
               </div>
-              {/* <ArticleShare
+              <ArticleShare
                 btnCopyText={t('button.copy')}
                 btnText={t('button.sharePost')}
                 clipboardMsg={t('toast.clipboard')}
@@ -147,7 +147,7 @@ export default async function Article({ params }: Props) {
                 embedText={t('shareDialog.embed')}
                 shareLinkText={t('shareDialog.shareLink')}
                 title={t('shareDialog.title')}
-              /> */}
+              />
             </div>
           </div>
         </div>
