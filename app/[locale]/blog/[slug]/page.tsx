@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
     },
+    robots: { index: true, follow: true },
   };
 }
 
