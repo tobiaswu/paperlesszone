@@ -40,8 +40,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let routes = <MetadataRoute.Sitemap>[];
 
   for (const path of Object.values(RouteId)) {
-    const enUrl = `${BASE_URL + path}`;
-    const deUrl = `${BASE_URL}/de${path}`;
+    const isRootPath = path === RouteId.root;
+    const enUrl = isRootPath ? BASE_URL : `${BASE_URL + path}`;
+    const deUrl = isRootPath ? `${BASE_URL}/de` : `${BASE_URL}/de${path}`;
 
     routes.push(
       {
