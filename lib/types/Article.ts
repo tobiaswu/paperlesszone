@@ -6,7 +6,9 @@ export type Article = {
     title: string;
     description: string;
     category: Category;
-    tags?: Tag[];
+    tags?: {
+      data: Tag[];
+    };
     reading_time: number;
     content: BlocksContent;
     createdAt: string;
@@ -27,12 +29,10 @@ type Category = {
   };
 };
 
-type Tag = {
-  data: {
-    id: number;
-    attributes: {
-      item: string;
-    };
+export type Tag = {
+  id: number;
+  attributes: {
+    item: string;
   };
 };
 

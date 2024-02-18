@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       params.locale +
       '&filters[slug][$eq]=' +
       params.slug +
-      '&populate[0]=thumbnail',
+      '&populate[0]=thumbnail&populate[1]=tags',
     {
       method: 'GET',
     }
@@ -137,7 +137,9 @@ export default async function Article({ params }: Props) {
               }
             />
 
-            <ArticleTags />
+            {article.attributes.tags && (
+              <ArticleTags tags={article.attributes.tags.data} />
+            )}
           </div>
 
           <div className="lg:w-2/3">
