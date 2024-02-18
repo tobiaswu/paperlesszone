@@ -234,8 +234,8 @@
     "copyNote": "Sende mir eine Kopie per E-Mail"
   },
   "emailSignup": {
-    "firstAgreement": "Durch das Abonnieren akzeptierst du unsere",
-    "secondAgreement": "und gibst dein Einverständnis, Mitteilungen von unserem Unternehmen zu erhalten."
+    "firstAgreement": "Durch das Abonnieren akzeptierst du unsere ",
+    "secondAgreement": " und gibst dein Einverständnis, Mitteilungen von unserem Unternehmen zu erhalten."
   },
   "shareDialog": {
     "title": "Teilen",

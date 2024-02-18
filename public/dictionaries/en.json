@@ -234,8 +234,8 @@
     "copyNote": "Send me a copy to my email"
   },
   "emailSignup": {
-    "firstAgreement": "By subscribing you agree with our",
-    "secondAgreement": "and provide consent to receive updates from our company."
+    "firstAgreement": "By subscribing you agree with our ",
+    "secondAgreement": " and provide consent to receive updates from our company."
   },
   "shareDialog": {
     "title": "Share",
