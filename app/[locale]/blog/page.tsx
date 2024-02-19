@@ -11,7 +11,7 @@ import { Category } from '@/lib/enums';
 
 type Props = {
   params: { locale: string };
-  searchParams: Record<string, Category>;
+  searchParams: Record<string, string>;
 };
 
 export default async function Blog({ params, searchParams }: Props) {
@@ -37,6 +37,12 @@ export default async function Blog({ params, searchParams }: Props) {
         (article) =>
           article.attributes.category?.data.attributes.item ===
           searchParams.category
+      )
+    : searchParams.tag
+    ? articles?.filter((article) =>
+        article.attributes.tags?.data
+          .map((tag) => tag.attributes.item)
+          .includes(searchParams.tag)
       )
     : articles;
 
