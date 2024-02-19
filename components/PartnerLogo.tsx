@@ -8,10 +8,10 @@ export interface PartnerLogoProps {
 export const PartnerLogo = ({ src, alt }: PartnerLogoProps) => {
   return (
     <Image
-      className="max-h-8 w-auto grayscale"
+      className="h-auto w-32 grayscale"
       src={src}
       alt={alt}
-      width={120}
+      width={128}
       height={0}
       loading="lazy"
     />

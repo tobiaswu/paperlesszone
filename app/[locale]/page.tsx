@@ -96,13 +96,22 @@ export default async function Home({ params }: Props) {
             className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8 sm:gap-16"
           >
             <div className="flex flex-col">
-              <p className="text-sm">{t('root.partnerTitle')}</p>
+              <p className="text-sm text-left">{t('root.partnerTitle')}</p>
               <PiArrowBendDownRightLight className="text-3xl" />
             </div>
             <div className="flex flex-wrap lg:flex-nowrap items-center gap-12">
               <PartnerLogo
+                src="/assets/logos/notion_logo.webp"
+                alt="Notion Logo"
+              />
+              <PartnerLogo src="/assets/logos/make_logo.svg" alt="Make Logo" />
+              <PartnerLogo
                 src="/assets/logos/contabo_logo.svg"
                 alt="Contabo Logo"
+              />
+              <PartnerLogo
+                src="/assets/logos/CF_logo.webp"
+                alt="Chris Feith Photography Logo"
               />
               <PartnerLogo
                 src="/assets/logos/IMS_logo.webp"
