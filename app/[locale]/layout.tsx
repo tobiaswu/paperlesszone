@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('description'),
     robots: { index: true, follow: true },
+    applicationName: 'DigitizerSpace',
   };
 }
 
