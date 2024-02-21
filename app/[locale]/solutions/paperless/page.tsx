@@ -360,12 +360,12 @@ export default async function Paperless({ params }: Props) {
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
             description={t('solutions.paperless.useSecondStep')}
-            url={`${RouteId.blog}?tag=paperless`}
+            url={`${RouteId.blog}?tag=paperless-ngx`}
           />
           <SolutionCard
             icon={<PiArticleLight />}
             description={t('solutions.paperless.useThirdStep')}
-            url={`${RouteId.blog}?tag=paperless`}
+            url={`${RouteId.blog}?tag=paperless-ngx`}
           />
         </div>
       </div>

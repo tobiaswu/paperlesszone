@@ -110,17 +110,23 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
         list: ({ children, format }) => {
           if (format === 'ordered') {
             return (
-              <ol className="list-decimal mb-4 ml-4 text-lg leading-relaxed">
+              <ol className="list-decimal mb-4 ml-4 text-lg leading-relaxed space-y-2">
                 {children}
               </ol>
             );
           }
           return (
-            <ul className="list-disc mb-4 ml-4 text-lg leading-relaxed">
+            <ul className="list-disc mb-4 ml-4 text-lg leading-relaxed space-y-2">
               {children}
             </ul>
           );
         },
+        quote: ({ children }) => (
+          <blockquote className="p-4 italic border-l-4 border-gray-500">
+            <p className="mb-2">{children}</p>
+            {/* <cite className="block text-gray-500">- Chris F., Unternehmer</cite> */}
+          </blockquote>
+        ),
       }}
       modifiers={{
         bold: ({ children }) => <strong>{children}</strong>,
