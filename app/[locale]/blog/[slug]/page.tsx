@@ -76,8 +76,14 @@ export default async function Article({ params }: Props) {
     .map((item) => item.children[0].text) as string[];
 
   if (article) {
-    const dateTime = new Date(article.attributes.publishedAt);
-    const formattedDate = format.dateTime(dateTime, {
+    const dateTimePublished = new Date(article.attributes.publishedAt);
+    const dateTimeUpdated = new Date(article.attributes.updatedAt);
+    const formattedPublishedDate = format.dateTime(dateTimePublished, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+    const formattedUpdatedDate = format.dateTime(dateTimeUpdated, {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
@@ -98,9 +104,12 @@ export default async function Article({ params }: Props) {
             <p className="max-w-xl leading-relaxed">
               {article.attributes.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 items-start sm:items-center">
+            <div className="flex flex-wrap gap-4 sm:gap-8 mt-8">
               <p className="text-base">
-                {t('blog.info.updated') + formattedDate}
+                {t('blog.info.published') + formattedPublishedDate}
+              </p>
+              <p className="text-base">
+                {t('blog.info.updated') + formattedUpdatedDate}
               </p>
               <div className="badge badge-primary badge-md rounded-lg">
                 {article.attributes.reading_time ?? 0}
