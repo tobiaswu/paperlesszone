@@ -60,28 +60,30 @@ export const BlogPreview = async () => {
             }
           />
         );
+      } else if (index < 4) {
+        return (
+          <ArticleCard
+            key={article.id}
+            className="col-span-6 sm:col-span-3 lg:col-span-2"
+            category={t(
+              `blog.category.${
+                article.attributes.category?.data.attributes.item as Category
+              }`
+            )}
+            formattedDate={formattedDate}
+            slug={article.attributes.slug}
+            title={article.attributes.title}
+            publishedAtText={t('blog.info.published')}
+            readTime={article.attributes.reading_time}
+            readTimeText={t('blog.info.readTime')}
+            thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
+            thumbnailAltText={
+              article.attributes.thumbnail?.data.attributes.alternativeText
+            }
+          />
+        );
       }
-      return (
-        <ArticleCard
-          key={article.id}
-          className="col-span-6 sm:col-span-3 lg:col-span-2"
-          category={t(
-            `blog.category.${
-              article.attributes.category?.data.attributes.item as Category
-            }`
-          )}
-          formattedDate={formattedDate}
-          slug={article.attributes.slug}
-          title={article.attributes.title}
-          publishedAtText={t('blog.info.published')}
-          readTime={article.attributes.reading_time}
-          readTimeText={t('blog.info.readTime')}
-          thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
-          thumbnailAltText={
-            article.attributes.thumbnail?.data.attributes.alternativeText
-          }
-        />
-      );
+      return <></>;
     });
   };
 
