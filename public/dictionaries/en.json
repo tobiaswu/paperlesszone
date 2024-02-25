@@ -214,7 +214,47 @@
         }
       },
       "dataProtectionTitle": "Data protection",
-      "dataProtectionDescription": "Our server solution is compliant with EU Regulation 2016/679 (General Data Protection Regulation, GDPR), the German Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG), the data protection laws of the German Federal States as well as the German Telemedia Act (Telemediengesetz, TMG) and the German Telecommunications-Telemedia-Data-Protection Act (Telekommunikations-Telemedien-Datenschutz-Gesetz, TTDSG)."
+      "dataProtectionDescription": "Our server solution is compliant with EU Regulation 2016/679 (General Data Protection Regulation, GDPR), the German Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG), the data protection laws of the German Federal States as well as the German Telemedia Act (Telemediengesetz, TMG) and the German Telecommunications-Telemedia-Data-Protection Act (Telekommunikations-Telemedien-Datenschutz-Gesetz, TTDSG).",
+      "faq": {
+        "faqTitle": "Frequently asked questions",
+        "faqDescription": "Feel free to <link>contact us here</link> if you have further questions. We're happy to help.",
+        "serverAdvise": {
+          "title": "I don't have a server yet. Which server solution is right for me?",
+          "content": "The right server solution depends on various individual factors. If you have a fixed office and the budget, it might make sense to buy your own server. The <linkNas>Synology NAS</linkNas> is popular among smaller businesses and freelancers. If you are a digital nomad, a VPS probably makes more sense. Also, you should ensure that your server is connected to a fast internet line, otherwise your entire workflow will be slowed down. We are currently working on an advisory chatbot that will help you make a decision."
+        },
+        "scannerAdvise": {
+          "title": "I don't have a scanner yet. Which scanner is right for me?",
+          "content": "It depends on various factors (e.g., budget, scanning speed, Wi-Fi connectivity, the dimensions of your documents, duplex scanning, portability, ease of use). One of the most popular allround document scanner is the <linkScanner>ScanSnap</linkScanner>. We are currently working on an advisory chatbot that will help you make a decision."
+        },
+        "targetGroup": {
+          "title": "Who is this solution suitable for?",
+          "content": "For almost any type of business that wants to manage its documents intelligently. Paperless is scalable and works with any archive size."
+        },
+        "dataPrivacy": {
+          "title": "Is my data safe?",
+          "content": "If you follow our best practices in cybersecurity, your data is quite safe. Paperless runs on your server. At no time is your data exchanged or shared with external companies. You do not need to make your Paperless instance publicly accessible via domain (like our <linkDemo>Demo</linkDemo>, for example). We can set up a VPN access with firewall rules for you, as well as a private DNS server. This way, your instance is only accessible to your authorized devices. Additionally, you have the option to turn off your server when you don't need it. Paperless also offers the possibility of multi-factor authentication. We have some more security measures. This makes you very unattractive to most hackers."
+        },
+        "fileNaming": {
+          "title": "How does Paperless name my files?",
+          "content": "Paperless always keeps your original files and also creates a copy. In the standard configuration, Paperless numbers your files. This is fine in many cases because you will probably only retrieve the files via the Paperless user interface. Nevertheless, there is the possibility to make individual specifications for naming. You have the choice."
+        },
+        "permissions": {
+          "title": "Can I give flexible access rights?",
+          "content": "Yes, absolutely. That is one of the core functions of Paperless. You can create as many users and groups as you like and decide which parts of the application should be unlocked for these people. You can give permissions for each individual file or groups of files based on tags or other characteristics."
+        },
+        "importFolderStructure": {
+          "title": "Can I transfer my existing folder structure?",
+          "content": "Yes, that is possible. Paperless can create any folder structure for you parallel to the tag-based system. Additionally, you can have your folder structure converted into tags during import."
+        },
+        "mediaSource": {
+          "title": "Where does Paperless store my original files?",
+          "content": "During installation, you can specify where your original files should be stored. By default, Docker manages this. However, you can choose any other storage path."
+        },
+        "workflow": {
+          "title": "What does a typical workflow look like?",
+          "content": "You first put a document in the Paperless Consumer. Usually, you scan your documents via a document scanner. Your scanner is configured to automatically drop the documents in the Paperless Consumer folder. However, you can also add documents via smartphone, email, drag-n-drop, or API. Paperless regularly checks the Consumer for new content and then imports it into the system. After Paperless has successfully processed your document and created the OCR layer, you can add more details to your document. E.g., title, correspondent, date, document type, tags, or custom fields. Paperless has a matching algorithm and can set many details automatically over time. You can now find your document in seconds via search or filters. You can create users, workflows, and more. Your creativity has no limits. On our <linkBlog>Blog</linkBlog>, you can find many examples of workflows."
+        }
+      }
     }
   },
   "navbar": {

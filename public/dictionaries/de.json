@@ -214,7 +214,47 @@
         }
       },
       "dataProtectionTitle": "Datenschutz",
-      "dataProtectionDescription": "Unsere Serverlösung ist konform mit der EU-Verordnung 2016/679 (Datenschutzgrundverordnung, DSGVO), dem Bundesdatenschutzgesetz (BDSG), den Datenschutz Gesetzen der Bundesländer sowie dem Telemediengesetz (TMG) und dem Telekommunikations-Telemedien-Datenschutz-Gesetz (TTDSG)."
+      "dataProtectionDescription": "Unsere Serverlösung ist konform mit der EU-Verordnung 2016/679 (Datenschutzgrundverordnung, DSGVO), dem Bundesdatenschutzgesetz (BDSG), den Datenschutz Gesetzen der Bundesländer sowie dem Telemediengesetz (TMG) und dem Telekommunikations-Telemedien-Datenschutz-Gesetz (TTDSG).",
+      "faq": {
+        "faqTitle": "Häufig gestellte Fragen",
+        "faqDescription": "Falls du weitere Fragen hast, <link>kontaktiere uns gerne hier</link>. Wir freuen uns dir zu helfen.",
+        "serverAdvise": {
+          "title": "Ich habe noch keinen Server. Welche Serverlösung ist die richtige für mich?",
+          "content": "Die richtige Serverlösung hängt von verschiedenen individuellen Faktoren ab. Wenn du ein festes Büro und das Budget hast, kann es Sinn machen einen eigenen Server zu kaufen. Beliebt bei kleineren Unternehmen und Selbständigen ist z. B. die Synology NAS. Falls du Digitaler Nomade bist, macht wahrscheinlich ein VPS mehr Sinn. Außerdem solltest du sicherstellen, dass dein Server an eine schnelle Internetleitung angeschlossen ist, da ansonsten dein gesamter Arbeitsablauf verlangsamt wird. Wir arbeiten gerade an einem Ratgeber Chatbot, der dir helfen wird eine Entscheidung zu treffen."
+        },
+        "scannerAdvise": {
+          "title": "Ich habe noch keinen Scanner. Welcher Scanner ist der richtige für mich?",
+          "content": "Das hängt von verschiedenen Faktoren ab (z. B. Budget, Scan Geschwindigkeit, Wi-Fi Konnektivität, die Abmaße deiner Dokumente, doppelseitiges Scannen, Portabilität, Benutzerfreundlichkeit). Einer der beliebtesten allround Dokumentenscanner ist der ScanSnap. Wir arbeiten gerade an einem Ratgeber Chatbot, der dir helfen wird eine Entscheidung zu treffen."
+        },
+        "targetGroup": {
+          "title": "Für wen ist diese Lösung geeignet?",
+          "content": "Für fast jegliche Art von Unternehmen, die ihre Dokumente intelligent verwalten möchten. Paperless ist skalierbar und funktioniert mit jeder Archivgröße."
+        },
+        "dataPrivacy": {
+          "title": "Sind meine Daten sicher?",
+          "content": "Wenn du unsere best practices im Bereich Cybersecurity beachtest, sind deine Daten ziemlich sicher. Paperless läuft auf deinem Server. Zu keiner Zeit werden deine Daten mit externen Firmen ausgetauscht oder geteilt. Du musst deine Paperless Instanz nicht öffentlich erreichbar machen via Domain (wie z. B. unsere <linkDemo>Demo</linkDemo>). Wir können dir einen VPN Zugang mit Firewall Regeln einrichten, sowie einen privaten DNS Server. Damit ist deine Instanz nur für deine autorisierten Geräte zugänglich. Zusätzlich hast du die Möglichkeit deinen Server abzuschalten, wenn du ihn gerade nicht brauchst. Paperless bietet zudem die Möglichkeit einer Multi-Faktor-Authentifizierung. Wir haben noch einige weitere Sicherheitsmaßnahmen. Damit bist du für die meisten Hacker sehr uninteressant."
+        },
+        "fileNaming": {
+          "title": "Wie benennt Paperless meine Dateien?",
+          "content": "Paperless behält immer deine Originaldateien und legt zusätzlich eine Kopie an. In der Standard Konfiguration nummeriert Paperless deine Dateien durch. Dies ist in vielen Fällen in Ordnung, weil du die Dateinen wahrscheinlich nur über die Paperless Benutzeroberfläche abrufen wirst. Dennoch besteht die Möglichkeit individuelle Vorgaben für die Benennung zu machen. Du hast die Wahl."
+        },
+        "permissions": {
+          "title": "Kann ich flexible Zugriffsrechte geben?",
+          "content": "Ja absolut. Das ist einer der Kern-Funktionen von Paperless. Du kannst beliebig viele Benutzer und Gruppen anlegen und entscheiden welche Teile der Anwendung für diese Personen freigeschaltet werden soll. Du kannst Berechtigungen geben für jede einzelne Datei oder Gruppen von Dateien basierend auf Tags oder anderen Merkmalen."
+        },
+        "importFolderStructure": {
+          "title": "Kann ich meine bisherige Ordnerstruktur übertragen?",
+          "content": "Ja das ist möglich. Paperless kann parallel zu dem tag-basierten System eine beliebige Ordnerstruktur für dich anlegen. Außerdem kannst du deine Ordnerstruktur beim Import in Tags umwandeln lassen."
+        },
+        "mediaSource": {
+          "title": "Wo legt Paperless meine Originaldateien ab?",
+          "content": "Während der Installation kannst du festlegen, wo deine Originaldateien abgelegt werden sollen. Standardmäßig verwaltet das Docker. Du kannst jedoch einen beliebigen anderen Speicherpfad wählen."
+        },
+        "workflow": {
+          "title": "Wie sieht ein typischer Arbeitsablauf aus?",
+          "content": "Du legst zunächst ein Dokument im Paperless Consumer ab. Überlicherweise scannst du deine Dokumente via Dokumentenscanner ein. Dein Scanner ist so konfiguriert, dass die Dokumente automatisch im Paperless Consumer Ordner landen. Du kannst jedoch auch Dokumente via Smartphone, E-Mail, per Drag-n-Drop oder per API hinzufügen. Paperless prüft regelmäßig den Consumer auf neue Inhalte und importiert diese dann in das System. Nachdem Paperless erfolgreich dein Dokument verarbeitet und die OCR Ebene erstellt hat, kannst du weitere Details zu deinem Dokument hinzufügen. Z. B. Titel, Korrespondent, Datum, Dokumententyp, Tags oder von dir erfundene Felder. Paperless hat einen Matching Algorithmus und kann viele Details mit der Zeit automatisch setzen. Du kannst dein Dokument jetzt in Sekundenschnelle über die Suche oder die Filter finden. Du kannst Benutzer, Arbeitsabläufe und mehr anlegen. Deiner Kreativität sind keine Grenzen gesetzt. Auf unserem <linkBlog>Blog</linkBlog> findest du viele Beispiele für Arbeitsabläufe."
+        }
+      }
     }
   },
   "navbar": {
