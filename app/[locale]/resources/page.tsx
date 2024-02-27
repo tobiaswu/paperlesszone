@@ -37,7 +37,7 @@ export default async function Resources({ params }: Props) {
         buttonText={tBlog('button')}
         description={tBlog('description')}
         thumbnailAltText={tBlog('thumbnailAlt')}
-        thumbnailSrc="/assets/backgrounds/blob-md.svg"
+        thumbnailSrc="/assets/images/digitizerspace-blog.webp"
         title={tBlog('title')}
         url={RouteId.blog}
       />
@@ -45,7 +45,7 @@ export default async function Resources({ params }: Props) {
         buttonText={tNewsletter('button')}
         description={tNewsletter('description')}
         thumbnailAltText={tNewsletter('thumbnailAlt')}
-        thumbnailSrc="/assets/backgrounds/blob-soft.svg"
+        thumbnailSrc="/assets/images/digitizerspace-insider.webp"
         title={tNewsletter('title')}
         url="https://digitizerspace.beehiiv.com/subscribe"
       />

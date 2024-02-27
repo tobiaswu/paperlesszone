@@ -20,7 +20,7 @@ export const PageIntroCard = ({
 }: PageIntroCardProps) => {
   return (
     <div className="card lg:card-side min-h-[324px] bg-neutral shadow-md rounded-lg border border-gunmetal-600">
-      <figure className="w-full">
+      <figure className="min-w-fit">
         <Link className="w-full" href={url}>
           <Image
             className="object-cover w-full h-full"

@@ -93,7 +93,7 @@ export default async function Home({ params }: Props) {
           </div>
           <MotionWrapper
             variants={itemAnimationVariant}
-            className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8 sm:gap-16"
+            className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8"
           >
             <div className="flex flex-col">
               <p className="text-sm text-left">{t('root.partnerTitle')}</p>
