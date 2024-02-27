@@ -39,7 +39,7 @@ export const ArticleCard = ({
 
   return (
     <div className={mergedClassName}>
-      <figure className="min-w-fit">
+      <figure className="w-full">
         <Link className="w-full" href={href}>
           {thumbnailUrl && thumbnailAltText && (
             <Image
@@ -53,7 +53,7 @@ export const ArticleCard = ({
           )}
         </Link>
       </figure>
-      <div className="card-body">
+      <div className="card-body overflow-y-scroll">
         <div className="badge badge-secondary badge-lg rounded-lg mb-2">
           {category}
         </div>
