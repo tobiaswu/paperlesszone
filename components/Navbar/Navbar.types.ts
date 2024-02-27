@@ -1,6 +1,6 @@
 export type NavItemData = {
   id: string;
   label: string;
-  url?: string;
+  url: string;
   items?: NavItemData[];
 };

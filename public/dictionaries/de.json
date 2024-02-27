@@ -308,12 +308,20 @@
   "localeSwitcher": {
     "locale": "{locale}"
   },
+  "paperlessIntroCard": {
+    "button": "Papierlose Lösung ansehen",
+    "description": "Verliere keine Zeit mehr mit der Verwaltung von Dokumenten. Automatisiere deinen Dokumenten-Management-Arbeitsablauf. Vereinfache die Zusammenarbeit mit Teammitgliedern. Scanne direkt in dein Archiv. Profitiere von intelligenter Suche. Vollständige Backups und nach höchsten Datenschutz-Standards.",
+    "title": "Das Papierlose Büro: Lösung zur Verwaltung deiner Dokumente in einem intelligent durchsuchbaren Archiv",
+    "thumbnailAlt": "Paperless-ngx dashboard mit getaggten Dokumenten."
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - KI Automatisierung und Digitalisierung",
       "description": "▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
     },
     "solutions": {
+      "title": "DigitizerSpace Lösungen - Innovative Automatisierungen fürs Büro",
+      "description": "Entdecke unsere Bürolösungen, von der intelligenten Dokumentenverwaltung bis hin zu kollaborativen Tools, die deinen Arbeitsalltag revolutionieren. ✓ Erfahre mehr hier",
       "paperless": {
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
         "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."

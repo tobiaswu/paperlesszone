@@ -114,10 +114,6 @@ export default async function Home({ params }: Props) {
                 alt="Chris Feith Photography Logo"
               />
               <PartnerLogo
-                src="/assets/logos/IMS_logo.webp"
-                alt="Immoselfmade Logo"
-              />
-              <PartnerLogo
                 src="/assets/logos/WV_logo.webp"
                 alt="Wupperfeld Ventures Logo"
               />

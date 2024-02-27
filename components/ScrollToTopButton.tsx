@@ -3,9 +3,7 @@
 import { useEffect, useState } from 'react';
 import { PiArrowFatUpLight } from 'react-icons/pi';
 
-export interface ScrollToTopButtonProps {}
-
-export const ScrollToTopButton = ({}: ScrollToTopButtonProps) => {
+export const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

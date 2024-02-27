@@ -308,12 +308,20 @@
   "localeSwitcher": {
     "locale": "{locale}"
   },
+  "paperlessIntroCard": {
+    "button": "See paperless solution",
+    "description": "Don't loose any more time with the managament of documents. Automate your document management workflow. Easily collaborate with team members. Scan directly into your archive. Benefit from intelligent search. Fully backed up and under highest cybersecurity standards.",
+    "title": "The Paperless Office: Turnkey solution to manage your documents in an intelligent searchable archive",
+    "thumbnailAlt": "Paperless-ngx dashboard with tagged documents."
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - Automation & Digitization Solutions",
       "description": "▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
     },
     "solutions": {
+      "title": "DigitizerSpace Solutions - Innovative Business Automations",
+      "description": "Explore our wide range of business solutions, from intelligent document management to collaborative tools that will revolutionize your workday. ✓ Learn more here!",
       "paperless": {
         "title": "Get the Paperless-ngx system running | we install it for you",
         "description": "▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support."

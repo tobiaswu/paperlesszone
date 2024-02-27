@@ -25,7 +25,7 @@ export const Navbar = async () => {
           return navItem.items ? (
             <div key={navItem.id} className="group">
               <div tabIndex={0} role="button" className="btn btn-ghost m-1">
-                {navItem.label}
+                <Link href={navItem.url}>{navItem.label}</Link>
                 <PiTriangleLight className="text-primary rotate-180 group-hover:rotate-0 transition-transform duration-300" />
               </div>
               <ul
