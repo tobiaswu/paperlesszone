@@ -16,6 +16,7 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
+import { ScrollToTopButton } from '@/components/ScrollToTopButton';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -189,6 +190,7 @@ export default async function Article({ params }: Props) {
         {/* <div className="container mx-auto py-32 px-4">
         <RelatedArticles />
       </div> */}
+        <ScrollToTopButton />
       </div>
     );
   } else {
