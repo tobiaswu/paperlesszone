@@ -314,6 +314,18 @@
     "title": "Das Papierlose Büro: Lösung zur Verwaltung deiner Dokumente in einem intelligent durchsuchbaren Archiv",
     "thumbnailAlt": "Paperless-ngx dashboard mit getaggten Dokumenten."
   },
+  "blogIntroCard": {
+    "button": "Blog besuchen",
+    "description": "Anleitungen, Werkzeuge, Arbeitsabläufe und mehr, um dir zu helfen, die Effizienz bei deinen täglichen Geschäftsaufgaben zu steigern.",
+    "title": "Der DigitizerSpace Blog",
+    "thumbnailAlt": ""
+  },
+  "newsletterIntroCard": {
+    "button": "Abonnieren",
+    "description": "Kostenloser Forschungs-Newsletter: Erhalte branchenspezifische Trends, Nachrichten und Sonderangebote. Verpasse nie die neuesten Erkenntnisse und Updates.",
+    "title": "Der DigitizerSpace Insider",
+    "thumbnailAlt": ""
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - KI Automatisierung und Digitalisierung",
@@ -326,6 +338,10 @@
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
         "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."
       }
+    },
+    "resources": {
+      "title": "DigitizerSpace Ressourcen - Tools für Workflow Automatisierung",
+      "description": "Entdecke unsere umfangreichen Ressourcen ✓ Blog ✓ Newsletter ✓ AI Tools, um deine Unternehmensabläufe zu boosten ✓ Klicke hier, um direkt mit dem Lernen loszulegen"
     },
     "privacy": {
       "title": "Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten",

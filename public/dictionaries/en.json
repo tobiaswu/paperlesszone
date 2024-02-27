@@ -314,6 +314,18 @@
     "title": "The Paperless Office: Turnkey solution to manage your documents in an intelligent searchable archive",
     "thumbnailAlt": "Paperless-ngx dashboard with tagged documents."
   },
+  "blogIntroCard": {
+    "button": "Visit blog",
+    "description": "Guides, tools, workflows and more to help you increase the efficiency in your daily business tasks.",
+    "title": "The DigitizerSpace Blog",
+    "thumbnailAlt": ""
+  },
+  "newsletterIntroCard": {
+    "button": "Subscribe",
+    "description": "Free research newsletter: Receive our industry specific trends, news and special offers. Never miss out on latest insights and updates.",
+    "title": "The DigitizerSpace Insider",
+    "thumbnailAlt": ""
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - Automation & Digitization Solutions",
@@ -326,6 +338,10 @@
         "title": "Get the Paperless-ngx system running | we install it for you",
         "description": "▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support."
       }
+    },
+    "resources": {
+      "title": "DigitizerSpace Resources - To Help You Automate Your Workflows",
+      "description": "Explore our extensive resources hub ✓ Blog ✓ Newsletter ✓ AI Tools to supercharge your business workflows ✓ Click here to start learning now"
     },
     "privacy": {
       "title": "Privacy Policy of DigitizerSpace - we care about your data",
