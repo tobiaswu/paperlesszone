@@ -334,7 +334,7 @@ export default async function Paperless({ params }: Props) {
           <SolutionCard
             icon={<PiFileArrowDownLight />}
             description={t('useFirstStep')}
-            url={`${RouteId.root}#newsletter`}
+            url="https://digitizerspace.beehiiv.com/subscribe"
           />
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
