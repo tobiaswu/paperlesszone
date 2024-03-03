@@ -486,7 +486,19 @@ export default async function Paperless({ params }: Props) {
                     linkNas: (chunks) => (
                       <Link
                         className="underline hover:text-primary"
-                        href="https://amzn.to/3IaCvjp"
+                        href={
+                          params.locale === 'de'
+                            ? 'https://amzn.to/3TlNrQv'
+                            : 'https://amzn.to/3IaCvjp'
+                        }
+                      >
+                        {chunks}
+                      </Link>
+                    ),
+                    linkVps: (chunks) => (
+                      <Link
+                        className="underline hover:text-primary"
+                        href="https://tidd.ly/3If2dmL"
                       >
                         {chunks}
                       </Link>
@@ -494,7 +506,11 @@ export default async function Paperless({ params }: Props) {
                     linkScanner: (chunks) => (
                       <Link
                         className="underline hover:text-primary"
-                        href="https://amzn.to/42Pp9Td"
+                        href={
+                          params.locale === 'de'
+                            ? 'https://amzn.to/49SYY07'
+                            : 'https://amzn.to/42Pp9Td'
+                        }
                       >
                         {chunks}
                       </Link>
