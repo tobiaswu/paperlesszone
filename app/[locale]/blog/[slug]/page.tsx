@@ -13,10 +13,15 @@ import { TableOfContents } from '@/components/TableOfContents';
 import { BASE_URL, STRAPI_URL } from '@/lib/constants';
 import {
   getFormatter,
+  getMessages,
   getTranslations,
   unstable_setRequestLocale,
 } from 'next-intl/server';
 import { ScrollToTopButton } from '@/components/ScrollToTopButton';
+import { RelatedArticles } from '@/components/RelatedArticles/RelatedArticles';
+import { sortAndLimitArticles } from '@/utils/sort';
+import { NextIntlClientProvider } from 'next-intl';
+import { pick } from 'lodash';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -55,6 +60,7 @@ export default async function Article({ params }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale });
   const format = await getFormatter();
+  const messages = await getMessages();
 
   const article: Article | undefined = await fetch(
     ARTICLES_API +
@@ -75,6 +81,26 @@ export default async function Article({ params }: Props) {
     .filter((item) => item.type === 'heading' && item.level === 2)
     // @ts-ignore
     .map((item) => item.children[0].text) as string[];
+
+  const articles: Article[] = await fetch(
+    ARTICLES_API +
+      '?locale=' +
+      params.locale +
+      '&populate[0]=tags&populate[1]=category&populate[2]=thumbnail',
+    {
+      method: 'GET',
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => data.data)
+    .catch((error) => console.log(error));
+
+  const initialTags = article?.attributes.tags?.data;
+  const sortedAndLimitedArticles = sortAndLimitArticles(
+    articles,
+    initialTags,
+    article?.id
+  );
 
   if (article) {
     const dateTimePublished = new Date(article.attributes.publishedAt);
@@ -186,10 +212,18 @@ export default async function Article({ params }: Props) {
 
         {/* TODO: add comment section */}
 
-        {/* TODO: add related Articles */}
-        {/* <div className="container mx-auto py-32 px-4">
-        <RelatedArticles />
-      </div> */}
+        <div className="container mx-auto py-32 px-4">
+          <NextIntlClientProvider
+            messages={pick(
+              messages,
+              'blog.relatedArticles',
+              'blog.info',
+              'blog.category'
+            )}
+          >
+            <RelatedArticles articles={sortedAndLimitedArticles} />
+          </NextIntlClientProvider>
+        </div>
         <ScrollToTopButton />
       </div>
     );

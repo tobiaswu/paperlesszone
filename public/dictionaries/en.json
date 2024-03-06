@@ -113,6 +113,12 @@
     },
     "toc": {
       "title": "Table of contents"
+    },
+    "relatedArticles": {
+      "subtitle": "Keep reading",
+      "title": "Related Articles",
+      "description": "Discover the latest trends in the automation industry and how they can impact your business.",
+      "link": "<link>View more</link>"
     }
   },
   "solutions": {

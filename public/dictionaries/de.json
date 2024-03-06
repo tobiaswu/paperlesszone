@@ -113,6 +113,12 @@
     },
     "toc": {
       "title": "Inhaltsverzeichnis"
+    },
+    "relatedArticles": {
+      "subtitle": "Weiterlesen",
+      "title": "Verwandte Artikel",
+      "description": "Entdecke die neuesten Trends in der Automatisierungsbranche und wie sie dein Geschäft beeinflussen können.",
+      "link": "<link>Mehr anzeigen</link>"
     }
   },
   "solutions": {
