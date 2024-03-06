@@ -36,6 +36,7 @@ export default async function BlogLayout({
           all: t('blog.category.all'),
           guides: t('blog.category.guides'),
           tools: t('blog.category.tools'),
+          trends: t('blog.category.trends'),
           workflows: t('blog.category.workflows'),
         }}
       />

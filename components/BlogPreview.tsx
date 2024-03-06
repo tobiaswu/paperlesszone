@@ -99,6 +99,8 @@ export const BlogPreview = async () => {
       guidesTabTitle={t('blog.category.guides')}
       toolsArticleCards={renderArticleCards(Category.TOOLS)}
       toolsTabTitle={t('blog.category.tools')}
+      trendsArticleCards={renderArticleCards(Category.TRENDS)}
+      trendsTabTitle={t('blog.category.trends')}
       workflowsArticleCards={renderArticleCards(Category.WORKFLOWS)}
       workflowsTabTitle={t('blog.category.workflows')}
     />
