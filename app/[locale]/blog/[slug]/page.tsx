@@ -212,7 +212,7 @@ export default async function Article({ params }: Props) {
 
         {/* TODO: add comment section */}
 
-        <div className="container mx-auto py-32 px-4">
+        <div className="container mx-auto py-12 sm:py-32 px-4">
           <NextIntlClientProvider
             messages={pick(
               messages,

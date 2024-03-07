@@ -50,7 +50,7 @@ export const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="flex gap-8 embla">
+    <div className="flex flex-col sm:flex-row gap-8 embla">
       <div className="flex flex-col justify-between max-w-sm">
         <div>
           <p className="text-base">{t('blog.relatedArticles.subtitle')}</p>
