@@ -91,17 +91,27 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
             <p className="text-sm">{image.caption}</p>
           </div>
         ),
-        code: ({ children }) => (
-          <code className="block p-4 mb-4 rounded-lg bg-base-300 border border-gunmetal-600 whitespace-pre overflow-x-scroll relative">
-            {/* <button
-              className="absolute btn btn-ghost right-1 top-1"
-              onClick={() => navigator.clipboard.writeText(children as string)} // TODO: fix
-            >
-              <PiCopySimpleLight className="text-2xl" />
-            </button> */}
-            {children}
-          </code>
-        ),
+        code: ({ children }) => {
+          return (
+            <div className="mockup-code mb-4">
+              {/* @ts-ignore */}
+              {(children[0].props.text as string)
+                .split('\n')
+                .map((line: string, index: number) => {
+                  const isOutput = line.startsWith('Output');
+                  return (
+                    <pre
+                      key={index}
+                      data-prefix={isOutput ? '>' : '$'}
+                      className={isOutput ? 'text-info' : ''}
+                    >
+                      <code>{line}</code>
+                    </pre>
+                  );
+                })}
+            </div>
+          );
+        },
         list: ({ children, format }) => {
           if (format === 'ordered') {
             return (
@@ -119,7 +129,6 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
         quote: ({ children }) => (
           <blockquote className="p-4 italic border-l-4 border-gray-500">
             <p className="mb-2">{children}</p>
-            {/* <cite className="block text-gray-500">- Chris F., Unternehmer</cite> */}
           </blockquote>
         ),
       }}
