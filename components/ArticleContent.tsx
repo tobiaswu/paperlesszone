@@ -35,12 +35,7 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
       blocks={{
         paragraph: ({ children }) => <p className="pb-4">{children}</p>,
         link: ({ children, url }) => (
-          <Link
-            className="underline hover:text-primary"
-            href={url}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <Link className="link link-hover link-primary" href={url}>
             {children}
           </Link>
         ),
