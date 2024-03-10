@@ -131,7 +131,7 @@ export default async function Article({ params }: Props) {
             <p className="max-w-xl leading-relaxed">
               {article.attributes.description}
             </p>
-            <div className="flex flex-wrap gap-4 sm:gap-8 mt-8">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-8 mt-8">
               <p className="text-base">
                 {t('blog.info.published') + formattedPublishedDate}
               </p>
