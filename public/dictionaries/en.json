@@ -272,7 +272,8 @@
   "footer": {
     "emailSignup": "Sign up for our free automation & digitization newsletter",
     "aboutUs": "About us",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "followUs": "Follow us"
   },
   "contactForm": {
     "phonePlaceholder": "Phone",

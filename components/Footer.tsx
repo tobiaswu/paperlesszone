@@ -1,10 +1,7 @@
 import { RouteId } from '@/lib/route';
 import Link from 'next/link';
-import {
-  PiDotOutlineLight,
-  PiLockKeyLight,
-  PiTwitterLogoLight,
-} from 'react-icons/pi';
+import { PiDotOutlineLight, PiLockKeyLight } from 'react-icons/pi';
+import { BsTwitterX } from 'react-icons/bs';
 import { EmailSignup } from './EmailSignup/EmailSignup';
 import { getNavItems } from './Navbar/Navbar.utils';
 import { getTranslations } from 'next-intl/server';
@@ -101,9 +98,10 @@ export const Footer = async () => {
               </div>
             </div>
           </aside>
-          <nav>
+          <nav className="flex gap-2 items-center">
+            <p>{t('footer.followUs')}</p>
             <Link href="https://twitter.com/digitizerspace">
-              <PiTwitterLogoLight className="hover:text-primary text-3xl" />
+              <BsTwitterX className="hover:text-primary text-3xl" />
             </Link>
           </nav>
         </div>

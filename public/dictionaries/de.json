@@ -272,7 +272,8 @@
   "footer": {
     "emailSignup": "Erhalte unseren kostenlosen Newsletter über Automatisierung & Digitalisierung",
     "aboutUs": "Über uns",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "followUs": "Folge uns"
   },
   "contactForm": {
     "phonePlaceholder": "Telefon",
