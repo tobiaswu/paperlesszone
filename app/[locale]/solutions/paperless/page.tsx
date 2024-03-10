@@ -323,7 +323,7 @@ export default async function Paperless({ params }: Props) {
         <p className="max-w-3xl">
           {t('useDescription')}&nbsp;
           <Link
-            className="underline hover:text-primary"
+            className="link link-hover link-primary"
             href="https://docs.paperless-ngx.com/"
           >
             {t('officialDocLinkText')}
@@ -445,7 +445,7 @@ export default async function Paperless({ params }: Props) {
           {t.rich('faq.faqDescription', {
             link: (chunks) => (
               <Link
-                className="underline hover:text-primary"
+                className="link link-hover link-primary"
                 href={RouteId.contact}
               >
                 {chunks}
@@ -469,7 +469,7 @@ export default async function Paperless({ params }: Props) {
                   {t.rich(`${item}.content`, {
                     linkDemo: (chunks) => (
                       <Link
-                        className="underline hover:text-primary"
+                        className="link link-hover link-primary"
                         href="https://paperless.digitizerspace.com/"
                       >
                         {chunks}
@@ -477,7 +477,7 @@ export default async function Paperless({ params }: Props) {
                     ),
                     linkBlog: (chunks) => (
                       <Link
-                        className="underline hover:text-primary"
+                        className="link link-hover link-primary"
                         href={RouteId.blog}
                       >
                         {chunks}
@@ -485,7 +485,7 @@ export default async function Paperless({ params }: Props) {
                     ),
                     linkNas: (chunks) => (
                       <Link
-                        className="underline hover:text-primary"
+                        className="link link-hover link-primary"
                         href={
                           params.locale === 'de'
                             ? 'https://amzn.to/3TlNrQv'
@@ -497,7 +497,7 @@ export default async function Paperless({ params }: Props) {
                     ),
                     linkVps: (chunks) => (
                       <Link
-                        className="underline hover:text-primary"
+                        className="link link-hover link-primary"
                         href="https://tidd.ly/3If2dmL"
                       >
                         {chunks}
@@ -505,7 +505,7 @@ export default async function Paperless({ params }: Props) {
                     ),
                     linkScanner: (chunks) => (
                       <Link
-                        className="underline hover:text-primary"
+                        className="link link-hover link-primary"
                         href={
                           params.locale === 'de'
                             ? 'https://amzn.to/49SYY07'

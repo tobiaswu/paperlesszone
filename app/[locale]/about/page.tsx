@@ -98,7 +98,7 @@ export default async function About({ params }: Props) {
         <p>
           {t('about.secondSectionText')}
           &nbsp;
-          <Link className="underline hover:text-primary" href={RouteId.root}>
+          <Link className="link link-hover link-primary" href={RouteId.root}>
             DigitizerSpace.com
           </Link>
           .&nbsp;
@@ -145,7 +145,7 @@ export default async function About({ params }: Props) {
           {t('about.fifthSectionText')}
           &nbsp;
           <Link
-            className="underline hover:text-primary"
+            className="link link-hover link-primary"
             href="https://openai.com/blog/introducing-chatgpt-enterprise"
             rel="noopener noreferrer"
             target="_blank"
@@ -161,20 +161,20 @@ export default async function About({ params }: Props) {
           {t('about.seventhSectionText')}
           &nbsp;
           <Link
-            className="underline hover:text-primary"
+            className="link link-hover link-primary"
             href={RouteId.resources}
           >
             {t('about.resourcesLinkText')}
           </Link>
           ,&nbsp;
           <Link
-            className="underline hover:text-primary"
+            className="link link-hover link-primary"
             href={RouteId.solutions}
           >
             {t('about.solutionsLinkText')}
           </Link>
           &nbsp;{t('conditional.or')}&nbsp;
-          <Link className="underline hover:text-primary" href={RouteId.contact}>
+          <Link className="link link-hover link-primary" href={RouteId.contact}>
             {t('about.contactUsLinkText')}
           </Link>
           &nbsp;
