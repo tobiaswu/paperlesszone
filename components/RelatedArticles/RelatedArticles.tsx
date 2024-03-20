@@ -7,7 +7,7 @@ import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 import './RelatedArticles.styles.css';
-import { useFormatter, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Category } from '@/lib/enums';
 import Link from 'next/link';
 import { RouteId } from '@/lib/route';
@@ -19,7 +19,6 @@ export interface RelatedArticlesProps {
 }
 
 export const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
-  const format = useFormatter();
   const t = useTranslations();
 
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
@@ -87,13 +86,6 @@ export const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
       <div ref={emblaRef} className="overflow-hidden">
         <div className="embla__container">
           {articles.map((article) => {
-            const dateTimePublished = new Date(article.attributes.publishedAt);
-            const formattedPublishedDate = format.dateTime(dateTimePublished, {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
-
             return (
               <div className="embla__slide" key={article.id}>
                 <ArticleCard
@@ -104,8 +96,6 @@ export const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
                         .item as Category
                     }`
                   )}
-                  formattedDate={formattedPublishedDate}
-                  publishedAtText={t('blog.info.published')}
                   slug={article.attributes.slug}
                   title={article.attributes.title}
                   readTime={article.attributes.reading_time}

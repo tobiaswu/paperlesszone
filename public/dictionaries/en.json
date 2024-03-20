@@ -104,8 +104,7 @@
     },
     "info": {
       "readTime": " mins read",
-      "published": "Published: ",
-      "updated": "Updated: ",
+      "updated": "Last updated: ",
       "home": "Home",
       "here": "Here",
       "notFound": "Could not find article.",

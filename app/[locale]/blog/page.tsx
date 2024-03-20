@@ -2,11 +2,7 @@ import { ArticleCard } from '@/components/ArticleCard';
 import { Article } from '@/lib/types';
 import { ARTICLES_API } from './[slug]/page';
 import { NotFound } from '@/components/NotFound';
-import {
-  getFormatter,
-  getTranslations,
-  unstable_setRequestLocale,
-} from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Category } from '@/lib/enums';
 
 type Props = {
@@ -17,7 +13,6 @@ type Props = {
 export default async function Blog({ params, searchParams }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale });
-  const format = await getFormatter();
 
   const articles: Article[] | undefined = await fetch(
     ARTICLES_API +
@@ -49,13 +44,6 @@ export default async function Blog({ params, searchParams }: Props) {
   return filteredArticles ? (
     <div className="container mx-auto py-16 px-4 grid grid-cols-6 gap-8">
       {filteredArticles.map((article, index) => {
-        const dateTime = new Date(article.attributes.publishedAt);
-        const formattedDate = format.dateTime(dateTime, {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        });
-
         if (index === 0) {
           return (
             <ArticleCard
@@ -70,8 +58,6 @@ export default async function Blog({ params, searchParams }: Props) {
               description={article.attributes.description}
               slug={article.attributes.slug}
               title={article.attributes.title}
-              formattedDate={formattedDate}
-              publishedAtText={t('blog.info.published')}
               readTime={article.attributes.reading_time}
               readTimeText={t('blog.info.readTime')}
               thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
@@ -92,8 +78,6 @@ export default async function Blog({ params, searchParams }: Props) {
             )}
             slug={article.attributes.slug}
             title={article.attributes.title}
-            formattedDate={formattedDate}
-            publishedAtText={t('blog.info.published')}
             readTime={article.attributes.reading_time}
             readTimeText={t('blog.info.readTime')}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}

@@ -1,14 +1,14 @@
 import { Article } from '@/lib/types';
 import { ARTICLES_API } from '@/app/[locale]/blog/[slug]/page';
 import { BlogPreviewTabs } from './BlogPreviewTabs';
-import { getFormatter, getLocale, getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { ArticleCard } from './ArticleCard';
 import { Category } from '@/lib/enums';
+import { NotFound } from './NotFound';
 
 export const BlogPreview = async () => {
   const t = await getTranslations();
   const locale = await getLocale();
-  const format = await getFormatter();
 
   const articles: Article[] | undefined = await fetch(
     ARTICLES_API + '?locale=' + locale + '&populate=*&sort=publishedAt:desc',
@@ -29,13 +29,6 @@ export const BlogPreview = async () => {
       : articles;
 
     return filteredArticles?.map((article, index) => {
-      const dateTime = new Date(article.attributes.publishedAt);
-      const formattedDate = format.dateTime(dateTime, {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-      });
-
       if (index === 0) {
         return (
           <ArticleCard
@@ -48,10 +41,8 @@ export const BlogPreview = async () => {
               }`
             )}
             description={article.attributes.description}
-            formattedDate={formattedDate}
             slug={article.attributes.slug}
             title={article.attributes.title}
-            publishedAtText={t('blog.info.published')}
             readTime={article.attributes.reading_time}
             readTimeText={t('blog.info.readTime')}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
@@ -70,10 +61,8 @@ export const BlogPreview = async () => {
                 article.attributes.category?.data.attributes.item as Category
               }`
             )}
-            formattedDate={formattedDate}
             slug={article.attributes.slug}
             title={article.attributes.title}
-            publishedAtText={t('blog.info.published')}
             readTime={article.attributes.reading_time}
             readTimeText={t('blog.info.readTime')}
             thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
@@ -88,7 +77,7 @@ export const BlogPreview = async () => {
   };
 
   if (!articles) {
-    return <p>Articles could not be loaded.</p>;
+    return <NotFound text={t('blog.info.loadingError')} />;
   }
 
   return (

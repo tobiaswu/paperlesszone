@@ -103,13 +103,7 @@ export default async function Article({ params }: Props) {
   );
 
   if (article) {
-    const dateTimePublished = new Date(article.attributes.publishedAt);
     const dateTimeUpdated = new Date(article.attributes.updatedAt);
-    const formattedPublishedDate = format.dateTime(dateTimePublished, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
     const formattedUpdatedDate = format.dateTime(dateTimeUpdated, {
       year: 'numeric',
       month: 'short',
@@ -132,9 +126,6 @@ export default async function Article({ params }: Props) {
               {article.attributes.description}
             </p>
             <div className="flex flex-wrap items-center gap-4 sm:gap-8 mt-8">
-              <p className="text-base">
-                {t('blog.info.published') + formattedPublishedDate}
-              </p>
               <p className="text-base">
                 {t('blog.info.updated') + formattedUpdatedDate}
               </p>

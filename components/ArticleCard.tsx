@@ -6,14 +6,12 @@ import Link from 'next/link';
 export interface ArticleCardProps {
   className?: string;
   preview?: boolean;
-  formattedDate: string;
   thumbnailUrl?: string;
   thumbnailAltText?: string;
   slug: string;
   category?: string;
   title: string;
   description?: string;
-  publishedAtText: string;
   readTime?: number;
   readTimeText: string;
 }
@@ -21,14 +19,12 @@ export interface ArticleCardProps {
 export const ArticleCard = ({
   className,
   preview,
-  formattedDate,
   thumbnailUrl,
   thumbnailAltText,
   slug,
   category,
   title,
   description,
-  publishedAtText,
   readTime,
   readTimeText,
 }: ArticleCardProps) => {
@@ -62,9 +58,6 @@ export const ArticleCard = ({
         </Link>
         {preview && <p>{description}</p>}
         <div className="card-actions">
-          <p className="text-base self-end">
-            {publishedAtText + formattedDate}
-          </p>
           <Link href={href}>
             <button className="btn btn-primary btn-outline btn-sm mt-2">
               {readTime ?? 0}
