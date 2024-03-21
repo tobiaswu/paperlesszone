@@ -4,7 +4,6 @@ import {
   PiLightningLight,
   PiLinkedinLogoLight,
   PiTimerLight,
-  PiTwitterLogoLight,
 } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
@@ -13,6 +12,7 @@ import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { BsTwitterX } from 'react-icons/bs';
 
 type Props = {
   params: { locale: string };
@@ -125,7 +125,7 @@ export default async function About({ params }: Props) {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <PiTwitterLogoLight className="text-2xl" />
+                <BsTwitterX className="text-2xl" />
               </Link>
               <Link
                 href="https://linkedin.com/in/tobias-wupperfeld"

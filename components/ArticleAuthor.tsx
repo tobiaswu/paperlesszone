@@ -1,7 +1,8 @@
 import { STRAPI_URL } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PiLinkedinLogoLight, PiTwitterLogoLight } from 'react-icons/pi';
+import { BsTwitterX } from 'react-icons/bs';
+import { PiLinkedinLogoLight } from 'react-icons/pi';
 
 export interface ArticleAuthorProps {
   name: string;
@@ -39,7 +40,7 @@ export const ArticleAuthor = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <PiTwitterLogoLight className="text-2xl" />
+                <BsTwitterX className="text-2xl" />
               </Link>
             )}
             {linkedinUrl && (

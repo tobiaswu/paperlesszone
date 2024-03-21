@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { BsTwitterX } from 'react-icons/bs';
 import {
   PiClipboardTextLight,
   PiCodeSimpleLight,
@@ -11,7 +12,6 @@ import {
   PiLinkedinLogoLight,
   PiShareFatLight,
   PiTelegramLogoLight,
-  PiTwitterLogoLight,
   PiWhatsappLogoLight,
 } from 'react-icons/pi';
 
@@ -125,7 +125,7 @@ export const ArticleShare = ({
                     href={`https://twitter.com/intent/tweet?text=${shareUrl}`}
                   >
                     <button className="btn btn-circle">
-                      <PiTwitterLogoLight className="text-2xl" />
+                      <BsTwitterX className="text-2xl" />
                     </button>
                   </Link>
                   <label className="label-text">X</label>
