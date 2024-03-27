@@ -171,7 +171,7 @@ export default async function Article({ params }: Props) {
 
           <div className="lg:w-2/3">
             <Image
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
               src={
                 STRAPI_URL + article.attributes.thumbnail.data.attributes.url
               }
