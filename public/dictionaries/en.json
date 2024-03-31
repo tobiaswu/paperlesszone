@@ -332,6 +332,13 @@
     "title": "The DigitizerSpace Insider",
     "thumbnailAlt": "DigitizerSpace Insider Logo"
   },
+  "commentSection": {
+    "title": "Write a Comment",
+    "note": "Your email address won't be published.",
+    "commentPlaceholder": "Comment*",
+    "checkboxLabel": "Add me to the newsletter.",
+    "submitBtnText": "Publish comment"
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - Automation & Digitization Solutions",

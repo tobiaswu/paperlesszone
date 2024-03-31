@@ -332,6 +332,13 @@
     "title": "Der DigitizerSpace Insider",
     "thumbnailAlt": "DigitizerSpace Insider Logo"
   },
+  "commentSection": {
+    "title": "Kommentar verfassen",
+    "note": "Deine E-Mail Adresse wird nicht veröffentlicht.",
+    "commentPlaceholder": "Kommentar*",
+    "checkboxLabel": "Füge mich zum Newsletter hinzu.",
+    "submitBtnText": "Kommentar veröffentlichen"
+  },
   "metadata": {
     "root": {
       "title": "DigitizerSpace - KI Automatisierung und Digitalisierung",

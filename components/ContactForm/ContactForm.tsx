@@ -3,7 +3,7 @@
 import { useFormState } from 'react-dom';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
-import { SubmitButton } from './SubmitButton';
+import { SubmitButton } from '../SubmitButton';
 
 interface ContactFormProps {
   copyNote: string;
