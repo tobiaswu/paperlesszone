@@ -6,6 +6,7 @@ import { useFormState } from 'react-dom';
 import { submitCommentForm } from './actions';
 
 export interface CommentSectionProps {
+  articleId: number;
   title: string;
   note: string;
   commentPlaceholder: string;
@@ -15,10 +16,11 @@ export interface CommentSectionProps {
 }
 
 export const CommentSection = ({
+  articleId,
   title,
   note,
   commentPlaceholder,
-  checkboxLabel,
+  // checkboxLabel,
   loadingText,
   submitBtnText,
 }: CommentSectionProps) => {
@@ -26,9 +28,8 @@ export const CommentSection = ({
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
-  const websiteError = state?.error?.website?._errors[0];
   const textError = state?.error?.text?._errors[0];
-  const checkboxError = state?.error?.checkbox?._errors[0];
+  // const checkboxError = state?.error?.checkbox?._errors[0];
   const message: string | undefined = state?.message?.message;
 
   // Name
@@ -42,6 +43,7 @@ export const CommentSection = ({
       <p className="label-text">{note}</p>
 
       <form className="flex flex-col gap-4 pt-4" action={formAction}>
+        <input type="hidden" name="articleId" value={articleId} />
         <label className="form-control">
           <textarea
             className={`${
@@ -58,7 +60,7 @@ export const CommentSection = ({
           )}
         </label>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <label className="form-control flex-1">
             <input
               className={`${nameError && 'input-error'} input input-bordered`}
@@ -87,25 +89,8 @@ export const CommentSection = ({
               </div>
             )}
           </label>
-          <label className="form-control flex-1">
-            <input
-              className={`${
-                websiteError && 'input-error'
-              } input input-bordered`}
-              name="website"
-              type="url"
-              placeholder="Website"
-            />
-            {websiteError && (
-              <div className="label">
-                <span className="label-text-alt text-error">
-                  {websiteError}
-                </span>
-              </div>
-            )}
-          </label>
         </div>
-        <label className="form-control">
+        {/* <label className="form-control">
           <label className="cursor-pointer label w-fit gap-4">
             <span className={`${checkboxError && 'text-error'} label-text`}>
               {checkboxLabel}
@@ -123,7 +108,7 @@ export const CommentSection = ({
               <span className="label-text-alt text-error">{checkboxError}</span>
             </div>
           )}
-        </label>
+        </label> */}
         <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
       </form>
       {message && (

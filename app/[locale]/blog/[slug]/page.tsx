@@ -22,6 +22,7 @@ import { RelatedArticles } from '@/components/RelatedArticles/RelatedArticles';
 import { sortAndLimitArticles } from '@/utils/sort';
 import { NextIntlClientProvider } from 'next-intl';
 import { pick } from 'lodash';
+import { CommentSection } from '@/components/CommentSection/CommentSection';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -196,7 +197,7 @@ export default async function Article({ params }: Props) {
           </div>
         </div>
 
-        <div className="container mx-auto py-12 sm:py-32 px-4">
+        <div className="container mx-auto py-12 sm:py-16 px-4">
           <NextIntlClientProvider
             messages={pick(
               messages,
@@ -214,7 +215,17 @@ export default async function Article({ params }: Props) {
         {/* <ArticleRating /> */}
         {/* </div> */}
 
-        {/* <CommentSection /> */}
+        <div className="container mx-auto py-12 sm:py-16 px-4">
+          <CommentSection
+            articleId={article.id}
+            title={t('commentSection.title')}
+            note={t('commentSection.note')}
+            commentPlaceholder={t('commentSection.commentPlaceholder')}
+            checkboxLabel={t('commentSection.checkboxLabel')}
+            loadingText={t('state.sending')}
+            submitBtnText={t('commentSection.submitBtnText')}
+          />
+        </div>
 
         <ScrollToTopButton />
       </div>
