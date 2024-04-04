@@ -333,10 +333,12 @@
     "thumbnailAlt": "DigitizerSpace Insider Logo"
   },
   "commentSection": {
-    "title": "Leave a Comment",
+    "title": "Comments",
+    "formTitle": "Leave a Comment",
     "note": "Your email address won't be published.",
     "commentPlaceholder": "Comment*",
     "checkboxLabel": "Add me to the newsletter.",
+    "replyBtnText": "Reply",
     "submitBtnText": "Publish comment"
   },
   "metadata": {

@@ -1,122 +1,64 @@
-'use client';
-
-import { PiCheckCircleLight } from 'react-icons/pi';
-import { SubmitButton } from '../SubmitButton';
-import { useFormState } from 'react-dom';
-import { submitCommentForm } from './actions';
+import { Comment } from '@/lib/types';
+import { CommentForm } from './CommentForm';
+import { getFormatter, getTranslations } from 'next-intl/server';
 
 export interface CommentSectionProps {
   articleId: number;
-  title: string;
-  note: string;
-  commentPlaceholder: string;
-  checkboxLabel: string;
-  loadingText: string;
-  submitBtnText: string;
+  data: Comment[];
 }
 
-export const CommentSection = ({
+export const CommentSection = async ({
   articleId,
-  title,
-  note,
-  commentPlaceholder,
-  // checkboxLabel,
-  loadingText,
-  submitBtnText,
+  data,
 }: CommentSectionProps) => {
-  const [state, formAction] = useFormState(submitCommentForm, null);
-
-  const nameError = state?.error?.name?._errors[0];
-  const emailError = state?.error?.email?._errors[0];
-  const textError = state?.error?.text?._errors[0];
-  // const checkboxError = state?.error?.checkbox?._errors[0];
-  const message: string | undefined = state?.message?.message;
-
-  // Name
-  // Datum mit Uhrzeit
-  // Nachricht
-  // Antworten button -> thread
+  const t = await getTranslations();
+  const format = await getFormatter();
 
   return (
     <div>
-      <h2 className="text-3xl font-semibold leading-tight pb-8">{title}</h2>
-      <p className="label-text">{note}</p>
+      {data.length > 0 && (
+        <div className="mb-16">
+          <h2 className="text-3xl font-semibold leading-tight pb-8">
+            {t('commentSection.title')}
+          </h2>
 
-      <form className="flex flex-col gap-4 pt-4" action={formAction}>
-        <input type="hidden" name="articleId" value={articleId} />
-        <label className="form-control">
-          <textarea
-            className={`${
-              textError && 'textarea-error'
-            } textarea textarea-bordered text-base textarea-md`}
-            name="text"
-            placeholder={commentPlaceholder}
-            required
-          />
-          {textError && (
-            <div className="label">
-              <span className="label-text-alt text-error">{textError}</span>
-            </div>
-          )}
-        </label>
+          {data.map((comment) => {
+            const dateCreated = new Date(comment.createdAt);
+            const formattedDateCreated = format.dateTime(dateCreated, {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+            });
 
-        <div className="flex flex-wrap gap-4">
-          <label className="form-control flex-1">
-            <input
-              className={`${nameError && 'input-error'} input input-bordered`}
-              name="name"
-              required
-              type="text"
-              placeholder="Name*"
-            />
-            {nameError && (
-              <div className="label">
-                <span className="label-text-alt text-error">{nameError}</span>
+            return (
+              <div key={comment.id}>
+                <div className="flex items-center pb-2">
+                  <p>{comment.author.name}</p>
+                  <div className="divider divider-horizontal"></div>
+                  <p className="text-sm">{formattedDateCreated}</p>
+                </div>
+                <p>{comment.content}</p>
+                <button className="btn btn-link">
+                  {t('commentSection.replyBtnText')}
+                </button>
               </div>
-            )}
-          </label>
-          <label className="form-control flex-1">
-            <input
-              className={`${emailError && 'input-error'} input input-bordered`}
-              name="email"
-              required
-              type="email"
-              placeholder="Email*"
-            />
-            {emailError && (
-              <div className="label">
-                <span className="label-text-alt text-error">{emailError}</span>
-              </div>
-            )}
-          </label>
-        </div>
-        {/* <label className="form-control">
-          <label className="cursor-pointer label w-fit gap-4">
-            <span className={`${checkboxError && 'text-error'} label-text`}>
-              {checkboxLabel}
-            </span>
-            <input
-              type="checkbox"
-              name="checkbox"
-              className={`${
-                checkboxError && 'checkbox-error'
-              } checkbox checkbox-primary`}
-            />
-          </label>
-          {checkboxError && (
-            <div className="label">
-              <span className="label-text-alt text-error">{checkboxError}</span>
-            </div>
-          )}
-        </label> */}
-        <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
-      </form>
-      {message && (
-        <div className="alert alert-info mt-4">
-          <PiCheckCircleLight className="text-2xl" />
-          <span>{message}</span>
+            );
+          })}
         </div>
       )}
+
+      <h2 className="text-3xl font-semibold leading-tight pb-8">
+        {t('commentSection.formTitle')}
+      </h2>
+      <p className="label-text">{t('commentSection.note')}</p>
+      <CommentForm
+        articleId={articleId}
+        commentPlaceholder={t('commentSection.commentPlaceholder')}
+        loadingText={t('state.sending')}
+        submitBtnText={t('commentSection.submitBtnText')}
+      />
     </div>
   );
 };

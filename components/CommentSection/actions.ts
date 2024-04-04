@@ -29,8 +29,20 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
     })
       .then((res) => res.json())
       .then((data) => data)
-      .catch((error) => error);
+      .catch((err) => err);
 
     return { message: response };
   }
+};
+
+export const getComments = async (articleId: number) => {
+  const apiUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/comments/api::article.article:${articleId}`;
+  const options = {
+    method: 'GET',
+  };
+
+  return await fetch(apiUrl, options)
+    .then((res) => res.json())
+    .then((data) => data)
+    .catch((err) => err);
 };
