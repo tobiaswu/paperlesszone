@@ -47,6 +47,9 @@ export const getComments = async (articleId: number) => {
   const apiUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/comments/api::article.article:${articleId}`;
   const options = {
     method: 'GET',
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_KEY}`,
+    },
   };
 
   return await fetch(apiUrl, options)
