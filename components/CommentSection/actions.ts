@@ -1,6 +1,7 @@
 'use server';
 
 import { CommentFormSchema } from '@/lib/schema';
+import { revalidateTag } from 'next/cache';
 
 export const submitCommentForm = async (state: any, formData: FormData) => {
   const articleId = formData.get('articleId') as string;
@@ -39,6 +40,8 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
       .then((data) => data)
       .catch((err) => err);
 
+    revalidateTag(`article-${articleId}`);
+
     return { message: response };
   }
 };
@@ -50,6 +53,7 @@ export const getComments = async (articleId: number) => {
     headers: {
       Authorization: `Bearer ${process.env.STRAPI_API_KEY}`,
     },
+    next: { tags: [`article-${articleId}`] },
   };
 
   return await fetch(apiUrl, options)
