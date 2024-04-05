@@ -22,8 +22,6 @@ export const CommentThread = async ({
     minute: 'numeric',
   });
 
-  // console.log(comment);
-  // className="pl-6 border-l-2 border-neutral"
   return (
     <div
       className={depth > 0 ? 'pl-6 border-l-2 border-neutral' : ''}

@@ -15,7 +15,7 @@ export type Comment = {
 };
 
 type Author = {
-  avatar?: string;
+  avatar: string | null;
   email: string;
   id: string;
   name: string;

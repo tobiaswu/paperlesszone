@@ -13,6 +13,7 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
 
   const parsed = CommentFormSchema.safeParse({
     articleId: articleId,
+    commentId: commentId,
     name: name,
     email: email,
     text: text,

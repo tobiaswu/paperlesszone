@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const CommentFormSchema = z.object({
   articleId: z.string(),
+  commentId: z.string().optional().nullable(),
   name: z.string().min(2),
   email: z.string().email().min(5),
   text: z.string().min(4),
