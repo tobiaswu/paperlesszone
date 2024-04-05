@@ -4,6 +4,7 @@ import { CommentFormSchema } from '@/lib/schema';
 
 export const submitCommentForm = async (state: any, formData: FormData) => {
   const articleId = formData.get('articleId') as string;
+  const commentId = formData.get('commentId');
   const name = formData.get('name') as string;
   const email = formData.get('email') as string;
   const text = formData.get('text') as string;
@@ -25,7 +26,14 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ articleId, name, email, text, checkbox }),
+      body: JSON.stringify({
+        articleId,
+        commentId,
+        name,
+        email,
+        text,
+        checkbox,
+      }),
     })
       .then((res) => res.json())
       .then((data) => data)

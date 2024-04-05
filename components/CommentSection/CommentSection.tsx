@@ -1,6 +1,7 @@
 import { Comment } from '@/lib/types';
 import { CommentForm } from './CommentForm';
-import { getFormatter, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { CommentThread } from './CommentThread';
 
 export interface CommentSectionProps {
   articleId: number;
@@ -12,7 +13,6 @@ export const CommentSection = async ({
   data,
 }: CommentSectionProps) => {
   const t = await getTranslations();
-  const format = await getFormatter();
 
   return (
     <div>
@@ -22,30 +22,12 @@ export const CommentSection = async ({
             {t('commentSection.title')}
           </h2>
 
-          {data.map((comment) => {
-            const dateCreated = new Date(comment.createdAt);
-            const formattedDateCreated = format.dateTime(dateCreated, {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-              hour: 'numeric',
-              minute: 'numeric',
-            });
-
-            return (
-              <div key={comment.id}>
-                <div className="flex items-center pb-2">
-                  <p>{comment.author.name}</p>
-                  <div className="divider divider-horizontal"></div>
-                  <p className="text-sm">{formattedDateCreated}</p>
-                </div>
-                <p>{comment.content}</p>
-                <button className="btn btn-link">
-                  {t('commentSection.replyBtnText')}
-                </button>
-              </div>
-            );
-          })}
+          {data.map((comment) => (
+            <div key={comment.id}>
+              <CommentThread comment={comment} />
+              <div className="divider"></div>
+            </div>
+          ))}
         </div>
       )}
 

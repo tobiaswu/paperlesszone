@@ -339,6 +339,7 @@
     "commentPlaceholder": "Comment*",
     "checkboxLabel": "Add me to the newsletter.",
     "replyBtnText": "Reply",
+    "replyDialogTitle": "Reply to {user}",
     "submitBtnText": "Publish comment"
   },
   "metadata": {

@@ -339,6 +339,7 @@
     "commentPlaceholder": "Kommentar*",
     "checkboxLabel": "Füge mich zum Newsletter hinzu.",
     "replyBtnText": "Antworten",
+    "replyDialogTitle": "Antworte {user}",
     "submitBtnText": "Kommentar veröffentlichen"
   },
   "metadata": {

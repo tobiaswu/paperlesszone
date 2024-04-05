@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   if (req.method === 'POST') {
-    const { articleId, name, email, text } = await req.json();
+    const { articleId, commentId, name, email, text } = await req.json();
 
     const apiUrl = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/comments/api::article.article:${articleId}`;
 
@@ -19,6 +19,7 @@ export async function POST(req: NextRequest) {
             email: email,
           },
           content: text,
+          threadOf: commentId,
         }),
       });
 

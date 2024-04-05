@@ -7,6 +7,7 @@ import { PiCheckCircleLight } from 'react-icons/pi';
 
 export interface CommentFormProps {
   articleId: number;
+  commentId?: number;
   commentPlaceholder: string;
   loadingText: string;
   submitBtnText: string;
@@ -14,6 +15,7 @@ export interface CommentFormProps {
 
 export const CommentForm = ({
   articleId,
+  commentId,
   commentPlaceholder,
   loadingText,
   submitBtnText,
@@ -30,6 +32,9 @@ export const CommentForm = ({
     <div>
       <form className="flex flex-col gap-4 pt-4" action={formAction}>
         <input type="hidden" name="articleId" value={articleId} />
+        {commentId && (
+          <input type="hidden" name="commentId" value={commentId} />
+        )}
         <label className="form-control">
           <textarea
             className={`${
