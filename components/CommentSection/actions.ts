@@ -10,6 +10,7 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
   const email = formData.get('email') as string;
   const text = formData.get('text') as string;
   const checkbox = formData.get('checkbox') as string;
+  const token = formData.get('cf-turnstile-response');
 
   const parsed = CommentFormSchema.safeParse({
     articleId: articleId,
@@ -23,27 +24,37 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
   if (!parsed.success) {
     return { error: parsed.error.format() };
   } else {
-    const response = await fetch(process.env.URL + '/api/comment', {
+    const verifyRes = await fetch(process.env.URL + '/api/verify', {
       method: 'POST',
+      body: JSON.stringify({ token }),
       headers: {
-        'Content-Type': 'application/json',
+        'content-type': 'application/json',
       },
-      body: JSON.stringify({
-        articleId,
-        commentId,
-        name,
-        email,
-        text,
-        checkbox,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => data)
-      .catch((err) => err);
+    });
 
-    revalidateTag(`article-${articleId}`);
+    if (verifyRes.ok) {
+      const res = await fetch(process.env.URL + '/api/comment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          articleId,
+          commentId,
+          name,
+          email,
+          text,
+          checkbox,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => data)
+        .catch((err) => err);
 
-    return { message: response };
+      revalidateTag(`article-${articleId}`);
+
+      return { message: res };
+    }
   }
 };
 

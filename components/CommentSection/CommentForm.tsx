@@ -4,12 +4,16 @@ import { useFormState } from 'react-dom';
 import { submitCommentForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
 import { PiCheckCircleLight } from 'react-icons/pi';
+import { useCallback, useState } from 'react';
+import { Turnstile } from '@marsidev/react-turnstile';
+import { useDarkMode } from '@/utils/hooks';
 
 export interface CommentFormProps {
   articleId: number;
   commentId?: number;
   commentPlaceholder: string;
   loadingText: string;
+  locale: string;
   submitBtnText: string;
 }
 
@@ -18,15 +22,22 @@ export const CommentForm = ({
   commentId,
   commentPlaceholder,
   loadingText,
+  locale,
   submitBtnText,
 }: CommentFormProps) => {
   const [state, formAction] = useFormState(submitCommentForm, null);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [darkMode] = useDarkMode();
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
   const textError = state?.error?.text?._errors[0];
   // const checkboxError = state?.error?.checkbox?._errors[0];
   const message: string | undefined = state?.message?.message;
+
+  const onVerify = useCallback(() => {
+    setCaptchaVerified(true);
+  }, []);
 
   return (
     <div>
@@ -79,6 +90,14 @@ export const CommentForm = ({
               </div>
             )}
           </label>
+          <Turnstile
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''}
+            onSuccess={onVerify}
+            options={{
+              theme: darkMode ? 'dark' : 'light',
+              language: locale,
+            }}
+          />
         </div>
         {/* <label className="form-control">
           <label className="cursor-pointer label w-fit gap-4">
@@ -99,7 +118,11 @@ export const CommentForm = ({
             </div>
           )}
         </label> */}
-        <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
+        <SubmitButton
+          disabled={!captchaVerified}
+          loadingText={loadingText}
+          submitBtnText={submitBtnText}
+        />
       </form>
       {message && (
         <div className="alert alert-info mt-4">

@@ -1,6 +1,6 @@
 import { Comment } from '@/lib/types';
 import { CommentForm } from './CommentForm';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { CommentThread } from './CommentThread';
 
 export interface CommentSectionProps {
@@ -13,6 +13,7 @@ export const CommentSection = async ({
   data,
 }: CommentSectionProps) => {
   const t = await getTranslations();
+  const locale = await getLocale();
 
   return (
     <div>
@@ -39,6 +40,7 @@ export const CommentSection = async ({
         articleId={articleId}
         commentPlaceholder={t('commentSection.commentPlaceholder')}
         loadingText={t('state.sending')}
+        locale={locale}
         submitBtnText={t('commentSection.submitBtnText')}
       />
     </div>
