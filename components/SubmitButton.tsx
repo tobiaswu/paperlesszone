@@ -1,7 +1,7 @@
 import { useFormStatus } from 'react-dom';
 
 interface SubmitButtonProps {
-  disabled: boolean;
+  disabled?: boolean;
   loadingText: string;
   submitBtnText: string;
 }
