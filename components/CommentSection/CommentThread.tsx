@@ -1,6 +1,6 @@
 import { Comment } from '@/lib/types';
 import { CommentReply } from './CommentReply';
-import { getFormatter, getTranslations } from 'next-intl/server';
+import { getFormatter, getLocale, getTranslations } from 'next-intl/server';
 
 export interface CommentThreadProps {
   comment: Comment;
@@ -13,6 +13,7 @@ export const CommentThread = async ({
 }: CommentThreadProps) => {
   const t = await getTranslations();
   const format = await getFormatter();
+  const locale = await getLocale();
   const dateCreated = new Date(comment.createdAt);
   const formattedDateCreated = format.dateTime(dateCreated, {
     year: 'numeric',
@@ -37,6 +38,7 @@ export const CommentThread = async ({
         commentPlaceholder={t('commentSection.commentPlaceholder')}
         id={comment.id}
         loadingText={t('state.sending')}
+        locale={locale}
         replyBtnText={t('commentSection.replyBtnText')}
         submitBtnText={t('commentSection.submitBtnText')}
         title={t('commentSection.replyDialogTitle', {

@@ -7,6 +7,7 @@ export interface CommentReplyProps {
   commentPlaceholder: string;
   id: number;
   loadingText: string;
+  locale: string;
   replyBtnText: string;
   submitBtnText: string;
   title: string;
@@ -16,6 +17,7 @@ export const CommentReply = ({
   commentPlaceholder,
   id,
   loadingText,
+  locale,
   replyBtnText,
   submitBtnText,
   title,
@@ -44,6 +46,7 @@ export const CommentReply = ({
               commentId={id}
               commentPlaceholder={commentPlaceholder}
               loadingText={loadingText}
+              locale={locale}
               submitBtnText={submitBtnText}
             />
           </div>
