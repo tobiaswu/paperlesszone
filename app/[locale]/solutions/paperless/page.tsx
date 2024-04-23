@@ -4,30 +4,22 @@ import {
   PiArticleLight,
   PiCalculatorLight,
   PiClockCountdownLight,
-  PiCloudCheckLight,
   PiDesktopTowerLight,
   PiDownloadLight,
-  PiFileArrowDownLight,
+  PiFloppyDiskBackLight,
   PiHandshakeLight,
-  PiHardDrivesLight,
-  PiHourglassMediumLight,
   PiKeyLight,
   PiLightbulbFilamentLight,
   PiMedalLight,
-  PiMoneyLight,
-  PiNumberSquareOneLight,
-  PiNumberSquareThreeLight,
-  PiNumberSquareTwoLight,
   PiPathLight,
+  PiPlugsConnectedLight,
   PiQuestionLight,
   PiRobotLight,
   PiScanLight,
+  PiShieldCheckLight,
   PiShootingStarLight,
-  PiSignInLight,
   PiStarFourLight,
-  PiTestTubeLight,
   PiTrendUpLight,
-  PiTrophyLight,
   PiUserLight,
   PiWarningCircleLight,
   PiWrenchLight,
@@ -69,10 +61,6 @@ export default async function Paperless({ params }: Props) {
     locale: params.locale,
     namespace: 'button',
   });
-  const tConditional = await getTranslations({
-    locale: params.locale,
-    namespace: 'conditional',
-  });
 
   const paperlessCardItems = [
     {
@@ -92,6 +80,7 @@ export default async function Paperless({ params }: Props) {
       infoText: t('pricingCard.paperlessSystem.item.fourthInfo'),
     },
     {
+      icon: <PiShootingStarLight />,
       name: t('pricingCard.paperlessSystem.item.fifthName'),
       infoText: t('pricingCard.paperlessSystem.item.fifthInfo'),
     },
@@ -101,24 +90,9 @@ export default async function Paperless({ params }: Props) {
       infoText: t('pricingCard.paperlessSystem.item.sixthInfo'),
     },
     {
-      icon: <PiShootingStarLight />,
+      icon: <PiWarningCircleLight className="text-accent" />,
       name: t('pricingCard.paperlessSystem.item.seventhName'),
       infoText: t('pricingCard.paperlessSystem.item.seventhInfo'),
-    },
-    {
-      icon: <PiShootingStarLight />,
-      name: t('pricingCard.paperlessSystem.item.eighthName'),
-      infoText: t('pricingCard.paperlessSystem.item.eighthInfo'),
-    },
-    {
-      icon: <PiShootingStarLight />,
-      name: t('pricingCard.paperlessSystem.item.ninethName'),
-      infoText: t('pricingCard.paperlessSystem.item.ninethInfo'),
-    },
-    {
-      icon: <PiWarningCircleLight className="text-accent" />,
-      name: t('pricingCard.paperlessSystem.item.tenthName'),
-      infoText: t('pricingCard.paperlessSystem.item.tenthInfo'),
     },
   ];
 
@@ -271,80 +245,31 @@ export default async function Paperless({ params }: Props) {
 
       <div className="container mx-auto px-4 py-16">
         <div className="flex gap-4 items-center mb-8">
-          <PiHourglassMediumLight className="text-3xl text-primary" />
-          <h2 className="text-4xl font-semibold">{t('installTitle')}</h2>
-        </div>
-        <p className="max-w-3xl">{t('installDescription')}</p>
-        <ul className="mt-8">
-          <li className="flex flex-col gap-4 mb-8">
-            <PiNumberSquareOneLight className="text-4xl text-primary" />
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-              <div className="col-span-2 flex flex-col sm:flex-row gap-2">
-                <SolutionCard
-                  icon={<PiHardDrivesLight />}
-                  description={t('installFirstStep')}
-                />
-                <div className="divider sm:divider-horizontal">
-                  {tConditional('or')}
-                </div>
-                <SolutionCard
-                  icon={<PiCloudCheckLight />}
-                  description={t('installSecondStep')}
-                />
-              </div>
-            </div>
-          </li>
-          <li className="flex flex-col gap-4 mb-8">
-            <PiNumberSquareTwoLight className="text-4xl text-primary" />
-            <div className="grid sm:grid-cols-2 md:grid-cols-3">
-              <SolutionCard
-                icon={<PiWrenchLight />}
-                description={t('installThirdStep')}
-              />
-            </div>
-          </li>
-          <li className="flex flex-col gap-4">
-            <PiNumberSquareThreeLight className="text-4xl text-primary" />
-            <div className="grid sm:grid-cols-2 md:grid-cols-3">
-              <SolutionCard
-                icon={<PiSignInLight />}
-                description={t('installFourthStep')}
-              />
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex gap-4 items-center mb-8">
           <PiQuestionLight className="text-3xl text-primary" />
           <h2 className="text-4xl font-semibold">{t('useTitle')}</h2>
         </div>
         <p className="max-w-3xl">
-          {t('useDescription')}&nbsp;
-          <Link
-            className="link link-hover link-primary"
-            href="https://docs.paperless-ngx.com/"
-          >
-            {t('officialDocLinkText')}
-          </Link>
-          .
+          {t.rich('useDescription', {
+            link: (chunks) => (
+              <Link
+                className="link link-hover link-primary"
+                href="https://docs.paperless-ngx.com/"
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
-            icon={<PiFileArrowDownLight />}
-            description={t('useFirstStep')}
-            url="https://digitizerspace.beehiiv.com/subscribe"
-          />
-          <SolutionCard
             icon={<PiLightbulbFilamentLight />}
-            description={t('useSecondStep')}
+            description={t('useFirstStep')}
             url={`${RouteId.blog}?tag=paperless-ngx`}
           />
           <SolutionCard
             icon={<PiArticleLight />}
-            description={t('useThirdStep')}
-            url={`${RouteId.blog}?tag=paperless-ngx`}
+            description={t('useSecondStep')}
+            url="https://digitizerspace.beehiiv.com/subscribe"
           />
         </div>
       </div>
@@ -363,24 +288,23 @@ export default async function Paperless({ params }: Props) {
               description={t('offerFirstBenefit')}
             />
             <SolutionCard
-              icon={<PiTestTubeLight />}
+              icon={<PiFloppyDiskBackLight />}
               description={t('offerSecondBenefit')}
-              url="https://paperless.digitizerspace.com/"
             />
             <SolutionCard
-              icon={<PiHandshakeLight />}
+              icon={<PiShieldCheckLight />}
               description={t('offerThirdBenefit')}
             />
             <SolutionCard
-              icon={<PiMoneyLight />}
+              icon={<PiTrendUpLight />}
               description={t('offerFourthBenefit')}
             />
             <SolutionCard
-              icon={<PiTrophyLight />}
+              icon={<PiPlugsConnectedLight />}
               description={t('offerFifthBenefit')}
             />
             <SolutionCard
-              icon={<PiTrendUpLight />}
+              icon={<PiHandshakeLight />}
               description={t('offerSixthBenefit')}
             />
           </div>
@@ -392,26 +316,30 @@ export default async function Paperless({ params }: Props) {
           <PiCalculatorLight className="text-3xl text-primary" />
           <h2 className="text-4xl font-semibold">{t('pricingTitle')}</h2>
         </div>
-        <p className="max-w-3xl">{t('pricingDescription')}</p>
-        <div className="flex flex-col lg:flex-row gap-8 mt-8">
+        <p className="max-w-3xl">
+          {t.rich('pricingDescription', {
+            link: (chunks) => (
+              <Link
+                className="link link-hover link-primary"
+                href={RouteId.contact}
+              >
+                {chunks}
+              </Link>
+            ),
+          })}
+        </p>
+        <div className="flex flex-col lg:flex-row flex-wrap gap-8 mt-8">
           <PricingCard
+            badgeText={t('pricingCard.paperlessSystem.badgeText')}
             title={t('pricingCard.paperlessSystem.title')}
             subtitle={t('pricingCard.paperlessSystem.subtitle')}
-            priceOld={t('pricingCard.paperlessSystem.priceOld')}
-            discount={t('pricingCard.paperlessSystem.discount')}
-            badgeText={t('pricingCard.paperlessSystem.badgeText')}
             price={t('pricingCard.paperlessSystem.price')}
-            priceInfo={t('pricingCard.paperlessSystem.priceInfo')}
             btnText={tButton('getStarted')}
-            btnUrl={
-              params.locale === 'de'
-                ? 'https://buy.stripe.com/bIY6re0K11YDg9O8ww?locale=de'
-                : 'https://buy.stripe.com/cN2g1O64l9r58Hm145?locale=en'
-            }
+            btnUrl={RouteId.contact}
             className="border-primary"
             items={paperlessCardItems}
           />
-          <div>
+          <div className="flex flex-wrap gap-8">
             <PricingCard
               title={t('pricingCard.testSystem.title')}
               subtitle={t('pricingCard.testSystem.subtitle')}
@@ -419,7 +347,7 @@ export default async function Paperless({ params }: Props) {
               btnText={tButton('startDemo')}
               btnUrl="https://paperless.digitizerspace.com/"
               price={t('pricingCard.testSystem.price')}
-              className="border-gunmetal-600 mb-8"
+              className="border-gunmetal-600"
               items={testCardItems}
             />
             <PricingCard
