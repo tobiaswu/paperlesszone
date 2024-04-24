@@ -24,6 +24,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { pick } from 'lodash';
 import { CommentSection } from '@/components/CommentSection/CommentSection';
 import { getComments } from '@/components/CommentSection/actions';
+import { RouteId } from '@/lib/route';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -237,9 +238,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     robots: { index: true, follow: true },
     alternates: {
       languages: {
-        en: params.locale === 'en' ? `/${slug}` : `/${slugEn}`,
-        de: params.locale === 'de' ? `/de/${slug}` : `/de/${slugDe}`,
-        'x-default': params.locale === 'en' ? `/${slug}` : `/${slugEn}`,
+        en:
+          params.locale === 'en'
+            ? `${RouteId.blog}/${slug}`
+            : `${RouteId.blog}/${slugEn}`,
+        de:
+          params.locale === 'de'
+            ? `/de${RouteId.blog}/${slug}`
+            : `/de${RouteId.blog}/${slugDe}`,
+        'x-default':
+          params.locale === 'en'
+            ? `${RouteId.blog}/${slug}`
+            : `${RouteId.blog}/${slugEn}`,
       },
     },
   };
