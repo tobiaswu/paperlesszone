@@ -8,31 +8,14 @@ import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import NextTopLoader from 'nextjs-toploader';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { locales } from '@/lib/constants';
+import { BASE_URL, locales } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 const inter = Inter({ subsets: ['latin'] });
 
 type Props = {
   params: { locale: string };
 };
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({
-    locale: params.locale,
-    namespace: 'metadata.root',
-  });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    robots: { index: true, follow: true },
-    applicationName: 'DigitizerSpace',
-  };
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
 
 export default async function RootLayout({
   children,
@@ -56,4 +39,30 @@ export default async function RootLayout({
       </body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.root',
+  });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    robots: { index: true, follow: true },
+    applicationName: 'DigitizerSpace',
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      languages: {
+        en: `${RouteId.root}`,
+        de: `/de${RouteId.root}`,
+        'x-default': `${RouteId.root}`,
+      },
+    },
+  };
 }

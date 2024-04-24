@@ -136,7 +136,7 @@
       "dataSafetyTitle": "Deine Daten bleiben sicher",
       "dataSafetyValue": "Flexible Zugangsrechte",
       "dataSafetyDescription": "Du entscheidest, auf was dein Team Zugriff hat",
-      "reqTitle": "Was sind die Voraussetzungen, um von dem Papierlosen Büro zu profitieren?",
+      "reqTitle": "Was sind die Voraussetzungen, um vom Papierlosen Büro zu profitieren?",
       "reqDescription": "Um loszulegen, benötigst du nicht mehr als ein Gerät, das die Anwendung ausführen kann. Je nach deinem Anwendungsfall bevorzugst du möglicherweise, einen Dokumentenscanner anzuschließen und Das Papierlose Büro auf einem Network-Attached-Storage (NAS) oder einem Virtual-Private-Server (VPS) auszuführen.",
       "reqtFirstStep": "Paperless-ngx Open-Source Software.",
       "reqSecondStep": "Optional: Ein Scanner, der Dateien an einen Ordner senden kann (z.B. Fujitsu ScanSnap).",
@@ -159,7 +159,7 @@
       "pricingDescription": "<link>Buche jetzt dein kostenloses Informationsgespräch mit uns.</link> Wir werden herausfinden, ob diese Lösung für deinen Anwendungsfall geeignet ist. Wir geben dir auch gerne eine kurze Führung durch die Software und beantworten deine restlichen Fragen.",
       "pricingCard": {
         "paperlessSystem": {
-          "title": "Das papierlose Büro",
+          "title": "Das Papierlose Büro",
           "subtitle": "Automatisiere deine Dokumentenverwaltung.",
           "priceOld": "4990€",
           "discount": "Launch Special: 80% Rabatt",

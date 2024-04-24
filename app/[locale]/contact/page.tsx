@@ -13,23 +13,12 @@ import {
   staggerAnimationVariant,
 } from '@/lib/animation';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { BASE_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/route';
 
 type Props = {
   params: { locale: string };
 };
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({
-    locale: params.locale,
-    namespace: 'metadata.contact',
-  });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    robots: { index: true, follow: true },
-  };
-}
 
 export default async function Contact({ params }: Props) {
   unstable_setRequestLocale(params.locale);
@@ -93,4 +82,25 @@ export default async function Contact({ params }: Props) {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.contact',
+  });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    robots: { index: true, follow: true },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      languages: {
+        en: `${RouteId.contact}`,
+        de: `/de${RouteId.contact}`,
+        'x-default': `${RouteId.contact}`,
+      },
+    },
+  };
 }

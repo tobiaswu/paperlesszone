@@ -17,6 +17,9 @@ export type Article = {
     slug: string;
     author: Author;
     thumbnail: Image;
+    localizations?: {
+      data: Localization[];
+    };
   };
 };
 
@@ -55,5 +58,13 @@ type Image = {
       url: string;
       alternativeText: string;
     };
+  };
+};
+
+type Localization = {
+  id: number;
+  attributes: {
+    locale: string;
+    slug: string;
   };
 };

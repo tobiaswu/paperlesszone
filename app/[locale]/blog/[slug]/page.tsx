@@ -2,7 +2,7 @@ import { ArticleAuthor } from '@/components/ArticleAuthor';
 import { ArticleShare } from '@/components/ArticleShare';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { Article, Comment } from '@/lib/types';
+import { type Article, type Comment } from '@/lib/types';
 import { NotFound } from '@/components/NotFound';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
@@ -30,33 +30,6 @@ type Props = {
 };
 
 export const ARTICLES_API = `${STRAPI_URL}/api/articles`;
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article: Article | undefined = await fetch(
-    ARTICLES_API +
-      '?locale=' +
-      params.locale +
-      '&filters[slug][$eq]=' +
-      params.slug +
-      '&populate[0]=thumbnail&populate[1]=tags',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data[0])
-    .catch((error) => console.log(error));
-
-  return {
-    title: article?.attributes.title,
-    description: article?.attributes.description,
-    metadataBase: new URL(BASE_URL),
-    openGraph: {
-      images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
-    },
-    robots: { index: true, follow: true },
-  };
-}
 
 export default async function Article({ params }: Props) {
   unstable_setRequestLocale(params.locale);
@@ -228,4 +201,46 @@ export default async function Article({ params }: Props) {
   } else {
     return <NotFound text={t('blog.info.notFound')} />;
   }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const article: Article | undefined = await fetch(
+    ARTICLES_API +
+      '?locale=' +
+      params.locale +
+      '&filters[slug][$eq]=' +
+      params.slug +
+      '&populate[0]=thumbnail&populate[1]=tags&populate[2]=localizations',
+    {
+      method: 'GET',
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => data.data[0])
+    .catch((error) => console.log(error));
+
+  const slug = article?.attributes.slug;
+  const slugEn = article?.attributes.localizations?.data.find(
+    (item) => item.attributes.locale === 'en'
+  )?.attributes.slug;
+  const slugDe = article?.attributes.localizations?.data.find(
+    (item) => item.attributes.locale === 'de'
+  )?.attributes.slug;
+
+  return {
+    title: article?.attributes.title,
+    description: article?.attributes.description,
+    metadataBase: new URL(BASE_URL),
+    openGraph: {
+      images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
+    },
+    robots: { index: true, follow: true },
+    alternates: {
+      languages: {
+        en: params.locale === 'en' ? `/${slug}` : `/${slugEn}`,
+        de: params.locale === 'de' ? `/de/${slug}` : `/de/${slugDe}`,
+        'x-default': params.locale === 'en' ? `/${slug}` : `/${slugEn}`,
+      },
+    },
+  };
 }

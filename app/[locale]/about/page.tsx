@@ -13,23 +13,11 @@ import { MotionWrapper } from '@/components/MotionWrapper';
 import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BsTwitterX } from 'react-icons/bs';
+import { BASE_URL } from '@/lib/constants';
 
 type Props = {
   params: { locale: string };
 };
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({
-    locale: params.locale,
-    namespace: 'metadata.about',
-  });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    robots: { index: true, follow: true },
-  };
-}
 
 export default async function About({ params }: Props) {
   unstable_setRequestLocale(params.locale);
@@ -225,4 +213,25 @@ export default async function About({ params }: Props) {
       </section>
     </>
   );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.about',
+  });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    robots: { index: true, follow: true },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      languages: {
+        en: `${RouteId.about}`,
+        de: `/de${RouteId.about}`,
+        'x-default': `${RouteId.about}`,
+      },
+    },
+  };
 }

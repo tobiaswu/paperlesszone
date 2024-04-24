@@ -33,23 +33,11 @@ import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
 import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { BASE_URL } from '@/lib/constants';
 
 type Props = {
   params: { locale: string };
 };
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({
-    locale: params.locale,
-    namespace: 'metadata.solutions.paperless',
-  });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    robots: { index: true, follow: true },
-  };
-}
 
 export default async function Paperless({ params }: Props) {
   unstable_setRequestLocale(params.locale);
@@ -465,4 +453,25 @@ export default async function Paperless({ params }: Props) {
       </div>
     </>
   );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.solutions.paperless',
+  });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    robots: { index: true, follow: true },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      languages: {
+        en: `${RouteId.paperless}`,
+        de: `/de${RouteId.paperless}`,
+        'x-default': `${RouteId.paperless}`,
+      },
+    },
+  };
 }
