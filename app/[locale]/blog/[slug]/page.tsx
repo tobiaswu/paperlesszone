@@ -228,6 +228,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     (item) => item.attributes.locale === 'de'
   )?.attributes.slug;
 
+  const alternates = article?.attributes.localizations?.data.length;
+
   return {
     title: article?.attributes.title,
     description: article?.attributes.description,
@@ -236,21 +238,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: STRAPI_URL + article?.attributes.thumbnail?.data.attributes.url,
     },
     robots: { index: true, follow: true },
-    alternates: {
-      languages: {
-        en:
-          params.locale === 'en'
-            ? `${RouteId.blog}/${slug}`
-            : `${RouteId.blog}/${slugEn}`,
-        de:
-          params.locale === 'de'
-            ? `/de${RouteId.blog}/${slug}`
-            : `/de${RouteId.blog}/${slugDe}`,
-        'x-default':
-          params.locale === 'en'
-            ? `${RouteId.blog}/${slug}`
-            : `${RouteId.blog}/${slugEn}`,
-      },
-    },
+    alternates: alternates
+      ? {
+          languages: {
+            en:
+              params.locale === 'en'
+                ? `${RouteId.blog}/${slug}`
+                : `${RouteId.blog}/${slugEn}`,
+            de:
+              params.locale === 'de'
+                ? `/de${RouteId.blog}/${slug}`
+                : `/de${RouteId.blog}/${slugDe}`,
+            'x-default':
+              params.locale === 'en'
+                ? `${RouteId.blog}/${slug}`
+                : `${RouteId.blog}/${slugEn}`,
+          },
+        }
+      : undefined,
   };
 }
