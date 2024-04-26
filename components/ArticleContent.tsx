@@ -51,25 +51,25 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
               return <ArticleSectionTitle title={children} />;
             case 3:
               return (
-                <h3 className="text-2xl font-semibold pb-6 pt-12 leading-tight">
+                <h3 className="text-2xl font-semibold py-6 leading-tight">
                   {children}
                 </h3>
               );
             case 4:
               return (
-                <h4 className="text-xl font-semibold pb-6 pt-12 leading-tight">
+                <h4 className="text-xl font-semibold py-6 leading-tight">
                   {children}
                 </h4>
               );
             case 5:
               return (
-                <h5 className="text-lg font-semibold pb-6 pt-12 leading-tight">
+                <h5 className="text-lg font-semibold py-6 leading-tight">
                   {children}
                 </h5>
               );
             case 6:
               return (
-                <h6 className="text-base font-semibold pb-6 pt-12 leading-tight">
+                <h6 className="text-base font-semibold py-6 leading-tight">
                   {children}
                 </h6>
               );
@@ -78,7 +78,7 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
           }
         },
         image: ({ image }) => (
-          <div className="flex flex-col gap-1 mb-4">
+          <div className="flex flex-col gap-1 mt-4 mb-8">
             <Image
               className="rounded-lg border border-gunmetal-600 w-auto h-auto cursor-zoom-in"
               src={image.url}
