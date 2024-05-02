@@ -56,13 +56,7 @@ export const Footer = async () => {
           </p>
           <EmailSignup
             btnTitle={t('button.subscribe')}
-            disclaimer={
-              <>
-                {t('emailSignup.firstAgreement')}
-                <Link href={RouteId.privacy}>{t('privacy.title')}</Link>
-                {t('emailSignup.secondAgreement')}
-              </>
-            }
+            disclaimer={t('emailSignup.agreement')}
             loadingMsg={t('state.sending')}
           />
         </div>

@@ -1,22 +1,28 @@
 'use client';
 
-import Link from 'next/link';
+import { SubscribeButton } from './SubscribeButton';
+import { PiCheckCircleLight } from 'react-icons/pi';
+import { useFormState } from 'react-dom';
+import { submitEmailForm } from './actions';
 
 interface EmailSignupProps {
-  disclaimer: JSX.Element;
+  disclaimer: string;
   loadingMsg: string;
   btnTitle: string;
 }
 
-export const EmailSignup = ({ btnTitle }: EmailSignupProps) => {
-  // const [state, formAction] = useFormState(submitEmailForm, null);
-  // const error = state?.error?.email?._errors[0];
-  // const message: string | undefined = state?.message?.message;
+export const EmailSignup = ({
+  btnTitle,
+  disclaimer,
+  loadingMsg,
+}: EmailSignupProps) => {
+  const [state, formAction] = useFormState(submitEmailForm, null);
+  const error = state?.error?.email?._errors[0];
+  const message: string | undefined = state?.message?.message;
 
   return (
     <div>
-      {/* TODO: activate again when on beehive paid plan */}
-      {/* <form action={formAction} className="sm:join">
+      <form action={formAction} className="sm:join">
         <label className="form-control">
           <input
             type="email"
@@ -41,10 +47,7 @@ export const EmailSignup = ({ btnTitle }: EmailSignupProps) => {
           <span>{message}</span>
         </div>
       )}
-      <p className="text-sm pt-8">{disclaimer}</p> */}
-      <Link href="https://digitizerspace.beehiiv.com/subscribe">
-        <button className="btn btn-primary w-full">{btnTitle}</button>
-      </Link>
+      <p className="text-xs pt-4">{disclaimer}</p>
     </div>
   );
 };

@@ -150,7 +150,7 @@
       "offerSubtitle": "Wir installieren und konfigurieren das Paperless System für dich. Angepasst an deine Bedürfnisse. Inklusive unserer sicheren Backup Lösung.",
       "offerDescription": "Buche noch heute und profitiere schon in wenigen Tagen von dem papierlosen System! Wir installieren das papierlose System für dich auf einem Server deiner Wahl.",
       "offerFirstBenefit": "Spare Zeit und Nerven. Professionelle Installation und Konfiguration, angepasst an deine Anwendungsfälle.",
-      "offerSecondBenefit": "Sie erhältst eine individuelle Backup-Lösung, so dass deine Daten jederzeit wiederhergestellt werden können.",
+      "offerSecondBenefit": "Du erhältst eine individuelle Backup-Lösung, so dass deine Daten jederzeit wiederhergestellt werden können.",
       "offerThirdBenefit": "Du erhältst einen gesicherten Server nach den höchsten Cyber-Sicherheits-Standards, um deine Daten bestmöglich zu schützen.",
       "offerFourthBenefit": "Bonus: Du erhältst 90 Tage vollen Support nach deiner Bestellung und Tipps, wie du die Software optimal nutzt.",
       "offerFifthBenefit": "Bonus: Du bekommst alle deine Geräte integriert (Scanner, Mobiltelefone, etc.).",
@@ -256,7 +256,7 @@
     "paperless": "Das papierlose Büro"
   },
   "footer": {
-    "emailSignup": "Erhalte unseren kostenlosen Newsletter über Automatisierung & Digitalisierung",
+    "emailSignup": "Werde über neue Artikel benachrichtigt",
     "aboutUs": "Über uns",
     "privacy": "Datenschutz",
     "followUs": "Folge uns auf"
@@ -267,8 +267,7 @@
     "copyNote": "Sende mir eine Kopie per E-Mail"
   },
   "emailSignup": {
-    "firstAgreement": "Durch das Abonnieren akzeptierst du unsere ",
-    "secondAgreement": " und gibst dein Einverständnis, Mitteilungen von unserem Unternehmen zu erhalten."
+    "agreement": "KEIN SPAM. DU KANNST JEDERZEIT ABBESTELLEN"
   },
   "shareDialog": {
     "title": "Teilen",
@@ -282,7 +281,7 @@
     "aboutUs": "Über uns",
     "contact": "Kontakt",
     "submit": "Abschicken",
-    "subscribe": "Abonnieren",
+    "subscribe": "Jetzt Abonnieren",
     "sharePost": "Artikel teilen",
     "getStarted": "Jetzt starten",
     "startDemo": "Demo starten",

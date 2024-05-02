@@ -256,7 +256,7 @@
     "paperless": "The Paperless Office"
   },
   "footer": {
-    "emailSignup": "Sign up for our free automation & digitization newsletter",
+    "emailSignup": "Get notified of new articles",
     "aboutUs": "About us",
     "privacy": "Privacy",
     "followUs": "Follow us on"
@@ -267,8 +267,7 @@
     "copyNote": "Send me a copy to my email"
   },
   "emailSignup": {
-    "firstAgreement": "By subscribing you agree with our ",
-    "secondAgreement": " and provide consent to receive updates from our company."
+    "agreement": "NO SPAM. YOU CAN CANCEL ANYTIME"
   },
   "shareDialog": {
     "title": "Share",
@@ -282,7 +281,7 @@
     "aboutUs": "About us",
     "contact": "Contact",
     "submit": "Submit",
-    "subscribe": "Subscribe",
+    "subscribe": "Subscribe Now",
     "sharePost": "Share this post",
     "getStarted": "Get started now",
     "startDemo": "Start demo",
