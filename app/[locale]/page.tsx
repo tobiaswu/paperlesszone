@@ -3,7 +3,6 @@ import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup/EmailSignup';
 import { MotionWrapper } from '@/components/MotionWrapper';
-import { PartnerLogo } from '@/components/PartnerLogo';
 import { UseCaseCard } from '@/components/UseCaseCard';
 import {
   fadeInAnimationVariant,
@@ -15,7 +14,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   PiAlienLight,
-  PiArrowBendDownRightLight,
   PiFactoryLight,
   PiFileCloudLight,
   PiFilesLight,
@@ -91,7 +89,7 @@ export default async function Home({ params }: Props) {
               />
             </MotionWrapper>
           </div>
-          <MotionWrapper
+          {/* <MotionWrapper
             variants={itemAnimationVariant}
             className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8"
           >
@@ -118,7 +116,7 @@ export default async function Home({ params }: Props) {
                 alt="Wupperfeld Ventures Logo"
               />
             </div>
-          </MotionWrapper>
+          </MotionWrapper> */}
         </div>
         {/* <div className="-z-10 w-full opacity-30 absolute">
           <LottieAnimation src="/assets/animations/matrix.lottie" />
