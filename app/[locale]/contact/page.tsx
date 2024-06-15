@@ -50,7 +50,6 @@ export default async function Contact({ params }: Props) {
                 icon={<PiPhoneCallLight />}
                 optionLabel={t('contact.callOptionLabel')}
                 optionText={t('contact.callOptionText')}
-                url="https://calendly.com/tobiaswu/1-1-meeting-clone"
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
