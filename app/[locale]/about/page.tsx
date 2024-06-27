@@ -81,7 +81,7 @@ export default async function About({ params }: Props) {
         </div>
       </section>
 
-      <section className="container mx-auto max-w-2xl px-4">
+      <section className="container mx-auto max-w-2xl px-4 pb-32">
         <p className="mb-8">{t('about.firstSectionText')}</p>
         <p>
           {t('about.secondSectionText')}
@@ -108,7 +108,7 @@ export default async function About({ params }: Props) {
             />
             <div className="flex gap-2">
               <Link
-                href="https://twitter.com/hikingceo"
+                href="https://twitter.com/tobiaswup"
                 className="link link-primary"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -168,48 +168,6 @@ export default async function About({ params }: Props) {
           &nbsp;
           {t('about.eighthSectionText')}
         </p>
-      </section>
-
-      <section className="py-32 px-4 bg-blob-lg bg-cover bg-top">
-        {/* <motion.div
-          variants={transitions.fadeIn}
-          initial="hidden"
-          whileInView="show"
-          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12"
-        >
-          <div className="col-span-3 md:col-span-2">
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">
-              Book a consulting call with DigitizerSpace today!
-            </h2>
-            <p className="leading-relaxed mb-8">
-              Discover how your business could implement automation and
-              digitization solutions. Save costs and more benefits
-            </p>
-            <div className="flex flex-col gap-4 mb-8">
-              <CheckedText description="Call with the founder Tobias Wupperfeld" />
-              <CheckedText description='Bonus: Get our e-book "The full tool guide" for free (value $299)' />
-              <CheckedText description="100% money back guarantee - no questions asked" />
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn btn-primary">
-                Book now
-                <PiTriangleLight className="rotate-90" />
-              </button>
-              <button className="btn btn-neutral btn-outline">
-                Check out specific solutions
-                <PiTriangleLight className="rotate-90" />
-              </button>
-            </div>
-          </div>
-          <div className="col-span-3 md:col-span-1 place-self-center">
-            <div className="rounded-lg border-primary border-2 shadow-md bg-neutral px-8 py-32 relative">
-              <p className="uppercase text-center font-bold">
-                10 must have automation tools and how to use them
-              </p>
-              <PiPlusSquareFill className="text-5xl text-primary absolute -top-8 -left-8" />
-            </div>
-          </div>
-        </motion.div> */}
       </section>
     </>
   );
