@@ -322,6 +322,7 @@ export default async function Paperless({ params }: Props) {
             title={t('pricingCard.paperlessSystem.title')}
             subtitle={t('pricingCard.paperlessSystem.subtitle')}
             price={t('pricingCard.paperlessSystem.price')}
+            priceInfo={t('pricingCard.paperlessSystem.priceInfo')}
             btnText={tButton('getStarted')}
             btnUrl={RouteId.contact}
             className="border-primary"

@@ -146,26 +146,26 @@
       "useFirstStep": "Wirf einen Blick auf unsere ausgewählten Artikel und erfahre mehr über Workflows, Anleitungen, Tipps und Tricks zu Paperless-ngx.",
       "useSecondStep": "Abonniere unseren Newsletter, um benachrichtigt zu werden, wenn wir neue Artikel veröffentlichen.",
       "useThirdStep": "Bald Videokurse.",
-      "offerTitle": "Unser Angebot",
+      "offerTitle": "Unsere vollständig verwaltete Lösung",
       "offerSubtitle": "Wir installieren und konfigurieren das Paperless System für dich. Angepasst an deine Bedürfnisse. Inklusive unserer sicheren Backup Lösung.",
       "offerDescription": "Buche noch heute und profitiere schon in wenigen Tagen von dem papierlosen System! Wir installieren das papierlose System für dich auf einem Server deiner Wahl.",
       "offerFirstBenefit": "Spare Zeit und Nerven. Professionelle Installation und Konfiguration, angepasst an deine Anwendungsfälle.",
       "offerSecondBenefit": "Du erhältst eine individuelle Backup-Lösung, so dass deine Daten jederzeit wiederhergestellt werden können.",
       "offerThirdBenefit": "Du erhältst einen gesicherten Server nach den höchsten Cyber-Sicherheits-Standards, um deine Daten bestmöglich zu schützen.",
-      "offerFourthBenefit": "Bonus: Du erhältst 90 Tage vollen Support nach deiner Bestellung und Tipps, wie du die Software optimal nutzt.",
-      "offerFifthBenefit": "Bonus: Du bekommst alle deine Geräte integriert (Scanner, Mobiltelefone, etc.).",
-      "offerSixthBenefit": "Bonus: Du profitierst von unserer 30-tägigen Geld-zurück-Garantie, wenn du deine Effizienz nicht steigern kannst.",
+      "offerFourthBenefit": "Du erhältst vollen Support & Wartung und Tipps, wie du die Software optimal nutzt.",
+      "offerFifthBenefit": "Du bekommst alle deine Geräte integriert (Scanner, Mobiltelefone, etc.).",
+      "offerSixthBenefit": "Du profitierst von unserer 30-tägigen Geld-zurück-Garantie, wenn du deine Effizienz nicht steigern kannst.",
       "pricingTitle": "Bestellprozess",
       "pricingDescription": "<link>Buche jetzt dein kostenloses Informationsgespräch mit uns.</link> Wir werden herausfinden, ob diese Lösung für deinen Anwendungsfall geeignet ist. Wir geben dir auch gerne eine kurze Führung durch die Software und beantworten deine restlichen Fragen.",
       "pricingCard": {
         "paperlessSystem": {
           "title": "Das Papierlose Büro",
-          "subtitle": "Automatisiere deine Dokumentenverwaltung.",
+          "subtitle": "Automatisiere deine Dokumentenverwaltung. Vollständig verwaltete Lösung.",
           "priceOld": "4990€",
           "discount": "Launch Special: 80% Rabatt",
           "badgeText": "Auf Anfrage",
-          "price": "Preis auf Anfrage",
-          "priceInfo": "Einmalzahlung",
+          "price": "47€ / Monat",
+          "priceInfo": "+ 470€ einmalige Setup-Kosten",
           "item": {
             "firstName": "Installation von Paperless-ngx auf deinem Firmenserver oder einem virtuellen privaten Server.",
             "firstInfo": "Falls du noch keinen eigenen Server hast, beraten wir dich und helfen dir, die richtige Entscheidung zu treffen.",
@@ -175,12 +175,12 @@
             "thirdInfo": "Wir sichern deinen Server, richten dir eine verschlüsselte Verbindung ein und stellen sicher, dass nur von dir autorisierte Personen Zugang bekommen.",
             "fourthName": "Individuelle Konfiguration von Paperless-ngx.",
             "fourthInfo": "Wir konfigurieren Paperless-ngx nach deinen Wünschen. Dies kann z. B. die Integration eines Scanners gehören. Wir helfen dir zusätzliche Geräte einzurichten, damit du auch unterwegs Scans in Paperless-ngx speichern kannst.",
-            "fifthName": "Bonus: 3 Monate Premium Support & Wartungspaket.",
+            "fifthName": "Fortlaufender Premium Support & Wartungspaket.",
             "fifthInfo": "Wir helfen dir bei der Einrichtung deines Arbeitsablaufs und individueller Konfigurationen. Darüber hinaus sorgen wir dafür, dass deine Instanz auf dem neuesten Stand bleibt.",
             "sixthName": "Bonus: Digitizer-Space-Garantie",
             "sixthInfo": "Wir glauben an unsere Lösung und geben dir das Geld zurück, ohne Wenn und Aber, wenn du deine Effizienz nach 30 Tagen nicht steigern kannst.",
             "seventhName": "Serverkosten nicht inklusive.",
-            "seventhInfo": "Die Kosten für einen VPS beginnen überlicherweise bei ca. €4,50/Monat (200 GB Speicherplatz) und sind jederzeit erweiterbar."
+            "seventhInfo": "Die Kosten für einen VPS beginnen überlicherweise bei ca. €4,50/Monat (400 GB Speicherplatz) und sind jederzeit erweiterbar."
           }
         },
         "testSystem": {
