@@ -53,7 +53,7 @@ export const Navbar = async () => {
           <LocaleSwitcher />
         </div>
         <Link className="ml-4" href={RouteId.contact}>
-          <button className="btn btn-neutral border-gunmetal-600">
+          <button className="btn btn-primary border-gunmetal-600">
             {t('button.contact')}
           </button>
         </Link>
