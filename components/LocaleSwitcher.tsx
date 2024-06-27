@@ -17,13 +17,11 @@ export const LocaleSwitcher = () => {
     let newPathname = pathname;
     if (locale !== 'en') {
       newPathname = newPathname.replace(`/${locale}`, `/${nextLocale}`);
-      router.push(newPathname);
-      router.refresh();
     } else {
       newPathname = `/${nextLocale + newPathname}`;
-      router.push(newPathname);
-      router.refresh();
     }
+    router.push(newPathname);
+    router.refresh();
   };
 
   const handleLocaleSwitch = (nextLocale: string) => {
@@ -40,15 +38,13 @@ export const LocaleSwitcher = () => {
         const className = activeLocale === locale ? 'tab tab-active' : 'tab';
 
         if (isArticle) {
-          if (activeLocale.includes(locale)) {
-            return (
-              <button key={locale} className={className} role="tab">
-                {locale}
-              </button>
-            );
-          }
           return (
-            <button disabled key={locale} className={className} role="tab">
+            <button
+              disabled={!activeLocale.includes(locale)}
+              key={locale}
+              className={className}
+              role="tab"
+            >
               {locale}
             </button>
           );
