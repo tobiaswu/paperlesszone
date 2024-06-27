@@ -1,27 +1,27 @@
 {
   "root": {
-    "heroTitle": "Skaliere und digitalisiere dein Unternehmen mit intelligenten Automatisierungen",
-    "heroSubtitle": "Entdecke Anwendungsbereiche und",
+    "heroTitle": "Automatisiere Dein Geschäft Mit Maßgeschneiderten KI-Lösungen",
+    "heroSubtitle": "Wir entwerfen und bauen AI-Tools, die auf deine Geschäftsziele zugeschnitten sind. Ob du einen intelligenten Chatbot oder eine fortgeschrittene Automatisierung benötigst, wir entwickeln Lösungen, die...",
     "partnerTitle": "In Zusammenarbeit mit",
     "discoverCard": {
-      "systemTitle": "Baue Systeme",
-      "automateTitle": "Automatisiere Prozesse",
-      "eliminateTitle": "Eliminiere Stift & Papier",
-      "costTitle": "Reduziere Kosten",
-      "efficiencyTitle": "Steigere Effizienz",
-      "happyTitle": "Erhöhe Mitarbeiter-Zufriedenheit"
+      "systemTitle": "Systeme schaffen",
+      "automateTitle": "Prozesse automatisieren",
+      "eliminateTitle": "Stift & Papier eliminieren",
+      "costTitle": "Kosten reduzieren",
+      "efficiencyTitle": "Effizienz steigern",
+      "happyTitle": "Mitarbeiter-Zufriedenheit erhöhen"
     },
     "useCaseSection": {
-      "title": "Lerne basierend auf unseren Anwendungsfällen aus der Praxis",
-      "description": "Wir sind ein Team von AI-Geeks, Software-Ingenieuren und Unternehmern, die leidenschaftlich daran arbeiten, innovative Lösungen zu schaffen. Wir bleiben auf dem neuesten Stand der Technik und Software-Tools und testen kontinuierlich neue Produkte. Wir kombinieren unser technisches Know-how mit unseren Brancheneinblicken, um auf DigitizerSpace Lösungen zu entwickeln und zu veröffentlichen, die sowohl modern als auch einfach zu bedienen sind.",
+      "title": "Lösungen basierend auf realen Anwendungsfällen",
+      "description": "Wir sind ein Team von AI-Geeks, Software-Ingenieuren und Unternehmern, die leidenschaftlich daran arbeiten, innovative Lösungen zu schaffen. Wir bleiben auf dem neuesten Stand der Technik und Software-Tools und testen kontinuierlich neue Produkte. Wir kombinieren unser technisches Know-how mit unseren Brancheneinblicken, um Lösungen für dich zu entwickeln, die sowohl modern als auch einfach zu bedienen sind.",
       "automationTitle": "Automatisierung",
-      "automationDescription": "Verbinde eine Vielzahl von Apps miteinander via APIs und spare Unmengen deiner produktiven Zeit",
+      "automationDescription": "Verknüpfung einer Vielzahl von Apps via APIs, um Unmengen produktiver Zeit einzusparen",
       "workflowTitle": "Arbeitsabläufe",
-      "workflowDescription": "Erstelle systematische Ansätze für deine alltäglichen Aufgaben und einfach zu befolgende Routinen für deine Mitarbeiter",
+      "workflowDescription": "Systematische Ansätze für deine alltäglichen Aufgaben und einfach zu befolgende Routinen für deine Mitarbeiter",
       "digitizationTitle": "Digitalisierung",
-      "digitizationDescription": "Eliminiere Stift und Papier und mache jede Information verfügbar für dein Team",
-      "aiTitle": "AI Generierung",
-      "aiDescription": "Verwende künstliche Intelligenz, um die Inhalte zu generieren, die du benötigst, wie Bilder, Texte und Videos"
+      "digitizationDescription": "Eliminierung von Stift und Papier, um jede Information für dein Team verfügbar zu machen",
+      "aiTitle": "AI Ära",
+      "aiDescription": "Generierung der Inhalte, die du benötigst, wie Bild, Text, Audio oder Video"
     },
     "blogSection": {
       "title": "Entdecke unseren Blog"
@@ -276,16 +276,16 @@
     "shareLink": "Diesen Link teilen"
   },
   "button": {
-    "learnMore": "Mehr erfahren",
+    "learnMore": "Mehr Erfahren",
     "solutions": "Lösungen",
-    "aboutUs": "Über uns",
-    "contact": "Kontakt",
+    "aboutUs": "Über Uns",
+    "contact": "Kontaktiere Uns",
     "submit": "Abschicken",
     "subscribe": "Jetzt Abonnieren",
-    "sharePost": "Artikel teilen",
-    "getStarted": "Jetzt starten",
-    "startDemo": "Demo starten",
-    "bookDemo": "Demo buchen",
+    "sharePost": "Artikel Teilen",
+    "getStarted": "Jetzt Starten",
+    "startDemo": "Demo Starten",
+    "bookDemo": "Demo Buchen",
     "copy": "Kopieren"
   },
   "state": {
@@ -330,7 +330,7 @@
   },
   "metadata": {
     "root": {
-      "title": "DigitizerSpace - KI Automatisierung und Digitalisierung",
+      "title": "DigitizerSpace - Wir implementieren KI Lösungen für dein Geschäft",
       "description": "▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
     },
     "solutions": {

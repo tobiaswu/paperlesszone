@@ -1,10 +1,10 @@
 {
   "root": {
-    "heroTitle": "Scale and Digitalize your Business with Intelligent Automations",
-    "heroSubtitle": "Discover areas of application and",
+    "heroTitle": "Automate Your Business With Our Custom Built AI Solutions",
+    "heroSubtitle": "We design and build AI tools tailored to your business objectives. Whether you need a smart chatbot or an advanced automation, we engineer solutions which...",
     "partnerTitle": "In cooperation with",
     "discoverCard": {
-      "systemTitle": "Build systems",
+      "systemTitle": "Create systems",
       "automateTitle": "Automate processes",
       "eliminateTitle": "Eliminate pen & paper",
       "costTitle": "Reduce costs",
@@ -12,16 +12,16 @@
       "happyTitle": "Boost employee happiness"
     },
     "useCaseSection": {
-      "title": "Learn based on our business use cases",
-      "description": "We are a team of AI geeks, software engineers and entrepreneurs who are passionate about creating innovative solutions. We stay up-to-date with the latest technologies and tools and continuously test new products. We combine our technical expertise with our industry insights to create and publish solutions on DigitizerSpace that are both cutting-edge and simple to use.",
+      "title": "Solutions based on your business use cases",
+      "description": "We are a team of AI geeks, software engineers and entrepreneurs who are passionate about creating innovative solutions. We stay up-to-date with the latest technologies and tools and continuously test new products. We combine our technical expertise with our industry insights to engineer solutions for you that are both cutting-edge and simple to use.",
       "automationTitle": "Automations",
-      "automationDescription": "Connect various apps with each other via APIs and safe tons of time",
+      "automationDescription": "Connection of various apps via APIs to safe tons of time",
       "workflowTitle": "Workflows",
-      "workflowDescription": "Create systematic approaches to your daily tasks and easy to follow routines for your employees",
+      "workflowDescription": "Systematic approaches to your daily tasks and easy to follow routines for your employees",
       "digitizationTitle": "Digitization",
-      "digitizationDescription": "Eliminate pen and paper and make every information accessible to your team",
-      "aiTitle": "AI Generation",
-      "aiDescription": "Use artificial intelligence to generate the content you need like images, texts, and videos"
+      "digitizationDescription": "Elimination of pen and paper to make every information accessible to your team",
+      "aiTitle": "AI Era",
+      "aiDescription": "Generation of the content you need like image, text, audio or video"
     },
     "blogSection": {
       "title": "Explore our blog"
@@ -276,16 +276,16 @@
     "shareLink": "Share this link"
   },
   "button": {
-    "learnMore": "Learn more",
+    "learnMore": "Learn More",
     "solutions": "Solutions",
-    "aboutUs": "About us",
-    "contact": "Contact",
+    "aboutUs": "About Us",
+    "contact": "Contact Us",
     "submit": "Submit",
     "subscribe": "Subscribe Now",
-    "sharePost": "Share this post",
-    "getStarted": "Get started now",
-    "startDemo": "Start demo",
-    "bookDemo": "Book demo",
+    "sharePost": "Share This Post",
+    "getStarted": "Get Started Now",
+    "startDemo": "Start Demo",
+    "bookDemo": "Book Demo",
     "copy": "Copy"
   },
   "state": {
@@ -330,7 +330,7 @@
   },
   "metadata": {
     "root": {
-      "title": "DigitizerSpace - Automation & Digitization Solutions",
+      "title": "DigitizerSpace - We implement AI solutions for your business",
       "description": "▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
     },
     "solutions": {
