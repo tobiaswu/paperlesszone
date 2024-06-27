@@ -18,7 +18,7 @@ export const DiscoverCard = ({ icon, title, url }: DiscoverCardProps) => {
               <span className="text-5xl text-primary group-hover:text-neutral">
                 {icon}
               </span>
-              <h3 className="card-title uppercase text-lg mt-4">{title}</h3>
+              <h3 className="card-title uppercase text-base mt-4">{title}</h3>
             </div>
           </div>
         </Link>
