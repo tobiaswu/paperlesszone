@@ -36,6 +36,10 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
+      <div className="relative h-full w-full bg-slate-950">
+        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
+      </div>
       <div className="container mx-auto hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <MotionWrapper
@@ -132,9 +136,6 @@ export default async function Home({ params }: Props) {
             </div>
           </MotionWrapper> */}
         </div>
-        {/* <div className="-z-10 w-full opacity-30 absolute">
-          <LottieAnimation src="/assets/animations/matrix.lottie" />
-        </div> */}
       </div>
 
       <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover xl:bg-contain bg-center">
