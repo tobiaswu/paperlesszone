@@ -93,6 +93,8 @@
     "title": "Privacy Policy"
   },
   "blog": {
+    "title": "Blog",
+    "description": "Benefit from new technology and use it to drive profitability in your business. Stay up to date with trends and tools, and implement solutions that will automate and digitize your business.",
     "category": {
       "all": "All",
       "useCases": "Use Cases",

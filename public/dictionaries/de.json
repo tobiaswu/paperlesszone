@@ -93,6 +93,8 @@
     "title": "Datenschutzerklärung"
   },
   "blog": {
+    "title": "Blog",
+    "description": "Profitiere von neuen Technologien und nutze sie, um die Rentabilität deines Unternehmens zu steigern. Entdecke die neuesten Trends und Tools, die dir helfen, deine Geschäftsprozesse zu automatisieren und zu digitalisieren.",
     "category": {
       "all": "Alle",
       "useCases": "Praxis",

@@ -41,54 +41,65 @@ export default async function Blog({ params, searchParams }: Props) {
       )
     : articles;
 
-  return filteredArticles ? (
-    <div className="container mx-auto py-16 px-4 grid grid-cols-6 gap-8">
-      {filteredArticles.map((article, index) => {
-        if (index === 0) {
-          return (
-            <ArticleCard
-              key={article.id}
-              className="col-span-6 lg:card-side min-h-[324px]"
-              preview
-              category={t(
-                `blog.category.${
-                  article.attributes.category?.data.attributes.item as Category
-                }`
-              )}
-              description={article.attributes.description}
-              slug={article.attributes.slug}
-              title={article.attributes.title}
-              readTime={article.attributes.reading_time}
-              readTimeText={t('blog.info.readTime')}
-              thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
-              thumbnailAltText={
-                article.attributes.thumbnail?.data.attributes.alternativeText
-              }
-            />
-          );
-        }
-        return (
-          <ArticleCard
-            key={article.id}
-            className="col-span-6 sm:col-span-3 lg:col-span-2"
-            category={t(
-              `blog.category.${
-                article.attributes.category?.data.attributes.item as Category
-              }`
-            )}
-            slug={article.attributes.slug}
-            title={article.attributes.title}
-            readTime={article.attributes.reading_time}
-            readTimeText={t('blog.info.readTime')}
-            thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
-            thumbnailAltText={
-              article.attributes.thumbnail?.data.attributes.alternativeText
+  return (
+    <div className="container mx-auto pt-8 pb-16 px-4">
+      <h1 className="text-4xl font-bold mb-6">{t('blog.title')}</h1>
+      <p className="mb-8 max-w-xl">{t('blog.description')}</p>
+      {filteredArticles ? (
+        <div className="grid grid-cols-6 gap-8">
+          {filteredArticles.map((article, index) => {
+            if (index === 0) {
+              return (
+                <ArticleCard
+                  key={article.id}
+                  className="col-span-6 lg:card-side min-h-[324px]"
+                  preview
+                  category={t(
+                    `blog.category.${
+                      article.attributes.category?.data.attributes
+                        .item as Category
+                    }`
+                  )}
+                  description={article.attributes.description}
+                  slug={article.attributes.slug}
+                  title={article.attributes.title}
+                  readTime={article.attributes.reading_time}
+                  readTimeText={t('blog.info.readTime')}
+                  thumbnailUrl={
+                    article.attributes.thumbnail?.data.attributes.url
+                  }
+                  thumbnailAltText={
+                    article.attributes.thumbnail?.data.attributes
+                      .alternativeText
+                  }
+                />
+              );
             }
-          />
-        );
-      })}
+            return (
+              <ArticleCard
+                key={article.id}
+                className="col-span-6 sm:col-span-3 lg:col-span-2"
+                category={t(
+                  `blog.category.${
+                    article.attributes.category?.data.attributes
+                      .item as Category
+                  }`
+                )}
+                slug={article.attributes.slug}
+                title={article.attributes.title}
+                readTime={article.attributes.reading_time}
+                readTimeText={t('blog.info.readTime')}
+                thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
+                thumbnailAltText={
+                  article.attributes.thumbnail?.data.attributes.alternativeText
+                }
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <NotFound text={t('blog.info.loadingError')} />
+      )}
     </div>
-  ) : (
-    <NotFound text={t('blog.info.loadingError')} />
   );
 }
