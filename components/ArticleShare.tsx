@@ -47,7 +47,18 @@ export const ArticleShare = ({
   };
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(shareUrl).then(() => setToastOpen(true));
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      let timeout: NodeJS.Timeout;
+
+      setToastOpen(true);
+      timeout = setTimeout(() => {
+        setToastOpen(false);
+      }, 3000);
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    });
   };
 
   const handleCloseClick = () => {

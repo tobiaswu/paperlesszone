@@ -4,7 +4,7 @@ import { useFormState } from 'react-dom';
 import { submitCommentForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
 import { PiCheckCircleLight } from 'react-icons/pi';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { useDarkMode } from '@/utils/hooks';
 
@@ -28,6 +28,7 @@ export const CommentForm = ({
   const [state, formAction] = useFormState(submitCommentForm, null);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [darkMode] = useDarkMode();
+  const [showMessage, setShowMessage] = useState(false);
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
@@ -38,6 +39,21 @@ export const CommentForm = ({
   const onVerify = useCallback(() => {
     setCaptchaVerified(true);
   }, []);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (message) {
+      setShowMessage(true);
+      timeout = setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [message]);
 
   return (
     <div>
@@ -124,7 +140,7 @@ export const CommentForm = ({
           submitBtnText={submitBtnText}
         />
       </form>
-      {message && (
+      {showMessage && (
         <div className="alert alert-info mt-4">
           <PiCheckCircleLight className="text-2xl" />
           <span>{message}</span>

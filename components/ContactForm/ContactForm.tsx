@@ -4,6 +4,7 @@ import { useFormState } from 'react-dom';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
+import { useEffect, useState } from 'react';
 
 interface ContactFormProps {
   copyNote: string;
@@ -21,6 +22,7 @@ export const ContactForm = ({
   textareaPlaceholder,
 }: ContactFormProps) => {
   const [state, formAction] = useFormState(submitContactForm, null);
+  const [showMessage, setShowMessage] = useState(false);
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
@@ -28,6 +30,21 @@ export const ContactForm = ({
   const textError = state?.error?.text?._errors[0];
   const checkboxError = state?.error?.checkbox?._errors[0];
   const message: string | undefined = state?.message?.message;
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (message) {
+      setShowMessage(true);
+      timeout = setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [message]);
 
   return (
     <div>
@@ -107,7 +124,7 @@ export const ContactForm = ({
         </label>
         <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
       </form>
-      {message && (
+      {showMessage && (
         <div className="alert alert-info mt-4">
           <PiCheckCircleLight className="text-2xl" />
           <span>{message}</span>
