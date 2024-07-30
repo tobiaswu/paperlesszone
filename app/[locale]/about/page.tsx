@@ -37,7 +37,7 @@ export default async function About({ params }: Props) {
               className="max-w-6xl"
               variants={itemAnimationVariant}
             >
-              <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
+              <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed mt-20">
                 {t('about.title')}
               </h1>
             </MotionWrapper>
@@ -75,7 +75,7 @@ export default async function About({ params }: Props) {
               </MotionWrapper>
             </div>
             <Image
-              className="rounded-lg max-w-3xl w-full mt-16"
+              className="rounded-lg max-w-6xl w-full mt-16"
               src="/assets/images/ai-hacker-wide.webp"
               alt="Ai generated image of a hacker in a space suit in front of a macbook."
               width={768}
@@ -86,7 +86,7 @@ export default async function About({ params }: Props) {
         </div>
       </section>
 
-      <section className="container mx-auto max-w-2xl px-4 pb-32">
+      <section className="container mx-auto max-w-4xl px-4 pb-32">
         <p className="mb-8">{t('about.firstSectionText')}</p>
         <p>
           {t('about.secondSectionText')}
@@ -101,13 +101,13 @@ export default async function About({ params }: Props) {
           {t('about.firstSubtitle')}
         </h2>
         <p>{t('about.fourthSectionText')}</p>
-        <div className="flex flex-col sm:flex-row gap-4 items-center my-8">
-          <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col sm:flex-row gap-8 items-center my-8">
+          <div className="flex flex-col items-center gap-4">
             <Image
-              className="rounded-full border border-gunmetal-600 w-48 h-auto"
+              className="rounded-lg border border-gunmetal-600 w-72 h-auto"
               src="/assets/images/founder-portrait.webp"
-              alt="Portrait of our founder Tobias Wupperfeld"
-              width={192}
+              alt="Portrait of the founder Tobias Wupperfeld"
+              width={320}
               height={0}
               loading="lazy"
             />
