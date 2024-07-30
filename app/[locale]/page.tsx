@@ -37,84 +37,86 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
-      <div className="relative h-full w-full">
+      <div className="relative h-full w-full overflow-x-hidden">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
-      </div>
-      <div className="container mx-auto hero min-h-screen relative">
-        <div className="hero-content text-center flex flex-col">
-          <MotionWrapper
-            className="max-w-6xl flex flex-col items-center justify-center"
-            variants={fadeInAnimationVariant}
-          >
-            <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
-              {t('root.heroTitle')}
-            </h1>
-            <div className="mt-4 flex justify-center items-center gap-6">
-              <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                <Link href={RouteId.contact}>
-                  <button className="relative btn btn-lg">
-                    {t('button.contact')}
+        <div className="container mx-auto hero min-h-screen relative">
+          <div className="hero-content text-center flex flex-col">
+            <MotionWrapper
+              className="max-w-6xl flex flex-col items-center justify-center"
+              variants={fadeInAnimationVariant}
+            >
+              <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
+                {t('root.heroTitle')}
+              </h1>
+              <div className="mt-4 flex justify-center items-center gap-6">
+                <div className="relative group">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                  <Link href={RouteId.contact}>
+                    <button className="relative btn btn-lg">
+                      {t('button.contact')}
+                    </button>
+                  </Link>
+                </div>
+                <Link href={RouteId.solutions}>
+                  <button className="btn btn-lg">
+                    {t('button.solutions')}
                   </button>
                 </Link>
               </div>
-              <Link href={RouteId.solutions}>
-                <button className="btn btn-lg">
-                  {t('button.solutions')}
-                </button>
-              </Link>
+              <h2 className="text-xl text-center max-w-2xl my-8">
+                {t('root.heroSubtitle')}
+              </h2>
+            </MotionWrapper>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiFactoryLight />}
+                  title={t('root.discoverCard.systemTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiRobotLight />}
+                  title={t('root.discoverCard.automateTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiFilesLight />}
+                  title={t('root.discoverCard.eliminateTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={3} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiPiggyBankLight />}
+                  title={t('root.discoverCard.costTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={4} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiRocketLaunchLight />}
+                  title={t('root.discoverCard.efficiencyTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={5} variants={staggerAnimationVariant}>
+                <DiscoverCard
+                  icon={<PiSmileyLight />}
+                  title={t('root.discoverCard.happyTitle')}
+                  url={RouteId.solutions}
+                />
+              </MotionWrapper>
             </div>
-            <h2 className="text-xl text-center max-w-2xl my-8">{t('root.heroSubtitle')}</h2>
-          </MotionWrapper>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-            <MotionWrapper index={0} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiFactoryLight />}
-                title={t('root.discoverCard.systemTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
-            <MotionWrapper index={1} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiRobotLight />}
-                title={t('root.discoverCard.automateTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
-            <MotionWrapper index={2} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiFilesLight />}
-                title={t('root.discoverCard.eliminateTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
-            <MotionWrapper index={3} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiPiggyBankLight />}
-                title={t('root.discoverCard.costTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
-            <MotionWrapper index={4} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiRocketLaunchLight />}
-                title={t('root.discoverCard.efficiencyTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
-            <MotionWrapper index={5} variants={staggerAnimationVariant}>
-              <DiscoverCard
-                icon={<PiSmileyLight />}
-                title={t('root.discoverCard.happyTitle')}
-                url={RouteId.solutions}
-              />
-            </MotionWrapper>
           </div>
         </div>
       </div>
 
-      <section className="py-32 sm:pb-64 px-4 flex flex-col items-center justify-center">
+      <section className="overflow-x-hidden py-32 sm:pb-64 px-4 flex flex-col items-center justify-center">
         <BlobMedium />
         <div className="container mx-auto z-20">
           <MotionWrapper variants={itemAnimationVariant}>
@@ -316,7 +318,7 @@ export default async function Home({ params }: Props) {
 
       <section
         id="newsletter"
-        className="pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center"
+        className="overflow-x-hidden pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center"
       >
         <BlobLarge />
         <MotionWrapper

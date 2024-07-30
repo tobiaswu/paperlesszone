@@ -128,76 +128,79 @@ export default async function Paperless({ params }: Props) {
 
   return (
     <>
-      <div className="relative h-full w-full">
+      <div className="relative h-full w-full overflow-x-hidden">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
-      </div>
-      <div className="container mx-auto hero min-h-screen relative">
-        <div className="hero-content text-center flex flex-col">
-          <MotionWrapper className="max-w-6xl" variants={itemAnimationVariant}>
-            <h1 className="mt-20 text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
-              {t('title')}
-            </h1>
-          </MotionWrapper>
-          <MotionWrapper variants={itemAnimationVariant}>
-            <p className="mt-8 mb-2 max-w-2xl mx-auto leading-relaxed">
-              {t('description')}
-            </p>
-          </MotionWrapper>
-          <MotionWrapper variants={itemAnimationVariant}>
-            <Link href="#pricing">
-              <button className="btn btn-secondary btn-lg mb-16 capitalize">
-                {tButton('getStarted')}
-              </button>
-            </Link>
-          </MotionWrapper>
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="flex flex-col gap-4 max-w-2xl">
-              <MotionWrapper index={0} variants={staggerAnimationVariant}>
-                <Image
-                  className="h-auto w-96"
-                  src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
-                  alt="White logo of paperless-ngx"
-                  width={0}
-                  height={184}
-                  loading="lazy"
-                />
-              </MotionWrapper>
-              <MotionWrapper index={1} variants={staggerAnimationVariant}>
-                <CheckedText description={t('firstCheckedText')} />
-              </MotionWrapper>
-              <MotionWrapper index={2} variants={staggerAnimationVariant}>
-                <CheckedText description={t('secondCheckedText')} />
-              </MotionWrapper>
-              <MotionWrapper index={3} variants={staggerAnimationVariant}>
-                <CheckedText description={t('thirdCheckedText')} />
-              </MotionWrapper>
-            </div>
-            <div className="flex flex-col gap-4">
-              <MotionWrapper index={0} variants={staggerAnimationVariant}>
-                <StatCard
-                  icon={<PiClockCountdownLight />}
-                  title={t('averageTimeTitle')}
-                  value={t('averageTimeValue')}
-                  description={t('averageTimeDescription')}
-                />
-              </MotionWrapper>
-              <MotionWrapper index={1} variants={staggerAnimationVariant}>
-                <StatCard
-                  icon={<PiRobotLight />}
-                  title={t('teachTitle')}
-                  value={t('teachValue')}
-                  description={t('teachDescription')}
-                />
-              </MotionWrapper>
-              <MotionWrapper index={2} variants={staggerAnimationVariant}>
-                <StatCard
-                  icon={<PiKeyLight />}
-                  title={t('dataSafetyTitle')}
-                  value={t('dataSafetyValue')}
-                  description={t('dataSafetyDescription')}
-                />
-              </MotionWrapper>
+        <div className="container mx-auto hero min-h-screen relative">
+          <div className="hero-content text-center flex flex-col">
+            <MotionWrapper
+              className="max-w-6xl"
+              variants={itemAnimationVariant}
+            >
+              <h1 className="mt-20 text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
+                {t('title')}
+              </h1>
+            </MotionWrapper>
+            <MotionWrapper variants={itemAnimationVariant}>
+              <p className="mt-8 mb-2 max-w-2xl mx-auto leading-relaxed">
+                {t('description')}
+              </p>
+            </MotionWrapper>
+            <MotionWrapper variants={itemAnimationVariant}>
+              <Link href="#pricing">
+                <button className="btn btn-secondary btn-lg mb-16 capitalize">
+                  {tButton('getStarted')}
+                </button>
+              </Link>
+            </MotionWrapper>
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="flex flex-col gap-4 max-w-2xl">
+                <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                  <Image
+                    className="h-auto w-96"
+                    src="https://docs.paperless-ngx.com/assets/logo_full_white.svg"
+                    alt="White logo of paperless-ngx"
+                    width={0}
+                    height={184}
+                    loading="lazy"
+                  />
+                </MotionWrapper>
+                <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                  <CheckedText description={t('firstCheckedText')} />
+                </MotionWrapper>
+                <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                  <CheckedText description={t('secondCheckedText')} />
+                </MotionWrapper>
+                <MotionWrapper index={3} variants={staggerAnimationVariant}>
+                  <CheckedText description={t('thirdCheckedText')} />
+                </MotionWrapper>
+              </div>
+              <div className="flex flex-col gap-4">
+                <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                  <StatCard
+                    icon={<PiClockCountdownLight />}
+                    title={t('averageTimeTitle')}
+                    value={t('averageTimeValue')}
+                    description={t('averageTimeDescription')}
+                  />
+                </MotionWrapper>
+                <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                  <StatCard
+                    icon={<PiRobotLight />}
+                    title={t('teachTitle')}
+                    value={t('teachValue')}
+                    description={t('teachDescription')}
+                  />
+                </MotionWrapper>
+                <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                  <StatCard
+                    icon={<PiKeyLight />}
+                    title={t('dataSafetyTitle')}
+                    value={t('dataSafetyValue')}
+                    description={t('dataSafetyDescription')}
+                  />
+                </MotionWrapper>
+              </div>
             </div>
           </div>
         </div>
@@ -270,7 +273,7 @@ export default async function Paperless({ params }: Props) {
         </div>
       </div>
 
-      <section>
+      <section className="overflow-x-hidden">
         <div className="container mx-auto z-20 px-4 py-16">
           <div className="flex gap-4 items-center mb-8">
             <PiMedalLight className="text-5xl text-yellow-400" />

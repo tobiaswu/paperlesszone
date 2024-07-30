@@ -169,7 +169,7 @@ export default async function Article({ params }: Props) {
             />
           </div>
 
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 overflow-x-hidden">
             <ArticleContent content={article.attributes.content} />
           </div>
         </div>
