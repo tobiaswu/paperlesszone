@@ -49,14 +49,16 @@ export const Navbar = async () => {
         })}
       </div>
       <div className="navbar-end">
-        <div className="hidden lg:block">
+        <div className="hidden lg:block mr-6">
           <LocaleSwitcher />
         </div>
-        <Link className="ml-4" href={RouteId.contact}>
-          <button className="btn btn-primary border-gunmetal-600">
-            {t('button.contact')}
-          </button>
-        </Link>
+
+        <div className="relative group">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <Link href={RouteId.contact}>
+            <button className="relative btn btn-sm">{t('button.contact')}</button>
+          </Link>
+        </div>
       </div>
     </header>
   );

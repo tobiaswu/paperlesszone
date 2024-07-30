@@ -44,25 +44,28 @@ export default async function Home({ params }: Props) {
       <div className="container mx-auto hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <MotionWrapper
-            className="max-w-6xl"
+            className="max-w-6xl flex flex-col items-center justify-center"
             variants={fadeInAnimationVariant}
           >
             <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
               {t('root.heroTitle')}
             </h1>
-            <div className="mt-4 flex justify-center items-center gap-4">
-              <Link href={RouteId.contact}>
-                <button className="btn btn-primary btn-lg">
-                  {t('button.contact')}
-                </button>
-              </Link>
+            <div className="mt-4 flex justify-center items-center gap-6">
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                <Link href={RouteId.contact}>
+                  <button className="relative btn btn-lg">
+                    {t('button.contact')}
+                  </button>
+                </Link>
+              </div>
               <Link href={RouteId.solutions}>
-                <button className="btn btn-outline btn-lg">
+                <button className="btn btn-lg">
                   {t('button.solutions')}
                 </button>
               </Link>
             </div>
-            <h2 className="text-xl my-8">{t('root.heroSubtitle')}</h2>
+            <h2 className="text-xl text-center max-w-2xl my-8">{t('root.heroSubtitle')}</h2>
           </MotionWrapper>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             <MotionWrapper index={0} variants={staggerAnimationVariant}>
@@ -120,7 +123,7 @@ export default async function Home({ params }: Props) {
             </h2>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
-            <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
+            <p className="mb-12 text-center max-w-2xl mx-auto leading-relaxed">
               {t('root.useCaseSection.description')}
             </p>
           </MotionWrapper>
@@ -163,15 +166,18 @@ export default async function Home({ params }: Props) {
             {t('root.blogSection.title')}
           </h2>
         </MotionWrapper>
-        <MotionWrapper variants={fadeInAnimationVariant}>
+        <MotionWrapper className="mb-8" variants={fadeInAnimationVariant}>
           <BlogPreview />
         </MotionWrapper>
-        <Link href={RouteId.blog}>
-          <button className="btn btn-primary mt-8">
-            {t('button.learnMore')}
-            <PiTriangleLight className="rotate-90" />
-          </button>
-        </Link>
+        <div className="relative group w-fit">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+          <Link href={RouteId.blog}>
+            <button className="relative btn">
+              {t('button.learnMore')}
+              <PiTriangleLight className="rotate-90" />
+            </button>
+          </Link>
+        </div>
       </section>
 
       {/* <section className="py-32">

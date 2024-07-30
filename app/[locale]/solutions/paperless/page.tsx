@@ -140,7 +140,7 @@ export default async function Paperless({ params }: Props) {
             </h1>
           </MotionWrapper>
           <MotionWrapper variants={itemAnimationVariant}>
-            <p className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed">
+            <p className="mt-8 mb-2 max-w-2xl mx-auto leading-relaxed">
               {t('description')}
             </p>
           </MotionWrapper>

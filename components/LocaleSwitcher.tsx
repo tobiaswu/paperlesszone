@@ -32,7 +32,7 @@ export const LocaleSwitcher = () => {
   return (
     <div
       role="tablist"
-      className="tabs tabs-boxed border border-gunmetal-600 bg-neutral w-fit"
+      className="tabs tabs-boxed tabs-sm border border-gunmetal-600 bg-neutral w-fit"
     >
       {LOCALES.map((locale) => {
         const className = activeLocale === locale ? 'tab tab-active' : 'tab';
