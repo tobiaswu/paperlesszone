@@ -29,9 +29,12 @@ import { PricingCard } from '@/components/PricingCard';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
-import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
+import {
+  itemAnimationVariant,
+  staggerAnimationVariant,
+} from '@/lib/transitions';
 import { StatCard } from '@/components/StatCard';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BASE_URL } from '@/lib/constants';
 import { BlobLarge } from '@/components/ui/blob';

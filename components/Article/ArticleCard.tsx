@@ -1,5 +1,5 @@
 import { STRAPI_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import Image from 'next/image';
 import Link from 'next/link';
 

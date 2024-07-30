@@ -1,4 +1,4 @@
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { Tag } from '@/lib/types';
 import Link from 'next/link';
 

@@ -1,6 +1,6 @@
 'use server';
 
-import { CommentFormSchema } from '@/lib/schema';
+import { CommentFormSchema } from '@/lib/schemas';
 import { revalidateTag } from 'next/cache';
 
 export const submitCommentForm = async (state: any, formData: FormData) => {

@@ -1,6 +1,6 @@
-import { BlogNavbar } from '@/components/BlogNavbar';
+import { BlogNavbar } from '@/components/Blog/BlogNavbar';
 import { BASE_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 

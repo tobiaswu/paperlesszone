@@ -1,6 +1,6 @@
 'use client';
 
-import { locales } from '@/lib/constants';
+import { LOCALES } from '@/lib/constants';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -34,7 +34,7 @@ export const LocaleSwitcher = () => {
       role="tablist"
       className="tabs tabs-boxed border border-gunmetal-600 bg-neutral w-fit"
     >
-      {locales.map((locale) => {
+      {LOCALES.map((locale) => {
         const className = activeLocale === locale ? 'tab tab-active' : 'tab';
 
         if (isArticle) {

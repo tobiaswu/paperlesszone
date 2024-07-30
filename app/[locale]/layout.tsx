@@ -8,8 +8,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import NextTopLoader from 'nextjs-toploader';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { BASE_URL, locales } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
+import { BASE_URL, LOCALES } from '@/lib/constants';
+import { RouteId } from '@/lib/routes';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,7 +42,7 @@ export default async function RootLayout({
 }
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return LOCALES.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -1,7 +1,7 @@
 'use client';
 
 import { Category } from '@/lib/enums';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 

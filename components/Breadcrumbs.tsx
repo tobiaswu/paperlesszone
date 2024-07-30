@@ -1,4 +1,4 @@
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 

@@ -1,4 +1,4 @@
-import { ArticleCard } from '@/components/ArticleCard';
+import { ArticleCard } from '@/components/Article/ArticleCard';
 import { Article } from '@/lib/types';
 import { ARTICLES_API } from './[slug]/page';
 import { NotFound } from '@/components/NotFound';

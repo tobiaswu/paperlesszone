@@ -1,4 +1,4 @@
-import { BlogPreview } from '@/components/BlogPreview';
+import { BlogPreview } from '@/components/Blog/BlogPreview';
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
 import { EmailSignup } from '@/components/EmailSignup/EmailSignup';
@@ -8,8 +8,8 @@ import {
   fadeInAnimationVariant,
   itemAnimationVariant,
   staggerAnimationVariant,
-} from '@/lib/animation';
-import { RouteId } from '@/lib/route';
+} from '@/lib/transitions';
+import { RouteId } from '@/lib/routes';
 import Link from 'next/link';
 import {
   PiAlienLight,

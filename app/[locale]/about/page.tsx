@@ -7,10 +7,13 @@ import {
 } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import type { Metadata } from 'next';
 import { MotionWrapper } from '@/components/MotionWrapper';
-import { itemAnimationVariant, staggerAnimationVariant } from '@/lib/animation';
+import {
+  itemAnimationVariant,
+  staggerAnimationVariant,
+} from '@/lib/transitions';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BsTwitterX } from 'react-icons/bs';
 import { BASE_URL } from '@/lib/constants';

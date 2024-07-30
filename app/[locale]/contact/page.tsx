@@ -11,10 +11,10 @@ import {
   fadeInAnimationVariant,
   itemAnimationVariant,
   staggerAnimationVariant,
-} from '@/lib/animation';
+} from '@/lib/transitions';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BASE_URL } from '@/lib/constants';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { BlobMedium } from '@/components/ui/blob';
 
 type Props = {

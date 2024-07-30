@@ -1,4 +1,4 @@
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import Link from 'next/link';
 import { PiTriangleLight } from 'react-icons/pi';
 import { MobileMenu } from './MobileMenu';

@@ -1,6 +1,6 @@
 'use client';
 
-import { useDarkMode } from '@/utils/hooks';
+import { useDarkMode } from '@/lib/hooks/useDarkMode';
 import { useEffect, useState } from 'react';
 import { PiMoonStarsLight, PiSunLight } from 'react-icons/pi';
 

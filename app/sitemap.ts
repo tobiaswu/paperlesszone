@@ -1,4 +1,4 @@
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { Article } from '@/lib/types';
 import { MetadataRoute } from 'next';
 import { ARTICLES_API } from './[locale]/blog/[slug]/page';

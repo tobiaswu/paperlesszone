@@ -2,9 +2,9 @@ import { Article } from '@/lib/types';
 import { ARTICLES_API } from '@/app/[locale]/blog/[slug]/page';
 import { BlogPreviewTabs } from './BlogPreviewTabs';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { ArticleCard } from './ArticleCard';
+import { ArticleCard } from '../Article/ArticleCard';
 import { Category } from '@/lib/enums';
-import { NotFound } from './NotFound';
+import { NotFound } from '../NotFound';
 
 export const BlogPreview = async () => {
   const t = await getTranslations();

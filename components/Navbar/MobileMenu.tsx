@@ -1,6 +1,6 @@
 import { PiListLight } from 'react-icons/pi';
 import Link from 'next/link';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { NavItemData } from './Navbar.types';
 import { LocaleSwitcher } from '../LocaleSwitcher';
 

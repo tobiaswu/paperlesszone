@@ -1,5 +1,7 @@
 import { type BlocksContent } from '@strapi/blocks-react-renderer';
 
+// ---- Articles ----
+
 export type Article = {
   id: number;
   attributes: {
@@ -15,7 +17,7 @@ export type Article = {
     updatedAt: string;
     publishedAt: string;
     slug: string;
-    author: Author;
+    author: ArticleAuthor;
     thumbnail: Image;
     localizations?: {
       data: Localization[];
@@ -39,7 +41,7 @@ export type Tag = {
   };
 };
 
-type Author = {
+type ArticleAuthor = {
   data: {
     id: number;
     attributes: {
@@ -67,4 +69,29 @@ type Localization = {
     locale: string;
     slug: string;
   };
+};
+
+// ---- Comments ----
+
+export type Comment = {
+  approvalStatus: string | null;
+  author: CommentAuthor;
+  blockReason: string | null;
+  blocked: boolean;
+  blockedThread: boolean;
+  children: Comment[];
+  content: string;
+  createdAt: string;
+  gotThread: boolean;
+  id: number;
+  isAdminComment: boolean | null;
+  removed: boolean | null;
+  updatedAt: string;
+};
+
+type CommentAuthor = {
+  avatar: string | null;
+  email: string;
+  id: string;
+  name: string;
 };

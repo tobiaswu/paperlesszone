@@ -1,6 +1,6 @@
 'use server';
 
-import { ContactFormSchema } from '@/lib/schema';
+import { ContactFormSchema } from '@/lib/schemas';
 
 export const submitContactForm = async (state: any, formData: FormData) => {
   const name = formData.get('name') as string;

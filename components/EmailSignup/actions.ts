@@ -1,6 +1,6 @@
 'use server';
 
-import { EmailFormSchema } from '@/lib/schema';
+import { EmailFormSchema } from '@/lib/schemas';
 
 export const submitEmailForm = async (state: any, formData: FormData) => {
   const email = formData.get('email') as string;

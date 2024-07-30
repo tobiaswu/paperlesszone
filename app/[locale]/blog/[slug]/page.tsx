@@ -1,5 +1,5 @@
-import { ArticleAuthor } from '@/components/ArticleAuthor';
-import { ArticleShare } from '@/components/ArticleShare';
+import { ArticleAuthor } from '@/components/Article/ArticleAuthor';
+import { ArticleShare } from '@/components/Article/ArticleShare';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { type Article, type Comment } from '@/lib/types';
@@ -7,8 +7,8 @@ import { NotFound } from '@/components/NotFound';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { ArticleTags } from '@/components/ArticleTags';
-import { ArticleContent } from '@/components/ArticleContent';
+import { ArticleTags } from '@/components/Article/ArticleTags';
+import { ArticleContent } from '@/components/Article/ArticleContent';
 import { TableOfContents } from '@/components/TableOfContents';
 import { BASE_URL, STRAPI_URL } from '@/lib/constants';
 import {
@@ -19,12 +19,12 @@ import {
 } from 'next-intl/server';
 import { ScrollToTopButton } from '@/components/ScrollToTopButton';
 import { RelatedArticles } from '@/components/RelatedArticles/RelatedArticles';
-import { sortAndLimitArticles } from '@/utils/sort';
+import { sortAndLimitArticles } from '@/lib/utils';
 import { NextIntlClientProvider } from 'next-intl';
 import { pick } from 'lodash';
 import { CommentSection } from '@/components/CommentSection/CommentSection';
 import { getComments } from '@/components/CommentSection/actions';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 
 type Props = {
   params: { slug: string; locale: string };

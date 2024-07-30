@@ -6,7 +6,7 @@ import { SubmitButton } from '../SubmitButton';
 import { PiCheckCircleLight } from 'react-icons/pi';
 import { useCallback, useEffect, useState } from 'react';
 import { Turnstile } from '@marsidev/react-turnstile';
-import { useDarkMode } from '@/utils/hooks';
+import { useDarkMode } from '@/lib/hooks/useDarkMode';
 
 export interface CommentFormProps {
   articleId: number;

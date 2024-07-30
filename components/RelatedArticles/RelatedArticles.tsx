@@ -1,7 +1,7 @@
 'use client';
 
 import { PiTriangleLight } from 'react-icons/pi';
-import { ArticleCard } from '../ArticleCard';
+import { ArticleCard } from '../Article/ArticleCard';
 import { Article } from '@/lib/types';
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -10,7 +10,7 @@ import './RelatedArticles.styles.css';
 import { useTranslations } from 'next-intl';
 import { Category } from '@/lib/enums';
 import Link from 'next/link';
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 
 const OPTIONS: EmblaOptionsType = { loop: true, align: 'start' };
 

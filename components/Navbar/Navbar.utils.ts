@@ -1,4 +1,4 @@
-import { RouteId } from '@/lib/route';
+import { RouteId } from '@/lib/routes';
 import { NavItemData } from './Navbar.types';
 import { getTranslations } from 'next-intl/server';
 
