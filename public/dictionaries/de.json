@@ -11,6 +11,30 @@
       "efficiencyTitle": "Effizienz steigern",
       "happyTitle": "Mitarbeiter-Zufriedenheit erhöhen"
     },
+    "serviceSection": {
+      "title": "Unsere Services",
+      "descriptionP1": "Speed (wiederverwendbare Komponenten, schnelle Implementierung)",
+      "descriptionP2": "100% anpassbar",
+      "descriptionP3": "Quellcode, keine Abhängigkeit von Drittanbietern",
+      "descriptionP4": "Support & Wartung, Anpassungen, Updates",
+      "service1": {
+        "title": "KI gestützte Web Apps",
+        "descriptionP1": "LLM Apps jenseits des traditionellen Chatbots",
+        "descriptionP2": "Interne Tools",
+        "descriptionP3": "Retrieval Augmented Generation",
+        "descriptionP4": "Generative UI"
+      },
+      "service2": {
+        "title": "Automatisierungs-Skripte",
+        "descriptionP1": "Angepasste Python Skripte",
+        "descriptionP2": "Google Apps Script",
+        "descriptionP3": "Verbunden mit APIs, LLMs, Twilio, CRM & ERP Systemen"
+      },
+      "service3": {
+        "title": "VPS oder Cloud Anbieter Setups",
+        "descriptionP1": "Open-Source Software Tools wie Paperless-ngx"
+      }
+    },
     "useCaseSection": {
       "title": "Lösungen basierend auf realen Anwendungsfällen",
       "description": "Wir sind ein Team von AI-Geeks, Software-Ingenieuren und Unternehmern, die leidenschaftlich daran arbeiten, innovative Lösungen zu schaffen. Wir bleiben auf dem neuesten Stand der Technik und Software-Tools und testen kontinuierlich neue Produkte. Wir kombinieren unser technisches Know-how mit unseren Brancheneinblicken, um Lösungen für dich zu entwickeln, die sowohl modern als auch einfach zu bedienen sind.",
@@ -288,7 +312,8 @@
     "getStarted": "Jetzt Starten",
     "startDemo": "Demo Starten",
     "bookDemo": "Demo Buchen",
-    "copy": "Kopieren"
+    "copy": "Kopieren",
+    "services": "Services"
   },
   "state": {
     "sending": "Senden"

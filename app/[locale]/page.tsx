@@ -13,6 +13,9 @@ import { RouteId } from '@/lib/routes';
 import Link from 'next/link';
 import {
   PiAlienLight,
+  PiCloudCheckLight,
+  PiCodeBlockLight,
+  PiCodepenLogoLight,
   PiFactoryLight,
   PiFileCloudLight,
   PiFilesLight,
@@ -38,8 +41,7 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <div className="relative h-full w-full overflow-x-hidden">
-        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
-        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,rgba(255,255,255,0)_40%,#288a21_100%)]"></div>
         <div className="container mx-auto hero min-h-screen relative">
           <div className="hero-content text-center flex flex-col">
             <MotionWrapper
@@ -58,9 +60,10 @@ export default async function Home({ params }: Props) {
                     </button>
                   </Link>
                 </div>
-                <Link href={RouteId.solutions}>
+                <Link href="#services">
                   <button className="btn btn-lg">
-                    {t('button.solutions')}
+                    {t('button.services')}
+                    <PiTriangleLight className="rotate-180" />
                   </button>
                 </Link>
               </div>
@@ -115,6 +118,86 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </div>
+      <section
+        id="services"
+        className="py-32 px-4 flex flex-col items-center justify-center [background:radial-gradient(125%_125%_at_50%_90%,rgba(255,255,255,0)_40%,#288a21_100%)]"
+      >
+        <div className="container mx-auto">
+          <MotionWrapper variants={itemAnimationVariant}>
+            <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
+              {t('root.serviceSection.title')}
+            </h2>
+          </MotionWrapper>
+          <MotionWrapper variants={fadeInAnimationVariant}>
+            <div className="flex flex-col mb-12 text-center max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base">
+                &#10003; {t('root.serviceSection.descriptionP2')}
+              </p>
+              <p className="text-base">
+                &#10003; {t('root.serviceSection.descriptionP3')}
+              </p>
+              <p className="text-base">
+                &#10003; {t('root.serviceSection.descriptionP4')}
+              </p>
+              <p className="text-base">
+                &#10003; {t('root.serviceSection.descriptionP1')}
+              </p>
+            </div>
+          </MotionWrapper>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <MotionWrapper index={0} variants={staggerAnimationVariant}>
+              <UseCaseCard
+                icon={<PiCodepenLogoLight />}
+                title={t('root.serviceSection.service1.title')}
+                description={
+                  <ul>
+                    <li>
+                      <p>{t('root.serviceSection.service1.descriptionP1')}</p>
+                    </li>
+                    <li>
+                      <p>{t('root.serviceSection.service1.descriptionP2')}</p>
+                    </li>
+                    <li>
+                      <p>{t('root.serviceSection.service1.descriptionP3')}</p>
+                    </li>
+                    <li>
+                      <p>{t('root.serviceSection.service1.descriptionP4')}</p>
+                    </li>
+                  </ul>
+                }
+              />
+            </MotionWrapper>
+            <MotionWrapper index={1} variants={staggerAnimationVariant}>
+              <UseCaseCard
+                icon={<PiCodeBlockLight />}
+                title={t('root.serviceSection.service2.title')}
+                description={
+                  <ul>
+                    <li>
+                      <p>{t('root.serviceSection.service2.descriptionP1')}</p>
+                    </li>
+                    <li>
+                      <p>{t('root.serviceSection.service2.descriptionP2')}</p>
+                    </li>
+                    <li>
+                      <p>{t('root.serviceSection.service2.descriptionP3')}</p>
+                    </li>
+                  </ul>
+                }
+              />
+            </MotionWrapper>
+            <MotionWrapper index={2} variants={staggerAnimationVariant}>
+              <UseCaseCard
+                icon={<PiCloudCheckLight />}
+                title={t('root.serviceSection.service3.title')}
+                description={
+                  <p>{t('root.serviceSection.service3.descriptionP1')}</p>
+                }
+              />
+            </MotionWrapper>
+          </div>
+        </div>
+      </section>
 
       <section className="overflow-x-hidden py-32 sm:pb-64 px-4 flex flex-col items-center justify-center">
         <BlobMedium />
@@ -134,34 +217,39 @@ export default async function Home({ params }: Props) {
               <UseCaseCard
                 icon={<PiRepeatLight />}
                 title={t('root.useCaseSection.automationTitle')}
-                description={t('root.useCaseSection.automationDescription')}
+                description={
+                  <p>{t('root.useCaseSection.automationDescription')}</p>
+                }
               />
             </MotionWrapper>
             <MotionWrapper index={1} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiFlowArrowLight />}
                 title={t('root.useCaseSection.workflowTitle')}
-                description={t('root.useCaseSection.workflowDescription')}
+                description={
+                  <p>{t('root.useCaseSection.workflowDescription')}</p>
+                }
               />
             </MotionWrapper>
             <MotionWrapper index={2} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiFileCloudLight />}
                 title={t('root.useCaseSection.digitizationTitle')}
-                description={t('root.useCaseSection.digitizationDescription')}
+                description={
+                  <p>{t('root.useCaseSection.digitizationDescription')}</p>
+                }
               />
             </MotionWrapper>
             <MotionWrapper index={3} variants={staggerAnimationVariant}>
               <UseCaseCard
                 icon={<PiAlienLight />}
                 title={t('root.useCaseSection.aiTitle')}
-                description={t('root.useCaseSection.aiDescription')}
+                description={<p>{t('root.useCaseSection.aiDescription')}</p>}
               />
             </MotionWrapper>
           </div>
         </div>
       </section>
-
       <section className="container mx-auto pb-16 sm:pb-32 px-4 bg-base-100">
         <MotionWrapper variants={itemAnimationVariant}>
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-24 sm:leading-normal">
@@ -181,7 +269,6 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section>
-
       {/* <section className="py-32">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-12">
@@ -225,7 +312,6 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </section> */}
-
       {/* <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="flex flex-col col-span-2 lg:col-span-1">
           <MotionWrapper variants={itemAnimationVariant}>
@@ -266,7 +352,6 @@ export default async function Home({ params }: Props) {
           </MotionWrapper>
         </div>
       </section> */}
-
       {/* <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="col-span-2 lg:col-span-1">
           <div className="grid sm:grid-cols-2 gap-4">
@@ -315,7 +400,6 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section> */}
-
       <section
         id="newsletter"
         className="overflow-x-hidden pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center"

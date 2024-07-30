@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 export interface UseCaseCardProps {
   icon: JSX.Element;
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 export const UseCaseCard = ({ icon, title, description }: UseCaseCardProps) => {
@@ -11,7 +13,7 @@ export const UseCaseCard = ({ icon, title, description }: UseCaseCardProps) => {
         <span className="text-3xl text-primary">{icon}</span>
       </div>
       <h3 className="text-3xl">{title}</h3>
-      <p>{description}</p>
+      {description}
     </div>
   );
 };

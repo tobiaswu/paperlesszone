@@ -11,6 +11,30 @@
       "efficiencyTitle": "Increase efficiency",
       "happyTitle": "Boost employee happiness"
     },
+    "serviceSection": {
+      "title": "Our Services",
+      "descriptionP1": "Speed (reusable components, fast implementation)",
+      "descriptionP2": "100% customizable",
+      "descriptionP3": "Source code, no vendor lock in",
+      "descriptionP4": "On-going support, updates, changes possible",
+      "service1": {
+        "title": "AI Powered Web Apps",
+        "descriptionP1": "LLM apps beyond the traditional chat format",
+        "descriptionP2": "Internal tools",
+        "descriptionP3": "Retrieval augmented generation",
+        "descriptionP4": "Generative UI"
+      },
+      "service2": {
+        "title": "Automation Scripts",
+        "descriptionP1": "Python custom scripts",
+        "descriptionP2": "Google Apps Script",
+        "descriptionP3": "Connected with APIs, LLMs, Twilio, CRM & ERP systems"
+      },
+      "service3": {
+        "title": "VPS or Cloud Provider Setups",
+        "descriptionP1": "Open source software tools like Paperless-ngx"
+      }
+    },
     "useCaseSection": {
       "title": "Solutions based on your business use cases",
       "description": "We are a team of AI geeks, software engineers and entrepreneurs who are passionate about creating innovative solutions. We stay up-to-date with the latest technologies and tools and continuously test new products. We combine our technical expertise with our industry insights to engineer solutions for you that are both cutting-edge and simple to use.",
@@ -288,7 +312,8 @@
     "getStarted": "Get Started Now",
     "startDemo": "Start Demo",
     "bookDemo": "Book Demo",
-    "copy": "Copy"
+    "copy": "Copy",
+    "services": "Services"
   },
   "state": {
     "sending": "Sending"
