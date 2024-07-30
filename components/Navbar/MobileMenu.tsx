@@ -16,7 +16,7 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-lg dropdown-content mt-2 z-[1] p-2 shadow bg-neutral border border-gunmetal-600 rounded-lg w-screen"
+        className="menu menu-lg dropdown-content mt-2 z-50 p-2 shadow bg-neutral border border-gunmetal-600 rounded-lg w-screen"
       >
         {items.map((tab) => {
           return (

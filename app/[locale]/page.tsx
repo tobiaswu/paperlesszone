@@ -25,6 +25,7 @@ import {
   PiTriangleLight,
 } from 'react-icons/pi';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { BlobLarge, BlobMedium } from '@/components/ui/blob';
 
 type Props = {
   params: { locale: string };
@@ -36,7 +37,7 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
-      <div className="relative h-full w-full bg-slate-950">
+      <div className="relative h-full w-full">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
       </div>
@@ -107,39 +108,12 @@ export default async function Home({ params }: Props) {
               />
             </MotionWrapper>
           </div>
-          {/* <MotionWrapper
-            variants={itemAnimationVariant}
-            className="flex flex-col sm:flex-row items-center justify-center pt-8 gap-8"
-          >
-            <div className="flex flex-col">
-              <p className="text-sm text-left">{t('root.partnerTitle')}</p>
-              <PiArrowBendDownRightLight className="text-3xl" />
-            </div>
-            <div className="flex flex-wrap lg:flex-nowrap items-center gap-12">
-              <PartnerLogo
-                src="/assets/logos/notion_logo.webp"
-                alt="Notion Logo"
-              />
-              <PartnerLogo src="/assets/logos/make_logo.svg" alt="Make Logo" />
-              <PartnerLogo
-                src="/assets/logos/contabo_logo.svg"
-                alt="Contabo Logo"
-              />
-              <PartnerLogo
-                src="/assets/logos/CF_logo.webp"
-                alt="Chris Feith Photography Logo"
-              />
-              <PartnerLogo
-                src="/assets/logos/WV_logo.webp"
-                alt="Wupperfeld Ventures Logo"
-              />
-            </div>
-          </MotionWrapper> */}
         </div>
       </div>
 
-      <section className="py-32 sm:pb-64 px-4 bg-base-100 bg-blob-md bg-cover xl:bg-contain bg-center">
-        <div className="container mx-auto">
+      <section className="py-32 sm:pb-64 px-4 flex flex-col items-center justify-center">
+        <BlobMedium />
+        <div className="container mx-auto z-20">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-12 sm:leading-normal">
               {t('root.useCaseSection.title')}
@@ -218,7 +192,7 @@ export default async function Home({ params }: Props) {
                 />
               </MotionWrapper>
             </div>
-            <div className="flex flex-col col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
+            <div className="flex flex-col col-span-2 lg:col-span-1">
               <MotionWrapper variants={itemAnimationVariant}>
                 <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
                   {t('root.benefitSection.title')}
@@ -245,7 +219,7 @@ export default async function Home({ params }: Props) {
       </section> */}
 
       {/* <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
-        <div className="flex flex-col col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
+        <div className="flex flex-col col-span-2 lg:col-span-1">
           <MotionWrapper variants={itemAnimationVariant}>
             <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
               {t('root.aboutSection.title')}
@@ -286,7 +260,7 @@ export default async function Home({ params }: Props) {
       </section> */}
 
       {/* <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
-        <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover bg-center">
+        <div className="col-span-2 lg:col-span-1">
           <div className="grid sm:grid-cols-2 gap-4">
             <ReviewCard
               description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
@@ -336,11 +310,12 @@ export default async function Home({ params }: Props) {
 
       <section
         id="newsletter"
-        className="pt-32 pb-16 sm:pb-32 px-4 bg-base-100 bg-blob-lg bg-cover bg-top"
+        className="pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center"
       >
+        <BlobLarge />
         <MotionWrapper
           variants={fadeInAnimationVariant}
-          className="container mx-auto grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12 backdrop-blur-3xl"
+          className="container mx-auto z-20 grid grid-cols-3 gap-20 xl:gap-40 border border-gunmetal-600 rounded-lg p-8 sm:p-12 backdrop-blur-3xl"
         >
           <div className="col-span-3 md:col-span-2">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8 sm:leading-normal">

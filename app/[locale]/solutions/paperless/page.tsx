@@ -34,6 +34,7 @@ import { StatCard } from '@/components/StatCard';
 import { RouteId } from '@/lib/route';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BASE_URL } from '@/lib/constants';
+import { BlobLarge } from '@/components/ui/blob';
 
 type Props = {
   params: { locale: string };
@@ -124,10 +125,14 @@ export default async function Paperless({ params }: Props) {
 
   return (
     <>
-      <div className="hero bg-blob-soft bg-cover xl:bg-contain bg-top">
+      <div className="relative h-full w-full">
+        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(85,212,76,.15),rgba(255,255,255,0))]"></div>
+      </div>
+      <div className="container mx-auto hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <MotionWrapper className="max-w-6xl" variants={itemAnimationVariant}>
-            <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
+            <h1 className="mt-20 text-4xl sm:text-6xl font-bold sm:leading-relaxed bg-gradient-to-br from-slate-100 to-slate-300 text-transparent bg-clip-text">
               {t('title')}
             </h1>
           </MotionWrapper>
@@ -262,39 +267,42 @@ export default async function Paperless({ params }: Props) {
         </div>
       </div>
 
-      <section className="bg-blob-lg bg-center bg-cover xl:bg-contain">
-        <div className="container mx-auto px-4 py-16">
+      <section>
+        <div className="container mx-auto z-20 px-4 py-16">
           <div className="flex gap-4 items-center mb-8">
             <PiMedalLight className="text-5xl text-yellow-400" />
             <h2 className="text-4xl font-semibold">{t('offerTitle')}</h2>
           </div>
           <h3 className="text-3xl max-w-3xl mb-4">{t('offerSubtitle')}</h3>
           <p className="max-w-3xl">{t('offerDescription')}</p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
-            <SolutionCard
-              icon={<PiWrenchLight />}
-              description={t('offerFirstBenefit')}
-            />
-            <SolutionCard
-              icon={<PiFloppyDiskBackLight />}
-              description={t('offerSecondBenefit')}
-            />
-            <SolutionCard
-              icon={<PiShieldCheckLight />}
-              description={t('offerThirdBenefit')}
-            />
-            <SolutionCard
-              icon={<PiTrendUpLight />}
-              description={t('offerFourthBenefit')}
-            />
-            <SolutionCard
-              icon={<PiPlugsConnectedLight />}
-              description={t('offerFifthBenefit')}
-            />
-            <SolutionCard
-              icon={<PiHandshakeLight />}
-              description={t('offerSixthBenefit')}
-            />
+          <div className="flex flex-col items-center justify-center">
+            <BlobLarge />
+            <div className="grid z-20 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
+              <SolutionCard
+                icon={<PiWrenchLight />}
+                description={t('offerFirstBenefit')}
+              />
+              <SolutionCard
+                icon={<PiFloppyDiskBackLight />}
+                description={t('offerSecondBenefit')}
+              />
+              <SolutionCard
+                icon={<PiShieldCheckLight />}
+                description={t('offerThirdBenefit')}
+              />
+              <SolutionCard
+                icon={<PiTrendUpLight />}
+                description={t('offerFourthBenefit')}
+              />
+              <SolutionCard
+                icon={<PiPlugsConnectedLight />}
+                description={t('offerFifthBenefit')}
+              />
+              <SolutionCard
+                icon={<PiHandshakeLight />}
+                description={t('offerSixthBenefit')}
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ import {
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BASE_URL } from '@/lib/constants';
 import { RouteId } from '@/lib/route';
+import { BlobMedium } from '@/components/ui/blob';
 
 type Props = {
   params: { locale: string };
@@ -27,38 +28,41 @@ export default async function Contact({ params }: Props) {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-2 gap-12 px-4 py-16 min-h-screen place-items-center">
-        <div className="col-span-2 lg:col-span-1 bg-blob-soft bg-cover lg:bg-contain bg-top">
-          <MotionWrapper variants={itemAnimationVariant}>
-            <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
-              {t('contact.title')}
-            </h1>
-          </MotionWrapper>
-          <MotionWrapper variants={itemAnimationVariant}>
-            <p className="leading-relaxed mb-8">{t('contact.description')}</p>
-          </MotionWrapper>
-          <div className="flex flex-col gap-4">
-            <MotionWrapper index={0} variants={staggerAnimationVariant}>
-              <ContactOption
-                icon={<PiEnvelopeLight />}
-                optionLabel="Email"
-                optionText="hello@digitizerspace.com"
-                url="mailto:hello@digitizerspace.com"
-              />
+        <div className="col-span-2 lg:col-span-1 flex flex-col items-center justify-center">
+          <BlobMedium />
+          <div className="z-20">
+            <MotionWrapper variants={itemAnimationVariant}>
+              <h1 className="text-4xl sm:text-6xl font-bold mb-12 sm:leading-relaxed">
+                {t('contact.title')}
+              </h1>
             </MotionWrapper>
-            <MotionWrapper index={1} variants={staggerAnimationVariant}>
-              <ContactOption
-                icon={<PiPhoneCallLight />}
-                optionLabel={t('contact.callOptionLabel')}
-                optionText={t('contact.callOptionText')}
-              />
+            <MotionWrapper variants={itemAnimationVariant}>
+              <p className="leading-relaxed mb-8">{t('contact.description')}</p>
             </MotionWrapper>
-            <MotionWrapper index={2} variants={staggerAnimationVariant}>
-              <ContactOption
-                icon={<PiMapPinLineLight />}
-                optionLabel={t('contact.officeOptionLabel')}
-                optionText={t('contact.officeOptionText')}
-              />
-            </MotionWrapper>
+            <div className="flex flex-col gap-4">
+              <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                <ContactOption
+                  icon={<PiEnvelopeLight />}
+                  optionLabel="Email"
+                  optionText="hello@digitizerspace.com"
+                  url="mailto:hello@digitizerspace.com"
+                />
+              </MotionWrapper>
+              <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                <ContactOption
+                  icon={<PiPhoneCallLight />}
+                  optionLabel={t('contact.callOptionLabel')}
+                  optionText={t('contact.callOptionText')}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <ContactOption
+                  icon={<PiMapPinLineLight />}
+                  optionLabel={t('contact.officeOptionLabel')}
+                  optionText={t('contact.officeOptionText')}
+                />
+              </MotionWrapper>
+            </div>
           </div>
         </div>
 
