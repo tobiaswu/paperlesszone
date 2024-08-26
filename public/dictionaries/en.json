@@ -13,16 +13,16 @@
     },
     "serviceSection": {
       "title": "Our Services",
-      "descriptionP1": "Speed (reusable components, fast implementation)",
+      "descriptionP1": "Quick and efficient implementation",
       "descriptionP2": "100% customizable",
       "descriptionP3": "Source code, no vendor lock in",
-      "descriptionP4": "On-going support, updates, changes possible",
+      "descriptionP4": "On-going support and administration",
       "service1": {
         "title": "AI Powered Web Apps",
         "descriptionP1": "LLM apps beyond the traditional chat format",
         "descriptionP2": "Internal tools",
-        "descriptionP3": "Retrieval augmented generation",
-        "descriptionP4": "Generative UI"
+        "descriptionP3": "AI agents or assistants",
+        "descriptionP4": "Tool calling and generative UI"
       },
       "service2": {
         "title": "Automation Scripts",
@@ -32,7 +32,7 @@
       },
       "service3": {
         "title": "VPS or Cloud Provider Setups",
-        "descriptionP1": "Open source software tools like Paperless-ngx"
+        "descriptionP1": "Installation and administration of open source software like Paperless-ngx or Nextcloud"
       }
     },
     "useCaseSection": {
@@ -190,8 +190,8 @@
           "priceOld": "$5465",
           "discount": "Launch special: 80% off",
           "badgeText": "On request",
-          "price": "$49 / month",
-          "priceInfo": "+ $499 one-time setup cost",
+          "price": "€49 / month",
+          "priceInfo": "+ €499 one-time setup cost",
           "item": {
             "firstName": "Paperless-ngx installed on your company server or a virtual private server.",
             "firstInfo": "In case you don't have your own server yet we consult and guide you making the right decision.",
@@ -279,7 +279,8 @@
     "solutions": "Solutions",
     "resources": "Resources",
     "about": "About",
-    "paperless": "The Paperless Office"
+    "paperless": "The Paperless Office",
+    "agents": "AI Agents"
   },
   "footer": {
     "emailSignup": "Get notified of new articles",
@@ -327,9 +328,15 @@
   "localeSwitcher": {
     "locale": "{locale}"
   },
+  "agentsIntroCard": {
+    "button": "See agent solution",
+    "description": "AI agents or assistants can help you with various tasks. They can be integrated into your existing systems and help you automate repetitive tasks. AI agents are able to respond with text based on your data, call custom tools, connect to any API, and generate interactive user interfaces. They help to reduce costs and increase efficiency.",
+    "title": "AI Agents: Automate your business processes with AI assistants",
+    "thumbnailAlt": "DigitizerSpace AI agent dashboard."
+  },
   "paperlessIntroCard": {
     "button": "See paperless solution",
-    "description": "Don't loose any more time with the managament of documents. Automate your document management workflow. Easily collaborate with team members. Scan directly into your archive. Benefit from intelligent search. Fully backed up and under highest cybersecurity standards.",
+    "description": "Don't loose any more time with the management of documents. Automate your document management workflow. Easily collaborate with team members. Scan directly into your archive. Benefit from intelligent search. Fully backed up and under highest cybersecurity standards.",
     "title": "The Paperless Office: Turnkey solution to manage your documents in an intelligent searchable archive",
     "thumbnailAlt": "Paperless-ngx dashboard with tagged documents."
   },

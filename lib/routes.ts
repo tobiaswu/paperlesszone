@@ -5,6 +5,7 @@ export const RouteId = {
   blog: '/blog',
   consultation: '/solutions/consultation',
   paperless: '/solutions/paperless',
+  agents: '/solutions/agents',
   privacy: '/privacy',
   solutions: '/solutions',
   resources: '/resources',

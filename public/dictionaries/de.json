@@ -13,16 +13,16 @@
     },
     "serviceSection": {
       "title": "Unsere Services",
-      "descriptionP1": "Speed (wiederverwendbare Komponenten, schnelle Implementierung)",
+      "descriptionP1": "Schnelle und effiziente Entwicklung",
       "descriptionP2": "100% anpassbar",
       "descriptionP3": "Quellcode, keine Abhängigkeit von Drittanbietern",
-      "descriptionP4": "Support & Wartung, Anpassungen, Updates",
+      "descriptionP4": "Laufende Wartung & Administration",
       "service1": {
         "title": "KI gestützte Web Apps",
-        "descriptionP1": "LLM Apps jenseits des traditionellen Chatbots",
+        "descriptionP1": "LLM Apps jenseits des traditionellen Chatformats",
         "descriptionP2": "Interne Tools",
-        "descriptionP3": "Retrieval Augmented Generation",
-        "descriptionP4": "Generative UI"
+        "descriptionP3": "KI Agenten oder Assistenten",
+        "descriptionP4": "Tool calling und generative UI"
       },
       "service2": {
         "title": "Automatisierungs-Skripte",
@@ -32,7 +32,7 @@
       },
       "service3": {
         "title": "VPS oder Cloud Anbieter Setups",
-        "descriptionP1": "Open-Source Software Tools wie Paperless-ngx"
+        "descriptionP1": "Installation und Administration von Open-Source Software wie Paperless-ngx oder Nextcloud"
       }
     },
     "useCaseSection": {
@@ -190,8 +190,8 @@
           "priceOld": "4990€",
           "discount": "Launch Special: 80% Rabatt",
           "badgeText": "Auf Anfrage",
-          "price": "47€ / Monat",
-          "priceInfo": "+ 470€ einmalige Setup-Kosten",
+          "price": "49€ / Monat",
+          "priceInfo": "+ 499€ einmalige Setup-Kosten",
           "item": {
             "firstName": "Installation von Paperless-ngx auf deinem Firmenserver oder einem virtuellen privaten Server.",
             "firstInfo": "Falls du noch keinen eigenen Server hast, beraten wir dich und helfen dir, die richtige Entscheidung zu treffen.",
@@ -279,7 +279,8 @@
     "solutions": "Lösungen",
     "resources": "Ressourcen",
     "about": "Über uns",
-    "paperless": "Das papierlose Büro"
+    "paperless": "Das papierlose Büro",
+    "agents": "KI-Agenten"
   },
   "footer": {
     "emailSignup": "Werde über neue Artikel benachrichtigt",
@@ -326,6 +327,12 @@
   },
   "localeSwitcher": {
     "locale": "{locale}"
+  },
+  "agentsIntroCard": {
+    "button": "Agent Lösung ansehen",
+    "description": "KI-Agenten sind intelligente Assistenten, die dir bei verschiedenen Aufgaben helfen. Sie können in deine bestehenden Systeme integriert werden und dir dabei helfen, wiederholende Aufgaben zu automatisieren. KI-Agenten sind in der Lage, basierend auf deinen Daten mit Text zu antworten, benutzerdefinierte Tools aufzurufen, sich mit jeder API zu verbinden und interaktive Benutzeroberflächen zu erstellen. Sie helfen, Kosten zu senken und die Effizienz zu steigern.",
+    "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
+    "thumbnailAlt": "DigitizerSpace KI-Agenten Dashboard."
   },
   "paperlessIntroCard": {
     "button": "Papierlose Lösung ansehen",
