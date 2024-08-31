@@ -11,8 +11,6 @@ export const LocaleSwitcher = () => {
   const pathname = usePathname();
   const [activeLocale, setActiveLocale] = useState<string>(locale);
 
-  const isArticle = pathname.includes('/blog/');
-
   const redirectedPathName = (nextLocale: string) => {
     let newPathname = pathname;
     if (locale !== 'en') {
@@ -36,19 +34,6 @@ export const LocaleSwitcher = () => {
     >
       {LOCALES.map((locale) => {
         const className = activeLocale === locale ? 'tab tab-active' : 'tab';
-
-        if (isArticle) {
-          return (
-            <button
-              disabled={!activeLocale.includes(locale)}
-              key={locale}
-              className={className}
-              role="tab"
-            >
-              {locale}
-            </button>
-          );
-        }
 
         return (
           <a
