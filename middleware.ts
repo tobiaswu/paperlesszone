@@ -2,18 +2,22 @@ import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 
 const REDIRECT_MAP: Record<string, string> = {
-  '/paperless-backup-automatisierung': '/paperless-backup-automation',
-  '/paperless-multi-faktor-authentifizierung':
-    '/paperless-multi-factor-authentication',
-  '/paperless-arbeitsablauf-mit-mitarbeitern-berechtigungen':
-    '/paperless-workflow-with-employees-permissions',
-  '/ordnerstruktur-fuer-unternehmen': '/folder-structure-for-companies',
-  '/notion-vs-asana-fuer-projekt-management':
-    '/notion-vs-asana-for-project-management',
-  '/paperless-workflow-steuerberater': '/paperless-workflow-tax-accountants',
-  '/kostenlose-online-demo-paperless-ngx': '/free-online-demo-paperless-ngx',
-  '/paperless-installation-auf-ubuntu-vps':
-    '/paperless-installation-on-ubuntu-vps',
+  '/de/blog/paperless-backup-automatisierung':
+    '/de/blog/paperless-backup-automation',
+  '/de/blog/paperless-multi-faktor-authentifizierung':
+    '/de/blog/paperless-multi-factor-authentication',
+  '/de/blog/paperless-arbeitsablauf-mit-mitarbeitern-berechtigungen':
+    '/de/blog/paperless-workflow-with-employees-permissions',
+  '/de/blog/ordnerstruktur-fuer-unternehmen':
+    '/de/blog/folder-structure-for-companies',
+  '/de/blog/notion-vs-asana-fuer-projekt-management':
+    '/de/blog/notion-vs-asana-for-project-management',
+  '/de/blog/paperless-workflow-steuerberater':
+    '/de/blog/paperless-workflow-tax-accountants',
+  '/de/blog/kostenlose-online-demo-paperless-ngx':
+    '/de/blog/free-online-demo-paperless-ngx',
+  '/de/blog/paperless-installation-auf-ubuntu-vps':
+    '/de/blog/paperless-installation-on-ubuntu-vps',
 };
 
 export default async function middleware(request: NextRequest) {
