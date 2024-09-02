@@ -107,9 +107,11 @@
     "title": "Get in touch",
     "description": "Got a project in mind? Let's talk, we'd love to hear from you. Choose a contact option below or simply fill in the form and one of the team will be in touch!",
     "callOptionLabel": "Call",
-    "callOptionText": "Schedule a call by email",
+    "callOptionText": "Schedule a call via email",
     "officeOptionLabel": "Office",
     "officeOptionText": "USA, Florida (global clients)",
+    "languageOptionLabel": "Languages",
+    "languageOptionText": "We speak English, German and Spanish.",
     "formTitle": "Tell us about your project",
     "formDescription": "How can DigitizerSpace help you? One of the team will be in touch after you submit this form."
   },
@@ -333,6 +335,12 @@
     "description": "AI agents or assistants can help you with various tasks. They can be integrated into your existing systems and help you automate repetitive tasks. AI agents are able to respond with text based on your data, call custom tools, connect to any API, and generate interactive user interfaces. They help to reduce costs and increase efficiency.",
     "title": "AI Agents: Automate your business processes with AI assistants",
     "thumbnailAlt": "DigitizerSpace AI agent dashboard."
+  },
+  "consultationIntroCard": {
+    "button": "Book a session",
+    "description": "Get expert help with your project in a dedicated 90-minute consultation. Our specialists can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
+    "title": "Paid Consultation: Expert Guidance for Your Project",
+    "thumbnailAlt": "Consultation session with an expert."
   },
   "paperlessIntroCard": {
     "button": "See paperless solution",

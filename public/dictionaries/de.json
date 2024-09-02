@@ -110,6 +110,8 @@
     "callOptionText": "Buche ein Telefonat per E-Mail",
     "officeOptionLabel": "Büro",
     "officeOptionText": "Florida, USA (internationale Kundschaft)",
+    "languageOptionLabel": "Sprachen",
+    "languageOptionText": "Wir sprechen Deutsch, Englisch und Spanisch.",
     "formTitle": "Erzähl uns von deinem Projekt",
     "formDescription": "Wie kann dir DigitizerSpace helfen? Ein Teammitglied wird sich mit dir in Verbindung setzen, nachdem du dieses Formular abgeschickt hast."
   },
@@ -333,6 +335,12 @@
     "description": "KI-Agenten sind intelligente Assistenten, die dir bei verschiedenen Aufgaben helfen. Sie können in deine bestehenden Systeme integriert werden und dir dabei helfen, wiederholende Aufgaben zu automatisieren. KI-Agenten sind in der Lage, basierend auf deinen Daten mit Text zu antworten, benutzerdefinierte Tools aufzurufen, sich mit jeder API zu verbinden und interaktive Benutzeroberflächen zu erstellen. Sie helfen, Kosten zu senken und die Effizienz zu steigern.",
     "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
     "thumbnailAlt": "DigitizerSpace KI-Agenten Dashboard."
+  },
+  "consultationIntroCard": {
+    "button": "Buche eine Sitzung",
+    "description": "Erhalte fachkundige Hilfe für dein Projekt in einer 90-minütigen Beratung. Unsere Spezialisten unterstützen dich bei der KI-Entwicklung, Automatisierung, papierlosen Lösungen und Nextcloud-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
+    "title": "Bezahlte Beratung: Fachkundige Anleitung für dein Projekt",
+    "thumbnailAlt": "Beratungssitzung mit einem Experten."
   },
   "paperlessIntroCard": {
     "button": "Papierlose Lösung ansehen",

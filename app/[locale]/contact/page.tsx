@@ -2,6 +2,7 @@ import { ContactForm } from '@/components/ContactForm/ContactForm';
 import { ContactOption } from '@/components/ContactOption';
 import {
   PiEnvelopeLight,
+  PiGlobeLight,
   PiMapPinLineLight,
   PiPhoneCallLight,
 } from 'react-icons/pi';
@@ -60,6 +61,13 @@ export default async function Contact({ params }: Props) {
                   icon={<PiMapPinLineLight />}
                   optionLabel={t('contact.officeOptionLabel')}
                   optionText={t('contact.officeOptionText')}
+                />
+              </MotionWrapper>
+              <MotionWrapper index={3} variants={staggerAnimationVariant}>
+                <ContactOption
+                  icon={<PiGlobeLight />}
+                  optionLabel={t('contact.languageOptionLabel')}
+                  optionText={t('contact.languageOptionText')}
                 />
               </MotionWrapper>
             </div>
