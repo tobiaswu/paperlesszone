@@ -11,11 +11,11 @@ export const getNavItems = async () => {
       label: t('navbar.solutions'),
       url: RouteId.solutions,
       items: [
-        // {
-        //   id: 'solution-1',
-        //   label: 'Consultation *coming soon',
-        //   url: RouteId.consultation,
-        // },
+        {
+          id: 'solution-1',
+          label: t('navbar.consultation'),
+          url: RouteId.consultation,
+        },
         {
           id: 'solution-2',
           label: t('navbar.paperless'),

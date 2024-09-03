@@ -188,12 +188,12 @@
       "pricingCard": {
         "paperlessSystem": {
           "title": "Das Papierlose Büro",
-          "subtitle": "Automatisiere deine Dokumentenverwaltung. Vollständig verwaltete Lösung.",
+          "subtitle": "Automatisiere deine Dokumentenverwaltung. Vollständig administrierte Lösung.",
           "priceOld": "4990€",
           "discount": "Launch Special: 80% Rabatt",
           "badgeText": "Auf Anfrage",
-          "price": "49€ / Monat",
-          "priceInfo": "+ 499€ einmalige Setup-Kosten",
+          "price": "Monatliche Gebühr für Administration",
+          "priceInfo": "+ einmalige Setup-Kosten",
           "item": {
             "firstName": "Installation von Paperless-ngx auf deinem Firmenserver oder einem virtuellen privaten Server.",
             "firstInfo": "Falls du noch keinen eigenen Server hast, beraten wir dich und helfen dir, die richtige Entscheidung zu treffen.",
@@ -275,6 +275,48 @@
           "content": "Du legst zunächst ein Dokument im Paperless Consumer ab. Überlicherweise scannst du deine Dokumente via Dokumentenscanner ein. Dein Scanner ist so konfiguriert, dass die Dokumente automatisch im Paperless Consumer Ordner landen. Du kannst jedoch auch Dokumente via Smartphone, E-Mail, per Drag-n-Drop oder per API hinzufügen. Paperless prüft regelmäßig den Consumer auf neue Inhalte und importiert diese dann in das System. Nachdem Paperless erfolgreich dein Dokument verarbeitet und die OCR Ebene erstellt hat, kannst du weitere Details zu deinem Dokument hinzufügen. Z. B. Titel, Korrespondent, Datum, Dokumententyp, Tags oder von dir erfundene Felder. Paperless hat einen Matching Algorithmus und kann viele Details mit der Zeit automatisch setzen. Du kannst dein Dokument jetzt in Sekundenschnelle über die Suche oder die Filter finden. Du kannst Benutzer, Arbeitsabläufe und mehr anlegen. Deiner Kreativität sind keine Grenzen gesetzt. Auf unserem <linkBlog>Blog</linkBlog> findest du viele Beispiele für Arbeitsabläufe."
         }
       }
+    },
+    "consultation": {
+      "title": "Expertenunterstützung für dein Projekt",
+      "summary": "In einer 90-minütigen Beratung unterstütze ich dich bei der Entwicklung von KI, Automatisierung, papierlosen Lösungen und Nextcloud-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
+      "button": "Buche jetzt eine Beratung für 450€",
+      "description": "Meine unabhängige Beratung hilft Selbständigen, Unternehmern oder Technik-Interessierten die richtigen Entscheidungen in Hinsicht Digitalisierung und Automatisierung zu treffen.",
+      "firstCheckedText": "Individuelle, maßgeschneiderte Beratung.",
+      "secondCheckedText": "90 Minuten plus Fragen im Anschluss.",
+      "thirdCheckedText": "Zeitnahe Terminfindung (erst nach Bezahlung).",
+      "focusArea": {
+        "title": "Schwerpunkte",
+        "firstText": "Entwicklung mit künstlicher Intelligenz",
+        "secondText": "Einsatz von Open-Source Software und künstlicher Intelligenz",
+        "thirdText": "Digitalisierung und Automatisierung im Geschäftsumfeld",
+        "fourthText": "Paperless-ngx und Nextcloud Setups",
+        "fifthText": "Entwicklung mit Javascript, Typescript und Python"
+      },
+      "expertise": {
+        "title": "Fachwissen",
+        "subTitle": "Beratungsthemen",
+        "firstText": "Paperless-ngx, Nextcloud, VPS, Synology NAS",
+        "secondText": "Linux, Docker, Backups, Cybersecurity",
+        "thirdText": "ChatGPT, Gemini API, Vercel AI SDK, Llama",
+        "fourthText": "KI Assistenten / Agenten, Prompt Engineering",
+        "fifthText": "Scripting mit JavaScript, TypeScript, Python",
+        "sixthText": "Web-Entwicklung mit React, Next.js"
+      },
+      "process": {
+        "title": "Ablauf",
+        "firstStep": "1. Kontakt zu Tobias aufnehmen",
+        "firstDescription": "Bitte nimm zuerst Kontakt mit Tobias per E-Mail auf, damit er entscheiden kann, ob du eine Beratung bei ihm benötigst und ob er dir bei deinem Thema helfen kann.",
+        "secondStep": "2. Buchung",
+        "secondDescription": "Die Kontodaten wird Tobias dir mitteilen. Es gibt verschiedene Möglichkeiten die Überweisung zu tätigen (Paypal, Banküberweisung, Krypto, etc.).",
+        "thirdStep": "3. Terminfindung",
+        "thirdDescription": "Nachdem das Geld auf dem Konto angekommen ist, kannst du den Termin abstimmen. Tobias wird dir hierfür seinen Kalender-Link geben. Es erfolgt keine Rückerstattung bei Nichterscheinen, es sei denn, eine Terminverschiebung wurde vorher mit Tobias vereinbart.",
+        "fourthStep": "4. Beratungsgespräch",
+        "fourthDescription": "Zum festgelegten Termin halten wir mit dir ein Beratungsgespräch. Die 90 Minuten reichen erfahrungsgemäß aus. Eine leichte Überziehung ist möglich, je nach nachfolgenden Terminen. Die Beratungskosten sind pauschal und richten sich nicht nach der Länge des Gespräches. Solange du Fragen hast, sind wir für dich da.",
+        "fifthStep": "5. Nachbereitung",
+        "fifthDescription": "Nach dem Gespräch werden wir dir möglicherweise Informationen zur weiteren Recherche zukommen lassen, die wir im Gespräch genannt haben. Außerdem werden wir uns in Abstimmung mit dir um die Umsetzung kümmern. Du kannst dich gerne auch danach jederzeit bei kleineren Fragen per Mail an uns wenden.",
+        "sixthStep": "100% Zufriedenheitsgarantie",
+        "sixthDescription": "Du zahlst nur für die Beratung, wenn du auch tatsächlich einen Mehrwert bekommst. Stellen wir gemeinsam in den ersten 15 Minuten unseres Gespräches fest, das Tobias keine Lösung für dich finden kann, stellen wir dir natürlich nichts dafür in Rechnung."
+      }
     }
   },
   "navbar": {
@@ -282,6 +324,7 @@
     "resources": "Ressourcen",
     "about": "Über uns",
     "paperless": "Das papierlose Büro",
+    "consultation": "Beratung mit Tobias Wupperfeld",
     "agents": "KI-Agenten"
   },
   "footer": {
@@ -381,6 +424,10 @@
       "paperless": {
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
         "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."
+      },
+      "consultation": {
+        "title": "Buche eine Beratungssitzung mit Tobias Wupperfeld",
+        "description": "▷ Buche eine 90-minütige Beratungssitzung mit mir. Erhalte fachkundige Hilfe für dein Projekt. ✓ Maßgeschneiderte Beratung. ✓ Praktische Unterstützung."
       }
     },
     "resources": {

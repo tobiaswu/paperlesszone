@@ -192,8 +192,8 @@
           "priceOld": "$5465",
           "discount": "Launch special: 80% off",
           "badgeText": "On request",
-          "price": "€49 / month",
-          "priceInfo": "+ €499 one-time setup cost",
+          "price": "Monthly administration fee",
+          "priceInfo": "+ one-time setup cost",
           "item": {
             "firstName": "Paperless-ngx installed on your company server or a virtual private server.",
             "firstInfo": "In case you don't have your own server yet we consult and guide you making the right decision.",
@@ -275,6 +275,48 @@
           "content": "You first put a document in the Paperless Consumer. Usually, you scan your documents via a document scanner. Your scanner is configured to automatically drop the documents in the Paperless Consumer folder. However, you can also add documents via smartphone, email, drag-n-drop, or API. Paperless regularly checks the Consumer for new content and then imports it into the system. After Paperless has successfully processed your document and created the OCR layer, you can add more details to your document. E.g., title, correspondent, date, document type, tags, or custom fields. Paperless has a matching algorithm and can set many details automatically over time. You can now find your document in seconds via search or filters. You can create users, workflows, and more. Your creativity has no limits. On our <linkBlog>Blog</linkBlog>, you can find many examples of workflows."
         }
       }
+    },
+    "consultation": {
+      "title": "Expert guidance for your project",
+      "summary": "In a dedicated 90-minute consultation, I can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
+      "button": "Book a session now for €450",
+      "description": "My independent consulting helps freelancers, business owners, entrepreneurs, or technology enthusiasts make the right decisions regarding digitalization and automation.",
+      "firstCheckedText": "Individual, customized consultation.",
+      "secondCheckedText": "90 minutes plus questions afterwards.",
+      "thirdCheckedText": "Prompt scheduling of the appointment (only after payment).",
+      "focusArea": {
+        "title": "Focus Areas",
+        "firstText": "Development with artificial intelligence",
+        "secondText": "Use of open source software and artificial intelligence",
+        "thirdText": "Digitization and automation in business environments",
+        "fourthText": "Paperless-ngx and Nextcloud setups",
+        "fifthText": "Development with JavaScript, TypeScript and Python"
+      },
+      "expertise": {
+        "title": "Expertise",
+        "subTitle": "Consulting Topics",
+        "firstText": "Paperless-ngx, Nextcloud, VPS, Synology NAS",
+        "secondText": "Linux, Docker, Backups, Cybersecurity",
+        "thirdText": "ChatGPT, Gemini API, Vercel AI SDK, Llama",
+        "fourthText": "AI assistants / agents, Prompt engineering",
+        "fifthText": "Scripting with JavaScript, TypeScript, Python",
+        "sixthText": "Web Development with React, Next.js"
+      },
+      "process": {
+        "title": "Process",
+        "firstStep": "1. Contact Tobias",
+        "firstDescription": "Please first contact Tobias via email so he can determine if you need a consultation and if he can assist you with your topic.",
+        "secondStep": "2. Booking",
+        "secondDescription": "Tobias will provide you with the account details. There are various options for payment (PayPal, bank transfer, crypto, etc.).",
+        "thirdStep": "3. Scheduling",
+        "thirdDescription": "Once the payment has been received, you can schedule the appointment. Tobias will give you a link to his calendar. There are no refunds for no-shows unless a rescheduling was agreed upon with Tobias beforehand.",
+        "fourthStep": "4. Consultation",
+        "fourthDescription": "The consultation will take place at the scheduled time. The 90 minutes are typically sufficient. A slight overrun is possible, depending on subsequent appointments. The consultation fee is flat and does not depend on the length of the session. As long as you have questions, we will be there for you.",
+        "fifthStep": "5. Follow-up",
+        "fifthDescription": "After the consultation, we may provide you with additional information for further research as discussed. We will also coordinate with you on the implementation. You are welcome to reach out to us later for smaller questions via email.",
+        "sixthStep": "100% Satisfaction Guarantee",
+        "sixthDescription": "You only pay for the consultation if you actually gain value from it. If we jointly determine within the first 15 minutes of our conversation that Tobias cannot find a solution for you, we will not charge you for the session."
+      }
     }
   },
   "navbar": {
@@ -282,6 +324,7 @@
     "resources": "Resources",
     "about": "About",
     "paperless": "The Paperless Office",
+    "consultation": "Consultation with Tobias Wupperfeld",
     "agents": "AI Agents"
   },
   "footer": {
@@ -339,7 +382,7 @@
   "consultationIntroCard": {
     "button": "Book a session",
     "description": "Get expert help with your project in a dedicated 90-minute consultation. Our specialists can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
-    "title": "Paid Consultation: Expert Guidance for Your Project",
+    "title": "Paid Consultation: Expert guidance for your project",
     "thumbnailAlt": "Consultation session with an expert."
   },
   "paperlessIntroCard": {
@@ -381,6 +424,10 @@
       "paperless": {
         "title": "Get the Paperless-ngx system running | we install it for you",
         "description": "▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support."
+      },
+      "consultation": {
+        "title": "Consultation with Tobias Wupperfeld - Get expert guidance for your project",
+        "description": "▷ Get expert help with your project in a dedicated 90-minute consultation. I can assist you with AI development, automation, paperless solutions, and Nextcloud setups."
       }
     },
     "resources": {

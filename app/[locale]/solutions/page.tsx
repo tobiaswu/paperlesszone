@@ -10,19 +10,31 @@ type Props = {
 
 export default async function Solutions({ params }: Props) {
   unstable_setRequestLocale(params.locale);
-  const t = await getTranslations({
+  const tConsultation = await getTranslations({
+    locale: params.locale,
+    namespace: 'consultationIntroCard',
+  });
+  const tPaperless = await getTranslations({
     locale: params.locale,
     namespace: 'paperlessIntroCard',
   });
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 space-y-8">
       <PageIntroCard
-        buttonText={t('button')}
-        description={t('description')}
-        thumbnailAltText={t('thumbnailAlt')}
+        buttonText={tConsultation('button')}
+        description={tConsultation('description')}
+        thumbnailAltText={tConsultation('thumbnailAlt')}
+        thumbnailSrc="/assets/images/founder-portrait-small.webp"
+        title={tConsultation('title')}
+        url={RouteId.consultation}
+      />
+      <PageIntroCard
+        buttonText={tPaperless('button')}
+        description={tPaperless('description')}
+        thumbnailAltText={tPaperless('thumbnailAlt')}
         thumbnailSrc="https://docs.paperless-ngx.com/assets/screenshots/documents-smallcards.png"
-        title={t('title')}
+        title={tPaperless('title')}
         url={RouteId.paperless}
       />
     </div>
