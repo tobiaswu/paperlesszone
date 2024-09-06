@@ -193,7 +193,11 @@ export default async function Article({ params }: Props) {
         {/* </div> */}
 
         <div className="container mx-auto py-12 sm:py-16 px-4">
-          <CommentSection articleId={article.id} data={comments} />
+          <CommentSection
+            articleId={article.id}
+            articleSlug={article.attributes.slug}
+            comments={comments}
+          />
         </div>
 
         <ScrollToTopButton />
@@ -221,13 +225,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch((error) => console.log(error));
 
   const slug = article?.attributes.slug;
-  const slugEn = article?.attributes.localizations?.data.find(
-    (item) => item.attributes.locale === 'en'
-  )?.attributes.slug;
-  const slugDe = article?.attributes.localizations?.data.find(
-    (item) => item.attributes.locale === 'de'
-  )?.attributes.slug;
-
   const alternates = article?.attributes.localizations?.data.length;
 
   return {
@@ -241,18 +238,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: alternates
       ? {
           languages: {
-            en:
-              params.locale === 'en'
-                ? `${RouteId.blog}/${slug}`
-                : `${RouteId.blog}/${slugEn}`,
-            de:
-              params.locale === 'de'
-                ? `/de${RouteId.blog}/${slug}`
-                : `/de${RouteId.blog}/${slugDe}`,
-            'x-default':
-              params.locale === 'en'
-                ? `${RouteId.blog}/${slug}`
-                : `${RouteId.blog}/${slugEn}`,
+            en: `${RouteId.blog}/${slug}`,
+            de: `/de${RouteId.blog}/${slug}`,
+            'x-default': `${RouteId.blog}/${slug}`,
           },
         }
       : undefined,

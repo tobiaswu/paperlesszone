@@ -10,6 +10,7 @@ import { useDarkMode } from '@/lib/hooks/useDarkMode';
 
 export interface CommentFormProps {
   articleId: number;
+  articleSlug?: string;
   commentId?: number;
   commentPlaceholder: string;
   loadingText: string;
@@ -19,6 +20,7 @@ export interface CommentFormProps {
 
 export const CommentForm = ({
   articleId,
+  articleSlug,
   commentId,
   commentPlaceholder,
   loadingText,
@@ -59,6 +61,9 @@ export const CommentForm = ({
     <div>
       <form className="flex flex-col gap-4 pt-4" action={formAction}>
         <input type="hidden" name="articleId" value={articleId} />
+        {articleSlug && (
+          <input type="hidden" name="articleSlug" value={articleSlug} />
+        )}
         {commentId && (
           <input type="hidden" name="commentId" value={commentId} />
         )}

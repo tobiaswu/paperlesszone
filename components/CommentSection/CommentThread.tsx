@@ -3,11 +3,15 @@ import { CommentReply } from './CommentReply';
 import { getFormatter, getLocale, getTranslations } from 'next-intl/server';
 
 export interface CommentThreadProps {
+  articleId: number;
+  articleSlug: string;
   comment: Comment;
   depth?: number;
 }
 
 export const CommentThread = async ({
+  articleId,
+  articleSlug,
   comment,
   depth = 0,
 }: CommentThreadProps) => {
@@ -35,8 +39,10 @@ export const CommentThread = async ({
       </div>
       <p className="text-base">{comment.content}</p>
       <CommentReply
+        articleId={articleId}
+        articleSlug={articleSlug}
+        commentId={comment.id}
         commentPlaceholder={t('commentSection.commentPlaceholder')}
-        id={comment.id}
         loadingText={t('state.sending')}
         locale={locale}
         replyBtnText={t('commentSection.replyBtnText')}
@@ -47,7 +53,13 @@ export const CommentThread = async ({
       />
       {comment.gotThread &&
         comment.children.map((child) => (
-          <CommentThread key={child.id} comment={child} depth={depth + 1} />
+          <CommentThread
+            articleId={articleId}
+            articleSlug={articleSlug}
+            key={child.id}
+            comment={child}
+            depth={depth + 1}
+          />
         ))}
     </div>
   );

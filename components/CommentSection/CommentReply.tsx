@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { CommentForm } from './CommentForm';
 
 export interface CommentReplyProps {
+  articleId: number;
+  articleSlug: string;
+  commentId: number;
   commentPlaceholder: string;
-  id: number;
   loadingText: string;
   locale: string;
   replyBtnText: string;
@@ -14,8 +16,10 @@ export interface CommentReplyProps {
 }
 
 export const CommentReply = ({
+  articleId,
+  articleSlug,
+  commentId,
   commentPlaceholder,
-  id,
   loadingText,
   locale,
   replyBtnText,
@@ -42,8 +46,9 @@ export const CommentReply = ({
             </button>
             <h3 className="font-semibold text-2xl">{title}</h3>
             <CommentForm
-              articleId={5}
-              commentId={id}
+              articleId={articleId}
+              articleSlug={articleSlug}
+              commentId={commentId}
               commentPlaceholder={commentPlaceholder}
               loadingText={loadingText}
               locale={locale}
