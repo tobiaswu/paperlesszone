@@ -44,6 +44,7 @@ export const CommentSection = async ({
       <p className="label-text">{t('commentSection.note')}</p>
       <CommentForm
         articleId={articleId}
+        articleSlug={articleSlug}
         commentPlaceholder={t('commentSection.commentPlaceholder')}
         loadingText={t('state.sending')}
         locale={locale}

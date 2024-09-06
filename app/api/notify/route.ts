@@ -19,7 +19,6 @@ export async function POST(req: NextRequest) {
     const mailOptions: Mail.Options = {
       from: process.env.NOTIFY_EMAIL,
       to: emails,
-      bcc: 'hello@digitizerspace.com',
       subject: `${name} replied to your comment`,
       text: `Comment:
       ${text}

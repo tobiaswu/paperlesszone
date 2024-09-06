@@ -4,6 +4,7 @@ import { CommentFormSchema } from '@/lib/schemas';
 import { Comment } from '@/lib/types';
 import { getLocale } from 'next-intl/server';
 import { revalidateTag } from 'next/cache';
+
 export const submitCommentForm = async (state: any, formData: FormData) => {
   const articleId = formData.get('articleId') as string;
   const articleSlug = formData.get('articleSlug') as string;
@@ -13,6 +14,7 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
   const text = formData.get('text') as string;
   const checkbox = formData.get('checkbox') as string;
   const token = formData.get('cf-turnstile-response');
+  const locale = await getLocale();
 
   const parsed = CommentFormSchema.safeParse({
     articleId: articleId,
@@ -47,6 +49,8 @@ export const submitCommentForm = async (state: any, formData: FormData) => {
           email,
           text,
           checkbox,
+          articleSlug,
+          locale,
         }),
       })
         .then((res) => res.json())

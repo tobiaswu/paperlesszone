@@ -10,7 +10,7 @@ import { useDarkMode } from '@/lib/hooks/useDarkMode';
 
 export interface CommentFormProps {
   articleId: number;
-  articleSlug?: string;
+  articleSlug: string;
   commentId?: number;
   commentPlaceholder: string;
   loadingText: string;
