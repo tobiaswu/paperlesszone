@@ -40,6 +40,18 @@ export const getNavItems = async () => {
         },
       ],
     },
+    {
+      id: 'tools',
+      label: t('navbar.tools'),
+      url: RouteId.resources,
+      items: [
+        {
+          id: 'tool-1',
+          label: 'Paperless-ngx Demo',
+          url: `${RouteId.blog}/free-online-demo-paperless-ngx`,
+        },
+      ],
+    },
     { id: 'about', label: t('navbar.about'), url: RouteId.about },
   ];
 
