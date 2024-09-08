@@ -320,12 +320,12 @@
     }
   },
   "navbar": {
-    "solutions": "Lösungen",
+    "solutions": "Leistungen",
     "resources": "Ressourcen",
     "tools": "Tools",
     "about": "Über uns",
-    "paperless": "Das papierlose Büro",
-    "consultation": "Beratung mit Tobias Wupperfeld",
+    "paperless": "Das Papierlose Büro",
+    "consultation": "Beratung",
     "agents": "KI-Agenten"
   },
   "footer": {

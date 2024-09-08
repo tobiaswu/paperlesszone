@@ -320,12 +320,12 @@
     }
   },
   "navbar": {
-    "solutions": "Solutions",
+    "solutions": "Services",
     "resources": "Resources",
     "tools": "Tools",
     "about": "About",
     "paperless": "The Paperless Office",
-    "consultation": "Consultation with Tobias Wupperfeld",
+    "consultation": "Consultation",
     "agents": "AI Agents"
   },
   "footer": {
