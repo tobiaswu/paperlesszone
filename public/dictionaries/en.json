@@ -240,11 +240,11 @@
         "faqDescription": "Feel free to <link>contact us here</link> if you have further questions. We're happy to help.",
         "serverAdvise": {
           "title": "I don't have a server yet. Which server solution is right for me?",
-          "content": "The right server solution depends on various individual factors. If you have a fixed office and the budget, it might make sense to buy your own server. The <linkNas>Synology NAS</linkNas> is popular among smaller businesses. If you are fully remote, a <linkVps>VPS</linkVps> probably makes more sense. Also, you should ensure that your server is connected to a fast internet line, otherwise your entire workflow will be slowed down. We are currently working on an advisory chatbot that will help you make a decision."
+          "content": "The right server solution depends on various individual factors. If you have a fixed office and the budget, it might make sense to buy your own server. The Synology NAS is popular among smaller businesses. If you want to test the system, starting with a VPS probably makes more sense. Also, you should ensure that your server is connected to a fast internet line, otherwise your entire workflow will be slowed down."
         },
         "scannerAdvise": {
           "title": "I don't have a scanner yet. Which scanner is right for me?",
-          "content": "It depends on various factors (e.g., budget, scanning speed, Wi-Fi connectivity, the dimensions of your documents, duplex scanning, portability, ease of use). One of the most popular allround document scanner is the <linkScanner>ScanSnap</linkScanner>. We are currently working on an advisory chatbot that will help you make a decision."
+          "content": "It depends on various factors (e.g., budget, scanning speed, Wi-Fi connectivity, the dimensions of your documents, duplex scanning, portability, ease of use). One of the most popular allround document scanner is the ScanSnap."
         },
         "targetGroup": {
           "title": "Who is this solution suitable for?",

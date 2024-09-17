@@ -240,11 +240,11 @@
         "faqDescription": "Falls du weitere Fragen hast, <link>kontaktiere uns gerne hier</link>. Wir freuen uns dir zu helfen.",
         "serverAdvise": {
           "title": "Ich habe noch keinen Server. Welche Serverlösung ist die richtige für mich?",
-          "content": "Die richtige Serverlösung hängt von verschiedenen individuellen Faktoren ab. Wenn du ein festes Büro und das Budget hast, kann es Sinn machen einen eigenen Server zu kaufen. Beliebt bei kleineren Unternehmen ist z. B. die <linkNas>Synology NAS</linkNas>. Falls du nur remote arbeitest, macht wahrscheinlich ein <linkVps>VPS</linkVps> mehr Sinn. Außerdem solltest du sicherstellen, dass dein Server an eine schnelle Internetleitung angeschlossen ist, da ansonsten dein gesamter Arbeitsablauf verlangsamt wird. Wir arbeiten gerade an einem Ratgeber Chatbot, der dir helfen wird eine Entscheidung zu treffen."
+          "content": "Die richtige Serverlösung hängt von verschiedenen individuellen Faktoren ab. Wenn du ein festes Büro und das Budget hast, kann es Sinn machen einen eigenen Server zu kaufen. Beliebt bei kleineren Unternehmen ist z. B. die Synology NAS. Falls du das System zunächst testen möchtest, macht wahrscheinlich ein VPS mehr Sinn. Außerdem solltest du sicherstellen, dass dein Server an eine schnelle Internetleitung angeschlossen ist, da ansonsten dein gesamter Arbeitsablauf verlangsamt wird."
         },
         "scannerAdvise": {
           "title": "Ich habe noch keinen Scanner. Welcher Scanner ist der richtige für mich?",
-          "content": "Das hängt von verschiedenen Faktoren ab (z. B. Budget, Scan Geschwindigkeit, Wi-Fi Konnektivität, die Abmaße deiner Dokumente, doppelseitiges Scannen, Portabilität, Benutzerfreundlichkeit). Einer der beliebtesten allround Dokumentenscanner ist der <linkScanner>ScanSnap</linkScanner>. Wir arbeiten gerade an einem Ratgeber Chatbot, der dir helfen wird eine Entscheidung zu treffen."
+          "content": "Das hängt von verschiedenen Faktoren ab (z. B. Budget, Scan Geschwindigkeit, Wi-Fi Konnektivität, die Abmaße deiner Dokumente, doppelseitiges Scannen, Portabilität, Benutzerfreundlichkeit). Einer der beliebtesten allround Dokumentenscanner ist der ScanSnap."
         },
         "targetGroup": {
           "title": "Für wen ist diese Lösung geeignet?",

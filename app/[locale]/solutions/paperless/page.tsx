@@ -414,38 +414,6 @@ export default async function Paperless({ params }: Props) {
                         {chunks}
                       </Link>
                     ),
-                    linkNas: (chunks) => (
-                      <Link
-                        className="link link-hover link-primary"
-                        href={
-                          params.locale === 'de'
-                            ? 'https://amzn.to/3TlNrQv'
-                            : 'https://amzn.to/3IaCvjp'
-                        }
-                      >
-                        {chunks}
-                      </Link>
-                    ),
-                    linkVps: (chunks) => (
-                      <Link
-                        className="link link-hover link-primary"
-                        href="https://tidd.ly/3If2dmL"
-                      >
-                        {chunks}
-                      </Link>
-                    ),
-                    linkScanner: (chunks) => (
-                      <Link
-                        className="link link-hover link-primary"
-                        href={
-                          params.locale === 'de'
-                            ? 'https://amzn.to/49SYY07'
-                            : 'https://amzn.to/42Pp9Td'
-                        }
-                      >
-                        {chunks}
-                      </Link>
-                    ),
                   })}
                 </p>
               </div>
