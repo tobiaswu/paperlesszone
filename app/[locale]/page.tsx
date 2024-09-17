@@ -269,114 +269,13 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section>
-      {/* <section className="py-32">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 gap-12">
-            <div
-              className="tooltip tooltip-neutral col-span-2 lg:col-span-1 w-fit"
-              data-tip="Prompt: an astronaut floating in space with earth in the background, shrugging his arms, neon green lighting, cinematic."
-            >
-              <MotionWrapper variants={fadeInAnimationVariant}>
-                <Image
-                  className="h-auto rounded-lg border border-transparent hover:border-primary"
-                  src="/assets/images/ai-astronaut-shrugging.webp"
-                  alt="Ai generated image of an astronaut shrugging his arms with earth in the background"
-                  width={512}
-                  height={512}
-                  loading="lazy"
-                />
-              </MotionWrapper>
-            </div>
-            <div className="flex flex-col col-span-2 lg:col-span-1">
-              <MotionWrapper variants={itemAnimationVariant}>
-                <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
-                  {t('root.benefitSection.title')}
-                </h2>
-              </MotionWrapper>
-              <MotionWrapper variants={itemAnimationVariant}>
-                <h3 className="text-2xl mb-4 sm:leading-normal">
-                  {t('root.benefitSection.subtitle')}
-                </h3>
-              </MotionWrapper>
-              <MotionWrapper variants={itemAnimationVariant}>
-                <p className="mb-8">{t('root.benefitSection.description')}</p>
-              </MotionWrapper>
-              <div className="flex flex-col gap-4">
-                <CheckedText description={t('root.benefitSection.firstText')} />
-                <CheckedText
-                  description={t('root.benefitSection.secondText')}
-                />
-                <CheckedText description={t('root.benefitSection.thirdText')} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* <section className="container mx-auto py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
-        <div className="flex flex-col col-span-2 lg:col-span-1">
-          <MotionWrapper variants={itemAnimationVariant}>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4 sm:leading-normal">
-              {t('root.aboutSection.title')}
-            </h2>
-          </MotionWrapper>
-          <MotionWrapper variants={itemAnimationVariant}>
-            <h3 className="text-2xl mb-4 sm:leading-normal">
-              {t('root.aboutSection.subtitle')}
-            </h3>
-          </MotionWrapper>
-          <div className="flex flex-col gap-4">
-            <CheckedText description={t('root.aboutSection.firstText')} />
-            <CheckedText description={t('root.aboutSection.secondText')} />
-            <CheckedText description={t('root.aboutSection.thirdText')} />
-          </div>
-          <Link className="w-fit mt-8" href={RouteId.solutions}>
-            <button className="btn btn-primary">
-              {t('button.solutions')}
-              <PiTriangleLight className="rotate-90" />
-            </button>
-          </Link>
-        </div>
-        <div
-          className="tooltip tooltip-neutral col-span-2 lg:col-span-1 w-fit"
-          data-tip="Prompt: a team of astronauts in black suits walking in a spaceship, neon green lighting, cinematic with lens flares, with DigitizerSpace written in large white letters on their suits."
-        >
-          <MotionWrapper variants={fadeInAnimationVariant}>
-            <Image
-              className="h-auto rounded-lg border border-transparent hover:border-primary"
-              src="/assets/images/ai-team-digitizerspace.webp"
-              alt="Ai generated image of astronauts resembling the team of DigitizerSpace"
-              width={512}
-              height={512}
-              loading="lazy"
-            />
-          </MotionWrapper>
-        </div>
-      </section> */}
       {/* <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="col-span-2 lg:col-span-1">
           <div className="grid sm:grid-cols-2 gap-4">
             <ReviewCard
-              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/founder-portrait.webp"
-              name="Michael Baylor"
-              position="Chief Technology Officer"
-            />
-            <ReviewCard
-              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/founder-portrait.webp"
-              name="Michael Baylor"
-              position="Chief Technology Officer"
-            />
-            <ReviewCard
-              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/founder-portrait.webp"
-              name="Michael Baylor"
-              position="Chief Technology Officer"
-            />
-            <ReviewCard
-              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
-              avatarURL="/images/founder-portrait.webp"
-              name="Michael Baylor"
+              description="Review."
+              avatarURL="/images/avatar.webp"
+              name="John Doe"
               position="Chief Technology Officer"
             />
           </div>
@@ -423,7 +322,7 @@ export default async function Home({ params }: Props) {
               <CheckedText
                 description={t('root.newsletterSection.secondText')}
               />
-              {/* <CheckedText description="As a bonus, you will receive our guide for free." /> */}
+              {/* <CheckedText description="The bonus" /> */}
             </div>
             <EmailSignup
               btnTitle={t('button.subscribe')}
@@ -434,7 +333,7 @@ export default async function Home({ params }: Props) {
           {/* <div className="col-span-3 md:col-span-1 place-self-center">
             <div className="rounded-lg border-primary border-2 shadow-md bg-neutral px-8 py-32 relative">
               <p className="uppercase text-center font-bold">
-                10 must have automation tools and how to use them
+                title
               </p>
               <PiPlusSquareFill className="text-5xl text-primary absolute -top-8 -left-8" />
             </div>
