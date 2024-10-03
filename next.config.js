@@ -14,7 +14,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'strapi.digitizerspace.com',
+        hostname: 'strapi.paperlesszone.com',
         port: '',
         pathname: '/**',
       },

@@ -38,9 +38,9 @@ export const ArticleShare = ({
   const [toastOpen, setToastOpen] = useState(false);
   const pathname = usePathname();
 
-  const shareUrl = `https://digitizerspace.com${pathname}`;
+  const shareUrl = `https://paperlesszone.com${pathname}`;
 
-  const embedCode = `<div><iframe src=${shareUrl} width="100%" height="790px" style={{ border: 0 }}></iframe><br />Brought to you by&nbsp;<a href="https://digitizerspace.com" target="_blank">DigitizerSpace</a></div>`;
+  const embedCode = `<div><iframe src=${shareUrl} width="100%" height="790px" style={{ border: 0 }}></iframe><br />Brought to you by&nbsp;<a href="https://paperlesszone.com" target="_blank">PaperlessZone</a></div>`;
 
   const handleEmbedClick = () => {
     navigator.clipboard.writeText(embedCode).then(() => setToastOpen(true));

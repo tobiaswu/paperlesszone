@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('description'),
     robots: { index: true, follow: true },
-    applicationName: 'DigitizerSpace',
+    applicationName: 'PaperlessZone',
     metadataBase: new URL(BASE_URL),
     alternates: {
       languages: {

@@ -18,7 +18,7 @@ export const Footer = async () => {
           <div className="flex flex-col gap-8">
             <Link className="h-fit" href={RouteId.root}>
               <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
-                DigitizerSpace
+                PaperlessZone
               </p>
             </Link>
             <LocaleSwitcher />
@@ -94,7 +94,7 @@ export const Footer = async () => {
           </aside>
           <nav className="flex gap-2 items-center">
             <p>{t('footer.followUs')}</p>
-            <Link href="https://twitter.com/digitizerspace">
+            <Link href="https://twitter.com/paperlesszone">
               <BsTwitterX className="hover:text-primary text-3xl" />
             </Link>
           </nav>

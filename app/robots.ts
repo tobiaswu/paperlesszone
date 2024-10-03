@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: undefined,
     },
-    sitemap: 'https://digitizerspace.com/sitemap.xml',
+    sitemap: 'https://paperlesszone.com/sitemap.xml',
   };
 }

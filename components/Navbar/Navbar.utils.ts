@@ -36,7 +36,7 @@ export const getNavItems = async () => {
         {
           id: 'resource-2',
           label: 'Newsletter',
-          url: 'https://digitizerspace.beehiiv.com/subscribe',
+          url: 'https://paperlesszone.beehiiv.com/subscribe',
         },
       ],
     },

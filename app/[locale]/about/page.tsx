@@ -92,7 +92,7 @@ export default async function About({ params }: Props) {
           {t('about.secondSectionText')}
           &nbsp;
           <Link className="link link-hover link-primary" href={RouteId.root}>
-            DigitizerSpace.com
+            PaperlessZone.com
           </Link>
           .&nbsp;
           {t('about.thirdSectionText')}

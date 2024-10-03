@@ -29,7 +29,7 @@ export const EmailSignup = ({
       setShowMessage(true);
       timeout = setTimeout(() => {
         setShowMessage(false);
-      }, 3000);
+      }, 5000);
     }
 
     return () => {

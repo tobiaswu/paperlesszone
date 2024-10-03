@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         email: email,
         reactivate_existing: true,
-        utm_source: 'DigitizerSpace website',
+        utm_source: 'PaperlessZone website',
         utm_medium: 'organic',
       }),
     });

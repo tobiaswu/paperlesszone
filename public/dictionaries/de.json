@@ -53,7 +53,7 @@
     "benefitSection": {
       "title": "Profitiere von der Welle neuer Technologie",
       "subtitle": "und implementiere sie auf profitable Weise in dein Unternehmen",
-      "description": "Die heutige Softwarelandschaft ermöglicht es dir, viel mehr zu tun, als nur ChatGPT zu integrieren, aber es kann überwältigend sein, zu wissen, was am besten für dein Unternehmen funktioniert. DigitizerSpace ist hier, um dir bei der Identifizierung von Anwendungsfällen zu helfen.",
+      "description": "Die heutige Softwarelandschaft ermöglicht es dir, viel mehr zu tun, als nur ChatGPT zu integrieren, aber es kann überwältigend sein, zu wissen, was am besten für dein Unternehmen funktioniert. PaperlessZone ist hier, um dir bei der Identifizierung von Anwendungsfällen zu helfen.",
       "firstText": "Bleibe auf dem Laufenden mit den neuesten Trends und Tools.",
       "secondText": "Identifiziere Anwendungsfälle für dein Unternehmen.",
       "thirdText": "Implementiere Lösungen, die dein Unternehmen wachsen lassen werden."
@@ -91,13 +91,13 @@
     "secondSectionText": "Deshalb haben wir beschlossen, unsere Forschung öffentlich zu machen mit",
     "thirdSectionText": "Unser Ziel ist es, den Prozess der Integration neuer Technologien in dein Unternehmen zu vereinfachen und dir unser Wissen und unsere Erfahrung zur Verfügung zu stellen. Wir haben branchenspezifische Tools entwickelt, die dir helfen, deine Arbeitsabläufe zu automatisieren, zu digitalisieren und zu rationalisieren.",
     "firstSubtitle": "Über den Gründer",
-    "fourthSectionText": "Tobias Wupperfeld ist der Gründer von DigitizerSpace. Er ist ein erfahrener Software-Ingenieur mit Erfahrung in verschiedenen Branchen. Er hat unter anderem bei internationalen Konzernen wie SAP und innovativen KI-Startups gearbeitet. Tobias hat eine Leidenschaft für Innovationen und möchte Unternehmen jeder Größe dabei helfen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um Zeit und Kosten zu sparen und die Effizienz zu steigern.",
+    "fourthSectionText": "Tobias Wupperfeld ist der Gründer von PaperlessZone. Er ist ein erfahrener Software-Ingenieur mit Erfahrung in verschiedenen Branchen. Er hat unter anderem bei internationalen Konzernen wie SAP und innovativen KI-Startups gearbeitet. Tobias hat eine Leidenschaft für Innovationen und möchte Unternehmen jeder Größe dabei helfen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um Zeit und Kosten zu sparen und die Effizienz zu steigern.",
     "quote": "Ich persönlich glaube, dass wir sehr früh sind in der KI Ära. KI wird Unternehmen nicht ersetzen, aber Unternehmen, die KI nutzen, werden Unternehmen ersetzen, die dies nicht tun. Unternehmen, die KI einsetzen, werden nicht nur führen, sondern dominieren.",
     "fifthSectionText": "Wusstest du, dass",
     "fortune500LinkText": "80% der Fortune 500 Unternehmen OpenAI Produkte einsetzen?",
     "sixthSectionText": "Diese Unternehmen haben das Potenzial von KI längst erkannt und nutzen es zu ihrem Vorteil. Mit der zunehmenden Nachfrage nach KI ist es nur eine Frage der Zeit, bis auch kleinere Unternehmen damit beginnen, sie einzusetzen.",
     "secondSubtitle": "Schlussworte",
-    "seventhSectionText": "Durch eine Zusammenarbeit mit DigitizerSpace kannst du die Vorteile der neuesten Automatisierungstechnologien nutzen und der Konkurrenz einen Schritt voraus sein. Schau dir unsere",
+    "seventhSectionText": "Durch eine Zusammenarbeit mit PaperlessZone kannst du die Vorteile der neuesten Automatisierungstechnologien nutzen und der Konkurrenz einen Schritt voraus sein. Schau dir unsere",
     "resourcesLinkText": "Ressourcen",
     "solutionsLinkText": "oder Lösungen an",
     "contactUsLinkText": "kontaktiere uns,",
@@ -113,7 +113,7 @@
     "languageOptionLabel": "Sprachen",
     "languageOptionText": "Wir sprechen Deutsch, Englisch und Spanisch.",
     "formTitle": "Erzähl uns von deinem Projekt",
-    "formDescription": "Wie kann dir DigitizerSpace helfen? Ein Teammitglied wird sich mit dir in Verbindung setzen, nachdem du dieses Formular abgeschickt hast."
+    "formDescription": "Wie kann dir PaperlessZone helfen? Ein Teammitglied wird sich mit dir in Verbindung setzen, nachdem du dieses Formular abgeschickt hast."
   },
   "privacy": {
     "title": "Datenschutzerklärung"
@@ -205,7 +205,7 @@
             "fourthInfo": "Wir konfigurieren Paperless-ngx nach deinen Wünschen. Dies kann z. B. die Integration eines Scanners gehören. Wir helfen dir zusätzliche Geräte einzurichten, damit du auch unterwegs Scans in Paperless-ngx speichern kannst.",
             "fifthName": "Fortlaufender Premium Support & Wartungspaket.",
             "fifthInfo": "Wir helfen dir bei der Einrichtung deines Arbeitsablaufs und individueller Konfigurationen. Darüber hinaus sorgen wir dafür, dass deine Instanz auf dem neuesten Stand bleibt.",
-            "sixthName": "Bonus: Digitizer-Space-Garantie",
+            "sixthName": "Bonus: PaperlessZone-Garantie",
             "sixthInfo": "Wir glauben an unsere Lösung und geben dir das Geld zurück, ohne Wenn und Aber, wenn du deine Effizienz nach 30 Tagen nicht steigern kannst.",
             "seventhName": "Serverkosten nicht inklusive.",
             "seventhInfo": "Die Kosten für einen VPS beginnen überlicherweise bei ca. €4,50/Monat (400 GB Speicherplatz) und sind jederzeit erweiterbar."
@@ -218,7 +218,7 @@
           "price": "Kostenlos",
           "item": {
             "firstName": "Benutzername: demo",
-            "secondName": "Passwort: digitizerspace",
+            "secondName": "Passwort: paperlesszone",
             "thirdName": "Bitte lade keine sensiblen Daten hoch. Dies ist eine öffentliche Installation von Paperless-ngx. Jeder kann sich anmelden und sehen, was du hochgeladen hast."
           }
         },
@@ -228,7 +228,7 @@
           "badgeText": "Kostenlose Live Demo",
           "price": "Kostenlos",
           "item": {
-            "firstName": "Finde heraus, ob Paperless und DigitizerSpace das Richtige für dich sind. (Das sind sie auf jeden Fall.)",
+            "firstName": "Finde heraus, ob Paperless und PaperlessZone das Richtige für dich sind. (Das sind sie auf jeden Fall.)",
             "secondName": "Lass dich durch Paperless-ngx führen und erfahre, wie du deine Arbeitsweise und die deiner Mitarbeiter für immer veränderst."
           }
         }
@@ -378,7 +378,7 @@
     "button": "Agent Lösung ansehen",
     "description": "KI-Agenten sind intelligente Assistenten, die dir bei verschiedenen Aufgaben helfen. Sie können in deine bestehenden Systeme integriert werden und dir dabei helfen, wiederholende Aufgaben zu automatisieren. KI-Agenten sind in der Lage, basierend auf deinen Daten mit Text zu antworten, benutzerdefinierte Tools aufzurufen, sich mit jeder API zu verbinden und interaktive Benutzeroberflächen zu erstellen. Sie helfen, Kosten zu senken und die Effizienz zu steigern.",
     "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
-    "thumbnailAlt": "DigitizerSpace KI-Agenten Dashboard."
+    "thumbnailAlt": "PaperlessZone KI-Agenten Dashboard."
   },
   "consultationIntroCard": {
     "button": "Buche eine Sitzung",
@@ -395,14 +395,14 @@
   "blogIntroCard": {
     "button": "Blog besuchen",
     "description": "Anleitungen, Werkzeuge, Arbeitsabläufe und mehr, um dir zu helfen, die Effizienz bei deinen täglichen Geschäftsaufgaben zu steigern.",
-    "title": "Der DigitizerSpace Blog",
-    "thumbnailAlt": "DigitizerSpace Blog Logo"
+    "title": "Der PaperlessZone Blog",
+    "thumbnailAlt": "PaperlessZone Blog Logo"
   },
   "newsletterIntroCard": {
     "button": "Abonnieren",
     "description": "Kostenloser Forschungs-Newsletter: Erhalte branchenspezifische Trends, Nachrichten und Sonderangebote. Verpasse nie die neuesten Erkenntnisse und Updates.",
-    "title": "Der DigitizerSpace Insider",
-    "thumbnailAlt": "DigitizerSpace Insider Logo"
+    "title": "Der PaperlessZone Insider",
+    "thumbnailAlt": "PaperlessZone Insider Logo"
   },
   "commentSection": {
     "title": "Kommentare",
@@ -416,11 +416,11 @@
   },
   "metadata": {
     "root": {
-      "title": "DigitizerSpace - Wir implementieren KI Lösungen für dein Geschäft",
-      "description": "▷ Skaliere und digitalisiere dein Unternehmen mit DigitizerSpace. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
+      "title": "PaperlessZone - Wir implementieren KI Lösungen für dein Geschäft",
+      "description": "▷ Skaliere und digitalisiere dein Unternehmen mit PaperlessZone. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
     },
     "solutions": {
-      "title": "DigitizerSpace Lösungen - Innovative Automatisierungen fürs Büro",
+      "title": "PaperlessZone Lösungen - Innovative Automatisierungen fürs Büro",
       "description": "Entdecke unsere Bürolösungen, von der intelligenten Dokumentenverwaltung bis hin zu kollaborativen Tools, die deinen Arbeitsalltag revolutionieren. ✓ Erfahre mehr hier",
       "paperless": {
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
@@ -432,24 +432,24 @@
       }
     },
     "resources": {
-      "title": "DigitizerSpace Ressourcen - Tools für Workflow Automatisierung",
+      "title": "PaperlessZone Ressourcen - Tools für Workflow Automatisierung",
       "description": "Entdecke unsere umfangreichen Ressourcen ✓ Blog ✓ Newsletter ✓ AI Tools, um deine Unternehmensabläufe zu boosten ✓ Klicke hier, um direkt mit dem Lernen loszulegen"
     },
     "privacy": {
-      "title": "Datenschutzerklärung von DigitizerSpace - wir schützen deine Daten",
-      "description": "▷ Deine Daten sind 100% sicher mit DigitizerSpace. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform."
+      "title": "Datenschutzerklärung von PaperlessZone - wir schützen deine Daten",
+      "description": "▷ Deine Daten sind 100% sicher mit PaperlessZone. Lies hier in unserer Datenschutzerklärung wie wir deine Daten nutzen und schützen. ✓ Null Spam. ✓ DSGVO konform."
     },
     "contact": {
-      "title": "Kontaktiere DigitizerSpace hier - wir helfen dir zu automatisieren",
-      "description": "▷ Kontaktiere DigitizerSpace per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren."
+      "title": "Kontaktiere PaperlessZone hier - wir helfen dir zu automatisieren",
+      "description": "▷ Kontaktiere PaperlessZone per E-Mail oder Kontaktformular. Erhalte direkte Unterstützung mit der Automatisierung & Digitalisierung deines Projects. ✓ Jetzt kontaktieren."
     },
     "blog": {
-      "title": "DigitizerSpace Blog - Automatisierung, AI Trends & Mehr!",
-      "description": "▷ Entdecke den DigitierSpace Blog. Lerne wie du dein Unternehmen skalierst & digitalisierst. ✓ Reale Anwendungsfälle. ✓ Lerne kostenlos. ✓ Setze noch heute um."
+      "title": "PaperlessZone Blog - Automatisierung, AI Trends & Mehr!",
+      "description": "▷ Entdecke den PaperlessZone Blog. Lerne wie du dein Unternehmen skalierst & digitalisierst. ✓ Reale Anwendungsfälle. ✓ Lerne kostenlos. ✓ Setze noch heute um."
     },
     "about": {
-      "title": "Über DigitizerSpace - Lösungen für den Geschäftsalltag",
-      "description": "▷ Über DigitierSpace - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!"
+      "title": "Über PaperlessZone - Lösungen für den Geschäftsalltag",
+      "description": "▷ Über PaperlessZone - das Team hinter dem Automatisierungs- und Digitalisierungsportal. ✓ Was wir warum machen und wer es gegründet hat. ✓ Arbeite mit uns!"
     }
   }
 }

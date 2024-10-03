@@ -268,7 +268,7 @@ export default async function Paperless({ params }: Props) {
           <SolutionCard
             icon={<PiArticleLight />}
             description={t('useSecondStep')}
-            url="https://digitizerspace.beehiiv.com/subscribe"
+            url="https://paperlesszone.beehiiv.com/subscribe"
           />
         </div>
       </div>
@@ -348,7 +348,7 @@ export default async function Paperless({ params }: Props) {
               subtitle={t('pricingCard.testSystem.subtitle')}
               badgeText={t('pricingCard.testSystem.badgeText')}
               btnText={tButton('startDemo')}
-              btnUrl="https://paperless.digitizerspace.com/"
+              btnUrl="https://paperless.paperlesszone.com/"
               price={t('pricingCard.testSystem.price')}
               className="border-gunmetal-600"
               items={testCardItems}
@@ -401,7 +401,7 @@ export default async function Paperless({ params }: Props) {
                     linkDemo: (chunks) => (
                       <Link
                         className="link link-hover link-primary"
-                        href="https://paperless.digitizerspace.com/"
+                        href="https://paperless.paperlesszone.com/"
                       >
                         {chunks}
                       </Link>

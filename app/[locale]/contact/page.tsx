@@ -45,8 +45,8 @@ export default async function Contact({ params }: Props) {
                 <ContactOption
                   icon={<PiEnvelopeLight />}
                   optionLabel="Email"
-                  optionText="hello@digitizerspace.com"
-                  url="mailto:hello@digitizerspace.com"
+                  optionText="info@paperlesszone.com"
+                  url="mailto:info@paperlesszone.com"
                 />
               </MotionWrapper>
               <MotionWrapper index={1} variants={staggerAnimationVariant}>

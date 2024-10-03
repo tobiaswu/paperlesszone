@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       text: `Comment:
       ${text}
 
-      Reply here: https://digitizerspace.com/${locale}${RouteId.blog}/${articleSlug}`,
+      Reply here: https://paperlesszone.com/${locale}${RouteId.blog}/${articleSlug}`,
     };
     const sendMailPromise = () =>
       new Promise<string>((resolve, reject) => {

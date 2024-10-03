@@ -53,7 +53,7 @@
     "benefitSection": {
       "title": "Benefit from the wave of new technology",
       "subtitle": "and implement it in your business in a profitable way",
-      "description": "Today's software landscape enables you to do much more than just integrating ChatGPT but it can be overwhelming to know what works best for your business. DigitizerSpace is here to help you identify use cases.",
+      "description": "Today's software landscape enables you to do much more than just integrating ChatGPT but it can be overwhelming to know what works best for your business. PaperlessZone is here to help you identify use cases.",
       "firstText": "Stay up to date with trends and tools.",
       "secondText": "Identify use cases for your business.",
       "thirdText": "Implement solutions that will boost your business."
@@ -91,13 +91,13 @@
     "secondSectionText": "That's why we decided to make our research public and create",
     "thirdSectionText": "Our goal is to simplify the process of integrating new technologies into your business and offer you our knowledge and experience. We've developed industry-specific tools that help you automate, digitalize and streamline your workflows.",
     "firstSubtitle": "About the founder",
-    "fourthSectionText": "Tobias Wupperfeld is the founder of DigitizerSpace. He is a seasoned software engineer with experience in various industries, including working at international corporations like SAP and innovative AI startups. Tobias has a passion for innovation and is dedicated to helping businesses of all sizes leverage the latest automation technologies and artificial intelligence to save time, cost and increase efficiency.",
+    "fourthSectionText": "Tobias Wupperfeld is the founder of PaperlessZone. He is a seasoned software engineer with experience in various industries, including working at international corporations like SAP and innovative AI startups. Tobias has a passion for innovation and is dedicated to helping businesses of all sizes leverage the latest automation technologies and artificial intelligence to save time, cost and increase efficiency.",
     "quote": "I personally think we are very early in the AI Era. AI won't replace businesses but businesses that use AI will replace businesses that don't. Businesses powered by AI don't just lead, they dominate.",
     "fifthSectionText": "Did you know that",
     "fortune500LinkText": "80% of Fortune 500 companies use OpenAI products?",
     "sixthSectionText": "These companies have long understood the potential of AI and have been using it to their advantage. With the increasing demand for AI, it's only a matter of time until smaller businesses start adopting it too.",
     "secondSubtitle": "Final words",
-    "seventhSectionText": "By partnering with DigitizerSpace, you can take advantage of the latest automation technologies and stay ahead of the competition. Check out our",
+    "seventhSectionText": "By partnering with PaperlessZone, you can take advantage of the latest automation technologies and stay ahead of the competition. Check out our",
     "resourcesLinkText": "resources",
     "solutionsLinkText": "solutions",
     "contactUsLinkText": "contact us",
@@ -113,7 +113,7 @@
     "languageOptionLabel": "Languages",
     "languageOptionText": "We speak English, German and Spanish.",
     "formTitle": "Tell us about your project",
-    "formDescription": "How can DigitizerSpace help you? One of the team will be in touch after you submit this form."
+    "formDescription": "How can PaperlessZone help you? One of the team will be in touch after you submit this form."
   },
   "privacy": {
     "title": "Privacy Policy"
@@ -205,7 +205,7 @@
             "fourthInfo": "We configure Paperless-ngx as you wish. This could include e.g. the integration of a scanner. We help you set up additional devices so that you can store scans in Paperless-ngx while on the move.",
             "fifthName": "Continuous premium support & maintenance package",
             "fifthInfo": "We help you set up your workflow and individual configurations. In addition we'll make sure your instance stays up to date.",
-            "sixthName": "Bonus: Digitizer-Space-Guarantee",
+            "sixthName": "Bonus: PaperlessZone-Guarantee",
             "sixthInfo": "We believe in our solution and return you the money no questions asked if you can't increase your efficiency after 30 days of using the system.",
             "seventhName": "Server costs not included.",
             "seventhInfo": "Costs for a VPS typically start around $5.50/month (400GB storage) and can be upgraded any time as you wish."
@@ -218,7 +218,7 @@
           "price": "Free",
           "item": {
             "firstName": "username: demo",
-            "secondName": "password: digitizerspace",
+            "secondName": "password: paperlesszone",
             "thirdName": "Please don't upload sensitive data. This is a public installation of Paperless-ngx. Everyone can sign in and see what you've uploaded."
           }
         },
@@ -228,7 +228,7 @@
           "badgeText": "Free live demo",
           "price": "Free",
           "item": {
-            "firstName": "See if Paperless and DigitizerSpace are right for you. (They totally are.)",
+            "firstName": "See if Paperless and PaperlessZone are right for you. (They totally are.)",
             "secondName": "Get a guided tour through Paperless-ngx, and find out how you and your team can change the way you work, forever."
           }
         }
@@ -378,7 +378,7 @@
     "button": "See agent solution",
     "description": "AI agents or assistants can help you with various tasks. They can be integrated into your existing systems and help you automate repetitive tasks. AI agents are able to respond with text based on your data, call custom tools, connect to any API, and generate interactive user interfaces. They help to reduce costs and increase efficiency.",
     "title": "AI Agents: Automate your business processes with AI assistants",
-    "thumbnailAlt": "DigitizerSpace AI agent dashboard."
+    "thumbnailAlt": "PaperlessZone AI agent dashboard."
   },
   "consultationIntroCard": {
     "button": "Book a session",
@@ -395,14 +395,14 @@
   "blogIntroCard": {
     "button": "Visit blog",
     "description": "Guides, tools, workflows and more to help you increase the efficiency in your daily business tasks.",
-    "title": "The DigitizerSpace Blog",
-    "thumbnailAlt": "DigitizerSpace Blog Logo"
+    "title": "The PaperlessZone Blog",
+    "thumbnailAlt": "PaperlessZone Blog Logo"
   },
   "newsletterIntroCard": {
     "button": "Subscribe",
     "description": "Free research newsletter: Receive our industry specific trends, news and special offers. Never miss out on latest insights and updates.",
-    "title": "The DigitizerSpace Insider",
-    "thumbnailAlt": "DigitizerSpace Insider Logo"
+    "title": "The PaperlessZone Insider",
+    "thumbnailAlt": "PaperlessZone Insider Logo"
   },
   "commentSection": {
     "title": "Comments",
@@ -416,11 +416,11 @@
   },
   "metadata": {
     "root": {
-      "title": "DigitizerSpace - We implement AI solutions for your business",
-      "description": "▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
+      "title": "PaperlessZone - We implement AI solutions for your business",
+      "description": "▷ Scale and digitalize your business with PaperlessZone. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
     },
     "solutions": {
-      "title": "DigitizerSpace Solutions - Innovative Business Automations",
+      "title": "PaperlessZone Solutions - Innovative Business Automations",
       "description": "Explore our wide range of business solutions, from intelligent document management to collaborative tools that will revolutionize your workday. ✓ Learn more here!",
       "paperless": {
         "title": "Get the Paperless-ngx system running | we install it for you",
@@ -432,24 +432,24 @@
       }
     },
     "resources": {
-      "title": "DigitizerSpace Resources - To Help You Automate Your Workflows",
+      "title": "PaperlessZone Resources - To Help You Automate Your Workflows",
       "description": "Explore our extensive resources hub ✓ Blog ✓ Newsletter ✓ AI Tools to supercharge your business workflows ✓ Click here to start learning now"
     },
     "privacy": {
-      "title": "Privacy Policy of DigitizerSpace - we care about your data",
-      "description": "▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR."
+      "title": "Privacy Policy of PaperlessZone - we care about your data",
+      "description": "▷ Your data is 100% safe with PaperlessZone. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR."
     },
     "contact": {
-      "title": "Contact DigitizerSpace here - we help you automating",
-      "description": "▷ Contact DigitizerSpace by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!"
+      "title": "Contact PaperlessZone here - we help you automating",
+      "description": "▷ Contact PaperlessZone by email or contact form. Get immediate support with automating & digitalizing your project. ✓ Quick response time. ✓ Get in touch now!"
     },
     "blog": {
-      "title": "DigitizerSpace Blog - Automation Use Cases, AI Trends & More",
-      "description": "▷ Discover the DigitizerSpace Blog. Learn how you can scale & digitalize your business. ✓ Based on real use cases. ✓ Learn for free. ✓ Start automating today."
+      "title": "PaperlessZone Blog - Automation Use Cases, AI Trends & More",
+      "description": "▷ Discover the PaperlessZone Blog. Learn how you can scale & digitalize your business. ✓ Based on real use cases. ✓ Learn for free. ✓ Start automating today."
     },
     "about": {
-      "title": "About DigitizerSpace - solutions for everyday business activities",
-      "description": "▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!"
+      "title": "About PaperlessZone - solutions for everyday business activities",
+      "description": "▷ About PaperlessZone - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!"
     }
   }
 }

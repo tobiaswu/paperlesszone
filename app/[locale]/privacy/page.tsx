@@ -17,10 +17,10 @@ export default async function Privacy({ params }: Props) {
         {t('privacy.title')}
       </h1>
       <p className="pb-8">
-        At DigitizerSpace, accessible from https://www.digitizerspace.com, one
-        of our main priorities is the privacy of our visitors. This Privacy
-        Policy document contains types of information that is collected and
-        recorded by DigitizerSpace and how we use it.
+        At PaperlessZone, accessible from https://www.paperlesszone.com, one of
+        our main priorities is the privacy of our visitors. This Privacy Policy
+        document contains types of information that is collected and recorded by
+        PaperlessZone and how we use it.
       </p>
       <p className="pb-8">
         If you have additional questions or require more information about our
@@ -28,7 +28,7 @@ export default async function Privacy({ params }: Props) {
       </p>
       <h2 className="pb-4 text-2xl">Log Files</h2>
       <p className="pb-8">
-        DigitizerSpace follows a standard procedure of using log files. These
+        PaperlessZone follows a standard procedure of using log files. These
         files log visitors when they visit websites. All hosting companies do
         this and a part of hosting services&apos; analytics. The information
         collected by log files include internet protocol (IP) addresses, browser
@@ -41,7 +41,7 @@ export default async function Privacy({ params }: Props) {
       </p>
       <h2 className="pb-4 text-2xl">Cookies and Web Beacons</h2>
       <p className="pb-8">
-        Like any other website, DigitizerSpace uses &quot;cookies&quot;. These
+        Like any other website, PaperlessZone uses &quot;cookies&quot;. These
         cookies are used to store information including visitors&apos;
         preferences, and the pages on the website that the visitor accessed or
         visited. The information is used to optimize the users&apos; experience
@@ -79,24 +79,24 @@ export default async function Privacy({ params }: Props) {
       <h2 className="pb-4 text-2xl">Privacy Policies</h2>
       <p className="pb-8">
         You may consult this list to find the Privacy Policy for each of the
-        advertising partners of DigitizerSpace.
+        advertising partners of PaperlessZone.
       </p>
       <p className="pb-8">
         Third-party ad servers or ad networks uses technologies like cookies,
         JavaScript, or Web Beacons that are used in their respective
-        advertisements and links that appear on DigitizerSpace, which are sent
+        advertisements and links that appear on PaperlessZone, which are sent
         directly to users&apos; browser. They automatically receive your IP
         address when this occurs. These technologies are used to measure the
         effectiveness of their advertising campaigns and/or to personalize the
         advertising content that you see on websites that you visit.
       </p>
       <p className="pb-8">
-        Note that DigitizerSpace has no access to or control over these cookies
+        Note that PaperlessZone has no access to or control over these cookies
         that are used by third-party advertisers.
       </p>
       <h2 className="pb-4 text-2xl">Third Party Privacy Policies</h2>
       <p className="pb-8">
-        DigitizerSpace&apos;s Privacy Policy does not apply to other advertisers
+        PaperlessZone&apos;s Privacy Policy does not apply to other advertisers
         or websites. Thus, we are advising you to consult the respective Privacy
         Policies of these third-party ad servers for more detailed information.
         It may include their practices and instructions about how to opt-out of
@@ -115,7 +115,7 @@ export default async function Privacy({ params }: Props) {
         participate in, and/or monitor and guide their online activity.
       </p>
       <p className="pb-8">
-        DigitizerSpace does not knowingly collect any Personal Identifiable
+        PaperlessZone does not knowingly collect any Personal Identifiable
         Information from children under the age of 13. If you think that your
         child provided this kind of information on our website, we strongly
         encourage you to contact us immediately and we will do our best efforts
@@ -125,8 +125,8 @@ export default async function Privacy({ params }: Props) {
       <p className="pb-8">
         This Privacy Policy applies only to our online activities and is valid
         for visitors to our website with regards to the information that they
-        shared and/or collect in DigitizerSpace. This policy is not applicable
-        to any information collected offline or via channels other than this
+        shared and/or collect in PaperlessZone. This policy is not applicable to
+        any information collected offline or via channels other than this
         website.
       </p>
       <h2 className="pb-4 text-2xl">Consent</h2>

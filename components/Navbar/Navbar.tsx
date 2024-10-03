@@ -16,7 +16,7 @@ export const Navbar = async () => {
         <MobileMenu items={navItems} />
         <Link className="ml-2" href={RouteId.root}>
           <p className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
-            DigitizerSpace
+            PaperlessZone
           </p>
         </Link>
       </div>
@@ -56,7 +56,9 @@ export const Navbar = async () => {
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-lime_green-600 to-sapphire-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
           <Link href={RouteId.contact}>
-            <button className="relative btn btn-sm">{t('button.contact')}</button>
+            <button className="relative btn btn-sm">
+              {t('button.contact')}
+            </button>
           </Link>
         </div>
       </div>
