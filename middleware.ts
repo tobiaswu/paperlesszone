@@ -10,8 +10,8 @@ const REDIRECT_MAP: Record<string, string> = {
     '/de/blog/paperless-workflow-with-employees-permissions',
   '/de/blog/ordnerstruktur-fuer-unternehmen':
     '/de/blog/folder-structure-for-companies',
-  '/de/blog/notion-vs-asana-fuer-projekt-management':
-    '/de/blog/notion-vs-asana-for-project-management',
+  '/de/blog/notion-vs-asana-fuer-projekt-management': '/de/blog',
+  '/blog/notion-vs-asana-for-project-management': '/blog',
   '/de/blog/paperless-workflow-steuerberater':
     '/de/blog/paperless-workflow-tax-accountants',
   '/de/blog/kostenlose-online-demo-paperless-ngx':
@@ -27,7 +27,7 @@ export default async function middleware(request: NextRequest) {
     if (pathname === from) {
       const url = request.nextUrl.clone();
       url.pathname = to;
-      return NextResponse.redirect(url, 308);
+      return NextResponse.redirect(url, 301);
     }
   }
 
