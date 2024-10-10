@@ -3,6 +3,7 @@ import { BASE_URL } from '@/lib/constants';
 import { RouteId } from '@/lib/routes';
 import type { Metadata } from 'next';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { Suspense } from 'react';
 
 type Props = {
   params: { locale: string };
@@ -20,15 +21,17 @@ export default async function BlogLayout({
 
   return (
     <div>
-      <BlogNavbar
-        categoryTexts={{
-          all: t('blog.category.all'),
-          guides: t('blog.category.guides'),
-          tools: t('blog.category.tools'),
-          trends: t('blog.category.trends'),
-          workflows: t('blog.category.workflows'),
-        }}
-      />
+      <Suspense>
+        <BlogNavbar
+          categoryTexts={{
+            all: t('blog.category.all'),
+            guides: t('blog.category.guides'),
+            tools: t('blog.category.tools'),
+            trends: t('blog.category.trends'),
+            workflows: t('blog.category.workflows'),
+          }}
+        />
+      </Suspense>
       {children}
     </div>
   );
