@@ -25,6 +25,7 @@ import { pick } from 'lodash';
 import { CommentSection } from '@/components/CommentSection/CommentSection';
 import { getComments } from '@/components/CommentSection/actions';
 import { RouteId } from '@/lib/routes';
+import { CardPopover } from '@/components/CardPopover';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -219,6 +220,8 @@ export default async function Article({ params }: Props) {
         </div>
 
         <ScrollToTopButton />
+
+        <CardPopover />
       </div>
     );
   } else {

@@ -10,21 +10,24 @@ export const SubscribeButton = ({
   btnTitle,
 }: SubscribeButtonProps) => {
   const { pending } = useFormStatus();
-  
+
   return (
-    <button
-      type="submit"
-      className="btn btn-primary w-full sm:w-fit join-item"
-      disabled={pending}
-    >
-      {pending ? (
-        <>
-          <span className="loading loading-spinner loading-md" />
-          <span>{loadingMsg}</span>
-        </>
-      ) : (
-        <span>{btnTitle}</span>
-      )}
-    </button>
+    <div className="indicator">
+      <span className="indicator-item badge badge-accent text-xs">FREE</span>
+      <button
+        type="submit"
+        className="btn btn-primary w-full sm:w-fit join-item"
+        disabled={pending}
+      >
+        {pending ? (
+          <>
+            <span className="loading loading-spinner loading-md" />
+            <span>{loadingMsg}</span>
+          </>
+        ) : (
+          <span>{btnTitle}</span>
+        )}
+      </button>
+    </div>
   );
 };

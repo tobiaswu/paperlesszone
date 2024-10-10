@@ -51,7 +51,7 @@ export const Footer = async () => {
           <div className="divider lg:divider-horizontal mx-0" />
         </div>
         <div className="col-span-2 lg:col-span-1">
-          <p className="text-2xl leading-normal mb-4">
+          <p className="text-xl leading-normal mb-4">
             {t('footer.emailSignup')}
           </p>
           <EmailSignup
