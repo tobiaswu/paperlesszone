@@ -20,21 +20,20 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    if (response.status !== 201) {
+    if (response.ok) {
       return NextResponse.json(
         {
-          error:
-            'Failed to subscribe. Please try it later again or contact us.',
+          message:
+            "Thanks for you interest! To confirm your subscription, please click the link in the email we've just send to you",
         },
-        { status: 500 }
+        { status: 200 }
       );
     }
     return NextResponse.json(
       {
-        message:
-          "Thanks for you interest! To confirm your subscription, please click the link in the email we've just send to you",
+        error: 'Failed to subscribe. Please try it later again or contact us.',
       },
-      { status: 200 }
+      { status: 500 }
     );
   } else {
     return NextResponse.json({ error: 'Method not allowed' }, { status: 405 });
