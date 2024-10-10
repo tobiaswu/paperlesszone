@@ -1,10 +1,10 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import { PiCheckCircleLight } from 'react-icons/pi';
+import { PiCheckCircleLight, PiXCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface ContactFormProps {
   copyNote: string;
@@ -23,6 +23,8 @@ export const ContactForm = ({
 }: ContactFormProps) => {
   const [state, formAction] = useFormState(submitContactForm, null);
   const [showMessage, setShowMessage] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
@@ -30,6 +32,7 @@ export const ContactForm = ({
   const textError = state?.error?.text?._errors[0];
   const checkboxError = state?.error?.checkbox?._errors[0];
   const message: string | undefined = state?.message?.message;
+  const error: string | undefined = state?.message?.error;
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -39,23 +42,38 @@ export const ContactForm = ({
       timeout = setTimeout(() => {
         setShowMessage(false);
       }, 3000);
+
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    }
+
+    if (error) {
+      setShowError(true);
+      timeout = setTimeout(() => {
+        setShowError(false);
+      }, 3000);
+
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     }
 
     return () => {
       clearTimeout(timeout);
     };
-  }, [message]);
+  }, [message, error]);
 
   return (
     <div>
-      <form className="flex flex-col gap-4" action={formAction}>
+      <form ref={formRef} className="flex flex-col gap-4" action={formAction}>
         <label className="form-control">
           <input
             className={`${nameError && 'input-error'} input input-bordered`}
             name="name"
             required
             type="text"
-            placeholder="Name"
+            placeholder="Name*"
           />
           {nameError && (
             <div className="label">
@@ -69,7 +87,7 @@ export const ContactForm = ({
             name="email"
             required
             type="email"
-            placeholder="Email"
+            placeholder="Email*"
           />
           {emailError && (
             <div className="label">
@@ -94,7 +112,7 @@ export const ContactForm = ({
               textError && 'textarea-error'
             } textarea textarea-bordered text-base textarea-md`}
             name="text"
-            placeholder={textareaPlaceholder}
+            placeholder={`${textareaPlaceholder}*`}
             required
           />
           {textError && (
@@ -125,9 +143,19 @@ export const ContactForm = ({
         <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
       </form>
       {showMessage && (
-        <div className="alert alert-info mt-4">
-          <PiCheckCircleLight className="text-2xl" />
-          <span>{message}</span>
+        <div className="toast toast-end z-50">
+          <div className="alert alert-info max-w-sm whitespace-pre-wrap">
+            <PiCheckCircleLight className="text-2xl" />
+            <span>{message}</span>
+          </div>
+        </div>
+      )}
+      {showError && (
+        <div className="toast toast-end z-50">
+          <div className="alert alert-error max-w-sm whitespace-pre-wrap">
+            <PiXCircleLight className="text-2xl" />
+            <span>{error}</span>
+          </div>
         </div>
       )}
     </div>
