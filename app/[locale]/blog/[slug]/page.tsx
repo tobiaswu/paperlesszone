@@ -143,7 +143,10 @@ export default async function Article({ params }: Props) {
             />
 
             {article.attributes.tags && (
-              <ArticleTags tags={article.attributes.tags.data} />
+              <ArticleTags
+                tags={article.attributes.tags.data}
+                title={t('blog.topics.title')}
+              />
             )}
           </div>
 
@@ -171,6 +174,21 @@ export default async function Article({ params }: Props) {
 
           <div className="lg:w-2/3 overflow-x-hidden">
             <ArticleContent content={article.attributes.content} />
+
+            <div className="flex flex-wrap gap-12 items-center mt-12">
+              <ArticleShare
+                btnCopyText={t('button.copy')}
+                btnText={t('button.sharePost')}
+                clipboardMsg={t('toast.clipboard')}
+                emailText={t('shareDialog.email')}
+                embedText={t('shareDialog.embed')}
+                shareLinkText={t('shareDialog.shareLink')}
+                title={t('shareDialog.title')}
+              />
+              {article.attributes.tags && (
+                <ArticleTags tags={article.attributes.tags.data} />
+              )}
+            </div>
           </div>
         </div>
 

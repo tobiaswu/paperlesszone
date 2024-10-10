@@ -4,12 +4,13 @@ import Link from 'next/link';
 
 export interface ArticleTagsProps {
   tags: Tag[];
+  title?: string;
 }
 
-export const ArticleTags = ({ tags }: ArticleTagsProps) => {
+export const ArticleTags = ({ tags, title }: ArticleTagsProps) => {
   return (
     <div>
-      <h2 className="text-xl font-semibold pb-4">Tags</h2>
+      {title && <h2 className="text-xl font-semibold pb-4">{title}</h2>}
 
       <div className="flex flex-wrap gap-4">
         {tags.map((tag) => {
