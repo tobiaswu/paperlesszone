@@ -3,8 +3,9 @@
 import { useFormState } from 'react-dom';
 import { submitCommentForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
-import { PiCheckCircleLight } from 'react-icons/pi';
-import { useCallback, useEffect, useState } from 'react';
+import { ToastInfo } from '../ui/toastInfo';
+import { ToastError } from '../ui/toastError';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { useDarkMode } from '@/lib/hooks/useDarkMode';
 
@@ -31,12 +32,14 @@ export const CommentForm = ({
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [darkMode] = useDarkMode();
   const [showMessage, setShowMessage] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const nameError = state?.error?.name?._errors[0];
   const emailError = state?.error?.email?._errors[0];
   const textError = state?.error?.text?._errors[0];
-  // const checkboxError = state?.error?.checkbox?._errors[0];
   const message: string | undefined = state?.message?.message;
+  const error: string | undefined = state?.message?.error;
 
   const onVerify = useCallback(() => {
     setCaptchaVerified(true);
@@ -50,16 +53,35 @@ export const CommentForm = ({
       timeout = setTimeout(() => {
         setShowMessage(false);
       }, 3000);
+
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    }
+
+    if (error) {
+      setShowError(true);
+      timeout = setTimeout(() => {
+        setShowError(false);
+      }, 3000);
+
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     }
 
     return () => {
       clearTimeout(timeout);
     };
-  }, [message]);
+  }, [message, error]);
 
   return (
     <div>
-      <form className="flex flex-col gap-4 pt-4" action={formAction}>
+      <form
+        className="flex flex-col gap-4 pt-4"
+        action={formAction}
+        ref={formRef}
+      >
         <input type="hidden" name="articleId" value={articleId} />
         {articleSlug && (
           <input type="hidden" name="articleSlug" value={articleSlug} />
@@ -73,7 +95,7 @@ export const CommentForm = ({
               textError && 'textarea-error'
             } textarea textarea-bordered text-base textarea-md`}
             name="text"
-            placeholder={commentPlaceholder}
+            placeholder={`${commentPlaceholder}*`}
             required
           />
           {textError && (
@@ -120,37 +142,14 @@ export const CommentForm = ({
             }}
           />
         </div>
-        {/* <label className="form-control">
-          <label className="cursor-pointer label w-fit gap-4">
-            <span className={`${checkboxError && 'text-error'} label-text`}>
-              {checkboxLabel}
-            </span>
-            <input
-              type="checkbox"
-              name="checkbox"
-              className={`${
-                checkboxError && 'checkbox-error'
-              } checkbox checkbox-primary`}
-            />
-          </label>
-          {checkboxError && (
-            <div className="label">
-              <span className="label-text-alt text-error">{checkboxError}</span>
-            </div>
-          )}
-        </label> */}
         <SubmitButton
           disabled={!captchaVerified}
           loadingText={loadingText}
           submitBtnText={submitBtnText}
         />
       </form>
-      {showMessage && (
-        <div className="alert alert-info mt-4">
-          <PiCheckCircleLight className="text-2xl" />
-          <span>{message}</span>
-        </div>
-      )}
+      {showMessage && <ToastInfo message={message} />}
+      {showError && <ToastError error={error} />}
     </div>
   );
 };

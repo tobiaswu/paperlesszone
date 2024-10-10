@@ -1,10 +1,11 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import { PiCheckCircleLight, PiXCircleLight } from 'react-icons/pi';
 import { submitContactForm } from './actions';
 import { SubmitButton } from '../SubmitButton';
 import { useEffect, useState, useRef } from 'react';
+import { ToastError } from '../ui/toastError';
+import { ToastInfo } from '../ui/toastInfo';
 
 interface ContactFormProps {
   copyNote: string;
@@ -142,22 +143,8 @@ export const ContactForm = ({
         </label>
         <SubmitButton loadingText={loadingText} submitBtnText={submitBtnText} />
       </form>
-      {showMessage && (
-        <div className="toast toast-end z-50">
-          <div className="alert alert-info max-w-sm whitespace-pre-wrap">
-            <PiCheckCircleLight className="text-2xl" />
-            <span>{message}</span>
-          </div>
-        </div>
-      )}
-      {showError && (
-        <div className="toast toast-end z-50">
-          <div className="alert alert-error max-w-sm whitespace-pre-wrap">
-            <PiXCircleLight className="text-2xl" />
-            <span>{error}</span>
-          </div>
-        </div>
-      )}
+      {showMessage && <ToastInfo message={message} />}
+      {showError && <ToastError error={error} />}
     </div>
   );
 };

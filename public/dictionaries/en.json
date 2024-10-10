@@ -408,7 +408,7 @@
     "title": "Comments",
     "formTitle": "Leave a Comment",
     "note": "Your email address won't be published.",
-    "commentPlaceholder": "Comment*",
+    "commentPlaceholder": "Comment",
     "checkboxLabel": "Add me to the newsletter.",
     "replyBtnText": "Reply",
     "replyDialogTitle": "Reply to {user}",

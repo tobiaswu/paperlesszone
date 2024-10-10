@@ -1,10 +1,11 @@
 'use client';
 
 import { SubscribeButton } from './SubscribeButton';
-import { PiCheckCircleLight, PiXCircleLight } from 'react-icons/pi';
 import { useFormState } from 'react-dom';
 import { submitEmailForm } from './actions';
 import { useEffect, useState } from 'react';
+import { ToastError } from '../ui/toastError';
+import { ToastInfo } from '../ui/toastInfo';
 
 interface EmailSignupProps {
   disclaimer: string;
@@ -72,22 +73,8 @@ export const EmailSignup = ({
         </label>
         <SubscribeButton loadingMsg={loadingMsg} btnTitle={btnTitle} />
       </form>
-      {showMessage && (
-        <div className="toast toast-end z-50">
-          <div className="alert alert-info max-w-sm whitespace-pre-wrap">
-            <PiCheckCircleLight className="text-2xl" />
-            <span>{message}</span>
-          </div>
-        </div>
-      )}
-      {showError && (
-        <div className="toast toast-end z-50">
-          <div className="alert alert-error max-w-sm whitespace-pre-wrap">
-            <PiXCircleLight className="text-2xl" />
-            <span>{error}</span>
-          </div>
-        </div>
-      )}
+      {showMessage && <ToastInfo message={message} />}
+      {showError && <ToastError error={error} />}
       <p className="text-xs pt-4">{disclaimer}</p>
     </div>
   );
