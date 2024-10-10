@@ -19,6 +19,7 @@ export const EmailSignup = ({
 }: EmailSignupProps) => {
   const [state, formAction] = useFormState(submitEmailForm, null);
   const [showMessage, setShowMessage] = useState(false);
+  const [email, setEmail] = useState('');
   const error = state?.error?.email?._errors[0];
   const message: string | undefined = state?.message?.message;
 
@@ -27,6 +28,7 @@ export const EmailSignup = ({
 
     if (message) {
       setShowMessage(true);
+      setEmail('');
       timeout = setTimeout(() => {
         setShowMessage(false);
       }, 5000);
@@ -38,17 +40,19 @@ export const EmailSignup = ({
   }, [message]);
 
   return (
-    <div>
-      <form action={formAction} className="sm:join">
-        <label className="form-control">
+    <div className='w-full max-w-xl'>
+      <form action={formAction} className="sm:flex sm:items-start sm:join">
+        <label className="form-control flex-grow">
           <input
             type="email"
             name="email"
             required
             className={`${
               error && 'input-error'
-            } input input-bordered input-primary w-full sm:w-72 join-item mb-4 sm:mb-0`}
+            } input input-bordered input-primary w-full mb-4 sm:mb-0 sm:mr-2 join-item`}
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           {error && (
             <div className="label">
@@ -59,9 +63,11 @@ export const EmailSignup = ({
         <SubscribeButton loadingMsg={loadingMsg} btnTitle={btnTitle} />
       </form>
       {showMessage && (
-        <div className="alert alert-info w-fit mt-4">
-          <PiCheckCircleLight className="text-2xl" />
-          <span>{message}</span>
+        <div className="toast toast-end z-50">
+          <div className="alert alert-info max-w-sm whitespace-pre-wrap">
+            <PiCheckCircleLight className="text-2xl" />
+            <span>{message}</span>
+          </div>
         </div>
       )}
       <p className="text-xs pt-4">{disclaimer}</p>

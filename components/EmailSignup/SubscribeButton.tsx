@@ -10,6 +10,7 @@ export const SubscribeButton = ({
   btnTitle,
 }: SubscribeButtonProps) => {
   const { pending } = useFormStatus();
+  
   return (
     <button
       type="submit"

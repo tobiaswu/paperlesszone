@@ -13,8 +13,8 @@ export const Footer = async () => {
 
   return (
     <footer className="bg-neutral" data-theme="darkTheme">
-      <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-8">
-        <div className="flex flex-col lg:flex-row justify-between gap-8 w-full">
+      <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 w-full col-span-2">
           <div className="flex flex-col gap-8">
             <Link className="h-fit" href={RouteId.root}>
               <p className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 text-transparent bg-clip-text">
@@ -48,9 +48,9 @@ export const Footer = async () => {
               )
             );
           })}
+          <div className="divider lg:divider-horizontal mx-0" />
         </div>
-        <div className="divider md:divider-horizontal mx-0" />
-        <div className="max-w-sm">
+        <div className="col-span-2 lg:col-span-1">
           <p className="text-2xl leading-normal mb-4">
             {t('footer.emailSignup')}
           </p>
@@ -63,23 +63,23 @@ export const Footer = async () => {
       </div>
 
       <div className="bg-gunmetal-400">
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-4">
-          <aside className="flex flex-col sm:flex-row items-center justify-between gap-8">
-            <div className="flex flex-col sm:flex-row items-center">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 p-4">
+          <aside className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-2">
               <p className="text-sm">© 2024 TW Software Solutions LLC</p>
-              <PiDotOutlineLight className="text-2xl" />
+              <PiDotOutlineLight className="text-2xl hidden md:block" />
               <Link className="hover:text-primary" href={RouteId.about}>
                 <p className="text-sm">{t('footer.aboutUs')}</p>
               </Link>
-              <PiDotOutlineLight className="text-2xl" />
+              <PiDotOutlineLight className="text-2xl hidden md:block" />
               <Link className="hover:text-primary" href={RouteId.contact}>
                 <p className="text-sm">{t('button.contact')}</p>
               </Link>
-              <PiDotOutlineLight className="text-2xl" />
+              <PiDotOutlineLight className="text-2xl hidden md:block" />
               <Link className="hover:text-primary" href={RouteId.privacy}>
                 <p className="text-sm">{t('footer.privacy')}</p>
               </Link>
-              <PiDotOutlineLight className="text-2xl" />
+              <PiDotOutlineLight className="text-2xl hidden md:block" />
               <Link className="hover:text-primary" href="/sitemap.xml">
                 <p className="text-sm">Sitemap</p>
               </Link>
@@ -92,7 +92,7 @@ export const Footer = async () => {
               </div>
             </div>
           </aside>
-          <nav className="flex gap-2 items-center">
+          <nav className="flex flex-wrap justify-center md:justify-start gap-2 items-center">
             <p>{t('footer.followUs')}</p>
             <Link href="https://twitter.com/paperlesszone">
               <BsTwitterX className="hover:text-primary text-3xl" />
