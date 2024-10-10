@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         {
           message:
-            "Thanks for you interest! To confirm your subscription, please click the link in the email we've just send to you",
+            'Thanks for you interest! Please check your email to confirm your subscription.',
         },
         { status: 200 }
       );

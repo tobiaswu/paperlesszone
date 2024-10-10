@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import '@/app/globals.css';
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Footer } from '@/components/Footer';
+import { TopHeaderBar } from '@/components/TopHeaderBar';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { GoogleAnalytics } from '@/components/GoogleAnalytics';
@@ -29,6 +30,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
+        <TopHeaderBar />
         <NextTopLoader color="#55d44c" />
         <Navbar />
         {children}
