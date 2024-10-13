@@ -347,7 +347,7 @@
     "copyNote": "Send me a copy to my email"
   },
   "emailSignup": {
-    "agreement": "NO SPAM. YOU CAN CANCEL ANYTIME"
+    "agreement": "I consent to receive newsletters via email. <PrivacyLink>Privacy Policy</PrivacyLink>."
   },
   "shareDialog": {
     "title": "Share",

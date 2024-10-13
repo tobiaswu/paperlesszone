@@ -347,7 +347,7 @@
     "copyNote": "Sende mir eine Kopie per E-Mail"
   },
   "emailSignup": {
-    "agreement": "KEIN SPAM. DU KANNST JEDERZEIT ABBESTELLEN"
+    "agreement": "Ich bin mit dem Erhalt von Newslettern via E-Mail einverstanden. <PrivacyLink>Datenschutzerklärung</PrivacyLink>."
   },
   "shareDialog": {
     "title": "Teilen",
