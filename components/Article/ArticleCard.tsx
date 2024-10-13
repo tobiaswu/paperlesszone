@@ -39,7 +39,7 @@ export const ArticleCard = ({
         <Link className="w-full" href={href}>
           {thumbnailUrl && thumbnailAltText && (
             <Image
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
               src={STRAPI_URL + thumbnailUrl}
               alt={thumbnailAltText}
               width={300}

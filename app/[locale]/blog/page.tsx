@@ -34,72 +34,64 @@ export default async function Blog({ params, searchParams }: Props) {
           searchParams.category
       )
     : searchParams.tag
-    ? articles?.filter((article) =>
-        article.attributes.tags?.data
-          .map((tag) => tag.attributes.item)
-          .includes(searchParams.tag)
-      )
-    : articles;
+      ? articles?.filter((article) =>
+          article.attributes.tags?.data
+            .map((tag) => tag.attributes.item)
+            .includes(searchParams.tag)
+        )
+      : articles;
 
   return (
     <div className="container mx-auto pt-8 pb-16 px-4">
-      <h1 className="text-4xl font-bold mb-6">{t('blog.title')}</h1>
-      <p className="mb-8 max-w-xl">{t('blog.description')}</p>
-      {filteredArticles ? (
-        <div className="grid grid-cols-6 gap-8">
-          {filteredArticles.map((article, index) => {
-            if (index === 0) {
-              return (
-                <ArticleCard
-                  key={article.id}
-                  className="col-span-6 lg:card-side min-h-[324px]"
-                  preview
-                  category={t(
-                    `blog.category.${
-                      article.attributes.category?.data.attributes
-                        .item as Category
-                    }`
-                  )}
-                  description={article.attributes.description}
-                  slug={article.attributes.slug}
-                  title={article.attributes.title}
-                  readTime={article.attributes.reading_time}
-                  readTimeText={t('blog.info.readTime')}
-                  thumbnailUrl={
-                    article.attributes.thumbnail?.data.attributes.url
-                  }
-                  thumbnailAltText={
-                    article.attributes.thumbnail?.data.attributes
-                      .alternativeText
-                  }
-                />
-              );
-            }
-            return (
-              <ArticleCard
-                key={article.id}
-                className="col-span-6 sm:col-span-3 lg:col-span-2"
-                category={t(
-                  `blog.category.${
-                    article.attributes.category?.data.attributes
-                      .item as Category
-                  }`
-                )}
-                slug={article.attributes.slug}
-                title={article.attributes.title}
-                readTime={article.attributes.reading_time}
-                readTimeText={t('blog.info.readTime')}
-                thumbnailUrl={article.attributes.thumbnail?.data.attributes.url}
-                thumbnailAltText={
-                  article.attributes.thumbnail?.data.attributes.alternativeText
-                }
-              />
-            );
-          })}
+      <h1 className="text-3xl sm:text-4xl font-bold pb-8">{t('blog.title')}</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
+        <div className="col-span-2">
+          {filteredArticles ? (
+            <div className="grid grid-cols-2 gap-8">
+              {filteredArticles.map((article) => {
+                return (
+                  <ArticleCard
+                    key={article.id}
+                    className="col-span-2 lg:col-span-1"
+                    category={t(
+                      `blog.category.${
+                        article.attributes.category?.data.attributes
+                          .item as Category
+                      }`
+                    )}
+                    preview
+                    description={article.attributes.description}
+                    slug={article.attributes.slug}
+                    title={article.attributes.title}
+                    readTime={article.attributes.reading_time}
+                    readTimeText={t('blog.info.readTime')}
+                    thumbnailUrl={
+                      article.attributes.thumbnail?.data.attributes.url
+                    }
+                    thumbnailAltText={
+                      article.attributes.thumbnail?.data.attributes
+                        .alternativeText
+                    }
+                  />
+                );
+              })}
+            </div>
+          ) : (
+            <NotFound text={t('blog.info.loadingError')} />
+          )}
         </div>
-      ) : (
-        <NotFound text={t('blog.info.loadingError')} />
-      )}
+        <div className="col-span-1 flex flex-col md:flex-row">
+          <div className="divider md:divider-horizontal" />
+          <div>
+            <p className="max-w-xl">{t('blog.description')}</p>
+            <div className="divider divider-vertical" />
+            <h2 className="text-2xl font-bold mb-4">
+              {t('blog.topics.title')}
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
