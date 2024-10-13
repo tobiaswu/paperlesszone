@@ -70,10 +70,14 @@
       "description": "Wie unsere Kunden ihr Geschäft mit uns transformiert haben. Von Prozessoptimierungen über Effizienzsteigerungen, Kostenersparnissen und Umsatzsteigerungen."
     },
     "newsletterSection": {
-      "title": "Erhalte als Erstes unsere branchen-spezifischen Trends",
-      "description": "Unser Ziel ist es, dich dabei zu unterstützen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um dein Unternehmen mit Rückenwind zu führen.",
-      "firstText": "Du verpasst keine Neuigkeiten, Trends und Sonderangebote mehr.",
-      "secondText": "Du erhältst unsere neuesten Erkenntnisse und Updates."
+      "title": "Erhalte exklusive Business Insights in Tech und Automatisierung, wöchentlich zugestellt",
+      "description": "Sei der Konkurrenz mit Expertentipps, Tools und umsetzbaren Strategien immer einen Schritt voraus. Unser Newsletter bietet praxisnahe Lösungen für die Automatisierung deines Geschäfts, die Verbesserung der Effizienz und die Nutzung der neuesten KI und Open-Source Technologien - speziell für kleine und mittlere Unternehmen.",
+      "whatYouGet": "Was du als Abonnent erhältst:",
+      "firstText": "Exklusive Anleitungen für die zeitsparende Optimierung deiner Prozesse.",
+      "secondText": "Branchenspezifische Trends und Best Practices in Automatisierung, Digitalisierung und IT-Lösungen.",
+      "thirdText": "Frühzeitiger Zugang zu neuen Artikeln, Tools und Angeboten, die dich auf dem Laufenden halten.",
+      "fourthText": "Firmenupdates, Tipps und Strategien, die du sofort umsetzen kannst, um dein Unternehmen zu boosten.",
+      "cta": "Zögere nicht - folge hunderten Geschäftsinhabern, die bereits von unseren wöchentlichen Insights profitieren!"
     }
   },
   "about": {
@@ -403,7 +407,7 @@
   },
   "newsletterIntroCard": {
     "button": "Abonnieren",
-    "description": "Kostenloser Forschungs-Newsletter: Erhalte branchenspezifische Trends, Nachrichten und Sonderangebote. Verpasse nie die neuesten Erkenntnisse und Updates.",
+    "description": "Unser wöchentlicher Newsletter bietet praxisnahe Lösungen für die Automatisierung deines Geschäfts, die Verbesserung der Effizienz und die Nutzung der neuesten KI und Open-Source Technologien - speziell für kleine und mittlere Unternehmen.",
     "title": "Der PaperlessZone Insider",
     "thumbnailAlt": "PaperlessZone Insider Logo"
   },

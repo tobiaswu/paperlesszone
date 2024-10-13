@@ -299,10 +299,7 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section> */}
-      <section
-        id="newsletter"
-        className="overflow-x-hidden pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center"
-      >
+      <section className="overflow-x-hidden pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center">
         <BlobLarge />
         <MotionWrapper
           variants={fadeInAnimationVariant}
@@ -315,6 +312,9 @@ export default async function Home({ params }: Props) {
             <p className="leading-relaxed mb-8">
               {t('root.newsletterSection.description')}
             </p>
+            <p className="font-bold mb-8">
+              {t('root.newsletterSection.whatYouGet')}
+            </p>
             <div className="flex flex-col gap-4 mb-8">
               <CheckedText
                 description={t('root.newsletterSection.firstText')}
@@ -322,8 +322,14 @@ export default async function Home({ params }: Props) {
               <CheckedText
                 description={t('root.newsletterSection.secondText')}
               />
-              {/* <CheckedText description="The bonus" /> */}
+              <CheckedText
+                description={t('root.newsletterSection.thirdText')}
+              />
+              <CheckedText
+                description={t('root.newsletterSection.fourthText')}
+              />
             </div>
+            <p className="mb-8">{t('root.newsletterSection.cta')}</p>
             <EmailSignup
               btnTitle={t('button.subscribe')}
               disclaimer={t('emailSignup.agreement')}
