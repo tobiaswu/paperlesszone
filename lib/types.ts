@@ -47,6 +47,7 @@ type ArticleAuthor = {
     attributes: {
       avatar?: Image;
       name: string;
+      description?: string;
       twitterUrl?: string;
       linkedinUrl?: string;
     };

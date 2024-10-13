@@ -138,6 +138,7 @@
       "workflows": "Workflows"
     },
     "info": {
+      "author": "Autor",
       "readTime": " min Lesezeit",
       "updated": "Zuletzt aktualisiert: ",
       "home": "Start",
@@ -356,16 +357,16 @@
     "shareLink": "Diesen Link teilen"
   },
   "button": {
-    "learnMore": "Mehr Erfahren",
+    "learnMore": "Mehr erfahren",
     "solutions": "Lösungen",
-    "aboutUs": "Über Uns",
-    "contact": "Kontaktiere Uns",
+    "aboutUs": "Über uns",
+    "contact": "Kontaktiere uns",
     "submit": "Abschicken",
-    "subscribe": "Jetzt Abonnieren",
-    "sharePost": "Artikel Teilen",
-    "getStarted": "Jetzt Starten",
-    "startDemo": "Demo Starten",
-    "bookDemo": "Demo Buchen",
+    "subscribe": "Jetzt abonnieren",
+    "sharePost": "Artikel teilen",
+    "getStarted": "Jetzt starten",
+    "startDemo": "Demo starten",
+    "bookDemo": "Demo buchen",
     "copy": "Kopieren",
     "services": "Services"
   },

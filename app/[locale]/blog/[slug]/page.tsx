@@ -128,6 +128,7 @@ export default async function Article({ params }: Props) {
         <div className="container flex flex-col lg:flex-row mx-auto gap-12 px-4 pb-4 mt-8">
           <div className="lg:w-1/3 flex flex-col gap-8">
             <ArticleAuthor
+              author={t('blog.info.author')}
               name={article.attributes.author?.data.attributes.name ?? ''}
               avatarUrl={
                 article.attributes.author?.data.attributes.avatar?.data
@@ -140,6 +141,9 @@ export default async function Article({ params }: Props) {
               twitterUrl={article.attributes.author?.data.attributes.twitterUrl}
               linkedinUrl={
                 article.attributes.author?.data.attributes.linkedinUrl
+              }
+              authorDescription={
+                article.attributes.author?.data.attributes.description
               }
             />
 
