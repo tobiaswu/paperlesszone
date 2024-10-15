@@ -69,6 +69,7 @@ export const Footer = async () => {
               ),
             })}
             loadingMsg={t('state.sending')}
+            badgeText={t('button.free')}
           />
         </div>
       </div>

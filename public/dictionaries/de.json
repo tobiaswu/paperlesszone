@@ -368,7 +368,8 @@
     "startDemo": "Demo starten",
     "bookDemo": "Demo buchen",
     "copy": "Kopieren",
-    "services": "Services"
+    "services": "Services",
+    "free": "Kostenlos"
   },
   "state": {
     "sending": "Senden"

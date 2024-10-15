@@ -11,12 +11,14 @@ interface EmailSignupProps {
   disclaimer: ReactNode;
   loadingMsg: string;
   btnTitle: string;
+  badgeText?: string;
 }
 
 export const EmailSignup = ({
   btnTitle,
   disclaimer,
   loadingMsg,
+  badgeText,
 }: EmailSignupProps) => {
   const [state, formAction] = useFormState(submitEmailForm, null);
   const [showMessage, setShowMessage] = useState(false);
@@ -74,7 +76,11 @@ export const EmailSignup = ({
               </div>
             )}
           </label>
-          <SubscribeButton loadingMsg={loadingMsg} btnTitle={btnTitle} />
+          <SubscribeButton
+            loadingMsg={loadingMsg}
+            btnTitle={btnTitle}
+            badgeText={badgeText}
+          />
         </div>
         <label htmlFor="gdpr" className="flex items-center gap-2 mt-2 text-xs">
           <input type="checkbox" name="gdpr" id="gdpr" required />

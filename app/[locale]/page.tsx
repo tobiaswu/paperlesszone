@@ -345,6 +345,7 @@ export default async function Home({ params }: Props) {
                 ),
               })}
               loadingMsg={t('state.sending')}
+              badgeText={t('button.free')}
             />
           </div>
           {/* <div className="col-span-3 md:col-span-1 place-self-center">
