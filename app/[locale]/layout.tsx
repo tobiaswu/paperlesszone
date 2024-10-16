@@ -66,5 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'x-default': `${RouteId.root}`,
       },
     },
+    other: {
+      'impact-site-verification': 'ac3ffd44-f926-419b-a30d-482cefb6575a',
+    },
   };
 }
