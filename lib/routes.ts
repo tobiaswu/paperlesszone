@@ -3,6 +3,7 @@ export const RouteId = {
   contact: '/contact',
   about: '/about',
   blog: '/blog',
+  blogTopic: '/blog/topic',
   consultation: '/solutions/consultation',
   paperless: '/solutions/paperless',
   agents: '/solutions/agents',

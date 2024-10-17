@@ -8,7 +8,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 import './RelatedArticles.styles.css';
 import { useTranslations } from 'next-intl';
-import { Category } from '@/lib/enums';
 import Link from 'next/link';
 import { RouteId } from '@/lib/routes';
 
@@ -90,12 +89,6 @@ export const RelatedArticles = ({ articles }: RelatedArticlesProps) => {
               <div className="embla__slide" key={article.id}>
                 <ArticleCard
                   className="h-full"
-                  category={t(
-                    `blog.category.${
-                      article.attributes.category?.data.attributes
-                        .item as Category
-                    }`
-                  )}
                   slug={article.attributes.slug}
                   title={article.attributes.title}
                   readTime={article.attributes.reading_time}

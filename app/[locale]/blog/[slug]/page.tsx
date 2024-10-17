@@ -2,7 +2,7 @@ import { ArticleAuthor } from '@/components/Article/ArticleAuthor';
 import { ArticleShare } from '@/components/Article/ArticleShare';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { type Article, type Comment } from '@/lib/types';
+import { type Comment } from '@/lib/types';
 import { NotFound } from '@/components/NotFound';
 import { MotionProgressbar } from '@/components/MotionProgressbar';
 import { Metadata } from 'next';
@@ -26,12 +26,11 @@ import { CommentSection } from '@/components/CommentSection/CommentSection';
 import { getComments } from '@/components/CommentSection/actions';
 import { RouteId } from '@/lib/routes';
 import { CardPopover } from '@/components/CardPopover';
+import { getBlogArticle, getBlogArticles } from '@/lib/blog';
 
 type Props = {
   params: { slug: string; locale: string };
 };
-
-export const ARTICLES_API = `${STRAPI_URL}/api/articles`;
 
 export default async function Article({ params }: Props) {
   unstable_setRequestLocale(params.locale);
@@ -39,43 +38,20 @@ export default async function Article({ params }: Props) {
   const format = await getFormatter();
   const messages = await getMessages();
 
-  const article: Article | undefined = await fetch(
-    ARTICLES_API +
-      '?locale=' +
-      params.locale +
-      '&filters[slug][$eq]=' +
-      params.slug +
-      '&populate[0]=author&populate[1]=author.avatar&populate[2]=category&populate[3]=tags&populate[4]=thumbnail',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data[0])
-    .catch((error) => console.log(error));
+  const allArticles = await getBlogArticles({ locale: params.locale });
+  const article = await getBlogArticle({
+    slug: params.slug,
+    locale: params.locale,
+  });
 
   const sectionTitles: string[] = article?.attributes.content
-    .filter((item) => item.type === 'heading' && item.level === 2)
-    // @ts-ignore
-    .map((item) => item.children[0].text) as string[];
+    .filter((item: any) => item.type === 'heading' && item.level === 2)
+    .map((item: any) => item.children[0].text) as string[];
 
-  const articles: Article[] = await fetch(
-    ARTICLES_API +
-      '?locale=' +
-      params.locale +
-      '&populate[0]=tags&populate[1]=category&populate[2]=thumbnail',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data)
-    .catch((error) => console.log(error));
-
-  const initialTags = article?.attributes.tags?.data;
+  const initialTopics = article?.attributes.topics?.data;
   const sortedAndLimitedArticles = sortAndLimitArticles(
-    articles,
-    initialTags,
+    allArticles ?? [],
+    initialTopics,
     article?.id
   );
 
@@ -147,9 +123,9 @@ export default async function Article({ params }: Props) {
               }
             />
 
-            {article.attributes.tags && (
+            {article.attributes.topics && (
               <ArticleTags
-                tags={article.attributes.tags.data}
+                tags={article.attributes.topics.data}
                 title={t('blog.topics.title')}
               />
             )}
@@ -190,8 +166,8 @@ export default async function Article({ params }: Props) {
                 shareLinkText={t('shareDialog.shareLink')}
                 title={t('shareDialog.title')}
               />
-              {article.attributes.tags && (
-                <ArticleTags tags={article.attributes.tags.data} />
+              {article.attributes.topics && (
+                <ArticleTags tags={article.attributes.topics.data} />
               )}
             </div>
           </div>
@@ -234,20 +210,10 @@ export default async function Article({ params }: Props) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article: Article | undefined = await fetch(
-    ARTICLES_API +
-      '?locale=' +
-      params.locale +
-      '&filters[slug][$eq]=' +
-      params.slug +
-      '&populate[0]=thumbnail&populate[1]=tags&populate[2]=localizations',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data[0])
-    .catch((error) => console.log(error));
+  const article = await getBlogArticle({
+    slug: params.slug,
+    locale: params.locale,
+  });
 
   const slug = article?.attributes.slug;
   const alternates = article?.attributes.localizations?.data.length;

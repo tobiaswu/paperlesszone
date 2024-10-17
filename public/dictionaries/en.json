@@ -48,7 +48,7 @@
       "aiDescription": "Generation of the content you need like image, text, audio or video"
     },
     "blogSection": {
-      "title": "Explore our blog"
+      "title": "Explore our latest articles"
     },
     "benefitSection": {
       "title": "Benefit from the wave of new technology",
@@ -127,8 +127,10 @@
       "title": "Topics"
     },
     "title": "PaperlessZone Blog: Modern Business Automation",
-    "description": "Welcome to our blog, where we help small and medium businesses unlock the power of automation, open-source software, and AI to streamline operations, boost productivity, and save costs. Discover expert insights, practical guides, and the latest industry trends to help your business stay ahead in the digital age.",
-    "category": {
+    "description": "Welcome to our blog, where we help small and medium-sized enterprises unlock the power of automation, open-source software, and AI to streamline operations, boost productivity, and save costs. Discover expert insights, practical guides, and the latest industry trends to help your business stay ahead in the digital age.",
+    "topicPageTitle": "Browse articles related to -{topic}- on PaperlessZone Blog",
+    "topicPageNotFound": "Could not find articles for topic {topic}.",
+    "topic": {
       "all": "All",
       "useCases": "Use Cases",
       "guides": "Guides",
@@ -357,7 +359,7 @@
     "shareLink": "Share this link"
   },
   "button": {
-    "learnMore": "Learn more",
+    "learnMore": "Explore more",
     "solutions": "Solutions",
     "aboutUs": "About us",
     "contact": "Contact us",

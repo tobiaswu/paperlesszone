@@ -7,9 +7,8 @@ export type Article = {
   attributes: {
     title: string;
     description: string;
-    category: Category;
-    tags?: {
-      data: Tag[];
+    topics?: {
+      data: Topic[];
     };
     reading_time: number;
     content: BlocksContent;
@@ -25,19 +24,10 @@ export type Article = {
   };
 };
 
-type Category = {
-  data: {
-    id: number;
-    attributes: {
-      item: string;
-    };
-  };
-};
-
-export type Tag = {
+export type Topic = {
   id: number;
   attributes: {
-    item: string;
+    topic: string;
   };
 };
 

@@ -1,28 +1,20 @@
 import { RouteId } from '@/lib/routes';
 import { Article } from '@/lib/types';
 import { MetadataRoute } from 'next';
-import { ARTICLES_API } from './[locale]/blog/[slug]/page';
 import { BASE_URL } from '@/lib/constants';
+import { getBlogArticles } from '@/lib/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const articlesEn: Article[] = await fetch(
-    ARTICLES_API + '?fields[0]=slug&fields[1]=updatedAt&locale=en',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data)
-    .catch((error) => console.log(error));
-  const articlesDe: Article[] = await fetch(
-    ARTICLES_API + '?fields[0]=slug&fields[1]=updatedAt&locale=de',
-    {
-      method: 'GET',
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => data.data)
-    .catch((error) => console.log(error));
+  const articlesEn: Article[] | undefined = await getBlogArticles({
+    locale: 'en',
+  });
+  const articlesDe: Article[] | undefined = await getBlogArticles({
+    locale: 'de',
+  });
+
+  if (!articlesEn || !articlesDe) {
+    return [];
+  }
 
   const postsEn: MetadataRoute.Sitemap = articlesEn.map((article) => ({
     url: `${BASE_URL + RouteId.blog}/${article.attributes.slug}`,

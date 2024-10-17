@@ -9,7 +9,6 @@ export interface ArticleCardProps {
   thumbnailUrl?: string;
   thumbnailAltText?: string;
   slug: string;
-  category?: string;
   title: string;
   description?: string;
   readTime?: number;
@@ -22,7 +21,6 @@ export const ArticleCard = ({
   thumbnailUrl,
   thumbnailAltText,
   slug,
-  category,
   title,
   description,
   readTime,
@@ -50,9 +48,6 @@ export const ArticleCard = ({
         </Link>
       </figure>
       <div className="card-body overflow-y-scroll">
-        <div className="badge badge-secondary badge-lg rounded-lg mb-2">
-          {category}
-        </div>
         <Link className="w-fit" href={href}>
           <h2 className="card-title text-2xl mb-2">{title}</h2>
         </Link>

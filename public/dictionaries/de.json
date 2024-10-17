@@ -48,7 +48,7 @@
       "aiDescription": "Generierung der Inhalte, die du benötigst, wie Bild, Text, Audio oder Video"
     },
     "blogSection": {
-      "title": "Entdecke unseren Blog"
+      "title": "Entdecke unsere neuesten Artikel"
     },
     "benefitSection": {
       "title": "Profitiere von der Welle neuer Technologie",
@@ -128,7 +128,9 @@
     },
     "title": "PaperlessZone Blog: Moderne Business-Automatisierung",
     "description": "Willkommen auf unserem Blog, auf dem wir kleinen und mittleren Unternehmen helfen, die Möglichkeiten von Automatisierung, Open-Source-Software und KI zu nutzen, um Abläufe zu optimieren, die Produktivität zu steigern und Kosten zu sparen. Entdecke Expertenwissen, praktische Leitfäden und die neuesten Branchen-Trends, um dein Unternehmen für die digitale Zukunft vorzubereiten.",
-    "category": {
+    "topicPageTitle": "Entdecke Artikel über {topic} auf PaperlessZone Blog",
+    "topicPageNotFound": "Es konnte kein Artikel über {topic} gefunden werden.",
+    "topic": {
       "all": "Alle",
       "useCases": "Praxis",
       "guides": "Guides",
@@ -357,7 +359,7 @@
     "shareLink": "Diesen Link teilen"
   },
   "button": {
-    "learnMore": "Mehr erfahren",
+    "learnMore": "Mehr entdecken",
     "solutions": "Lösungen",
     "aboutUs": "Über uns",
     "contact": "Kontaktiere uns",
