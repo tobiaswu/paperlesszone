@@ -128,7 +128,7 @@
     },
     "title": "PaperlessZone Blog: Moderne Business-Automatisierung",
     "description": "Willkommen auf unserem Blog, auf dem wir kleinen und mittleren Unternehmen helfen, die Möglichkeiten von Automatisierung, Open-Source-Software und KI zu nutzen, um Abläufe zu optimieren, die Produktivität zu steigern und Kosten zu sparen. Entdecke Expertenwissen, praktische Leitfäden und die neuesten Branchen-Trends, um dein Unternehmen für die digitale Zukunft vorzubereiten.",
-    "topicPageTitle": "Entdecke Artikel über {topic} auf PaperlessZone Blog",
+    "topicPageTitle": "Entdecke Artikel über -{topic}- auf PaperlessZone Blog",
     "topicPageNotFound": "Es konnte kein Artikel über {topic} gefunden werden.",
     "topic": {
       "all": "Alle",
