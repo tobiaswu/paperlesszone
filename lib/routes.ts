@@ -10,4 +10,5 @@ export const RouteId = {
   privacy: '/privacy',
   solutions: '/solutions',
   resources: '/resources',
+  tools: '/tools',
 };

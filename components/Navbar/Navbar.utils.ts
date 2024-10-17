@@ -43,7 +43,7 @@ export const getNavItems = async () => {
     {
       id: 'tools',
       label: t('navbar.tools'),
-      url: RouteId.resources,
+      url: RouteId.tools,
       items: [
         {
           id: 'tool-1',

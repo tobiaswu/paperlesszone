@@ -129,7 +129,7 @@
     "title": "PaperlessZone Blog: Moderne Business-Automatisierung",
     "description": "Willkommen auf unserem Blog, auf dem wir kleinen und mittleren Unternehmen helfen, die Möglichkeiten von Automatisierung, Open-Source-Software und KI zu nutzen, um Abläufe zu optimieren, die Produktivität zu steigern und Kosten zu sparen. Entdecke Expertenwissen, praktische Leitfäden und die neuesten Branchen-Trends, um dein Unternehmen für die digitale Zukunft vorzubereiten.",
     "topicPageTitle": "Entdecke Artikel über -{topic}- auf PaperlessZone Blog",
-    "topicPageNotFound": "Es konnte kein Artikel über {topic} gefunden werden.",
+    "topicPageNotFound": "Es konnte kein Artikel über -{topic}- gefunden werden.",
     "topic": {
       "all": "Alle",
       "useCases": "Praxis",
@@ -415,6 +415,12 @@
     "title": "Der PaperlessZone Insider",
     "thumbnailAlt": "PaperlessZone Insider Logo"
   },
+  "toolsIntroCard": {
+    "button": "Tool ansehen",
+    "description": "Paperless-ngx ist ein leistungsstarkes Dokumentenverwaltungssystem, das dir helfen kann, deinen Dokumentenverwaltungs-Arbeitsablauf zu automatisieren. Es ist einfach zu bedienen und kann an deine Bedürfnisse angepasst werden. Klicke hier, um Paperless-ngx zu testen!",
+    "title": "Revolutioniere deine Dokumentenverwaltung mit Paperless-ngx - Kostenlose Online Demo",
+    "thumbnailAlt": "Paperless-ngx dashboard mit getaggten Dokumenten."
+  },
   "commentSection": {
     "title": "Kommentare",
     "formTitle": "Hinterlasse einen Kommentar",
@@ -432,7 +438,7 @@
     },
     "solutions": {
       "title": "PaperlessZone Lösungen - Innovative Automatisierungen fürs Büro",
-      "description": "Entdecke unsere Bürolösungen, von der intelligenten Dokumentenverwaltung bis hin zu kollaborativen Tools, die deinen Arbeitsalltag revolutionieren. ✓ Erfahre mehr hier",
+      "description": "▷ Entdecke unsere Bürolösungen, von der intelligenten Dokumentenverwaltung bis hin zu kollaborativen Tools, die deinen Arbeitsalltag revolutionieren. ✓ Erfahre mehr hier",
       "paperless": {
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
         "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."
@@ -444,7 +450,11 @@
     },
     "resources": {
       "title": "PaperlessZone Ressourcen - Tools für Workflow Automatisierung",
-      "description": "Entdecke unsere umfangreichen Ressourcen ✓ Blog ✓ Newsletter ✓ AI Tools, um deine Unternehmensabläufe zu boosten ✓ Klicke hier, um direkt mit dem Lernen loszulegen"
+      "description": "▷ Entdecke unsere umfangreichen Ressourcen ✓ Blog ✓ Newsletter ✓ AI Tools, um deine Unternehmensabläufe zu boosten ✓ Klicke hier, um direkt mit dem Lernen loszulegen"
+    },
+    "tools": {
+      "title": "PaperlessZone Tools - AI Tools für dein Geschäft",
+      "description": "▷ Entdecke unsere Sammlung von AI Tools, um deine Geschäftsabläufe zu beschleunigen. Von der Dokumentenverwaltung bis hin zur Projektplanung. Klicke hier, um direkt mit unseren Tools loszulegen!"
     },
     "privacy": {
       "title": "Datenschutzerklärung von PaperlessZone - wir schützen deine Daten",
@@ -457,6 +467,10 @@
     "blog": {
       "title": "PaperlessZone Blog - Automatisierung, AI Trends & Mehr!",
       "description": "▷ Entdecke den PaperlessZone Blog. Lerne wie du dein Unternehmen skalierst & digitalisierst. ✓ Reale Anwendungsfälle. ✓ Lerne kostenlos. ✓ Setze noch heute um."
+    },
+    "blogTopic": {
+      "title": "{topic} Artikel | PaperlessZone Blog",
+      "description": "▷ Entdecke Artikel über -{topic}- auf PaperlessZone Blog"
     },
     "about": {
       "title": "Über PaperlessZone - Lösungen für den Geschäftsalltag",

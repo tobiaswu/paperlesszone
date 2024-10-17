@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { getBlogArticles, getBlogTopics } from '@/lib/blog';
 import { BlogPage, mapTopicName } from '@/components/Blog/BlogPage';
 import { getTranslations } from 'next-intl/server';
+import { BASE_URL } from '@/lib/constants';
+import { RouteId } from '@/lib/routes';
 
 type Props = {
   params: { slug: string; locale: string };
@@ -32,14 +34,25 @@ export default async function TopicBlogPage({ params }: Props) {
   );
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const topic = params.slug;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata.blogTopic',
+  });
+  const slug = params.slug;
+  const topic = mapTopicName(slug);
+
   return {
-    title: `${topic.charAt(0).toUpperCase() + topic.slice(1)} Articles | PaperlessZone Blog`,
-    description: `Browse articles related to ${topic} on PaperlessZone Blog`,
+    title: t('title', { topic }),
+    description: t('description', { topic }),
+    robots: { index: true, follow: true },
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      languages: {
+        en: `${RouteId.blogTopic}/${slug}`,
+        de: `/de${RouteId.blogTopic}/${slug}`,
+        'x-default': `${RouteId.blogTopic}/${slug}`,
+      },
+    },
   };
 }
