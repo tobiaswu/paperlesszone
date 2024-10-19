@@ -19,7 +19,7 @@ export default async function Consultation({ params }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({
     locale: params.locale,
-    namespace: 'solutions.consultation',
+    namespace: 'services.consulting',
   });
 
   const processItems = [
@@ -216,7 +216,7 @@ export default async function Consultation({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({
     locale: params.locale,
-    namespace: 'metadata.solutions.consultation',
+    namespace: 'metadata.services.consulting',
   });
 
   return {
@@ -226,9 +226,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(BASE_URL),
     alternates: {
       languages: {
-        en: `${RouteId.consultation}`,
-        de: `/de${RouteId.consultation}`,
-        'x-default': `${RouteId.consultation}`,
+        en: `${RouteId.consulting}`,
+        de: `/de${RouteId.consulting}`,
+        'x-default': `${RouteId.consulting}`,
       },
     },
   };

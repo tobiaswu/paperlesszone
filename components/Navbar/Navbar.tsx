@@ -36,6 +36,19 @@ export const Navbar = async () => {
                   return (
                     <li key={item.id}>
                       <Link href={item.url ?? RouteId.root}>{item.label}</Link>
+                      {item.items && (
+                        <ul key={item.id}>
+                          {item.items.map((subItem) => {
+                            return (
+                              <li key={subItem.id}>
+                                <Link href={subItem.url ?? RouteId.root}>
+                                  {subItem.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
                     </li>
                   );
                 })}

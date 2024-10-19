@@ -4,11 +4,16 @@ export const RouteId = {
   about: '/about',
   blog: '/blog',
   blogTopic: '/blog/topic',
-  consultation: '/solutions/consultation',
-  paperless: '/solutions/paperless',
-  agents: '/solutions/agents',
-  privacy: '/privacy',
-  solutions: '/solutions',
   resources: '/resources',
   tools: '/tools',
-};
+  solutions: '/solutions',
+  paperless: '/solutions/paperless',
+  services: '/services',
+  consulting: '/services/consulting',
+  agents: '/services/agents',
+  openSource: '/services/open-source',
+  webScraping: '/services/web-scraping',
+  privacy: '/privacy',
+} as const;
+
+export type RouteIdType = (typeof RouteId)[keyof typeof RouteId];

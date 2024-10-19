@@ -7,17 +7,39 @@ export const getNavItems = async () => {
 
   const navItems: NavItemData[] = [
     {
+      id: 'services',
+      label: t('navbar.services'),
+      url: RouteId.services,
+      items: [
+        {
+          id: 'consulting',
+          label: t('navbar.consulting'),
+          url: RouteId.consulting,
+        },
+        {
+          id: 'open-source',
+          label: t('navbar.openSource'),
+          url: RouteId.openSource,
+        },
+        {
+          id: 'agents',
+          label: t('navbar.agents'),
+          url: RouteId.agents,
+        },
+        {
+          id: 'web-scraping',
+          label: t('navbar.webScraping'),
+          url: RouteId.webScraping,
+        },
+      ],
+    },
+    {
       id: 'solutions',
       label: t('navbar.solutions'),
       url: RouteId.solutions,
       items: [
         {
-          id: 'solution-1',
-          label: t('navbar.consultation'),
-          url: RouteId.consultation,
-        },
-        {
-          id: 'solution-2',
+          id: 'paperless-ngx',
           label: t('navbar.paperless'),
           url: RouteId.paperless,
         },
@@ -29,12 +51,12 @@ export const getNavItems = async () => {
       url: RouteId.resources,
       items: [
         {
-          id: 'resource-1',
+          id: 'blog',
           label: 'Blog',
           url: RouteId.blog,
         },
         {
-          id: 'resource-2',
+          id: 'newsletter',
           label: 'Newsletter',
           url: 'https://paperlesszone.beehiiv.com/subscribe',
         },
@@ -46,7 +68,7 @@ export const getNavItems = async () => {
       url: RouteId.tools,
       items: [
         {
-          id: 'tool-1',
+          id: 'paperless-demo',
           label: 'Paperless-ngx Demo',
           url: `${RouteId.blog}/free-online-demo-paperless-ngx`,
         },

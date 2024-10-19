@@ -76,7 +76,6 @@
       "firstText": "Exclusive how-to guides for streamlining your operations and saving time.",
       "secondText": "Industry trends and best practices in automation, digital transformation, and IT solutions.",
       "thirdText": "Early access to new articles, tools, and offers that help you stay ahead of the curve.",
-      "fourthText": "Company updates, tips, and strategies that you can implement right away to boost your business.",
       "cta": "Don't miss out—join hundreds of business owners already benefiting from our weekly insights!"
     }
   },
@@ -285,8 +284,10 @@
           "content": "You first put a document in the Paperless Consumer. Usually, you scan your documents via a document scanner. Your scanner is configured to automatically drop the documents in the Paperless Consumer folder. However, you can also add documents via smartphone, email, drag-n-drop, or API. Paperless regularly checks the Consumer for new content and then imports it into the system. After Paperless has successfully processed your document and created the OCR layer, you can add more details to your document. E.g., title, correspondent, date, document type, tags, or custom fields. Paperless has a matching algorithm and can set many details automatically over time. You can now find your document in seconds via search or filters. You can create users, workflows, and more. Your creativity has no limits. On our <linkBlog>Blog</linkBlog>, you can find many examples of workflows."
         }
       }
-    },
-    "consultation": {
+    }
+  },
+  "services": {
+    "consulting": {
       "title": "Expert guidance for your project",
       "summary": "In a dedicated 90-minute consultation, I can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
       "button": "Book a session now for €450",
@@ -330,13 +331,16 @@
     }
   },
   "navbar": {
-    "solutions": "Services",
+    "services": "Services",
+    "solutions": "Solutions",
     "resources": "Resources",
     "tools": "Tools",
     "about": "About",
-    "paperless": "The Paperless Office",
-    "consultation": "Consultation",
-    "agents": "AI Agents"
+    "consulting": "Consulting",
+    "openSource": "Open Source Software Integration",
+    "agents": "AI Agents",
+    "webScraping": "AI Web Scraping",
+    "paperless": "The Paperless Office"
   },
   "footer": {
     "emailSignup": "Get exclusive business insights on IT and automation delivered weekly",
@@ -391,10 +395,10 @@
     "title": "AI Agents: Automate your business processes with AI assistants",
     "thumbnailAlt": "PaperlessZone AI agent dashboard."
   },
-  "consultationIntroCard": {
+  "consultingIntroCard": {
     "button": "Book a session",
-    "description": "Get expert help with your project in a dedicated 90-minute consultation. Our specialists can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
-    "title": "Paid Consultation: Expert guidance for your project",
+    "description": "Get expert help with your project in a dedicated 90-minute consultation. Our specialists can assist you with AI development, automation, paperless solutions, and open-source setups. Tailored advice and hands-on support to ensure your project's success.",
+    "title": "Book a consultation session - expert guidance for your project",
     "thumbnailAlt": "Consultation session with an expert."
   },
   "paperlessIntroCard": {
@@ -436,16 +440,20 @@
       "title": "PaperlessZone - We implement AI solutions for your business",
       "description": "▷ Scale and digitalize your business with PaperlessZone. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today."
     },
+    "services": {
+      "title": "PaperlessZone Services - We implement AI solutions for your business",
+      "description": "▷ Explore our services to supercharge your business with AI. From expert consulting to tailored software solutions, we're here to help you thrive in the digital age.",
+      "consulting": {
+        "title": "Book a consultation session - expert guidance for your project",
+        "description": "▷ Get expert help with your project in a dedicated 90-minute consultation. We can assist you with AI development, automation, paperless solutions, and open-source setups."
+      }
+    },
     "solutions": {
       "title": "PaperlessZone Solutions - Innovative Business Automations",
       "description": "▷ Explore our wide range of business solutions, from intelligent document management to collaborative tools that will revolutionize your workday. ✓ Learn more here!",
       "paperless": {
         "title": "Get the Paperless-ngx system running | we install it for you",
         "description": "▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support."
-      },
-      "consultation": {
-        "title": "Consultation with Tobias Wupperfeld - Get expert guidance for your project",
-        "description": "▷ Get expert help with your project in a dedicated 90-minute consultation. I can assist you with AI development, automation, paperless solutions, and Nextcloud setups."
       }
     },
     "resources": {

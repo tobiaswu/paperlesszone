@@ -37,6 +37,8 @@ export const BlogPreview = async () => {
               <ArticleCard
                 key={article.id}
                 className="col-span-6 sm:col-span-3 lg:col-span-2"
+                preview
+                description={article.attributes.description}
                 slug={article.attributes.slug}
                 title={article.attributes.title}
                 readTime={article.attributes.reading_time}

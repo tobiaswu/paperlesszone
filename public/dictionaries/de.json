@@ -76,7 +76,6 @@
       "firstText": "Exklusive Anleitungen für die zeitsparende Optimierung deiner Prozesse.",
       "secondText": "Branchenspezifische Trends und Best Practices in Automatisierung, Digitalisierung und IT-Lösungen.",
       "thirdText": "Frühzeitiger Zugang zu neuen Artikeln, Tools und Angeboten, die dich auf dem Laufenden halten.",
-      "fourthText": "Firmenupdates, Tipps und Strategien, die du sofort umsetzen kannst, um dein Unternehmen zu boosten.",
       "cta": "Zögere nicht - folge hunderten Geschäftsinhabern, die bereits von unseren wöchentlichen Insights profitieren!"
     }
   },
@@ -285,8 +284,10 @@
           "content": "Du legst zunächst ein Dokument im Paperless Consumer ab. Überlicherweise scannst du deine Dokumente via Dokumentenscanner ein. Dein Scanner ist so konfiguriert, dass die Dokumente automatisch im Paperless Consumer Ordner landen. Du kannst jedoch auch Dokumente via Smartphone, E-Mail, per Drag-n-Drop oder per API hinzufügen. Paperless prüft regelmäßig den Consumer auf neue Inhalte und importiert diese dann in das System. Nachdem Paperless erfolgreich dein Dokument verarbeitet und die OCR Ebene erstellt hat, kannst du weitere Details zu deinem Dokument hinzufügen. Z. B. Titel, Korrespondent, Datum, Dokumententyp, Tags oder von dir erfundene Felder. Paperless hat einen Matching Algorithmus und kann viele Details mit der Zeit automatisch setzen. Du kannst dein Dokument jetzt in Sekundenschnelle über die Suche oder die Filter finden. Du kannst Benutzer, Arbeitsabläufe und mehr anlegen. Deiner Kreativität sind keine Grenzen gesetzt. Auf unserem <linkBlog>Blog</linkBlog> findest du viele Beispiele für Arbeitsabläufe."
         }
       }
-    },
-    "consultation": {
+    }
+  },
+  "services": {
+    "consulting": {
       "title": "Expertenunterstützung für dein Projekt",
       "summary": "In einer 90-minütigen Beratung unterstütze ich dich bei der Entwicklung von KI, Automatisierung, papierlosen Lösungen und Nextcloud-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
       "button": "Buche jetzt eine Beratung für 450€",
@@ -330,13 +331,16 @@
     }
   },
   "navbar": {
-    "solutions": "Leistungen",
+    "services": "Leistungen",
+    "solutions": "Lösungen",
     "resources": "Ressourcen",
     "tools": "Tools",
     "about": "Über uns",
-    "paperless": "Das Papierlose Büro",
-    "consultation": "Beratung",
-    "agents": "KI-Agenten"
+    "consulting": "Beratung",
+    "openSource": "Open Source Software Integration",
+    "agents": "KI-Agenten",
+    "webScraping": "KI Web Scraping",
+    "paperless": "Das Papierlose Büro"
   },
   "footer": {
     "emailSignup": "Erhalte wöchentlich exklusive Geschäftseinblicke zu IT und Automatisierung",
@@ -391,10 +395,10 @@
     "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
     "thumbnailAlt": "PaperlessZone KI-Agenten Dashboard."
   },
-  "consultationIntroCard": {
+  "consultingIntroCard": {
     "button": "Buche eine Sitzung",
-    "description": "Erhalte fachkundige Hilfe für dein Projekt in einer 90-minütigen Beratung. Unsere Spezialisten unterstützen dich bei der KI-Entwicklung, Automatisierung, papierlosen Lösungen und Nextcloud-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
-    "title": "Bezahlte Beratung: Fachkundige Anleitung für dein Projekt",
+    "description": "Erhalte fachkundige Hilfe für dein Projekt in einer 90-minütigen Beratung. Unsere Spezialisten unterstützen dich bei der KI-Entwicklung, Automatisierung, papierlosen Lösungen und Open-Source-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
+    "title": "Buche eine Beratungssitzung - Fachkundige Anleitung für dein Projekt",
     "thumbnailAlt": "Beratungssitzung mit einem Experten."
   },
   "paperlessIntroCard": {
@@ -436,16 +440,20 @@
       "title": "PaperlessZone - Wir implementieren KI Lösungen für dein Geschäft",
       "description": "▷ Skaliere und digitalisiere dein Unternehmen mit PaperlessZone. Intelligente Automatisierungen. ✓ Basierend auf realen Anwendungsfällen. ✓ Lerne und setze um."
     },
+    "services": {
+      "title": "PaperlessZone Leistungen - Wir implementieren KI Lösungen für dein Geschäft",
+      "description": "▷ Entdecke unsere Leistungen, um dein Geschäft mit KI zu stärken. Von Expertensitzungen bis hin zu angepassten Softwarelösungen. Wir sind hier, um dir zu helfen.",
+      "consulting": {
+        "title": "Buche eine Beratungssitzung - Fachkundige Unterstützung für dein Projekt",
+        "description": "▷ Buche eine 90-minütige Beratungssitzung. Erhalte fachkundige Hilfe für dein Projekt. ✓ Maßgeschneiderte Beratung. ✓ Praktische Unterstützung."
+      }
+    },
     "solutions": {
       "title": "PaperlessZone Lösungen - Innovative Automatisierungen fürs Büro",
       "description": "▷ Entdecke unsere Bürolösungen, von der intelligenten Dokumentenverwaltung bis hin zu kollaborativen Tools, die deinen Arbeitsalltag revolutionieren. ✓ Erfahre mehr hier",
       "paperless": {
         "title": "Nutze das Paperless-ngx System | wir installieren es für dich",
         "description": "▷ Eliminiere Stift & Papier und mache deine Dokumente verfügbar für dein Team. Starte noch heute mit Paperless-ngx! ✓ 100% Zufriedenheitsgarantie. ✓ Kundensupport."
-      },
-      "consultation": {
-        "title": "Buche eine Beratungssitzung mit Tobias Wupperfeld",
-        "description": "▷ Buche eine 90-minütige Beratungssitzung mit mir. Erhalte fachkundige Hilfe für dein Projekt. ✓ Maßgeschneiderte Beratung. ✓ Praktische Unterstützung."
       }
     },
     "resources": {

@@ -325,9 +325,6 @@ export default async function Home({ params }: Props) {
               <CheckedText
                 description={t('root.newsletterSection.thirdText')}
               />
-              <CheckedText
-                description={t('root.newsletterSection.fourthText')}
-              />
             </div>
             <p className="mb-8">{t('root.newsletterSection.cta')}</p>
             <EmailSignup

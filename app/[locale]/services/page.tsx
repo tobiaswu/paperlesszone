@@ -8,22 +8,22 @@ type Props = {
   params: { locale: string };
 };
 
-export default async function Solutions({ params }: Props) {
+export default async function Services({ params }: Props) {
   unstable_setRequestLocale(params.locale);
-  const tPaperless = await getTranslations({
+  const tConsulting = await getTranslations({
     locale: params.locale,
-    namespace: 'paperlessIntroCard',
+    namespace: 'consultingIntroCard',
   });
 
   return (
     <div className="container mx-auto px-4 py-16 space-y-8">
       <PageIntroCard
-        buttonText={tPaperless('button')}
-        description={tPaperless('description')}
-        thumbnailAltText={tPaperless('thumbnailAlt')}
-        thumbnailSrc="/assets/images/paperless-cover.webp"
-        title={tPaperless('title')}
-        url={RouteId.paperless}
+        buttonText={tConsulting('button')}
+        description={tConsulting('description')}
+        thumbnailAltText={tConsulting('thumbnailAlt')}
+        thumbnailSrc="/assets/images/consulting-robots.webp"
+        title={tConsulting('title')}
+        url={RouteId.consulting}
       />
     </div>
   );
@@ -32,7 +32,7 @@ export default async function Solutions({ params }: Props) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({
     locale: params.locale,
-    namespace: 'metadata.solutions',
+    namespace: 'metadata.services',
   });
 
   return {
@@ -40,18 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     robots: { index: true, follow: true },
     metadataBase: new URL(BASE_URL),
-    openGraph: {
-      images: [
-        {
-          url: `${BASE_URL}/assets/images/paperless-cover.webp`,
-        },
-      ],
-    },
     alternates: {
       languages: {
-        en: `${RouteId.solutions}`,
-        de: `/de${RouteId.solutions}`,
-        'x-default': `${RouteId.solutions}`,
+        en: `${RouteId.services}`,
+        de: `/de${RouteId.services}`,
+        'x-default': `${RouteId.services}`,
       },
     },
   };

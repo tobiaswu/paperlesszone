@@ -40,7 +40,7 @@ export const Footer = async () => {
                         key={item.id}
                         href={item.url ?? RouteId.root}
                       >
-                        <p className="text-base">{item.label}</p>
+                        <p className="text-sm">{item.label}</p>
                       </Link>
                     );
                   })}

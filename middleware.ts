@@ -18,6 +18,8 @@ const REDIRECT_MAP: Record<string, string> = {
     '/de/blog/free-online-demo-paperless-ngx',
   '/de/blog/paperless-installation-auf-ubuntu-vps':
     '/de/blog/paperless-installation-on-ubuntu-vps',
+  '/de/solutions/consultation': '/de/services/consulting',
+  '/solutions/consultation': '/services/consulting',
 };
 
 export default async function middleware(request: NextRequest) {
