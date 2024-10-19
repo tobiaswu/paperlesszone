@@ -328,6 +328,15 @@
         "sixthStep": "100% Zufriedenheitsgarantie",
         "sixthDescription": "Du zahlst nur für die Beratung, wenn du auch tatsächlich einen Mehrwert bekommst. Stellen wir gemeinsam in den ersten 15 Minuten unseres Gespräches fest, das Tobias keine Lösung für dich finden kann, stellen wir dir natürlich nichts dafür in Rechnung."
       }
+    },
+    "agents": {
+      "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten"
+    },
+    "webScraping": {
+      "title": "KI Web Scraping: Daten aus Websites extrahieren mit KI"
+    },
+    "openSource": {
+      "title": "Open Source Software Integration: Automatisiere deine Geschäftsprozesse mit Open-Source Software"
     }
   },
   "navbar": {
@@ -446,6 +455,18 @@
       "consulting": {
         "title": "Buche eine Beratungssitzung - Fachkundige Unterstützung für dein Projekt",
         "description": "▷ Buche eine 90-minütige Beratungssitzung. Erhalte fachkundige Hilfe für dein Projekt. ✓ Maßgeschneiderte Beratung. ✓ Praktische Unterstützung."
+      },
+      "agents": {
+        "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
+        "description": "▷ KI-Agenten oder Assistenten können dir bei verschiedenen Aufgaben helfen. Sie können in deine bestehenden Systeme integriert werden und dir dabei helfen, wiederholende Aufgaben zu automatisieren. KI-Agenten sind in der Lage, basierend auf deinen Daten mit Text zu antworten, benutzerdefinierte Tools aufzurufen, sich mit jeder API zu verbinden und interaktive Benutzeroberflächen zu erstellen."
+      },
+      "webScraping": {
+        "title": "KI Web Scraping: Daten aus Websites extrahieren mit KI",
+        "description": "▷ KI Web Scraping kann dir helfen, Daten aus Websites zu extrahieren. Es kann verwendet werden, um Aufgaben zu automatisieren, Zeit zu sparen und die Effizienz zu steigern."
+      },
+      "openSource": {
+        "title": "Open Source Software Integration: Automatisiere deine Geschäftsprozesse mit Open-Source Software",
+        "description": "▷ Open Source Software kann dir helfen, deine Geschäftsprozesse zu automatisieren. Es kann verwendet werden, um Zeit zu sparen und die Effizienz zu steigern."
       }
     },
     "solutions": {

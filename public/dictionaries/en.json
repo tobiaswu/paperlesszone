@@ -328,6 +328,15 @@
         "sixthStep": "100% Satisfaction Guarantee",
         "sixthDescription": "You only pay for the consultation if you actually gain value from it. If we jointly determine within the first 15 minutes of our conversation that Tobias cannot find a solution for you, we will not charge you for the session."
       }
+    },
+    "agents": {
+      "title": "AI Agents: Automate your business processes with AI assistants"
+    },
+    "webScraping": {
+      "title": "AI Web Scraping: Scrape data from websites with AI"
+    },
+    "openSource": {
+      "title": "Open Source Software Integration: Automate your business processes with open source software"
     }
   },
   "navbar": {
@@ -446,6 +455,18 @@
       "consulting": {
         "title": "Book a consultation session - expert guidance for your project",
         "description": "▷ Get expert help with your project in a dedicated 90-minute consultation. We can assist you with AI development, automation, paperless solutions, and open-source setups."
+      },
+      "agents": {
+        "title": "AI Agents: Automate your business processes with AI assistants",
+        "description": "▷ AI agents or assistants can help you with various tasks. They can be integrated into your existing systems and help you automate repetitive tasks. AI agents are able to respond with text based on your data, call custom tools, connect to any API, and generate interactive user interfaces."
+      },
+      "webScraping": {
+        "title": "AI Web Scraping: Scrape data from websites with AI",
+        "description": "▷ AI web scraping can help you to extract data from websites. It can be used to automate tasks, save time and increase efficiency."
+      },
+      "openSource": {
+        "title": "Open Source Software Integration: Automate your business processes with open source software",
+        "description": "▷ Open source software can help you to automate your business processes. It can be used to save time and increase efficiency."
       }
     },
     "solutions": {
