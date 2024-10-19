@@ -95,7 +95,7 @@
     "thirdSectionText": "Unser Ziel ist es, den Prozess der Integration neuer Technologien in dein Unternehmen zu vereinfachen und dir unser Wissen und unsere Erfahrung zur Verfügung zu stellen. Wir haben branchenspezifische Tools entwickelt, die dir helfen, deine Arbeitsabläufe zu automatisieren, zu digitalisieren und zu rationalisieren.",
     "firstSubtitle": "Über den Gründer",
     "fourthSectionText": "Tobias Wupperfeld ist der Gründer von PaperlessZone. Er ist ein erfahrener Software-Ingenieur mit Erfahrung in verschiedenen Branchen. Er hat unter anderem bei internationalen Konzernen wie SAP und innovativen KI-Startups gearbeitet. Tobias hat eine Leidenschaft für Innovationen und möchte Unternehmen jeder Größe dabei helfen, die neuesten Automatisierungstechnologien und künstliche Intelligenz zu nutzen, um Zeit und Kosten zu sparen und die Effizienz zu steigern.",
-    "quote": "Ich persönlich glaube, dass wir sehr früh sind in der KI Ära. KI wird Unternehmen nicht ersetzen, aber Unternehmen, die KI nutzen, werden Unternehmen ersetzen, die dies nicht tun. Unternehmen, die KI einsetzen, werden nicht nur führen, sondern dominieren.",
+    "quote": "Ich persönlich glaube, dass wir sehr früh sind in der KI Ära. KI wird Unternehmen nicht ersetzen, aber Unternehmen, die KI nutzen, werden Unternehmen ersetzen, die dies nicht tun. Firmen, die KI einsetzen, werden nicht nur führen, sondern dominieren.",
     "fifthSectionText": "Wusstest du, dass",
     "fortune500LinkText": "80% der Fortune 500 Unternehmen OpenAI Produkte einsetzen?",
     "sixthSectionText": "Diese Unternehmen haben das Potenzial von KI längst erkannt und nutzen es zu ihrem Vorteil. Mit der zunehmenden Nachfrage nach KI ist es nur eine Frage der Zeit, bis auch kleinere Unternehmen damit beginnen, sie einzusetzen.",
@@ -418,7 +418,7 @@
   },
   "blogIntroCard": {
     "button": "Blog besuchen",
-    "description": "Mit unserem Blog, helfen wir kleinen und mittleren Unternehmen, die Möglichkeiten von Automatisierung, Open-Source-Software und KI zu nutzen, um Abläufe zu optimieren, die Produktivität zu steigern und Kosten zu sparen. Entdecke Expertenwissen, praktische Leitfäden und die neuesten Branchen-Trends, um dein Unternehmen für die digitale Zukunft vorzubereiten.",
+    "description": "Mit unserem Blog, helfen wir KMUs, die Möglichkeiten von Automatisierung, Open-Source-Software und KI zu nutzen, um Abläufe zu optimieren, Produktivität zu steigern und Kosten zu sparen. Entdecke Expertenwissen, praktische Leitfäden und die neuesten Branchen-Trends, um dein Unternehmen für die digitale Zukunft vorzubereiten.",
     "title": "Der PaperlessZone Blog",
     "thumbnailAlt": "PaperlessZone Blog Logo"
   },

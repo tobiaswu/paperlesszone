@@ -95,7 +95,7 @@
     "thirdSectionText": "Our goal is to simplify the process of integrating new technologies into your business and offer you our knowledge and experience. We've developed industry-specific tools that help you automate, digitalize and streamline your workflows.",
     "firstSubtitle": "About the founder",
     "fourthSectionText": "Tobias Wupperfeld is the founder of PaperlessZone. He is a seasoned software engineer with experience in various industries, including working at international corporations like SAP and innovative AI startups. Tobias has a passion for innovation and is dedicated to helping businesses of all sizes leverage the latest automation technologies and artificial intelligence to save time, cost and increase efficiency.",
-    "quote": "I personally think we are very early in the AI Era. AI won't replace businesses but businesses that use AI will replace businesses that don't. Businesses powered by AI don't just lead, they dominate.",
+    "quote": "I personally think we are very early in the AI Era. AI won't replace businesses but businesses that use AI will replace businesses that don't. Enterprises powered by AI don't just lead, they dominate.",
     "fifthSectionText": "Did you know that",
     "fortune500LinkText": "80% of Fortune 500 companies use OpenAI products?",
     "sixthSectionText": "These companies have long understood the potential of AI and have been using it to their advantage. With the increasing demand for AI, it's only a matter of time until smaller businesses start adopting it too.",
@@ -418,7 +418,7 @@
   },
   "blogIntroCard": {
     "button": "Visit blog",
-    "description": "With our blog, we help small and medium businesses unlock the power of automation, open-source software, and AI to streamline operations, boost productivity, and save costs. Discover expert insights, practical guides, and the latest industry trends to help your business stay ahead in the digital age.",
+    "description": "With our blog, we help SMBs unlock the power of automation, open-source software, and AI to streamline operations, boost productivity, and save costs. Discover expert insights, practical guides, and the latest industry trends to help your business stay ahead in the digital age.",
     "title": "The PaperlessZone Blog",
     "thumbnailAlt": "PaperlessZone Blog Logo"
   },

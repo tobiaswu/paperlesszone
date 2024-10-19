@@ -21,7 +21,7 @@ export default async function Services({ params }: Props) {
         buttonText={tConsulting('button')}
         description={tConsulting('description')}
         thumbnailAltText={tConsulting('thumbnailAlt')}
-        thumbnailSrc="/assets/images/consulting-robots.webp"
+        thumbnailSrc="/assets/images/consulting.webp"
         title={tConsulting('title')}
         url={RouteId.consulting}
       />
