@@ -10,7 +10,12 @@ export const BlogPreview = async () => {
   const allArticles = await getBlogArticles({ locale });
 
   if (!allArticles) {
-    return <NotFound text={t('blog.info.loadingError')} />;
+    return (
+      <NotFound
+        text={t('blog.info.loadingError')}
+        buttonText={t('button.backToBlog')}
+      />
+    );
   }
 
   return (

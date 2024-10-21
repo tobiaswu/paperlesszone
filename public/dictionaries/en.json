@@ -384,7 +384,8 @@
     "bookDemo": "Book demo",
     "copy": "Copy",
     "services": "Services",
-    "free": "Free"
+    "free": "Free",
+    "backToBlog": "Back to blog"
   },
   "state": {
     "sending": "Sending"
@@ -409,6 +410,12 @@
     "description": "Get expert help with your project in a dedicated 90-minute consultation. Our specialists can assist you with AI development, automation, paperless solutions, and open-source setups. Tailored advice and hands-on support to ensure your project's success.",
     "title": "Book a consultation session - expert guidance for your project",
     "thumbnailAlt": "Consultation session with an expert."
+  },
+  "openSourceIntroCard": {
+    "button": "See open source solution",
+    "description": "Open source software can help you to automate your business processes. It can be used to save time and increase efficiency.",
+    "title": "Open Source Software Integration: Automate your business processes with open source software",
+    "thumbnailAlt": "Open source software integration."
   },
   "paperlessIntroCard": {
     "button": "See paperless solution",

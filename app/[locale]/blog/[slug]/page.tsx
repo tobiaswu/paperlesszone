@@ -205,7 +205,12 @@ export default async function Article({ params }: Props) {
       </div>
     );
   } else {
-    return <NotFound text={t('blog.info.notFound')} />;
+    return (
+      <NotFound
+        text={t('blog.info.notFound')}
+        buttonText={t('button.backToBlog')}
+      />
+    );
   }
 }
 

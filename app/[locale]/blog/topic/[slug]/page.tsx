@@ -27,6 +27,7 @@ export default async function TopicBlogPage({ params }: Props) {
       title={t('blog.topicPageTitle', { topic })}
       description={t('blog.description')}
       notFoundText={t('blog.topicPageNotFound', { topic })}
+      backToBlogText={t('button.backToBlog')}
       readTimeText={t('blog.info.readTime')}
       topicsTitle={t('blog.topics.title')}
       topics={topics ?? []}

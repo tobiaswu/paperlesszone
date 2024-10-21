@@ -18,6 +18,7 @@ interface BlogPageProps {
   notFoundText: string;
   readTimeText: string;
   topicsTitle: string;
+  backToBlogText: string;
   topics: Topic[];
 }
 
@@ -28,6 +29,7 @@ export const BlogPage = ({
   notFoundText,
   readTimeText,
   topicsTitle,
+  backToBlogText,
   topics,
 }: BlogPageProps) => {
   return (
@@ -63,7 +65,7 @@ export const BlogPage = ({
               })}
             </div>
           ) : (
-            <NotFound text={notFoundText} />
+            <NotFound text={notFoundText} buttonText={backToBlogText} />
           )}
         </div>
         <div className="col-span-1 flex flex-col md:flex-row">

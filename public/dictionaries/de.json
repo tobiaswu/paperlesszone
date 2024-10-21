@@ -384,7 +384,8 @@
     "bookDemo": "Demo buchen",
     "copy": "Kopieren",
     "services": "Services",
-    "free": "Kostenlos"
+    "free": "Kostenlos",
+    "backToBlog": "Zurück zum Blog"
   },
   "state": {
     "sending": "Senden"
@@ -409,6 +410,12 @@
     "description": "Erhalte fachkundige Hilfe für dein Projekt in einer 90-minütigen Beratung. Unsere Spezialisten unterstützen dich bei der KI-Entwicklung, Automatisierung, papierlosen Lösungen und Open-Source-Setups. Maßgeschneiderte Beratung und praktische Unterstützung, um den Erfolg deines Projekts sicherzustellen.",
     "title": "Buche eine Beratungssitzung - Fachkundige Anleitung für dein Projekt",
     "thumbnailAlt": "Beratungssitzung mit einem Experten."
+  },
+  "openSourceIntroCard": {
+    "button": "Open Source Lösung ansehen",
+    "description": "Open Source Software kann dir helfen, deine Geschäftsprozesse zu automatisieren. Es kann verwendet werden, um Zeit zu sparen und die Effizienz zu steigern.",
+    "title": "Open Source Software Integration: Automatisiere deine Geschäftsprozesse mit Open-Source Software",
+    "thumbnailAlt": "Open Source Software Integration."
   },
   "paperlessIntroCard": {
     "button": "Papierlose Lösung ansehen",

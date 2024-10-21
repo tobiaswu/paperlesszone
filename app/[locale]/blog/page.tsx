@@ -23,6 +23,7 @@ export default async function Blog({ params }: Props) {
       notFoundText={t('blog.info.notFound')}
       readTimeText={t('blog.info.readTime')}
       topicsTitle={t('blog.topics.title')}
+      backToBlogText={t('button.backToBlog')}
       topics={topics ?? []}
     />
   );
