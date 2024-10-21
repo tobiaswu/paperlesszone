@@ -20,10 +20,10 @@ export const PageIntroCard = ({
 }: PageIntroCardProps) => {
   return (
     <div className="card lg:card-side min-h-[324px] bg-neutral shadow-md rounded-lg border border-gunmetal-600">
-      <figure className="min-w-fit lg:w-2/5 lg:min-w-min">
+      <div className="min-w-fit lg:w-1/2 lg:min-w-min">
         <Link className="w-full lg:max-h-96" href={url}>
           <Image
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full lg:rounded-l-lg rounded-t-lg lg:rounded-tr-none"
             src={thumbnailSrc}
             alt={thumbnailAltText}
             width={512}
@@ -31,8 +31,8 @@ export const PageIntroCard = ({
             loading="lazy"
           />
         </Link>
-      </figure>
-      <div className="card-body overflow-y-scroll lg:w-3/5 h-fit">
+      </div>
+      <div className="card-body overflow-y-scroll lg:w-1/2 h-fit">
         <Link className="w-fit" href={url}>
           <h2 className="card-title text-2xl mb-2">{title}</h2>
         </Link>

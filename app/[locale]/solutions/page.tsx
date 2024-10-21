@@ -21,7 +21,7 @@ export default async function Solutions({ params }: Props) {
         buttonText={tPaperless('button')}
         description={tPaperless('description')}
         thumbnailAltText={tPaperless('thumbnailAlt')}
-        thumbnailSrc="/assets/images/paperless-cover.webp"
+        thumbnailSrc="/assets/images/the-paperless-office.webp"
         title={tPaperless('title')}
         url={RouteId.paperless}
       />
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: `${BASE_URL}/assets/images/paperless-cover.webp`,
+          url: `${BASE_URL}/assets/images/the-paperless-office.webp`,
         },
       ],
     },

@@ -25,7 +25,7 @@ export default async function Resources({ params }: Props) {
         buttonText={tBlog('button')}
         description={tBlog('description')}
         thumbnailAltText={tBlog('thumbnailAlt')}
-        thumbnailSrc="/assets/images/blog-thumbnail.webp"
+        thumbnailSrc="/assets/images/blog.webp"
         title={tBlog('title')}
         url={RouteId.blog}
       />
@@ -33,7 +33,7 @@ export default async function Resources({ params }: Props) {
         buttonText={tNewsletter('button')}
         description={tNewsletter('description')}
         thumbnailAltText={tNewsletter('thumbnailAlt')}
-        thumbnailSrc="/assets/images/newsletter-thumbnail.webp"
+        thumbnailSrc="/assets/images/newsletter.webp"
         title={tNewsletter('title')}
         url="https://paperlesszone.beehiiv.com/subscribe"
       />
