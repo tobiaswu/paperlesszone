@@ -70,7 +70,7 @@ export default async function Consultation({ params }: Props) {
               </p>
             </MotionWrapper>
             <MotionWrapper variants={itemAnimationVariant}>
-              <Link href="mailto:info@paperlesszone.com">
+              <Link href={RouteId.contact}>
                 <button className="btn btn-secondary btn-lg mb-16 capitalize">
                   {t('button')}
                 </button>
@@ -122,7 +122,7 @@ export default async function Consultation({ params }: Props) {
               <li>{t('focusArea.fourthText')}</li>
               <li>{t('focusArea.fifthText')}</li>
             </ul>
-            <Link href="mailto:info@paperlesszone.com">
+            <Link href={RouteId.contact}>
               <button className="relative btn btn-primary mt-8">
                 {t('button')}
               </button>
@@ -151,7 +151,7 @@ export default async function Consultation({ params }: Props) {
               <li>{t('expertise.fifthText')}</li>
               <li>{t('expertise.sixthText')}</li>
             </ul>
-            <Link href="mailto:info@paperlesszone.com">
+            <Link href={RouteId.contact}>
               <button className="relative btn btn-primary mt-8">
                 {t('button')}
               </button>
@@ -192,7 +192,7 @@ export default async function Consultation({ params }: Props) {
                 </div>
               );
             })}
-            <Link href="mailto:info@paperlesszone.com">
+            <Link href={RouteId.contact}>
               <button className="relative btn btn-primary mt-8">
                 {t('button')}
               </button>
