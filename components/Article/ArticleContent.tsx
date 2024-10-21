@@ -115,13 +115,13 @@ export const ArticleContent = ({ content }: ArticleContentProps) => {
         list: ({ children, format }) => {
           if (format === 'ordered') {
             return (
-              <ol className="list-decimal mb-4 ml-4 text-lg leading-relaxed space-y-2">
+              <ol className="list-decimal mb-4 ml-4 text-base leading-relaxed space-y-2">
                 {children}
               </ol>
             );
           }
           return (
-            <ul className="list-disc mb-4 ml-4 text-lg leading-relaxed space-y-2">
+            <ul className="list-disc mb-4 ml-4 text-base leading-relaxed space-y-2">
               {children}
             </ul>
           );
