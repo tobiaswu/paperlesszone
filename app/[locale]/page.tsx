@@ -37,7 +37,12 @@ export default async function Home({ params }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale });
 
-  const serviceKeys = ['consulting', 'openSource', 'agents', 'webScraping'];
+  const serviceKeys = [
+    'consulting',
+    'openSource',
+    'agents',
+    'webScraping',
+  ] as const;
 
   return (
     <>
