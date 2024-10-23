@@ -427,8 +427,8 @@
           "description": "<li>Ein Ansprechpartner für alle deine Bedürfnisse</li><li>Proaktive Wartung und Überwachung</li><li>Feste monatliche Kosten ohne Überraschungen</li><li>Expertise über mehrere Open Source Lösungen</li><li>An deinen spezifischen Workflow angepasst</li><li>Regelmäßige Systemoptimierung</li><li>Klare Dokumentation und Wissenstransfer</li>"
         },
         "compliance": {
-          "title": "Wir sind DSGVO-konform",
-          "description": "Unsere Lösungen entsprechen der EU-Verordnung 2016/679 (Datenschutz-Grundverordnung, DSGVO). Wir geben deine Daten nicht an Dritte weiter."
+          "title": "Wir sind DSGVO- und HIPAA-konform",
+          "description": "Unsere Lösungen entsprechen der EU-Verordnung 2016/679 (Datenschutz-Grundverordnung, DSGVO) und der Health Insurance Portability and Accountability Act (HIPAA). Wir geben deine Daten nicht an Dritte weiter."
         },
         "cta": "Unser Versprechen für deinen Erfolg",
         "ctaLink": "Vereinbare deine Service-Beratung",

@@ -427,8 +427,8 @@
           "description": "<li>Single point of contact for all your needs</li><li>Proactive maintenance and monitoring</li><li>Fixed monthly costs without surprises</li><li>Expertise across multiple open source solutions</li><li>Customized to your specific workflow</li><li>Regular system optimization</li><li>Clear documentation and knowledge transfer</li>"
         },
         "compliance": {
-          "title": "We are GDPR compliant",
-          "description": "Our solutions are compliant with EU Regulation 2016/679 (General Data Protection Regulation, GDPR). We don't share your data with third parties."
+          "title": "We are GDPR & HIPAA compliant",
+          "description": "Our solutions are compliant with EU Regulation 2016/679 (General Data Protection Regulation, GDPR) and the Health Insurance Portability and Accountability Act (HIPAA). We don't share your data with third parties."
         },
         "cta": "Our Commitment to Your Success",
         "ctaLink": "Schedule your service consultation",

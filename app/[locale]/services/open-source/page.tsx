@@ -349,12 +349,20 @@ export default async function OpenSource({ params }: Props) {
               <p className="max-w-xl mb-4">
                 {t('serviceBreakdown.compliance.description')}
               </p>
-              <Image
-                src="/assets/logos/gdpr.webp"
-                alt="GDPR"
-                width={100}
-                height={100}
-              />
+              <div className="flex gap-4">
+                <Image
+                  src="/assets/logos/gdpr.webp"
+                  alt="GDPR"
+                  width={100}
+                  height={100}
+                />
+                <Image
+                  src="/assets/logos/hipaa.webp"
+                  alt="HIPAA"
+                  width={100}
+                  height={100}
+                />
+              </div>
             </div>
           </div>
           <div className="flex md:flex-row flex-col justify-center gap-8 mb-16">
