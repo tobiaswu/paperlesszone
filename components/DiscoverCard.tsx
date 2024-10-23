@@ -11,7 +11,7 @@ export const DiscoverCard = ({ icon, title }: DiscoverCardProps) => {
   return (
     <Link
       href={RouteId.solutions}
-      className="card rounded-lg bg-neutral border border-gunmetal-600 shadow-md hover:bg-primary hover:text-neutral h-full group overflow-hidden relative"
+      className="card rounded-lg backdrop-blur-3xl border border-gunmetal-600 shadow-md hover:bg-primary hover:text-neutral h-full group overflow-hidden relative"
     >
       <div className="card-body justify-center items-center">
         <span className="text-5xl text-primary group-hover:text-neutral">

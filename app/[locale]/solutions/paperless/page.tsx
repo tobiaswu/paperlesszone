@@ -226,16 +226,19 @@ export default async function Paperless({ params }: Props) {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
             icon={<PiDownloadLight />}
+            title=""
             description={t('reqtFirstStep')}
             url="https://github.com/paperless-ngx/paperless-ngx"
           />
           <SolutionCard
             icon={<PiScanLight />}
+            title=""
             description={t('reqSecondStep')}
             url="https://amzn.to/42Pp9Td"
           />
           <SolutionCard
             icon={<PiDesktopTowerLight />}
+            title=""
             description={t('reqThirdStep')}
             url="https://amzn.to/3IaCvjp"
           />
@@ -262,11 +265,13 @@ export default async function Paperless({ params }: Props) {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
           <SolutionCard
             icon={<PiLightbulbFilamentLight />}
+            title=""
             description={t('useFirstStep')}
-            url={`${RouteId.blog}?tag=paperless-ngx`}
+            url={`${RouteId.blogTopic}/paperless`}
           />
           <SolutionCard
             icon={<PiArticleLight />}
+            title=""
             description={t('useSecondStep')}
             url="https://paperlesszone.beehiiv.com/subscribe"
           />
@@ -283,29 +288,35 @@ export default async function Paperless({ params }: Props) {
           <p className="max-w-3xl">{t('offerDescription')}</p>
           <div className="flex flex-col items-center justify-center">
             <BlobLarge />
-            <div className="grid z-20 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8">
+            <div className="grid z-20 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 mt-8 py-16">
               <SolutionCard
                 icon={<PiWrenchLight />}
+                title=""
                 description={t('offerFirstBenefit')}
               />
               <SolutionCard
                 icon={<PiFloppyDiskBackLight />}
+                title=""
                 description={t('offerSecondBenefit')}
               />
               <SolutionCard
                 icon={<PiShieldCheckLight />}
+                title=""
                 description={t('offerThirdBenefit')}
               />
               <SolutionCard
                 icon={<PiTrendUpLight />}
+                title=""
                 description={t('offerFourthBenefit')}
               />
               <SolutionCard
                 icon={<PiPlugsConnectedLight />}
+                title=""
                 description={t('offerFifthBenefit')}
               />
               <SolutionCard
                 icon={<PiHandshakeLight />}
+                title=""
                 description={t('offerSixthBenefit')}
               />
             </div>

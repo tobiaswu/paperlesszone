@@ -13,8 +13,6 @@ import { RouteId } from '@/lib/routes';
 import Link from 'next/link';
 import {
   PiAlienLight,
-  PiCloudCheckLight,
-  PiCodeBlockLight,
   PiCodepenLogoLight,
   PiFactoryLight,
   PiFileCloudLight,
@@ -29,6 +27,7 @@ import {
 } from 'react-icons/pi';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { BlobLarge, BlobMedium } from '@/components/ui/blob';
+import { SolutionCard } from '@/components/SolutionCard';
 
 type Props = {
   params: { locale: string };
@@ -37,6 +36,8 @@ type Props = {
 export default async function Home({ params }: Props) {
   unstable_setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale });
+
+  const serviceKeys = ['consulting', 'openSource', 'agents', 'webScraping'];
 
   return (
     <>
@@ -118,6 +119,7 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </div>
+      {/* Services */}
       <section
         id="services"
         className="py-32 px-4 flex flex-col items-center justify-center [background:radial-gradient(125%_125%_at_50%_90%,rgba(255,255,255,0)_40%,#288a21_100%)]"
@@ -128,77 +130,25 @@ export default async function Home({ params }: Props) {
               {t('root.serviceSection.title')}
             </h2>
           </MotionWrapper>
-          <MotionWrapper variants={fadeInAnimationVariant}>
-            <div className="flex flex-col mb-12 text-center max-w-2xl mx-auto leading-relaxed">
-              <p className="text-base">
-                &#10003; {t('root.serviceSection.descriptionP2')}
-              </p>
-              <p className="text-base">
-                &#10003; {t('root.serviceSection.descriptionP3')}
-              </p>
-              <p className="text-base">
-                &#10003; {t('root.serviceSection.descriptionP4')}
-              </p>
-              <p className="text-base">
-                &#10003; {t('root.serviceSection.descriptionP1')}
-              </p>
-            </div>
-          </MotionWrapper>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            <MotionWrapper index={0} variants={staggerAnimationVariant}>
-              <UseCaseCard
-                icon={<PiCodepenLogoLight />}
-                title={t('root.serviceSection.service1.title')}
-                description={
-                  <ul>
-                    <li>
-                      <p>{t('root.serviceSection.service1.descriptionP1')}</p>
-                    </li>
-                    <li>
-                      <p>{t('root.serviceSection.service1.descriptionP2')}</p>
-                    </li>
-                    <li>
-                      <p>{t('root.serviceSection.service1.descriptionP3')}</p>
-                    </li>
-                    <li>
-                      <p>{t('root.serviceSection.service1.descriptionP4')}</p>
-                    </li>
-                  </ul>
-                }
-              />
-            </MotionWrapper>
-            <MotionWrapper index={1} variants={staggerAnimationVariant}>
-              <UseCaseCard
-                icon={<PiCodeBlockLight />}
-                title={t('root.serviceSection.service2.title')}
-                description={
-                  <ul>
-                    <li>
-                      <p>{t('root.serviceSection.service2.descriptionP1')}</p>
-                    </li>
-                    <li>
-                      <p>{t('root.serviceSection.service2.descriptionP2')}</p>
-                    </li>
-                    <li>
-                      <p>{t('root.serviceSection.service2.descriptionP3')}</p>
-                    </li>
-                  </ul>
-                }
-              />
-            </MotionWrapper>
-            <MotionWrapper index={2} variants={staggerAnimationVariant}>
-              <UseCaseCard
-                icon={<PiCloudCheckLight />}
-                title={t('root.serviceSection.service3.title')}
-                description={
-                  <p>{t('root.serviceSection.service3.descriptionP1')}</p>
-                }
-              />
-            </MotionWrapper>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {serviceKeys.map((key, index) => (
+              <MotionWrapper
+                index={index}
+                key={key}
+                variants={staggerAnimationVariant}
+              >
+                <SolutionCard
+                  icon={<PiCodepenLogoLight />}
+                  title={t(`root.serviceSection.${key}.title`)}
+                  description={t(`root.serviceSection.${key}.description`)}
+                  url={RouteId[key as keyof typeof RouteId]}
+                />
+              </MotionWrapper>
+            ))}
           </div>
         </div>
       </section>
-
+      {/* Use Cases */}
       <section className="overflow-x-hidden py-32 sm:pb-64 px-4 flex flex-col items-center justify-center">
         <BlobMedium />
         <div className="container mx-auto z-20">
@@ -250,6 +200,7 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </section>
+      {/* Blog */}
       <section className="container mx-auto pb-16 sm:pb-32 px-4 bg-base-100">
         <MotionWrapper variants={itemAnimationVariant}>
           <h2 className="text-3xl sm:text-5xl font-semibold text-center mb-24 sm:leading-normal">
@@ -269,6 +220,7 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section>
+      {/* Reviews */}
       {/* <section className="container mx-auto pt-16 sm:pt-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
         <div className="col-span-2 lg:col-span-1">
           <div className="grid sm:grid-cols-2 gap-4">
@@ -299,6 +251,7 @@ export default async function Home({ params }: Props) {
           </Link>
         </div>
       </section> */}
+      {/* Newsletter */}
       <section className="overflow-x-hidden pt-32 pb-16 sm:pb-32 px-4 bg-base-100 flex flex-col items-center justify-center">
         <BlobLarge />
         <MotionWrapper
