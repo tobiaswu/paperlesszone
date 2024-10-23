@@ -80,10 +80,15 @@ export const Footer = async () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 p-4">
           <aside className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-2">
-              <p className="text-sm">
-                © {currentYear} TW Software Solutions LLC
-              </p>
-              <PiDotOutlineLight className="text-2xl hidden md:block" />
+              <div className="flex flex-col max-w-xs">
+                <p className="text-sm">
+                  © {currentYear} TW Software Solutions LLC
+                </p>
+                <p className="text-xs text-gunmetal-600">
+                  All trademarks, logos, and brand names are the property of
+                  their respective owners.
+                </p>
+              </div>
               <Link className="hover:text-primary" href={RouteId.about}>
                 <p className="text-sm">{t('footer.aboutUs')}</p>
               </Link>
