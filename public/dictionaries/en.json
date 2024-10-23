@@ -325,10 +325,14 @@
       }
     },
     "agents": {
-      "title": "AI Agents: Automate your business processes with AI assistants"
+      "title": "AI Agents: Automate your business processes with AI assistants",
+      "summary": "Page is currently under development.",
+      "cta": "Let's talk"
     },
     "webScraping": {
-      "title": "AI Web Scraping: Scrape data from websites with AI"
+      "title": "AI Web Scraping: Scrape data from websites with AI",
+      "summary": "Page is currently under development.",
+      "cta": "Let's talk"
     },
     "openSource": {
       "title": "Transform Your Business With Enterprise-Grade Open Source Solutions",

@@ -325,15 +325,19 @@
       }
     },
     "agents": {
-      "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten"
+      "title": "KI-Agenten: Automatisiere deine Geschäftsprozesse mit KI-Assistenten",
+      "summary": "Die Seite ist derzeit noch in Entwicklung.",
+      "cta": "Kontakt aufnehmen"
     },
     "webScraping": {
-      "title": "KI Web Scraping: Daten aus Websites extrahieren mit KI"
+      "title": "KI Web Scraping: Daten aus Websites extrahieren mit KI",
+      "summary": "Die Seite ist derzeit noch in Entwicklung.",
+      "cta": "Kontakt aufnehmen"
     },
     "openSource": {
       "title": "Transformiere dein Unternehmen mit Enterprise-Grade Open Source Lösungen",
       "summary": "Genieße die Freiheit von Open Source Software mit der Zuverlässigkeit professioneller Unterstützung. Wir kümmern uns um alles von der Einrichtung bis zum täglichen Betrieb, damit du dich auf dein Geschäft konzentrieren kannst.",
-      "cta": "Lass uns reden",
+      "cta": "Kontakt aufnehmen",
       "heroHeading": "Vorteile der Integration von Open Source Software",
       "heroBenefits": {
         "first": "Reduziere Softwarekosten um bis zu 70% ohne Kompromisse bei den Funktionen",
