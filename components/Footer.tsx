@@ -11,6 +11,8 @@ export const Footer = async () => {
   const t = await getTranslations();
   const navItems = await getNavItems();
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-neutral" data-theme="darkTheme">
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -78,7 +80,9 @@ export const Footer = async () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 p-4">
           <aside className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-2">
-              <p className="text-sm">© 2024 TW Software Solutions LLC</p>
+              <p className="text-sm">
+                © {currentYear} TW Software Solutions LLC
+              </p>
               <PiDotOutlineLight className="text-2xl hidden md:block" />
               <Link className="hover:text-primary" href={RouteId.about}>
                 <p className="text-sm">{t('footer.aboutUs')}</p>
