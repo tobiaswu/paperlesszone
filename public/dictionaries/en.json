@@ -13,26 +13,21 @@
     },
     "serviceSection": {
       "title": "Our Services",
-      "descriptionP1": "Quick and efficient implementation",
-      "descriptionP2": "100% customizable",
-      "descriptionP3": "Source code, no vendor lock in",
-      "descriptionP4": "On-going support and administration",
-      "service1": {
-        "title": "AI Powered Web Apps",
-        "descriptionP1": "LLM apps beyond the traditional chat format",
-        "descriptionP2": "Internal tools",
-        "descriptionP3": "AI agents or assistants",
-        "descriptionP4": "Tool calling and generative UI"
+      "consulting": {
+        "title": "Consulting",
+        "description": "We help you identify use cases for your business."
       },
-      "service2": {
-        "title": "Automation Scripts",
-        "descriptionP1": "Python custom scripts",
-        "descriptionP2": "Google Apps Script",
-        "descriptionP3": "Connected with APIs, LLMs, Twilio, CRM & ERP systems"
+      "openSource": {
+        "title": "Open Source Software Integrations",
+        "description": "We integrate open source software like Paperless-ngx or Nextcloud into your business."
       },
-      "service3": {
-        "title": "VPS or Cloud Provider Setups",
-        "descriptionP1": "Installation and administration of open source software like Paperless-ngx or Nextcloud"
+      "agents": {
+        "title": "AI Agents",
+        "description": "We build AI agents to automate your business processes."
+      },
+      "webScraping": {
+        "title": "AI Web Scraping",
+        "description": "We extract data from websites and use it to automate your business processes."
       }
     },
     "useCaseSection": {
@@ -336,7 +331,172 @@
       "title": "AI Web Scraping: Scrape data from websites with AI"
     },
     "openSource": {
-      "title": "Open Source Software Integration: Automate your business processes with open source software"
+      "title": "Transform Your Business With Enterprise-Grade Open Source Solutions",
+      "summary": "Get the freedom of open source software with the reliability of professional support. We handle everything from setup to daily operations, so you can focus on your business.",
+      "cta": "Let's talk",
+      "heroHeading": "Benefits of choosing open source software integration",
+      "heroBenefits": {
+        "first": "Reduce software costs by up to 70% without compromising on features",
+        "second": "Professional setup, training, and ongoing support included",
+        "third": "Seamless integration with your existing systems"
+      },
+      "trustedBy": "Trusted by",
+      "painAndGains": {
+        "title": "Common Business Challenges, Solved",
+        "summary": "Turn your document and workflow headaches into smooth, automated processes",
+        "conclusion": "Stop wasting time on manual processes.",
+        "cta": "See how we can help",
+        "card1": {
+          "pain": "Drowning in Paper & Manual Work?",
+          "pains": "<li>Stacks of documents needing manual processing</li><li>Hours spent on data entry and filing</li><li>Important papers getting lost or misfiled</li><li>Storage costs eating into your budget</li>",
+          "gain": "Paperless-ngx transforms your document workflow:",
+          "gains": "<li>Automatic document scanning & classification</li><li>Smart search across all documents</li><li>Secure digital archive</li><li>Mobile access to all documents</li>"
+        },
+        "card2": {
+          "pain": "Struggling with Team Collaboration?",
+          "pains": "<li>Files scattered across personal computers</li><li>Unsecure file sharing via email</li><li>Version conflicts in documents</li><li>Limited access when working remotely</li>",
+          "gain": "Nextcloud gives you enterprise-grade file sharing:",
+          "gains": "<li>Central file storage & sharing</li><li>Real-time document collaboration</li><li>Secure external sharing</li><li>Full mobile & desktop access</li>"
+        },
+        "card3": {
+          "pain": "Business Processes Still Manual?",
+          "pains": "<li>Multiple systems that don't talk to each other</li><li>Repetitive data entry across applications</li><li>No clear overview of business operations</li><li>Time wasted on administrative tasks</li>",
+          "gain": "Odoo streamlines your entire business:",
+          "gains": "<li>Integrated business processes</li><li>Automated workflows</li><li>Real-time business insights</li><li>Custom API connections to your existing tools</li>"
+        }
+      },
+      "featuredSolutions": {
+        "title": "Enterprise-Ready Open Source Solutions",
+        "summary": "Professional implementation and support for industry-leading open source software",
+        "card1": {
+          "logo": "paperless-ngx",
+          "title": "Paperless-ngx - Your Complete Document Management System",
+          "description": "Key Benefits:<li>Intelligent document scanning & OCR</li><li>Automated filing with AI-powered tagging</li><li>Lightning-fast document search</li><li>Secure, organized digital archive</li>Perfect for:<li>Insurance documentation</li><li>Patient records</li><li>Construction documentation</li><li>Real estate contracts</li><li>Invoice processing</li>Integration Examples:<li>Auto-import from office scanners</li><li>Mobile scanning via smartphone</li><li>Export to accounting software</li><li>Secure email integration</li>"
+        },
+        "card2": {
+          "logo": "nextcloud",
+          "title": "Nextcloud - Secure File Sharing & Collaboration Platform",
+          "description": "Key Benefits:<li>Enterprise-grade file sharing</li><li>Built-in document editing</li><li>Team calendars & contacts</li><li>Video conferencing</li>Perfect for:<li>Client file sharing</li><li>Team collaboration</li><li>Project management</li><li>Secure external access</li><li>Remote work</li>Integration Examples:<li>Single Sign-On (SSO)</li><li>Mobile & desktop apps</li><li>MS Office integration</li><li>Automated backups</li>"
+        },
+        "card3": {
+          "logo": "odoo",
+          "title": "Odoo - Complete Business Management Suite",
+          "description": "Key Benefits:<li>Integrated business processes</li><li>CRM & sales management</li><li>Inventory & project tracking</li><li>Financial management</li>Perfect for:<li>Customer management</li><li>Sales pipeline</li><li>Inventory tracking</li><li>Project planning</li><li>HR processes</li>Integration Examples:<li>E-commerce integration</li><li>Payment gateway connections</li><li>Custom API development</li><li>Third-party app connections</li>"
+        },
+        "box": {
+          "title": "Why Choose Our Open Source Solutions?",
+          "description": "<li>No vendor lock-in</li><li>Full data ownership</li><li>Customizable to your needs</li><li>Regular security updates</li><li>Lower total cost of ownership</li><li>Growing feature set</li>",
+          "cta": "Discover your perfect solution stack",
+          "ctaLink": "Book a solution demo"
+        },
+        "portfolio": {
+          "title": "Future-Proof Your Business",
+          "description": "Our solution portfolio is constantly growing. We carefully select and test new open source solutions to ensure they meet our enterprise-grade standards.",
+          "comingSoon": "<li>Business Intelligence Tools</li><li>Advanced Analytics</li><li>Additional Industry Solutions</li>"
+        }
+      },
+      "serviceBreakdown": {
+        "title": "Full-Service Open Source Implementation",
+        "summary": "Everything you need for a successful transition to open source solutions",
+        "card1": {
+          "title": "🔍 Initial Assessment & Planning",
+          "description": "<li>Infrastructure evaluation and requirements analysis</li><li>Current workflow documentation and pain point identification</li><li>Solution architecture design</li><li>Implementation roadmap creation</li><li>Security and compliance review</li><li>Hardware recommendations if needed</li>"
+        },
+        "card2": {
+          "title": "⚙️ Professional Implementation",
+          "description": "<li>Server setup and configuration</li><li>Software installation and optimization</li><li>Data migration from existing systems</li><li>Security hardening and SSL setup</li><li>Mobile access configuration</li><li>Backup system implementation</li><li>Custom API development and integrations</li><li>User access management setup</li>"
+        },
+        "card3": {
+          "title": "👥 Training & Onboarding",
+          "description": "<li>Custom training program development</li><li>Group training sessions (remote)</li><li>Role-specific workflow training</li><li>Admin user technical training</li><li>Training documentation creation</li><li>Video tutorials for common tasks</li><li>Hands-on workshops</li><li>Best practices guidance</li>"
+        },
+        "card4": {
+          "title": "🛠️ Ongoing Administration",
+          "description": "<li>System monitoring and maintenance</li><li>Regular security updates</li><li>Performance optimization</li><li>Backup management</li><li>User management</li><li>Storage optimization</li><li>Monthly system health reports</li><li>Proactive issue prevention</li>"
+        },
+        "card5": {
+          "title": "💬 Support Services",
+          "description": "<li>Phone and email support</li><li>Remote troubleshooting</li><li>Emergency assistance</li><li>Monthly review meetings</li><li>Performance reports</li><li>User support tickets</li><li>System usage analytics</li><li>Continuous improvement recommendations</li>"
+        },
+        "card6": {
+          "title": "🔄 Integration & Development",
+          "description": "<li>Custom API development</li><li>Third-party system integration</li><li>Workflow automation</li><li>Custom feature development</li><li>Reporting customization</li><li>Mobile app configuration</li><li>Scanner/hardware integration</li><li>Legacy system connectors</li>"
+        },
+        "box": {
+          "title": "The PaperlessZone Difference.<br></br>What sets our service apart:",
+          "description": "<li>Single point of contact for all your needs</li><li>Proactive maintenance and monitoring</li><li>Fixed monthly costs without surprises</li><li>Expertise across multiple open source solutions</li><li>Customized to your specific workflow</li><li>Regular system optimization</li><li>Clear documentation and knowledge transfer</li>"
+        },
+        "compliance": {
+          "title": "We are GDPR compliant",
+          "description": "Our solutions are compliant with EU Regulation 2016/679 (General Data Protection Regulation, GDPR). We don't share your data with third parties."
+        },
+        "cta": "Our Commitment to Your Success",
+        "ctaLink": "Schedule your service consultation",
+        "ctaDescription": "We don't just implement software - we ensure it delivers value to your business every day. Our comprehensive service approach means you can focus on your core business while we handle all technical aspects."
+      },
+      "howItWorks": {
+        "title": "Your Journey to Efficient Open Source Solutions",
+        "summary": "A proven 5-step process for seamless implementation",
+        "step1": {
+          "title": "1. 🤝 Initial Consultation: Understanding Your Needs",
+          "description": "What Happens:<li>30-minute discovery call</li><li>Discussion of current challenges</li><li>Review of existing systems</li><li>Identification of key requirements</li><li>Initial solution recommendations</li><li>High-level budget discussion</li>Outcome:<li>Clear understanding of your needs</li><li>Preliminary solution blueprint</li><li>Rough timeline and budget estimate</li>"
+        },
+        "step2": {
+          "title": "2. 📋 Planning & Design: Creating Your Perfect Solution",
+          "description": "What Happens:<li>Detailed workflow analysis</li><li>Solution architecture design</li><li>Server infrastructure planning</li><li>Integration requirements mapping</li><li>Timeline creation</li><li>Training plan development</li><li>Final proposal presentation</li>Outcome:<li>Detailed implementation plan</li><li>Finalized pricing and timeline</li><li>Project kickoff schedule</li>"
+        },
+        "step3": {
+          "title": "3. ⚙️ Implementation & Setup: Bringing Solutions to Life",
+          "description": "What Happens:<li>Server setup and configuration</li><li>Software installation</li><li>Data migration</li><li>Integration development</li><li>Security setup</li><li>Initial testing</li><li>System optimization</li>Outcome:<li>Fully configured system</li><li>Completed integrations</li><li>Ready for team training</li>"
+        },
+        "step4": {
+          "title": "4. 🎓 Training & Handover: Empowering Your Team",
+          "description": "What Happens:<li>Admin user training</li><li>End-user training sessions</li><li>Workflow documentation</li><li>Best practices review</li><li>Support process setup</li><li>Final system adjustments</li>Outcome:<li>Trained team members</li><li>Complete documentation</li><li>Support channels established</li><li>System goes live</li>"
+        },
+        "step5": {
+          "title": "5. 🛡️ Ongoing Administration: We've Got Your Back",
+          "description": "Continuous Support Includes:<li>Regular maintenance</li><li>System monitoring</li><li>Security updates</li><li>User support</li><li>Performance optimization</li><li>Monthly check-ins</li>"
+        },
+        "cta": "Ready to Start Your Journey?",
+        "ctaLink": "Schedule your free consultation",
+        "guaranteeTitle": "Our Guarantee",
+        "guarantees": "<li>Transparent Communication</li><li>Fixed Project Timeline</li><li>Clear Milestone Deliverables</li><li>No Hidden Costs</li><li>Post-Launch Support</li>"
+      },
+      "pricingStructure": {
+        "title": "Transparent Pricing for Long-Term Success",
+        "summary": "Simple, predictable pricing with no hidden costs",
+        "tableHead": "<th></th><th>Starter Package</th><th>Business Package</th><th>Enterprise Package</th>",
+        "row1": "<th>Use case</th><td>Perfect for: Small businesses starting their digital transformation</td><td>Perfect for: Growing businesses needing multiple solutions</td><td>Perfect for: Established businesses requiring full digital tranformation</td>",
+        "row2": "<th>Open source solution</th><td>Single open source solution</td><td>Two integrated solutions</td><td>Full solution suite</td>",
+        "row3": "<th>Integration</th><td>Basic integration</td><td>Custom workflows</td><td>Custom integrations</td>",
+        "row4": "<th>Configuration</th><td>Standard configuration</td><td>Advanced configuration</td><td>Enterprise configuration</td>",
+        "row5": "<th>Training</th><td>Essential training</td><td>Comprehensive training</td><td>Multi-department training</td>",
+        "row6": "<th>Documentation</th><td>Basic documentation</td><td>Detailed documentation</td><td>Complete documentation</td>",
+        "additional": {
+          "title": "Add-On Services",
+          "description1": "Custom Development:<li>API Integration</li><li>Custom Features</li><li>Workflow Automation</li><li>Mobile App Configuration</li>",
+          "description2": "Additional Services:<li>Extra User Training</li><li>On-site Support</li><li>Data Migration / Legacy system migration</li><li>Hardware Setup</li><li>Advanced automation</li>"
+        },
+        "scaling": {
+          "title": "Scaling Options",
+          "description1": "User Expansion:<li>Add additional users to your system</li>",
+          "description2": "Storage Expansion:<li>Increase your storage capacity</li>"
+        },
+        "guarantee": {
+          "title": "Our Price Guarantee",
+          "description": "<li>No hidden costs</li><li>Transparent billing</li><li>Fixed project quotes</li><li>Predictable monthly fees</li><li>30-day satisfaction guarantee</li>"
+        },
+        "cta": "Find Your Perfect Plan",
+        "ctaLink": "Schedule pricing consultation",
+        "included": {
+          "title": "All plans include",
+          "description": "<li>Implementation support</li><li>Regular maintenance</li><li>Security updates</li><li>Technical support</li><li>Training materials</li><li>Documentation</li><li>Regular backups</li>"
+        },
+        "payment": {
+          "title": "Flexible Payment Options",
+          "description": "<li>Monthly billing</li><li>Quarterly prepay (5% discount)</li><li>Annual prepay (10% discount)</li><li>Custom payment plans available</li>"
+        }
+      }
     }
   },
   "navbar": {
@@ -375,7 +535,7 @@
     "learnMore": "Explore more",
     "solutions": "Solutions",
     "aboutUs": "About us",
-    "contact": "Contact us",
+    "contact": "Contact",
     "submit": "Submit",
     "subscribe": "Subscribe now",
     "sharePost": "Share post",

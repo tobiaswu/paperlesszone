@@ -437,7 +437,7 @@ export default async function Paperless({ params }: Props) {
           <div className="w-full">
             <Image
               className="w-auto h-32"
-              src="/assets/images/ai-gdpr-shield.webp"
+              src="/assets/logos/gdpr.webp"
               alt="EU GDPR logo"
               width={128}
               height={128}

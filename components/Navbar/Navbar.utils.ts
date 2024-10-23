@@ -16,11 +16,11 @@ export const getNavItems = async () => {
           label: t('navbar.consulting'),
           url: RouteId.consulting,
         },
-        // {
-        //   id: 'open-source',
-        //   label: t('navbar.openSource'),
-        //   url: RouteId.openSource,
-        // },
+        {
+          id: 'open-source',
+          label: t('navbar.openSource'),
+          url: RouteId.openSource,
+        },
         // {
         //   id: 'agents',
         //   label: t('navbar.agents'),

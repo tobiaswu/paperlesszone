@@ -12,27 +12,22 @@
       "happyTitle": "Mitarbeiter-Zufriedenheit erhöhen"
     },
     "serviceSection": {
-      "title": "Unsere Services",
-      "descriptionP1": "Schnelle und effiziente Entwicklung",
-      "descriptionP2": "100% anpassbar",
-      "descriptionP3": "Quellcode, keine Abhängigkeit von Drittanbietern",
-      "descriptionP4": "Laufende Wartung & Administration",
-      "service1": {
-        "title": "KI gestützte Web Apps",
-        "descriptionP1": "LLM Apps jenseits des traditionellen Chatformats",
-        "descriptionP2": "Interne Tools",
-        "descriptionP3": "KI Agenten oder Assistenten",
-        "descriptionP4": "Tool calling und generative UI"
+      "title": "Unsere Dienstleistungen",
+      "consulting": {
+        "title": "Beratung",
+        "description": "Wir helfen dir, Anwendungsfälle für dein Unternehmen zu identifizieren."
       },
-      "service2": {
-        "title": "Automatisierungs-Skripte",
-        "descriptionP1": "Angepasste Python Skripte",
-        "descriptionP2": "Google Apps Script",
-        "descriptionP3": "Verbunden mit APIs, LLMs, Twilio, CRM & ERP Systemen"
+      "openSource": {
+        "title": "Open Source Software Integrationen",
+        "description": "Wir integrieren Open Source Software wie Paperless-ngx oder Nextcloud in dein Unternehmen."
       },
-      "service3": {
-        "title": "VPS oder Cloud Anbieter Setups",
-        "descriptionP1": "Installation und Administration von Open-Source Software wie Paperless-ngx oder Nextcloud"
+      "agents": {
+        "title": "KI Agenten",
+        "description": "Wir bauen AI Agenten, um deine Geschäftsprozesse zu automatisieren."
+      },
+      "webScraping": {
+        "title": "KI Web Scraping",
+        "description": "Wir extrahieren Daten von Websites und nutzen sie, um deine Geschäftsprozesse zu automatisieren."
       }
     },
     "useCaseSection": {
@@ -336,7 +331,172 @@
       "title": "KI Web Scraping: Daten aus Websites extrahieren mit KI"
     },
     "openSource": {
-      "title": "Open Source Software Integration: Automatisiere deine Geschäftsprozesse mit Open-Source Software"
+      "title": "Transformiere dein Unternehmen mit Enterprise-Grade Open Source Lösungen",
+      "summary": "Genieße die Freiheit von Open Source Software mit der Zuverlässigkeit professioneller Unterstützung. Wir kümmern uns um alles von der Einrichtung bis zum täglichen Betrieb, damit du dich auf dein Geschäft konzentrieren kannst.",
+      "cta": "Lass uns reden",
+      "heroHeading": "Vorteile der Integration von Open Source Software",
+      "heroBenefits": {
+        "first": "Reduziere Softwarekosten um bis zu 70% ohne Kompromisse bei den Funktionen",
+        "second": "Professionelle Einrichtung, Schulung und laufende Unterstützung inklusive",
+        "third": "Nahtlose Integration in deine bestehenden Systeme"
+      },
+      "trustedBy": "Vertraut von",
+      "painAndGains": {
+        "title": "Häufige Geschäftsprobleme, gelöst",
+        "summary": "Verwandle deine Dokumenten- und Workflow-Probleme in reibungslose, automatisierte Prozesse",
+        "conclusion": "Höre auf, Zeit mit manuellen Prozessen zu verschwenden.",
+        "cta": "Erfahre, wie wir helfen können",
+        "card1": {
+          "pain": "Ertrinkst du in Papier & manueller Arbeit?",
+          "pains": "<li>Stapel von Dokumenten, die manuell verarbeitet werden müssen</li><li>Stunden mit Dateneingabe und Ablage verbracht</li><li>Wichtige Papiere gehen verloren oder werden falsch abgelegt</li><li>Lagerkosten belasten dein Budget</li>",
+          "gain": "Paperless-ngx transformiert deinen Dokumenten-Workflow:",
+          "gains": "<li>Automatische Dokumentenerfassung & Klassifizierung</li><li>Intelligente Suche über alle Dokumente</li><li>Sicheres digitales Archiv</li><li>Mobiler Zugriff auf alle Dokumente</li>"
+        },
+        "card2": {
+          "pain": "Probleme bei der Teamzusammenarbeit?",
+          "pains": "<li>Dateien verstreut auf persönlichen Computern</li><li>Unsicherer Dateiaustausch per E-Mail</li><li>Versionskonflikte in Dokumenten</li><li>Eingeschränkter Zugriff bei Remote-Arbeit</li>",
+          "gain": "Nextcloud bietet dir Enterprise-Grade Dateifreigabe:",
+          "gains": "<li>Zentrale Dateispeicherung & Freigabe</li><li>Echtzeit-Dokumentenzusammenarbeit</li><li>Sichere externe Freigabe</li><li>Voller mobiler & Desktop-Zugriff</li>"
+        },
+        "card3": {
+          "pain": "Geschäftsprozesse noch manuell?",
+          "pains": "<li>Mehrere Systeme, die nicht miteinander kommunizieren</li><li>Wiederholte Dateneingabe in verschiedene Anwendungen</li><li>Kein klarer Überblick über Geschäftsabläufe</li><li>Zeitverschwendung durch administrative Aufgaben</li>",
+          "gain": "Odoo optimiert dein gesamtes Unternehmen:",
+          "gains": "<li>Integrierte Geschäftsprozesse</li><li>Automatisierte Workflows</li><li>Echtzeit-Geschäftseinblicke</li><li>Individuelle API-Verbindungen zu deinen bestehenden Tools</li>"
+        }
+      },
+      "featuredSolutions": {
+        "title": "Enterprise-Ready Open Source Lösungen",
+        "summary": "Professionelle Implementierung und Support für branchenführende Open Source Software",
+        "card1": {
+          "logo": "paperless-ngx",
+          "title": "Paperless-ngx - Dein komplettes Dokumenten-Management-System",
+          "description": "Hauptvorteile:<li>Intelligente Dokumentenerfassung & OCR</li><li>Automatisierte Ablage mit KI-gestützter Verschlagwortung</li><li>Blitzschnelle Dokumentensuche</li><li>Sicheres, organisiertes digitales Archiv</li>Perfekt für:<li>Versicherungsdokumentation</li><li>Patientenakten</li><li>Baudokumentation</li><li>Immobilienverträge</li><li>Rechnungsverarbeitung</li>Integrationsbeispiele:<li>Auto-Import von Büroscannern</li><li>Mobiles Scannen per Smartphone</li><li>Export in Buchhaltungssoftware</li><li>Sichere E-Mail-Integration</li>"
+        },
+        "card2": {
+          "logo": "nextcloud",
+          "title": "Nextcloud - Sichere Dateifreigabe & Kollaborations-Plattform",
+          "description": "Hauptvorteile:<li>Enterprise-Grade Dateifreigabe</li><li>Integrierte Dokumentenbearbeitung</li><li>Team-Kalender & Kontakte</li><li>Videokonferenzen</li>Perfekt für:<li>Kunden-Dateifreigabe</li><li>Team-Zusammenarbeit</li><li>Projektmanagement</li><li>Sicherer externer Zugriff</li><li>Remote-Arbeit</li>Integrationsbeispiele:<li>Single Sign-On (SSO)</li><li>Mobile & Desktop-Apps</li><li>MS Office-Integration</li><li>Automatisierte Backups</li>"
+        },
+        "card3": {
+          "logo": "odoo",
+          "title": "Odoo - Komplette Unternehmens-Verwaltungssuite",
+          "description": "Hauptvorteile:<li>Integrierte Geschäftsprozesse</li><li>CRM & Vertriebsmanagement</li><li>Bestands- & Projektverfolgung</li><li>Finanzverwaltung</li>Perfekt für:<li>Kundenmanagement</li><li>Vertriebspipeline</li><li>Bestandsverfolgung</li><li>Projektplanung</li><li>HR-Prozesse</li>Integrationsbeispiele:<li>E-Commerce-Integration</li><li>Payment-Gateway-Verbindungen</li><li>Individuelle API-Entwicklung</li><li>Drittanbieter-App-Verbindungen</li>"
+        },
+        "box": {
+          "title": "Warum unsere Open Source Lösungen wählen?",
+          "description": "<li>Keine Herstellerabhängigkeit</li><li>Volle Datenkontrolle</li><li>An deine Bedürfnisse anpassbar</li><li>Regelmäßige Sicherheitsupdates</li><li>Geringere Gesamtbetriebskosten</li><li>Wachsender Funktionsumfang</li>",
+          "cta": "Entdecke deinen perfekten Lösungs-Stack",
+          "ctaLink": "Demo buchen"
+        },
+        "portfolio": {
+          "title": "Zukunftssicher dein Unternehmen",
+          "description": "Unser Lösungsportfolio wächst ständig. Wir wählen neue Open Source Lösungen sorgfältig aus und testen sie, um sicherzustellen, dass sie unseren Enterprise-Standards entsprechen.",
+          "comingSoon": "<li>Business Intelligence Tools</li><li>Erweiterte Analytik</li><li>Zusätzliche Branchenlösungen</li>"
+        }
+      },
+      "serviceBreakdown": {
+        "title": "Full-Service Open Source Implementierung",
+        "summary": "Alles, was du für einen erfolgreichen Übergang zu Open Source Lösungen brauchst",
+        "card1": {
+          "title": "🔍 Erste Bewertung & Planung",
+          "description": "<li>Infrastrukturbewertung und Anforderungsanalyse</li><li>Dokumentation aktueller Workflows und Identifikation von Problempunkten</li><li>Lösungsarchitektur-Design</li><li>Erstellung der Implementierungs-Roadmap</li><li>Sicherheits- und Compliance-Überprüfung</li><li>Hardware-Empfehlungen bei Bedarf</li>"
+        },
+        "card2": {
+          "title": "⚙️ Professionelle Implementierung",
+          "description": "<li>Server-Setup und Konfiguration</li><li>Software-Installation und Optimierung</li><li>Datenmigration von bestehenden Systemen</li><li>Sicherheitshärtung und SSL-Einrichtung</li><li>Mobile-Zugriff-Konfiguration</li><li>Backup-System-Implementierung</li><li>Individuelle API-Entwicklung und Integrationen</li><li>Benutzerzugriffsverwaltung-Setup</li>"
+        },
+        "card3": {
+          "title": "👥 Training & Einarbeitung",
+          "description": "<li>Entwicklung individueller Schulungsprogramme</li><li>Gruppen-Schulungssessions (remote)</li><li>Rollenspezifisches Workflow-Training</li><li>Technisches Training für Administratoren</li><li>Erstellung von Schulungsunterlagen</li><li>Video-Tutorials für häufige Aufgaben</li><li>Praktische Workshops</li><li>Best-Practice-Anleitungen</li>"
+        },
+        "card4": {
+          "title": "🛠️ Laufende Administration",
+          "description": "<li>System-Überwachung und Wartung</li><li>Regelmäßige Sicherheitsupdates</li><li>Performance-Optimierung</li><li>Backup-Management</li><li>Benutzerverwaltung</li><li>Speicheroptimierung</li><li>Monatliche System-Gesundheitsberichte</li><li>Proaktive Problemvermeidung</li>"
+        },
+        "card5": {
+          "title": "💬 Support-Services",
+          "description": "<li>Telefon- und E-Mail-Support</li><li>Remote-Fehlerbehebung</li><li>Notfall-Unterstützung</li><li>Monatliche Review-Meetings</li><li>Performance-Berichte</li><li>Benutzer-Support-Tickets</li><li>System-Nutzungsanalysen</li><li>Kontinuierliche Verbesserungsempfehlungen</li>"
+        },
+        "card6": {
+          "title": "🔄 Integration & Entwicklung",
+          "description": "<li>Individuelle API-Entwicklung</li><li>Integration von Drittsystemen</li><li>Workflow-Automatisierung</li><li>Entwicklung individueller Funktionen</li><li>Reporting-Anpassung</li><li>Mobile-App-Konfiguration</li><li>Scanner/Hardware-Integration</li><li>Legacy-System-Anbindungen</li>"
+        },
+        "box": {
+          "title": "Der PaperlessZone Unterschied.<br></br>Was unseren Service besonders macht:",
+          "description": "<li>Ein Ansprechpartner für alle deine Bedürfnisse</li><li>Proaktive Wartung und Überwachung</li><li>Feste monatliche Kosten ohne Überraschungen</li><li>Expertise über mehrere Open Source Lösungen</li><li>An deinen spezifischen Workflow angepasst</li><li>Regelmäßige Systemoptimierung</li><li>Klare Dokumentation und Wissenstransfer</li>"
+        },
+        "compliance": {
+          "title": "Wir sind DSGVO-konform",
+          "description": "Unsere Lösungen entsprechen der EU-Verordnung 2016/679 (Datenschutz-Grundverordnung, DSGVO). Wir geben deine Daten nicht an Dritte weiter."
+        },
+        "cta": "Unser Versprechen für deinen Erfolg",
+        "ctaLink": "Vereinbare deine Service-Beratung",
+        "ctaDescription": "Wir implementieren nicht nur Software - wir stellen sicher, dass sie deinem Unternehmen jeden Tag Mehrwert bringt. Unser umfassender Service-Ansatz bedeutet, dass du dich auf dein Kerngeschäft konzentrieren kannst, während wir uns um alle technischen Aspekte kümmern."
+      },
+      "howItWorks": {
+        "title": "Deine Reise zu effizienten Open Source Lösungen",
+        "summary": "Ein bewährter 5-Schritte-Prozess für eine nahtlose Implementierung",
+        "step1": {
+          "title": "1. 🤝 Erstberatung: Verstehen deiner Bedürfnisse",
+          "description": "Was passiert:<li>30-minütiges Erstgespräch</li><li>Besprechung aktueller Herausforderungen</li><li>Überprüfung bestehender Systeme</li><li>Identifikation der Hauptanforderungen</li><li>Erste Lösungsempfehlungen</li><li>Grobe Budgetbesprechung</li>Ergebnis:<li>Klares Verständnis deiner Bedürfnisse</li><li>Vorläufiger Lösungsentwurf</li><li>Grober Zeitplan und Kostenvoranschlag</li>"
+        },
+        "step2": {
+          "title": "2. 📋 Planung & Design: Entwicklung deiner perfekten Lösung",
+          "description": "Was passiert:<li>Detaillierte Workflow-Analyse</li><li>Lösungsarchitektur-Design</li><li>Server-Infrastrukturplanung</li><li>Erfassung der Integrationsanforderungen</li><li>Zeitplanerstellung</li><li>Entwicklung des Schulungsplans</li><li>Finale Angebotspräsentation</li>Ergebnis:<li>Detaillierter Implementierungsplan</li><li>Finale Preise und Zeitplan</li><li>Projekt-Starttermin</li>"
+        },
+        "step3": {
+          "title": "3. ⚙️ Implementierung & Setup: Lösungen zum Leben erwecken",
+          "description": "Was passiert:<li>Server-Setup und Konfiguration</li><li>Software-Installation</li><li>Datenmigration</li><li>Integrationsentwicklung</li><li>Sicherheitseinrichtung</li><li>Erstes Testing</li><li>Systemoptimierung</li>Ergebnis:<li>Vollständig konfiguriertes System</li><li>Abgeschlossene Integrationen</li><li>Bereit für Team-Schulungen</li>"
+        },
+        "step4": {
+          "title": "4. 🎓 Training & Übergabe: Dein Team befähigen",
+          "description": "Was passiert:<li>Admin-Benutzer-Schulung</li><li>Endbenutzer-Schulungssessions</li><li>Workflow-Dokumentation</li><li>Best-Practice-Review</li><li>Support-Prozess-Einrichtung</li><li>Finale Systemanpassungen</li>Ergebnis:<li>Geschulte Teammitglieder</li><li>Vollständige Dokumentation</li><li>Support-Kanäle eingerichtet</li><li>System geht live</li>"
+        },
+        "step5": {
+          "title": "5. 🛡️ Laufende Administration: Wir kümmern uns um alles",
+          "description": "Kontinuierlicher Support beinhaltet:<li>Regelmäßige Wartung</li><li>System-Überwachung</li><li>Sicherheitsupdates</li><li>Benutzer-Support</li><li>Performance-Optimierung</li><li>Monatliche Check-ins</li>"
+        },
+        "cta": "Bereit, deine Reise zu beginnen?",
+        "ctaLink": "Vereinbare deine kostenlose Beratung",
+        "guaranteeTitle": "Unsere Garantie",
+        "guarantees": "<li>Transparente Kommunikation</li><li>Fester Projektzeitplan</li><li>Klare Meilenstein-Lieferungen</li><li>Keine versteckten Kosten</li><li>Support nach der Einführung</li>"
+      },
+      "pricingStructure": {
+        "title": "Transparente Preise für langfristigen Erfolg",
+        "summary": "Einfache, vorhersehbare Preise ohne versteckte Kosten",
+        "tableHead": "<th></th><th>Starter-Paket</th><th>Business-Paket</th><th>Enterprise-Paket</th>",
+        "row1": "<th>Anwendungsfall</th><td>Perfekt für: Kleine Unternehmen am Anfang ihrer digitalen Transformation</td><td>Perfekt für: Wachsende Unternehmen, die mehrere Lösungen benötigen</td><td>Perfekt für: Etablierte Unternehmen, die eine vollständige digitale Transformation benötigen</td>",
+        "row2": "<th>Open Source Lösung</th><td>Einzelne Open Source Lösung</td><td>Zwei integrierte Lösungen</td><td>Komplette Lösungssuite</td>",
+        "row3": "<th>Integration</th><td>Basis-Integration</td><td>Individuelle Workflows</td><td>Individuelle Integrationen</td>",
+        "row4": "<th>Konfiguration</th><td>Standard-Konfiguration</td><td>Erweiterte Konfiguration</td><td>Enterprise-Konfiguration</td>",
+        "row5": "<th>Schulung</th><td>Basis-Schulung</td><td>Umfassende Schulung</td><td>Abteilungsübergreifende Schulung</td>",
+        "row6": "<th>Dokumentation</th><td>Basis-Dokumentation</td><td>Detaillierte Dokumentation</td><td>Vollständige Dokumentation</td>",
+        "additional": {
+          "title": "Zusätzliche Services",
+          "description1": "Individuelle Entwicklung:<li>API-Integration</li><li>Individuelle Funktionen</li><li>Workflow-Automatisierung</li><li>Mobile-App-Konfiguration</li>",
+          "description2": "Zusätzliche Services:<li>Extra Benutzer-Schulung</li><li>Vor-Ort-Support</li><li>Datenmigration / Legacy-System-Migration</li><li>Hardware-Setup</li><li>Erweiterte Automatisierung</li>"
+        },
+        "scaling": {
+          "title": "Skalierungsoptionen",
+          "description1": "Benutzer-Erweiterung:<li>Füge zusätzliche Benutzer zu deinem System hinzu</li>",
+          "description2": "Speicher-Erweiterung:<li>Erhöhe deine Speicherkapazität</li>"
+        },
+        "guarantee": {
+          "title": "Unsere Preis-Garantie",
+          "description": "<li>Keine versteckten Kosten</li><li>Transparente Abrechnung</li><li>Feste Projektangebote</li><li>Vorhersehbare monatliche Gebühren</li><li>30-Tage-Zufriedenheitsgarantie</li>"
+        },
+        "cta": "Finde deinen perfekten Plan",
+        "ctaLink": "Vereinbare Preis-Beratung",
+        "included": {
+          "title": "Alle Pläne beinhalten",
+          "description": "<li>Implementierungs-Support</li><li>Regelmäßige Wartung</li><li>Sicherheitsupdates</li><li>Technischer Support</li><li>Schulungsmaterialien</li><li>Dokumentation</li><li>Regelmäßige Backups</li>"
+        },
+        "payment": {
+          "title": "Flexible Zahlungsoptionen",
+          "description": "<li>Monatliche Abrechnung</li><li>Quartalsweise Vorauszahlung (5% Rabatt)</li><li>Jährliche Vorauszahlung (10% Rabatt)</li><li>Individuelle Zahlungspläne verfügbar</li>"
+        }
+      }
     }
   },
   "navbar": {
@@ -375,7 +535,7 @@
     "learnMore": "Mehr entdecken",
     "solutions": "Lösungen",
     "aboutUs": "Über uns",
-    "contact": "Kontaktiere uns",
+    "contact": "Kontakt",
     "submit": "Abschicken",
     "subscribe": "Jetzt abonnieren",
     "sharePost": "Artikel teilen",

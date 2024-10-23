@@ -14,6 +14,10 @@ export default async function Services({ params }: Props) {
     locale: params.locale,
     namespace: 'consultingIntroCard',
   });
+  const tOpenSource = await getTranslations({
+    locale: params.locale,
+    namespace: 'openSourceIntroCard',
+  });
 
   return (
     <div className="container mx-auto px-4 py-16 space-y-8">
@@ -24,6 +28,14 @@ export default async function Services({ params }: Props) {
         thumbnailSrc="/assets/images/consulting.webp"
         title={tConsulting('title')}
         url={RouteId.consulting}
+      />
+      <PageIntroCard
+        buttonText={tOpenSource('button')}
+        description={tOpenSource('description')}
+        thumbnailAltText={tOpenSource('thumbnailAlt')}
+        thumbnailSrc="/assets/images/open-source.webp"
+        title={tOpenSource('title')}
+        url={RouteId.openSource}
       />
     </div>
   );
