@@ -121,7 +121,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Pain Points & Solutions */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('painAndGains.title')}
@@ -176,7 +176,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Featured Open Source Solutions */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <div className="flex justify-center items-center relative">
           <BlobMedium className="absolute z-0" />
@@ -263,7 +263,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Service Breakdown */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('serviceBreakdown.title')}
@@ -343,7 +343,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* How it works */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('howItWorks.title')}
@@ -412,7 +412,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Pricing Structure */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <div className="flex justify-center items-center relative">
           <BlobLarge className="absolute z-0 opacity-25" />
@@ -528,7 +528,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Benefits */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('benefits.title')}
@@ -599,7 +599,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Social Proof */}
-      <div className="container mx-auto z-10 relative">
+      <div className="container mx-auto z-10 relative px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('socialProof.title')}
@@ -638,7 +638,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* FAQ */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 overflow-x-hidden">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('faq.title')}
