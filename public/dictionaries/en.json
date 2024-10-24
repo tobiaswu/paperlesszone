@@ -550,6 +550,76 @@
           "title": "🤝 Technology Partners",
           "description": "<li>Digital Ocean</li><li>Namecheap</li>"
         }
+      },
+      "faq": {
+        "title": "Common Questions About Our Open Source Solutions",
+        "summary": "Everything you need to know about implementation, support, and services",
+        "implementationTimeline": {
+          "question": "How long does implementation typically take?",
+          "answer": "Implementation timeline varies based on your needs:<li>Small setups (single solution): 3-5 weeks</li><li>Medium implementations (2-3 solutions): 6-9 weeks</li><li>Large projects (full suite): 11-16 weeks</li>These timelines include planning, setup, data migration, and training."
+        },
+        "dataMigration": {
+          "question": "Can we keep our existing data?",
+          "answer": "Yes! We handle data migration from most systems:<li>Document migration from existing DMS</li><li>Contact/client database transfers</li><li>Historical records import</li><li>Email archive migration</li>We'll assess your current data during planning and create a migration strategy."
+        },
+        "timeClientNeeds": {
+          "question": "How much of our time is required during implementation?",
+          "answer": "We minimize disruption while ensuring success:<li>Initial consultation: 0.5-1 hours</li><li>Planning meetings: 2-4 hours total</li><li>Training sessions: 2-3 hours per user group</li><li>Testing/feedback: 1-2 hours during implementation</li>"
+        },
+        "dataSecurity": {
+          "question": "Where is our data stored?",
+          "answer": "You have flexible hosting options:<li>On your own servers (on-premise)</li><li>Cloud hosting (AWS, Google Cloud, Digital Ocean, etc.)</li><li>Hybrid solutions</li>All options include enterprise-grade security and backup solutions."
+        },
+        "security": {
+          "question": "How secure are open source solutions?",
+          "answer": "Our implementations include:<li>Regular security updates</li><li>Encryption at rest and in transit</li><li>Multi-factor authentication</li><li>Role-based access control</li><li>Security audit logging</li><li>Compliance with industry standards</li>Plus, open source means transparent security that's verified by thousands of developers."
+        },
+        "whatIf": {
+          "question": "What happens if something goes wrong?",
+          "answer": "Our support system ensures quick resolution:<li>24/7 monitoring for early detection</li><li>Automated backup systems</li><li>Disaster recovery planning</li><li>Regular system health checks</li>"
+        },
+        "training": {
+          "question": "How do you handle user training?",
+          "answer": "Our comprehensive training program includes:<li>Initial group training sessions</li><li>Role-specific workshops</li><li>Video tutorials library</li><li>Written documentation</li><li>Hands-on practice sessions</li><li>Follow-up training as needed</li>"
+        },
+        "support": {
+          "question": "What support is included?",
+          "answer": "All packages include:<li>Regular maintenance</li><li>Security updates</li><li>Technical support</li><li>User assistance</li>"
+        },
+        "hiddenCosts": {
+          "question": "Are there hidden costs?",
+          "answer": "No. Our pricing is transparent:<li>One-time setup fee (clearly defined)</li><li>Monthly support retainer</li><li>Optional add-ons (clearly priced)</li><li>No surprise charges</li><li>All costs are discussed and agreed upon during planning</li>"
+        },
+        "monthlyCosts": {
+          "question": "What's included in the monthly fee?",
+          "answer": "Monthly retainers cover:<li>System monitoring</li><li>Security updates</li><li>Backup management</li><li>Technical support</li><li>User assistance</li><li>Regular maintenance</li><li>System optimization</li>"
+        },
+        "integration": {
+          "question": "Can you integrate with our existing software?",
+          "answer": "Yes! We regularly integrate with:<li>Accounting software</li><li>CRM systems</li><li>Email platforms</li><li>Industry-specific tools</li>We'll assess integration needs during planning."
+        },
+        "customDevelopment": {
+          "question": "Can the solutions be customized?",
+          "answer": "Absolutely! Common customizations include:<li>Workflow automation</li><li>Custom reports</li><li>Specific integrations</li><li>Interface modifications</li><li>Industry-specific features</li>"
+        },
+        "gettingStarted": {
+          "question": "What's the first step?",
+          "answer": "Starting is easy:<li>Schedule a free consultation</li><li>Discuss your needs</li><li>Receive a tailored proposal</li><li>Sign the contract</li><li>Implementation begins</li>"
+        },
+        "preparation": {
+          "question": "What do we need to prepare?",
+          "answer": "To get started, have ready:<li>Overview of current processes</li><li>List of pain points</li><li>Key stakeholder availability</li><li>Basic technical information</li>We'll help gather anything else needed."
+        },
+        "scaling": {
+          "question": "Can the system grow with our business?",
+          "answer": "Yes! Our solutions are built to scale:<li>Easy user addition</li><li>Flexible storage expansion</li><li>Feature additions as needed</li><li>Performance optimization</li><li>No need to switch systems as you grow</li>"
+        },
+        "updates": {
+          "question": "How often are updates and new features added?",
+          "answer": "System improvements are regular:<li>Security updates: As needed</li><li>Bug fixes: Monthly</li><li>Feature updates: Quarterly</li><li>Major upgrades: Annually</li>All managed by our team."
+        },
+        "cta": "Didn't Find Your Answer?",
+        "ctaLink": "Ask our experts"
       }
     }
   },

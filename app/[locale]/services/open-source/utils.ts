@@ -87,6 +87,24 @@ const benefitsKeys = [
   'benefit5',
   'benefit6',
 ] as const;
+const faqKeys = [
+  'implementationTimeline',
+  'dataMigration',
+  'timeClientNeeds',
+  'dataSecurity',
+  'security',
+  'whatIf',
+  'training',
+  'support',
+  'hiddenCosts',
+  'monthlyCosts',
+  'integration',
+  'customDevelopment',
+  'gettingStarted',
+  'preparation',
+  'scaling',
+  'updates',
+] as const;
 
 export {
   logos,
@@ -97,4 +115,5 @@ export {
   howItWorksKeys,
   pricingStructureRowKeys,
   benefitsKeys,
+  faqKeys,
 };

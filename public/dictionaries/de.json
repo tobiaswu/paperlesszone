@@ -550,6 +550,76 @@
           "title": "🤝 Technologiepartner",
           "description": "<li>Digital Ocean</li><li>Namecheap</li>"
         }
+      },
+      "faq": {
+        "title": "Häufige Fragen zu unseren Open Source Lösungen",
+        "summary": "Alles, was du über Implementierung, Support und Services wissen musst",
+        "implementationTimeline": {
+          "question": "Wie lange dauert die Implementierung typischerweise?",
+          "answer": "Die Implementierungszeit variiert je nach deinen Anforderungen:<li>Kleine Setups (einzelne Lösung): 3-5 Wochen</li><li>Mittlere Implementierungen (2-3 Lösungen): 6-9 Wochen</li><li>Große Projekte (komplettes Paket): 11-16 Wochen</li>Diese Zeiträume beinhalten Planung, Einrichtung, Datenmigration und Schulung."
+        },
+        "dataMigration": {
+          "question": "Können wir unsere bestehenden Daten behalten?",
+          "answer": "Ja! Wir übernehmen die Datenmigration von den meisten Systemen:<li>Dokumentenmigration aus bestehenden DMS</li><li>Kontakt-/Kundendatenbank-Übertragungen</li><li>Import historischer Aufzeichnungen</li><li>E-Mail-Archiv-Migration</li>Wir bewerten deine aktuellen Daten während der Planung und erstellen eine Migrationsstrategie."
+        },
+        "timeClientNeeds": {
+          "question": "Wie viel Zeit müssen wir während der Implementierung einplanen?",
+          "answer": "Wir halten den notwendigen Zeiteinsatz so gering wie möglich:<li>Erstes Beratungsgespräch: 0,5-1 Stunden</li><li>Planungsmeetings: 2-4 Stunden insgesamt</li><li>Schulungen: 2-3 Stunden pro Benutzergruppe</li><li>Tests/Feedback: 1-2 Stunden während der Implementierung</li>"
+        },
+        "dataSecurity": {
+          "question": "Wo werden unsere Daten gespeichert?",
+          "answer": "Du hast flexible Hosting-Optionen:<li>Auf deinen eigenen Servern (On-Premise)</li><li>Cloud-Hosting (AWS, Google Cloud, Digital Ocean, etc.)</li><li>Hybrid-Lösungen</li>Alle Optionen beinhalten Enterprise-Grade Sicherheit und Backup-Lösungen."
+        },
+        "security": {
+          "question": "Wie sicher sind Open Source Lösungen?",
+          "answer": "Unsere Implementierungen beinhalten:<li>Regelmäßige Sicherheitsupdates</li><li>Verschlüsselung während der Übertragung und Speicherung</li><li>Multi-Faktor-Authentifizierung</li><li>Rollenbasierte Zugriffskontrolle</li><li>Sicherheits-Audit-Protokollierung</li><li>Einhaltung von Industriestandards</li>Plus: Open Source bedeutet einsehbarer Code, der von tausenden Entwicklern überprüft wird."
+        },
+        "whatIf": {
+          "question": "Was passiert, wenn etwas schief geht?",
+          "answer": "Unser Support-System gewährleistet schnelle Lösungen:<li>24/7-Überwachung zur Früherkennung</li><li>Automatisierte Backup-Systeme</li><li>Disaster-Recovery-Planung</li><li>Regelmäßige System-Gesundheitschecks</li>"
+        },
+        "training": {
+          "question": "Wie läuft die Benutzerschulung ab?",
+          "answer": "Unser umfassendes Schulungsprogramm beinhaltet:<li>Initiale Gruppenschulungen</li><li>Rollenspezifische Workshops</li><li>Video-Tutorial-Bibliothek</li><li>Schriftliche Dokumentation</li><li>Praktische Übungssessions</li><li>Bei Bedarf Nachschulungen</li>"
+        },
+        "support": {
+          "question": "Welcher Support ist enthalten?",
+          "answer": "Alle Pakete beinhalten:<li>Regelmäßige Wartung</li><li>Sicherheitsupdates</li><li>Technischen Support</li><li>Benutzerunterstützung</li>"
+        },
+        "hiddenCosts": {
+          "question": "Gibt es versteckte Kosten?",
+          "answer": "Nein. Unsere Preise sind transparent:<li>Einmalige Einrichtungsgebühr (klar definiert)</li><li>Monatliche Support-Pauschale</li><li>Optionale Zusatzleistungen (klar bepreist)</li><li>Keine Überraschungskosten</li><li>Alle Kosten werden während der Planung besprochen und vereinbart</li>"
+        },
+        "monthlyCosts": {
+          "question": "Was ist in der monatlichen Gebühr enthalten?",
+          "answer": "Monatliche Pauschalen decken ab:<li>System-Überwachung</li><li>Sicherheitsupdates</li><li>Backup-Management</li><li>Technischen Support</li><li>Benutzerunterstützung</li><li>Regelmäßige Wartung</li><li>System-Optimierung</li>"
+        },
+        "integration": {
+          "question": "Könnt ihr mit unserer bestehenden Software integrieren?",
+          "answer": "Ja! Wir integrieren regelmäßig mit:<li>Buchhaltungssoftware</li><li>CRM-Systemen</li><li>E-Mail-Plattformen</li><li>Branchenspezifischen Tools</li>Wir bewerten den Integrationsbedarf während der Planung."
+        },
+        "customDevelopment": {
+          "question": "Können die Lösungen angepasst werden?",
+          "answer": "Absolut! Häufige Anpassungen umfassen:<li>Workflow-Automatisierung</li><li>Individuelle Berichte</li><li>Spezifische Integrationen</li><li>Oberflächenanpassungen</li><li>Branchenspezifische Funktionen</li>"
+        },
+        "gettingStarted": {
+          "question": "Was ist der erste Schritt?",
+          "answer": "Der Start ist einfach:<li>Kostenlose Beratung vereinbaren</li><li>Anforderungen besprechen</li><li>Maßgeschneidertes Angebot erhalten</li><li>Vertrag unterschreiben</li><li>Implementierung beginnt</li>"
+        },
+        "preparation": {
+          "question": "Was müssen wir vorbereiten?",
+          "answer": "Für den Start benötigst du:<li>Überblick über aktuelle Prozesse</li><li>Liste der Problempunkte</li><li>Verfügbarkeit der Hauptentscheider</li><li>Grundlegende technische Informationen</li>Wir helfen dir bei der Beschaffung aller weiteren benötigten Informationen."
+        },
+        "scaling": {
+          "question": "Kann das System mit unserem Unternehmen mitwachsen?",
+          "answer": "Ja! Unsere Lösungen sind auf Skalierbarkeit ausgelegt:<li>Einfaches Hinzufügen von Benutzern</li><li>Flexible Speichererweiterung</li><li>Funktionserweiterungen nach Bedarf</li><li>Leistungsoptimierung</li><li>Kein Systemwechsel beim Wachstum nötig</li>"
+        },
+        "updates": {
+          "question": "Wie oft gibt es Updates und neue Funktionen?",
+          "answer": "Systemverbesserungen erfolgen regelmäßig:<li>Sicherheitsupdates: Nach Bedarf</li><li>Fehlerbehebungen: Monatlich</li><li>Funktionsupdates: Vierteljährlich</li><li>Große Upgrades: Jährlich</li>Alles wird von unserem Team verwaltet."
+        },
+        "cta": "Keine Antwort gefunden?",
+        "ctaLink": "Frag unsere Experten"
       }
     }
   },

@@ -27,6 +27,7 @@ import {
   benefitsKeys,
   pricingStructureRowKeys,
   clientLogos,
+  faqKeys,
 } from './utils';
 import { StatCard } from '@/components/StatCard';
 import { ReactNode } from 'react';
@@ -625,6 +626,41 @@ export default async function OpenSource({ params }: Props) {
               })}\
             </ul> */}
           </div>
+        </div>
+      </div>
+      {/* FAQ */}
+      <div className="container mx-auto">
+        <div className="divider mb-16"></div>
+        <h2 className="text-3xl font-bold text-center mb-4">
+          {t('faq.title')}
+        </h2>
+        <p className="text-lg text-center mb-8">{t('faq.summary')}</p>
+        <div className="flex flex-col gap-2 my-16">
+          {faqKeys.map((key, index) => (
+            <div key={key} className="collapse collapse-arrow bg-neutral">
+              <input
+                type="radio"
+                name="my-accordion-1"
+                defaultChecked={index === 0}
+              />
+              <div className="collapse-title text-xl font-medium">
+                {t(`faq.${key}.question`)}
+              </div>
+              <div className="collapse-content">
+                <ul className="list-inside list-disc leading-relaxed">
+                  {t.rich(`faq.${key}.answer`, {
+                    li: (children) => <li>{children}</li>,
+                  })}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col gap-4 justify-center items-center my-16">
+          <p className="text-lg font-bold">{t('faq.cta')}</p>
+          <Link href={RouteId.contact}>
+            <button className="btn btn-secondary">{t('faq.ctaLink')}</button>
+          </Link>
         </div>
       </div>
     </>
