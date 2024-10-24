@@ -285,7 +285,7 @@
     "consulting": {
       "title": "Expert guidance for your project",
       "summary": "In a dedicated 90-minute consultation, I can assist you with AI development, automation, paperless solutions, and Nextcloud setups. Tailored advice and hands-on support to ensure your project's success.",
-      "button": "Book a session now for €450",
+      "button": "Book a session now for €149",
       "description": "My independent consulting helps freelancers, business owners, entrepreneurs, or technology enthusiasts make the right decisions regarding digitalization and automation.",
       "firstCheckedText": "Individual, customized consultation.",
       "secondCheckedText": "90 minutes plus questions afterwards.",
@@ -499,6 +499,46 @@
         "payment": {
           "title": "Flexible Payment Options",
           "description": "<li>Monthly billing</li><li>Quarterly prepay (5% discount)</li><li>Annual prepay (10% discount)</li><li>Custom payment plans available</li>"
+        }
+      },
+      "benefits": {
+        "title": "Transform Your Business with Enterprise-Grade Open Source",
+        "summary": "Experience the power of professional open source solutions without enterprise-level costs",
+        "benefit1": {
+          "title": "💰 Financial Benefits: Significant Cost Savings Without Compromise",
+          "description": "<li>Licensing Cost Reduction</li><li>Up to 70% savings vs proprietary solutions</li><li>No per-user licensing fees</li><li>Predictable monthly costs</li><li>Scale without licensing penalties</li><li>Total Cost of Ownership</li><li>Reduced IT infrastructure costs</li><li>Lower training costs</li><li>Minimal hardware requirements</li><li>Future-proof investment</li>",
+          "example": ""
+        },
+        "benefit2": {
+          "title": "🚀 Operational Excellence: Streamlined Processes, Enhanced Productivity",
+          "description": "<li>Time Savings</li><li>50% reduction in document processing time</li><li>70% faster information retrieval</li><li>Automated routine tasks</li><li>Streamlined workflows</li><li>Efficiency Gains</li><li>Centralized information access</li><li>Reduced data entry</li><li>Automated backups</li><li>Simplified collaboration</li>",
+          "example": "Real Example: A real estate company reduced document processing time from 15 minutes to 3 minutes per case after implementing our paperless solution."
+        },
+        "benefit3": {
+          "title": "🛡️ Security & Compliance: Enterprise-Grade Security, Guaranteed",
+          "description": "<li>Advanced Security Features</li><li>Regular security updates</li><li>Encrypted data storage</li><li>Secure access controls</li><li>Audit trails</li><li>Compliance Ready</li><li>GDPR & HIPAA compliance</li><li>Data protection</li><li>Industry standards</li><li>Regular security audits</li>",
+          "example": ""
+        },
+        "benefit4": {
+          "title": "🔄 Flexibility & Scalability: Grow and Adapt at Your Pace",
+          "description": "<li>Customization Options</li><li>Tailored to your workflow</li><li>Custom integrations</li><li>Flexible configurations</li><li>Scalable solutions</li><li>Future-Proof</li><li>Regular updates</li><li>Growing feature set</li><li>No vendor lock-in</li><li>Open standards</li>",
+          "example": ""
+        },
+        "benefit5": {
+          "title": "🎯 Business Control: Your Data, Your Way",
+          "description": "<li>Data Ownership</li><li>Complete data control</li><li>On-premise options</li><li>Data portability</li><li>No vendor lock-in</li><li>Business Independence</li><li>Choose your features</li><li>Control your costs</li><li>Own your timeline</li><li>Direct system access</li>",
+          "example": ""
+        },
+        "benefit6": {
+          "title": "👥 User Experience: Solutions Your Team Will Love",
+          "description": "<li>Easy Adoption</li><li>Intuitive interfaces</li><li>Mobile access</li><li>Familiar workflows</li><li>Comprehensive training</li><li>Team Benefits</li><li>Remote work enabled</li><li>Better collaboration</li><li>Reduced frustration</li><li>Increased satisfaction</li>",
+          "example": ""
+        },
+        "cta": "Start Your Transformation",
+        "ctaLink": "Book your benefits analysis",
+        "results": {
+          "title": "Average Client Achievements",
+          "description": "<li>45% increase in productivity</li><li>60% reduction in software costs</li><li>70% faster document retrieval</li><li>85% reduction in manual tasks</li><li>95% user satisfaction rate</li>"
         }
       }
     }
