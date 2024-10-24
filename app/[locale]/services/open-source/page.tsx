@@ -31,6 +31,7 @@ import {
 } from './utils';
 import { StatCard } from '@/components/StatCard';
 import { ReactNode } from 'react';
+import { BlobLarge, BlobMedium } from '@/components/ui/blob';
 
 type Props = {
   params: { locale: string };
@@ -177,11 +178,16 @@ export default async function OpenSource({ params }: Props) {
       {/* Featured Open Source Solutions */}
       <div className="container mx-auto">
         <div className="divider mb-16"></div>
-        <h2 className="text-3xl font-bold text-center mb-4">
+        <div className="flex justify-center items-center relative">
+          <BlobMedium className="absolute z-0" />
+        </div>
+        <h2 className="text-3xl font-bold text-center mb-4 z-10 relative">
           {t('featuredSolutions.title')}
         </h2>
-        <p className="text-lg text-center">{t('featuredSolutions.summary')}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
+        <p className="text-lg text-center z-10 relative">
+          {t('featuredSolutions.summary')}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 relative">
           {cardKeys.map((key) => (
             <div
               className="card border border-gunmetal-600 overflow-hidden backdrop-blur-3xl"
@@ -408,10 +414,15 @@ export default async function OpenSource({ params }: Props) {
       {/* Pricing Structure */}
       <div className="container mx-auto">
         <div className="divider mb-16"></div>
-        <h2 className="text-3xl font-bold text-center mb-4">
+        <div className="flex justify-center items-center relative">
+          <BlobLarge className="absolute z-0 opacity-25" />
+        </div>
+        <h2 className="text-3xl font-bold text-center mb-4 z-10 relative">
           {t('pricingStructure.title')}
         </h2>
-        <p className="text-lg text-center">{t('pricingStructure.summary')}</p>
+        <p className="text-lg text-center z-10 relative">
+          {t('pricingStructure.summary')}
+        </p>
         <div className="overflow-x-auto mt-16">
           <table className="table table-zebra w-full table-xs sm:table-sm md:table-md lg:table-lg">
             <thead className="text-2xl text-sapphire-700">
@@ -523,7 +534,7 @@ export default async function OpenSource({ params }: Props) {
           {t('benefits.title')}
         </h2>
         <p className="text-lg text-center mb-8">{t('benefits.summary')}</p>
-        <div className="grid grid-cols-1 gap-8 my-16">
+        <div className="grid grid-cols-1 gap-8 my-16 z-10 relative">
           {benefitsKeys.map((key, index) => (
             <div
               key={key}
@@ -565,7 +576,10 @@ export default async function OpenSource({ params }: Props) {
             </div>
           ))}
         </div>
-        <div className="flex md:flex-row flex-col justify-center md:items-center gap-16 my-16">
+        <div className="flex justify-center items-center relative">
+          <BlobMedium className="absolute z-0" />
+        </div>
+        <div className="flex md:flex-row flex-col justify-center md:items-center gap-16 my-16 z-10 relative">
           <div className="flex flex-col gap-4">
             <p className="text-lg font-bold">{t('benefits.cta')}</p>
             <Link href={RouteId.contact}>
@@ -574,7 +588,7 @@ export default async function OpenSource({ params }: Props) {
               </button>
             </Link>
           </div>
-          <div className="md:max-w-sm lg:max-w-2xl">
+          <div className="md:max-w-sm lg:max-w-3xl">
             <h3 className="text-2xl font-bold mb-4">
               {t('benefits.results.title')}
             </h3>
@@ -585,7 +599,7 @@ export default async function OpenSource({ params }: Props) {
         </div>
       </div>
       {/* Social Proof */}
-      <div className="container mx-auto">
+      <div className="container mx-auto z-10 relative">
         <div className="divider mb-16"></div>
         <h2 className="text-3xl font-bold text-center mb-4">
           {t('socialProof.title')}
@@ -616,16 +630,11 @@ export default async function OpenSource({ params }: Props) {
               </button>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <p className="text-lg font-bold mb-4">
               {t('socialProof.partners.title')}
             </p>
-            {/* <ul className="list-inside list-disc">
-              {t.rich('socialProof.partners.description', {
-                li: (children) => <li>{children}</li>,
-              })}\
-            </ul> */}
-          </div>
+          </div> */}
         </div>
       </div>
       {/* FAQ */}
