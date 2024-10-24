@@ -540,6 +540,16 @@
           "title": "Average Client Achievements",
           "description": "<li>Increase in productivity</li><li>Reduction in software costs</li><li>Faster document retrieval</li><li>Reduction in manual tasks</li><li>High user satisfaction rate</li>"
         }
+      },
+      "socialProof": {
+        "title": "Trusted by Growing Businesses",
+        "summary": "See how businesses like yours succeed with our open source services",
+        "cta": "Join Our Success Stories",
+        "ctaLink": "Let's discuss a solution for you",
+        "partners": {
+          "title": "🤝 Technology Partners",
+          "description": "<li>Digital Ocean</li><li>Namecheap</li>"
+        }
       }
     }
   },

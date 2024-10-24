@@ -38,6 +38,28 @@ const avatarLogos = [
     alt: 'Construction Worker',
   },
 ];
+const clientLogos = [
+  {
+    src: '/assets/logos/sap.webp',
+    alt: 'SAP',
+  },
+  {
+    src: '/assets/logos/procureai.webp',
+    alt: 'ProcureAI',
+  },
+  {
+    src: '/assets/logos/peacevillages.webp',
+    alt: 'Peace Villages International Srl',
+  },
+  {
+    src: '/assets/logos/chrisfeith.webp',
+    alt: 'Chris Feith Photography',
+  },
+  {
+    src: '/assets/logos/wolfofrealestate.webp',
+    alt: 'The Wolf of Real Estate',
+  },
+];
 
 const cardKeys = ['card1', 'card2', 'card3'] as const;
 const serviceBreakdownKeys = [
@@ -69,6 +91,7 @@ const benefitsKeys = [
 export {
   logos,
   avatarLogos,
+  clientLogos,
   cardKeys,
   serviceBreakdownKeys,
   howItWorksKeys,

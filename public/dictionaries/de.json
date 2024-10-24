@@ -540,6 +540,16 @@
           "title": "Durchschnittliche Kundenerfolge",
           "description": "<li>Steigerung der Produktivität</li><li>Reduzierung der Softwarekosten</li><li>Schnellerer Dokumentenzugriff</li><li>Reduzierung manueller Aufgaben</li><li>Hohe Benutzerzufriedenheit</li>"
         }
+      },
+      "socialProof": {
+        "title": "Wachsende Unternehmen vertrauen auf uns",
+        "summary": "Unternehmen wie deins sind mit unseren Open-Source-Leistungen erfolgreich",
+        "cta": "Werde Teil unserer Erfolgsgeschichten",
+        "ctaLink": "Lass uns eine Lösung für dich finden",
+        "partners": {
+          "title": "🤝 Technologiepartner",
+          "description": "<li>Digital Ocean</li><li>Namecheap</li>"
+        }
       }
     }
   },

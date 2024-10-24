@@ -26,6 +26,7 @@ import {
   howItWorksKeys,
   benefitsKeys,
   pricingStructureRowKeys,
+  clientLogos,
 } from './utils';
 import { StatCard } from '@/components/StatCard';
 import { ReactNode } from 'react';
@@ -579,6 +580,50 @@ export default async function OpenSource({ params }: Props) {
             <RichResults>
               {(tags) => t.rich('benefits.results.description', tags)}
             </RichResults>
+          </div>
+        </div>
+      </div>
+      {/* Social Proof */}
+      <div className="container mx-auto">
+        <div className="divider mb-16"></div>
+        <h2 className="text-3xl font-bold text-center mb-4">
+          {t('socialProof.title')}
+        </h2>
+        <p className="text-lg text-center mb-8">{t('socialProof.summary')}</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center my-16">
+          {clientLogos.map((logo) => (
+            <div
+              key={logo.alt}
+              className="w-32 h-32 flex items-center justify-center p-4 rounded-lg bg-gunmetal hover:bg-gunmetal-600 transition-colors"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={96}
+                height={96}
+                className="w-full h-full object-contain opacity-75 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex md:flex-row flex-col justify-center gap-16 my-16">
+          <div>
+            <p className="text-lg font-bold mb-4">{t('socialProof.cta')}</p>
+            <Link href={RouteId.contact}>
+              <button className="btn btn-secondary">
+                {t('socialProof.ctaLink')}
+              </button>
+            </Link>
+          </div>
+          <div>
+            <p className="text-lg font-bold mb-4">
+              {t('socialProof.partners.title')}
+            </p>
+            {/* <ul className="list-inside list-disc">
+              {t.rich('socialProof.partners.description', {
+                li: (children) => <li>{children}</li>,
+              })}\
+            </ul> */}
           </div>
         </div>
       </div>
