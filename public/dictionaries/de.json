@@ -500,6 +500,46 @@
           "title": "Flexible Zahlungsoptionen",
           "description": "<li>Monatliche Abrechnung</li><li>Quartalsweise Vorauszahlung (5% Rabatt)</li><li>Jährliche Vorauszahlung (10% Rabatt)</li><li>Individuelle Zahlungspläne verfügbar</li>"
         }
+      },
+      "benefits": {
+        "title": "Transformiere dein Unternehmen mit Enterprise-Grade Open Source",
+        "summary": "Erlebe die Leistungsfähigkeit professioneller Open-Source-Lösungen ohne Enterprise-Level-Kosten",
+        "benefit1": {
+          "title": "💰 Finanzielle Vorteile: Erhebliche Kosteneinsparungen ohne Kompromisse",
+          "description": "<li>Reduzierung der Lizenzkosten</li><li>Bis zu 70% Einsparungen gegenüber proprietären Lösungen</li><li>Keine Lizenzgebühren pro Benutzer</li><li>Planbare monatliche Kosten</li><li>Skalierung ohne Lizenzstrafen</li><li>Gesamtbetriebskosten</li><li>Reduzierte IT-Infrastrukturkosten</li><li>Niedrigere Schulungskosten</li><li>Minimale Hardware-Anforderungen</li><li>Zukunftssichere Investition</li>",
+          "example": ""
+        },
+        "benefit2": {
+          "title": "🚀 Betriebliche Exzellenz: Optimierte Prozesse, gesteigerte Produktivität",
+          "description": "<li>Zeitersparnis</li><li>50% weniger Dokumentenverarbeitungszeit</li><li>70% schnellerer Informationszugriff</li><li>Automatisierte Routineaufgaben</li><li>Optimierte Arbeitsabläufe</li><li>Effizienzsteigerungen</li><li>Zentraler Informationszugriff</li><li>Reduzierte Dateneingabe</li><li>Automatisierte Backups</li><li>Vereinfachte Zusammenarbeit</li>",
+          "example": "Echtes Beispiel: Ein Immobilienunternehmen reduzierte die Dokumentenverarbeitungszeit von 15 auf 3 Minuten pro Fall nach der Implementierung unserer papierlosen Lösung."
+        },
+        "benefit3": {
+          "title": "🛡️ Sicherheit & Compliance: Enterprise-Grade-Sicherheit, garantiert",
+          "description": "<li>Erweiterte Sicherheitsfunktionen</li><li>Regelmäßige Sicherheitsupdates</li><li>Verschlüsselte Datenspeicherung</li><li>Sichere Zugriffskontrollen</li><li>Prüfprotokolle</li><li>Compliance-bereit</li><li>DSGVO & HIPAA-konform</li><li>Datenschutz</li><li>Industriestandards</li><li>Regelmäßige Sicherheitsaudits</li>",
+          "example": ""
+        },
+        "benefit4": {
+          "title": "🔄 Flexibilität & Skalierbarkeit: Wachse und passe dich in deinem Tempo an",
+          "description": "<li>Anpassungsoptionen</li><li>Maßgeschneidert für deinen Workflow</li><li>Individuelle Integrationen</li><li>Flexible Konfigurationen</li><li>Skalierbare Lösungen</li><li>Zukunftssicher</li><li>Regelmäßige Updates</li><li>Wachsender Funktionsumfang</li><li>Keine Herstellerabhängigkeit</li><li>Offene Standards</li>",
+          "example": ""
+        },
+        "benefit5": {
+          "title": "🎯 Geschäftskontrolle: Deine Daten, deine Regeln",
+          "description": "<li>Datenhoheit</li><li>Vollständige Datenkontrolle</li><li>On-Premise-Optionen</li><li>Datenportabilität</li><li>Keine Herstellerabhängigkeit</li><li>Geschäftliche Unabhängigkeit</li><li>Wähle deine Funktionen</li><li>Kontrolliere deine Kosten</li><li>Bestimme deinen Zeitplan</li><li>Direkter Systemzugriff</li>",
+          "example": ""
+        },
+        "benefit6": {
+          "title": "👥 Benutzererfahrung: Lösungen, die dein Team lieben wird",
+          "description": "<li>Einfache Einführung</li><li>Intuitive Benutzeroberflächen</li><li>Mobiler Zugriff</li><li>Vertraute Arbeitsabläufe</li><li>Umfassende Schulung</li><li>Team-Vorteile</li><li>Remote-Arbeit ermöglicht</li><li>Bessere Zusammenarbeit</li><li>Reduzierte Frustration</li><li>Erhöhte Zufriedenheit</li>",
+          "example": ""
+        },
+        "cta": "Starte deine Transformation",
+        "ctaLink": "Buche deine Benefits-Analyse",
+        "results": {
+          "title": "Durchschnittliche Kundenerfolge",
+          "description": "<li>Steigerung der Produktivität</li><li>Reduzierung der Softwarekosten</li><li>Schnellerer Dokumentenzugriff</li><li>Reduzierung manueller Aufgaben</li><li>Hohe Benutzerzufriedenheit</li>"
+        }
       }
     }
   },

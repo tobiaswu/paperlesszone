@@ -15,6 +15,8 @@ import {
   PiXBold,
   PiXCircleBold,
   PiArrowRightBold,
+  PiArrowDownBold,
+  PiStarBold,
 } from 'react-icons/pi';
 import {
   logos,
@@ -25,6 +27,8 @@ import {
   benefitsKeys,
   pricingStructureRowKeys,
 } from './utils';
+import { StatCard } from '@/components/StatCard';
+import { ReactNode } from 'react';
 
 type Props = {
   params: { locale: string };
@@ -559,8 +563,63 @@ export default async function OpenSource({ params }: Props) {
             </div>
           ))}
         </div>
+        <div className="flex md:flex-row flex-col justify-center md:items-center gap-16 my-16">
+          <div className="flex flex-col gap-4">
+            <p className="text-lg font-bold">{t('benefits.cta')}</p>
+            <Link href={RouteId.contact}>
+              <button className="btn btn-secondary btn-lg">
+                {t('benefits.ctaLink')}
+              </button>
+            </Link>
+          </div>
+          <div className="md:max-w-sm lg:max-w-2xl">
+            <h3 className="text-2xl font-bold mb-4">
+              {t('benefits.results.title')}
+            </h3>
+            <RichResults>
+              {(tags) => t.rich('benefits.results.description', tags)}
+            </RichResults>
+          </div>
+        </div>
       </div>
     </>
+  );
+}
+
+type ResultsProps = {
+  children(tags: { li: (chunks: ReactNode) => ReactNode }): ReactNode;
+};
+
+function RichResults({ children }: ResultsProps) {
+  const stats = [
+    { icon: <PiCheckCircleBold />, value: '45%' },
+    { icon: <PiArrowDownBold />, value: '60%' },
+    { icon: <PiBoxArrowDownBold />, value: '70%' },
+    { icon: <PiArrowDownBold />, value: '85%' },
+    { icon: <PiStarBold />, value: '95%' },
+  ];
+
+  let currentIndex = 0;
+
+  return (
+    <ul className="flex flex-wrap gap-4">
+      {children({
+        li: (chunks) => {
+          const stat = stats[currentIndex] || stats[0];
+          const element = (
+            <li key={currentIndex} className="w-fit">
+              <StatCard
+                icon={stat.icon}
+                title={chunks as string}
+                value={stat.value}
+              />
+            </li>
+          );
+          currentIndex += 1;
+          return element;
+        },
+      })}
+    </ul>
   );
 }
 
